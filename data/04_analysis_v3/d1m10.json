@@ -1,0 +1,116 @@
+{
+  "talk_id": "d1m10",
+  "speakers": "Vincent Koc",
+  "org": "OpenClaw Foundation",
+  "value_chain_layer": "agent_infra",
+  "position": "开源 agent 工厂实践",
+  "target_customer": "internal",
+  "intent": "insight",
+  "skeleton": [
+    "OpenClaw 用 harness 造 harness（dark factory），单人并行数百 agent，但瓶颈从“品味/意图”转向“证明”：怎么知道产出真的有效。",
+    "从 loop engineering、intent engineering 走向 proof engineering：先把可验证的结果/奖励定义成代码，再让 agent 爬坡（hill climbing）。",
+    "案例：CI 成本与 agent cycle time；用 adaptive testing（分类器预测回归风险，只测相关部分）压低测试成本和时长。",
+    "即将发布 ShellBench（人工设计的个人 agent 真实任务基准），并实验把“证明”映射到代码库以驱动 agent 去除 slop。"
+  ],
+  "core_message": "当 agent 工厂的产能不再受限于写代码而受限于“如何证明产出有效”时，工程师要从工厂管理者变成 proof engineer：把可验证的结果写成代码、用自适应测试和真实任务基准让 agent 低成本爬坡。OpenClaw 用自己的 CI 成本压缩和 ShellBench 作为实证。",
+  "frameworks": [
+    {
+      "name": "前台工作 vs 后台工作",
+      "gist": "后台工作（可验证的修复）自动测试、验证、合并；前台工作（需大量人工注意力的功能）则先定义证明/结果再开工。",
+      "seg": "505–505"
+    },
+    {
+      "name": "loop engineering → intent engineering → proof engineering",
+      "gist": "循环不够，需注入意图；意图仍会回归，因此要把“有效性”本身变成可验证的代码，agent 才能放心自循环。",
+      "seg": "505–505"
+    }
+  ],
+  "offerings": [
+    {
+      "name": "ShellBench",
+      "what": "含 135 个任务、人工设计的个人 AI agent 基准（报税、多人意见分歧等模糊任务），覆盖 harness 与模型组合，小部分子集公开。",
+      "for_whom": "个人 agent / 编码 agent 的开发者与模型团队",
+      "status": "preview"
+    },
+    {
+      "name": "Adaptive testing（CI 引擎）",
+      "what": "用树模型分类器根据改动与执行路径预测回归风险，只运行相关测试，已合入主干但未全面启用。",
+      "for_whom": "OpenClaw 自身及未来开源社区",
+      "status": "internal"
+    }
+  ],
+  "why_needed": "",
+  "problem_approach": [
+    {
+      "problem": "agent 写代码极快后，测试量和 CI 成本暴涨、等待证明拖慢整个工厂，而简单删测试又会失去验证手段。",
+      "approach": "主干关闭每次 CI、PR 上做受限检查加 agent 审查，再用 adaptive testing 只测高回归风险部分，并追踪 PR 开合并的 cycle time。"
+    },
+    {
+      "problem": "SWE-bench 之类通用基准和合成数据无法衡量个人 agent 在真实场景下是变好还是变差。",
+      "approach": "与伙伴共建人工设计、含歧义的真实任务基准 ShellBench，用它在较短时间内度量 harness、记忆、消息等整体表现。"
+    }
+  ],
+  "non_consensus": [
+    {
+      "kind": "insight",
+      "point": "agent 工厂的真正瓶颈是“证明”而非代码产出；工程师角色应转向 proof engineer（vibe eval）。",
+      "quote": "So essentially I've gone from factory manager to what I'm calling proof engineer — or essentially a vibe eval guy.",
+      "seg": "505–505",
+      "speaker": "Vincent Koc"
+    },
+    {
+      "kind": "practice",
+      "point": "不要简单删测试，也不要每次都全量跑，而是训练“证明模型”预测回归，只测受影响部分。",
+      "quote": "Essentially, what we're doing here is building a model of proof, using classifiers and tree-based classifiers, to see — based on the code that was changed and what was executed — whether we can get a good understanding of what has a likelihood of regression, and then just test that component.",
+      "seg": "576–585",
+      "speaker": "Vincent Koc"
+    },
+    {
+      "kind": "practice",
+      "point": "内部基准要用真实数据集而非合成数据。",
+      "quote": "Try to stay away from synthetics and spend time building real datasets if you can.",
+      "seg": "598–601",
+      "speaker": "Vincent Koc"
+    }
+  ],
+  "signals": [
+    {
+      "type": "metric_focus",
+      "signal": "追踪 agent cycle time（PR 从打开到合并的时间）和 CI 成本，说明其优先级是让工厂自我加速且可持续，而非单纯多产出。",
+      "value_as_heard": "峰值月 CI 约 127 万美元；每百次 CI 约 1000 多降到 200 多美元",
+      "seg": "535–542"
+    },
+    {
+      "type": "market_pattern",
+      "signal": "基金会靠多家公司赞助的算力运转，几乎撞遍所有模型提供商的 rate limit；免费算力不可持续，成本倒逼工程优化。",
+      "value_as_heard": "",
+      "seg": "518–523"
+    },
+    {
+      "type": "data_signal",
+      "signal": "越来越多公司在自建内部基准；ShellBench 用人工设计的真实任务作为评测数据，并用 agent 使用产品生成并缓存“证明”。",
+      "value_as_heard": "135 个任务",
+      "seg": "586–601"
+    },
+    {
+      "type": "launch",
+      "signal": "ShellBench 预计几天内发布（讲者自己也说多次推迟），自适应测试和代码库“证明地图”将开源贡献。",
+      "value_as_heard": "",
+      "seg": "586–597"
+    }
+  ],
+  "trend_categories": [
+    "eval_verifiability",
+    "agent_harness_runtime"
+  ],
+  "novelty": 3,
+  "pr_level": 2,
+  "content_industry_note": "“先定义可验证的结果，再让 agent 自循环爬坡”的 proof 思路，同样适用于 AI 剪辑/生成流水线：没有可自动判定的“剪得好”标准，规模化自动生产就会卡在人工审片上。",
+  "filtered_consensus": [
+    "每家公司都在做 harness",
+    "CI 成本高、测试变慢",
+    "内部基准优于公开榜单",
+    "赞助算力不可持续",
+    "agent 并行提升产出"
+  ]
+}

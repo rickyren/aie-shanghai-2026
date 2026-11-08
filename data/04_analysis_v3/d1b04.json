@@ -1,0 +1,45 @@
+{
+ "talk_id": "d1b04",
+ "speakers": "裴晟 (Robert Pei)",
+ "org": "Visa",
+ "value_chain_layer": "agent_infra",
+ "position": "智能体支付网络与信任层",
+ "target_customer": "enterprise",
+ "intent": "both",
+ "skeleton": [
+  "Personal Agent 兴起后，支付成为刚需，Agent 正从辅助搜索走向真正交易，原有互联网并非为 Agent 设计，商业模式也将重塑。",
+  "早期场景是 vibe coding 等 agent 自主小额付款，决策从基于商品转向基于任务和预算，这是 agentic payment 的实验场。",
+  "要解决的难题包括 agent 身份与信任、意图与授权、商户生态，以及网站拦截 bot 和风控把机器交易当盗刷。",
+  "Visa Intelligent Commerce 的思路：令牌化的限额凭证、用户授权控制、Trusted Agent Protocol 与商户可用性评分，并推出 CLI 和微支付方案。"
+ ],
+ "core_message": "Visa 主张智能体商业的关键不是给 agent 发卡，而是用令牌化、限额、可追溯的授权凭证，加上 agent 与商户之间的信任认证，让人类能把花钱的决策安全地交给 agent；Visa Intelligent Commerce 与 Trusted Agent Protocol 正是为此提供的网络层基础设施。",
+ "frameworks": [
+  {"name": "Visa Intelligent Commerce 三要点：凭证、控制权、生态信任", "gist": "凭证用 tokenize 的 scoped token 而非卡号，控制权要匹配用户明确授权并留痕，生态信任靠 agent 认证和商户握手。", "seg": "658–696"},
+  {"name": "自动商务类比自动驾驶分级", "gist": "agentic commerce 目前像 L3 的 supervised 驾驶，多数场景仍需 human in the loop 确认，逐步出现完全自主场景。", "seg": "571–576"}
+ ],
+ "offerings": [
+  {"name": "Visa Intelligent Commerce", "what": "让 agent 使用令牌化、限额、可控的 Visa 凭证完成交易的框架。", "for_whom": "agent 平台、银行、商户", "status": "launched"},
+  {"name": "Trusted Agent Protocol", "what": "对 agent 认证并让商户与 agent 握手以确认可信。", "for_whom": "商户与 agent 开发方", "status": "launched"},
+  {"name": "开发者 CLI 与微支付方案", "what": "帮助开发者用 Visa 卡交易的 CLI，以及面向小额交易的微支付方案（后续推出）。", "for_whom": "开发者及 agent 构建者", "status": "preview"}
+ ],
+ "why_needed": "相对于让 agent 模仿人点击网页、直接持有卡号，或各家封闭生态（如 Amazon 阻止外部 agent）各自为政，开放的 open loop 卡网络需要标准化的 agent 身份、授权凭证和风控来支撑跨商户交易。",
+ "problem_approach": [
+  {"problem": "银行风控把深夜大量小额机器交易判为盗刷，网站也把诚实声明身份的 agent 当 bot 拦截。", "approach": "区分人与机器交易并调整风控规则，在基础设施层为认证过的 agent 提供通道，并通过 Trusted Agent Protocol 握手。"},
+  {"problem": "agent 代为购买时的身份、意图和责任归属不清，个人自建 agent 尤其难以信任。", "approach": "发放 scoped token、设定上限和有效期，要求明确授权并全程留痕。"}
+ ],
+ "non_consensus": [
+  {"kind": "market_call", "point": "商户将面临被 agent 评分的新排名逻辑：衡量的不是相关性而是 agent 下单的难易度，评分低 agent 就不来了。", "quote": "PageRank 衡量的是 relevance，而这个分衡量的是你的 usability，包括 agent 到你这来容不容易下单。", "seg": "679–685", "speaker": "裴晟"},
+  {"kind": "insight", "point": "agent 购买决策由基于商品转为基于任务和预算，具体怎么花由 agent 决定，这改变了纠纷和风控的定义。", "quote": "这里面的决策并不是一个基于商品的决策，而是一个基于任务的决策，对吧。", "seg": "607–615", "speaker": "裴晟"}
+ ],
+ "signals": [
+  {"type": "market_pattern", "signal": "Amazon 等闭环平台屏蔽外部 agent，同时自家 shopping agent 通过与 Visa 合作进入开放网络购买站外商品，平台围墙与 open loop 支付正在博弈。", "value_as_heard": "", "seg": "548–559"},
+  {"type": "market_pattern", "signal": "Google UCP、Stripe、Shopify、Visa 等各自推出 agentic commerce 与支付协议，行业处于协议竞争期。", "value_as_heard": "", "seg": "566–570"},
+  {"type": "data_signal", "signal": "风控需要识别机器交易的作息、上下文和执行速度，说明交易侧将产生并购买人与 agent 行为区分的数据。", "value_as_heard": "", "seg": "647–655"},
+  {"type": "metric_focus", "signal": "关注 agent 对商户的可用性评分（下单难易度），类比 PageRank 的相关性。", "value_as_heard": "", "seg": "679–685"}
+ ],
+ "trend_categories": ["personal_agent_ai_native", "agent_harness_runtime"],
+ "novelty": 3,
+ "pr_level": 4,
+ "content_industry_note": "当 agent 代用户购买版权图片、素材、域名等数字服务时，内容平台需要提供面向 agent 的微支付和授权接口，否则素材交易会被 agent 绕开或被拦截。",
+ "filtered_consensus": ["human in the loop", "互联网不是为 agent 设计", "个人 agent 兴起", "商业模式会被重塑"]
+}

@@ -1,0 +1,49 @@
+{
+  "talk_id": "d1m14",
+  "speakers": [
+    {
+      "name": "Jakub Hojsan",
+      "name_as_heard": ["Jakub Hojsa", "Jacob"],
+      "org": "Exa",
+      "role": "Forward deployed engineer",
+      "background": "Works with developers that need search in their products; has spent the last year at Exa; recently in Hong Kong; first time in Shanghai; describes himself as a heavy user of personal agents in iMessage.",
+      "evidence_orders": [1256, 1257, 1258, 1260, 1336, 1393, 1428]
+    }
+  ],
+  "corrections": [
+    {"from": "Excel", "to": "Exa", "count": 22, "confidence": "high"},
+    {"from": "Jakub Hojsa / Jacob", "to": "Jakub Hojsan / Jakub", "count": 2, "confidence": "high"},
+    {"from": "OneRequest", "to": "one request", "count": 2, "confidence": "high"},
+    {"from": "Lost Haven on the Bund", "to": "Lost Heaven on the Bund", "count": 1, "confidence": "high"},
+    {"from": "MemZero", "to": "Mem0", "count": 1, "confidence": "high"},
+    {"from": "Quen OpenAway model", "to": "Qwen open-weight model", "count": 1, "confidence": "high"},
+    {"from": "Quen", "to": "Qwen", "count": 1, "confidence": "high"},
+    {"from": "BrowseUse / the browser use library", "to": "Browser Use", "count": 2, "confidence": "high"},
+    {"from": "Link (iMessage API)", "to": "Linq", "count": 2, "confidence": "high"},
+    {"from": "GrokBot", "to": "Grok Bot", "count": 1, "confidence": "medium"},
+    {"from": "Grok Instinct and Muse", "to": "Grok, Instinct and Muse", "count": 1, "confidence": "medium"},
+    {"from": "new sources within 15 minutes", "to": "news sources within 15 minutes", "count": 1, "confidence": "medium"},
+    {"from": "which planet affects", "to": "which plan it affects", "count": 1, "confidence": "high"},
+    {"from": "Malibu food", "to": "milder food", "count": 1, "confidence": "medium"},
+    {"from": "keeping and then task time low", "to": "keeping end-to-end task time low", "count": 1, "confidence": "medium"},
+    {"from": "Jazz at the Lincoln Center Shanghai", "to": "Jazz at Lincoln Center Shanghai", "count": 1, "confidence": "high"},
+    {"from": "Excel Monitors", "to": "Exa Monitors", "count": 1, "confidence": "high"},
+    {"from": "at one you might overflow", "to": "for one, you might overflow", "count": 1, "confidence": "high"},
+    {"from": "So that. Us to how Excel leverages highlights.", "to": "So that brings us to how Exa leverages highlights.", "count": 1, "confidence": "high"}
+  ],
+  "removed_non_content": [
+    {"orders": "1395", "what": "presenter slip 'ah, sorry. One more.' (dropped inside paragraph 1393–1401; line still within a seg range)"}
+  ],
+  "uncertain": [
+    {"orders": "1250", "issue": "'keeping and then task time low' rendered as 'end-to-end task time'; marked 〔?〕"},
+    {"orders": "1379", "issue": "'prefers Malibu food' read as 'milder food' (friend dislikes spicy chilies); marked 〔?〕"},
+    {"orders": "1253", "issue": "'Grok Instinct and Muse' — list of closed personal agents; read as Grok, Instinct, Muse (cf. 1306 'Muse, Instinct, and GrokBot'); exact product name for Grok unverified"}
+  ],
+  "verified": [
+    {"as_heard": "Instinct / Muse / GrokBot", "resolved_to": "Instinct, Muse (Meta), Grok Bot", "evidence": "https://dev.to/amananandrai/14-personal-ai-agents-in-2026-a-technical-guide-to-architecture-memory-tools-autonomy-10h — 2026 roundup lists Muse, Grok Bot, Poke, Instinct as vendor-owned personal agents", "orders": "1253, 1306, 1312"},
+    {"as_heard": "Link (iMessage API)", "resolved_to": "Linq", "evidence": "https://linqapp.com/imessage-api — iMessage API for AI agents, matches context of connecting a personal agent to iMessage", "orders": "1316, 1426"},
+    {"as_heard": "Lost Haven on the Bund", "resolved_to": "Lost Heaven on the Bund", "evidence": "https://www.trip.com/restaurant/china/shanghai/detail/lost-heaven-on-the-bund-11152260/ — Yunnan restaurant on the Bund, Shanghai", "orders": "1293"},
+    {"as_heard": "Excel Monitors", "resolved_to": "Exa Monitors (Websets Monitors)", "evidence": "https://docs.exa.ai/websets/api/monitors/create-a-monitor — Exa monitor product for scheduled searches", "orders": "1419"},
+    {"as_heard": "Jakub Hojsa", "resolved_to": "Jakub Hojsan", "evidence": "https://www.jakubhojsan.com/ — Forward Deployed Engineer at Exa, matches self-introduction", "orders": "1256"}
+  ]
+}

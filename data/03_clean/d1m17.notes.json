@@ -1,0 +1,56 @@
+{
+  "talk_id": "d1m17",
+  "speakers": [
+    {
+      "name": "Lux Li（李粒）",
+      "name_as_heard": ["李立"],
+      "org": "TiDB / PingCAP",
+      "role": "负责 TiDB 的 AI 业务",
+      "background": "在 TiDB 负责 AI 业务；TiDB 服务了大量线上与线下的 agent 公司（仅讲稿中所述）。",
+      "evidence_orders": [1867, 1869]
+    }
+  ],
+  "corrections": [
+    {"from": "TideDB", "to": "TiDB", "count": 15, "confidence": "high"},
+    {"from": "李立", "to": "李粒", "count": 1, "confidence": "medium"},
+    {"from": "circle", "to": "SQL", "count": 3, "confidence": "high"},
+    {"from": "事物", "to": "事务", "count": 4, "confidence": "high"},
+    {"from": "事物据系", "to": "事无巨细", "count": 2, "confidence": "high"},
+    {"from": "LM provider", "to": "LLM provider", "count": 1, "confidence": "high"},
+    {"from": "用户调里面", "to": "用户调研里面", "count": 1, "confidence": "high"},
+    {"from": "为了示范算力 / 把sandbox示范掉", "to": "为了释放算力 / 把 sandbox 释放掉", "count": 2, "confidence": "high"},
+    {"from": "session B可以慢的", "to": "session B 可以 mount", "count": 1, "confidence": "medium"},
+    {"from": "做健全", "to": "做鉴权", "count": 1, "confidence": "high"},
+    {"from": "agent planform", "to": "agent platform", "count": 3, "confidence": "high"},
+    {"from": "实力 / 实力池", "to": "实例 / 实例池", "count": 3, "confidence": "high"},
+    {"from": "spend的关系", "to": "span 的关系", "count": 1, "confidence": "high"},
+    {"from": "fog出来", "to": "fork 出来", "count": 2, "confidence": "high"},
+    {"from": "排站时", "to": "排障时", "count": 1, "confidence": "high"},
+    {"from": "增站", "to": "增长", "count": 4, "confidence": "high"},
+    {"from": "持有工作区", "to": "持久工作区", "count": 1, "confidence": "high"},
+    {"from": "TideDB cloud start", "to": "TiDB Cloud Starter", "count": 1, "confidence": "high"},
+    {"from": "lake", "to": "Lake（TiDB Cloud Lake）", "count": 2, "confidence": "high"},
+    {"from": "infrar layer", "to": "infra layer", "count": 1, "confidence": "high"},
+    {"from": "上百的兆B", "to": "上百 MB", "count": 1, "confidence": "high"}
+  ],
+  "removed_non_content": [
+    {"orders": "1865–1866", "what": "repeated greeting / mic check"}
+  ],
+  "uncertain": [
+    {"orders": "1873", "issue": "'像40到80道是很常见的' — snapshot 大小单位不明（可能为 KB/MB）"},
+    {"orders": "1881", "issue": "'把对季度进度和季度对齐' 无法确定原意，译作“把进度对齐〔?〕”"},
+    {"orders": "1897", "issue": "'我的切割怎么办' 推测为“隔离怎么办”"},
+    {"orders": "1903", "issue": "'放置扩容备份升级对战故障补偿' 推测为 配置/扩容/备份/升级/对账/故障补偿"},
+    {"orders": "1920", "issue": "'不断的重试去回答这个成本' 推测为“推高成本”"},
+    {"orders": "1924", "issue": "'也有可能是因为它其实盗版是效果不好' 中“盗版”无法辨识"},
+    {"orders": "1925", "issue": "'从数百TB到数十TB的tracing' 数量级顺序可疑；'持续查核算' 推测为查询、核算"},
+    {"orders": "1926", "issue": "'合并测数据' 推测为“评测数据”"},
+    {"orders": "1932", "issue": "'连续的调用一次工具' 与 '直径耗时' 含义不明"},
+    {"orders": "1941", "issue": "'所以我们下面也能跟上' 推测指文件；'用户说一声巨细' 推测为“说了一句”"},
+    {"orders": "1942", "issue": "'数据独立的说服能力' 推测为“数据库服务能力”"}
+  ],
+  "verified": [
+    {"as_heard": "李立 / Lux Li", "resolved_to": "Lux Li（李粒）, TiDB / PingCAP", "evidence": "https://ai.engineer/shanghai/2026/speakers?lang=cn and PingCAP AI Lab Medium post — Lux Li (李粒), TiDB AI business & product lead", "orders": "1867"},
+    {"as_heard": "TideDB file system / lake / TideDB cloud start", "resolved_to": "TiDB Cloud Filesystem, TiDB Cloud Lake, TiDB Cloud Starter", "evidence": "https://docs.pingcap.com/tidbcloud/tidb-cloud-release-notes/ — persistent agent workspaces across sandboxes, Lake analytics warehouse, Starter with millions of isolated databases", "orders": "1895, 1926, 1942"}
+  ]
+}

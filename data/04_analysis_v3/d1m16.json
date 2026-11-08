@@ -1,0 +1,39 @@
+{
+ "talk_id": "d1m16",
+ "speakers": "Xinghong Fang",
+ "org": "Optiver",
+ "value_chain_layer": "ai_adopter",
+ "position": "量化交易公司自建 LLM 网关",
+ "target_customer": "internal",
+ "intent": "insight",
+ "skeleton": [
+  "LLM 网关看似简单转发，实际 HTTP 200 不等于成功，协议翻译会导致流中断、缓存失效和 thinking block 被静默丢弃。",
+  "每个重要模型至少接两家 provider 并做 failover，但 LLM 请求有状态，需会话粘滞、功能对齐，并用约 10% 流量持续演练备份。",
+  "多区域部署时全局身份、本地推理：认证本地副本、提示日志改存对象存储、计费用最终一致，并补上分布式 tracing。",
+  "基于以上教训自建精简网关，倾向让 harness 原生支持多协议而非做协议翻译。"
+ ],
+ "core_message": "Optiver 的经验是：把 LLM 网关当作公共基础设施来运营，协议翻译、有状态的 failover 和跨区域数据依赖是三大隐形故障源，因此他们放弃通用开源网关，自建只含必要功能的精简网关，并用全链路 tracing 定位问题。",
+ "frameworks": [
+  {"name": "Failover 边界：流开始前可切换，流开始后直接报错", "gist": "未向用户输出前遇到 429/529 可换 provider；一旦已开始流式输出就把错误交给用户，不做中途切换。", "seg": "1695–1711"}
+ ],
+ "offerings": [],
+ "why_needed": "",
+ "problem_approach": [
+  {"problem": "failover 与协议翻译会破坏 prompt cache 并静默丢失 thinking block，推高成本和延迟，而监控上看不到。", "approach": "同一会话固定一个 provider、双 provider 只开放共同功能集，并减少协议翻译，让 harness 原生说多种协议。"},
+  {"problem": "多区域网关把鉴权和全量 prompt 日志放在单一 Postgres，造成跨洋流量和高鉴权延迟。", "approach": "鉴权用各区域本地副本，prompt 日志直接写各区域 S3，计费走最终一致，推理热路径不依赖远程。"}
+ ],
+ "non_consensus": [
+  {"kind": "practice", "point": "备用 provider 要长期常态承接一部分流量，而不是只在主路故障时才启用。", "quote": "We shouldn't start sending requests to the fallback only when the primary fails; we should keep exercising it even when everything is working fine.", "seg": "1746–1753", "speaker": "Xinghong Fang"},
+  {"kind": "practice", "point": "明知有更高级的流中途 failover 网关，仍选择尽早失败、由用户决定是否重试，以降低复杂度。", "quote": "We'll stick with the simpler option: fail early and let the user decide what they want to do.", "seg": "1709–1711", "speaker": "Xinghong Fang"}
+ ],
+ "signals": [
+  {"type": "market_pattern", "signal": "开源 LLM 网关是起点，但规模化企业用户会因协议翻译和成本控制需求转向自建精简网关，同时保留回到开源方案的可能。", "value_as_heard": "", "seg": "1840–1852"},
+  {"type": "metric_focus", "signal": "追踪上游错误率、缓存命中率（反映成本）、鉴权额外延迟和端到端 tracing，反映其把网关当公共设施、重视用户可感知的可靠性。", "value_as_heard": "上游错误率约 0.4%，鉴权延迟从 2 秒降到 20 毫秒", "seg": "1640–1640"},
+  {"type": "data_signal", "signal": "合规要求保存全部 prompt 和响应日志，数据量大到需要从数据库迁移到各区域对象存储。", "value_as_heard": "一度每天超过 200GB 跨洋传输", "seg": "1768–1793"}
+ ],
+ "trend_categories": ["agent_harness_runtime", "enterprise_agent_ops"],
+ "novelty": 2,
+ "pr_level": 1,
+ "content_industry_note": "",
+ "filtered_consensus": ["可观测性很重要", "多 provider 冗余", "成本与延迟取舍", "缓存节省成本", "自建 vs 开源的取舍"]
+}

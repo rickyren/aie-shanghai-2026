@@ -1,0 +1,21 @@
+{
+"talk_id":"d1b01","speakers":"Baoping Wang（玉伯）","org":"YouMind",
+"value_chain_layer":"general_agent_app","position":"面向创作的个人 agent","target_customer":"consumer","intent":"both",
+"skeleton":["各家 Personal Agent 在工程上大同小异（记忆、连接器感知、主动性、权限），真正的差异在场景。","现有场景无外乎两类：解决烦恼（代办杂事）与满足欲望（内容工厂涨粉），都是向外求，未必让人重获主动性。","YouMind 选择向内求，把环境做成创作 Studio：Create to Learn（费曼式学习）和 Create to Earn（变现与获得连接感）。","Personal Agent 留给大厂，创业者更有机会做与环境相关的创作型 Studio。"],
+"core_message":"玉伯认为各家 Personal Agent 工程同质化、都在帮人解决烦恼或满足欲望，而 YouMind 不做通用 agent，而是做一个让人“从消费走向创作”的 Studio，主打 Create to Learn 和 Create to Earn，并判断创业者应把通用 Personal Agent 让给大厂。",
+"frameworks":[{"name":"Personal Agent 两类场景：解决烦恼 vs 满足欲望","gist":"现有 PA 要么替人干不想干的事，要么帮人做内容工厂涨粉赚钱，二者都是向外求；YouMind 主张第三类向内求（学习与创作）。","seg":"39–56"},
+{"name":"创作的四个阶段","gist":"直接对话生成（差异在模型）、带私有资料、沉淀为 Skill、一键转视频等多形态复用。","seg":"149–163"}],
+"offerings":[{"name":"YouMind","what":"带记忆与 Skill 的创作型 agent Studio，可生成 PPT、文章、图片，并一键将 PPT 转视频。","for_whom":"创作者、知识工作者、自媒体","status":"launched"}],
+"why_needed":"对比 Muse、Grok Bot、Tomo 等通用 Personal Agent 帮人处理邮件杂事、做内容工厂；YouMind 认为这些工程相近且只向外求，因而专注于帮人学习和创作，并把大厂擅长的通用 PA 让出。",
+"problem_approach":[{"problem":"通用 Personal Agent 省下来的时间未必被用于想做的事，常被短视频等被动消费占走。","approach":"把产品做成创作环境，让用户用 AI 把想法变成作品，在创作中学习并获得正反馈。"},
+{"problem":"Agent 直接对话时各家差异主要来自模型，难以形成产品壁垒。","approach":"依靠沉淀的记忆、私有资料与 Skill 让产品随使用越来越懂用户。"}],
+"non_consensus":[{"kind":"insight","point":"AI 创作需求中有大量是做给自己看的（ToM），不是为了发布给他人，这是一个被忽视的市场。","quote":"所以给自己看的需求，能够越级〔?〕，就是在 ToB、ToC 之外，还有 ToM，能够让自己有所不一样、有所成长，其实也是一个很大的市场。","seg":"105–107","speaker":"Baoping Wang"},
+{"kind":"market_call","point":"通用 Personal Agent 让大厂去做，创业者应做与环境相关的创作 Studio。","quote":"今天是 Personal Agent 的一个专场，但我觉得 Personal Agent 可能交给大厂们去玩吧。","seg":"174–177","speaker":"Baoping Wang"}],
+"signals":[{"type":"market_pattern","signal":"Claude Tag、Grok Bot、Muse、Tomo、Manus 等大厂、模型厂商和创业者密集推出 Personal Agent，功能趋同、靠场景区分。","value_as_heard":"","seg":"7–15"},
+{"type":"metric_focus","signal":"关注付费高阶用户每月生成的 PPT 数量及其中给他人看的比例，借此判断用户是在自用学习还是对外发布。","value_as_heard":"千名 Max 用户、月均约 15 个 PPT，仅一两个给别人看","seg":"97–104"},
+{"type":"market_pattern","signal":"NotebookLM 上的播客、视频概览、PPT 等内容也多是自己消费，创作工具的使用不等于对外发布。","value_as_heard":"","seg":"105–107"}],
+"trend_categories":["personal_agent_ai_native","investment_startup"],
+"novelty":3,"pr_level":4,
+"content_industry_note":"创作者工具的重度付费用户把大量 PPT、图文、视频生成用于自学和自用而非发布，说明“创作工具”的价值不一定体现为平台上的内容供给；同时“一鱼多吃”（PPT 一键转视频）是多形态复用的需求。",
+"filtered_consensus":["记忆与上下文很重要","Personal Agent 需要连接器与主动性","权限与隐私待解决","模型决定直接对话质量"]
+}

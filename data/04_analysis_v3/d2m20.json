@@ -1,0 +1,92 @@
+{
+  "talk_id": "d2m20",
+  "speakers": "Yanlong Wang",
+  "org": "Jina AI by Elastic",
+  "value_chain_layer": "data_context",
+  "position": "agent 读网页 API",
+  "target_customer": "developer",
+  "intent": "both",
+  "skeleton": [
+    "Jina Reader 是 URL 转 Markdown 的 API，区别在于总是用无头浏览器渲染，并提供匿名免费额度让 agent 自己调用。",
+    "后台数据显示一个网页处理后约几千 token，直接喂主流模型的单价远高于互联网广告每千次浏览收入，先做抽取/摘要则便宜很多，说明 AI 用户付费能力高，转 Markdown 不是最后一步。",
+    "agent 流量涨使匿名访问占比上升，威胁免费服务；网站反爬动机不同，广告模式是暗线。",
+    "按请求向 agent 收费的方案讲者不看好（价格锚高、全球不均、灰产倒卖），但同意应在 gateway 层控制；提出让 agent 复述广告或完成可验证的公开任务来维持免费。"
+  ],
+  "core_message": "Jina Reader 把任意网页变成 agent 可读的文本，但 agent 访问量让匿名免费模式难以为继；讲者认为让 agent 直接付钱走不通，提出借鉴早期互联网，用广告和 reCAPTCHA 式可验证任务来维持人类与 agent 都能享受的免费网络。",
+  "frameworks": [
+    {
+      "name": "网页 token 经济账",
+      "gist": "按中位数网页 token 折算成每千次调用，对比大模型百万 token 价与广告每千次浏览收入，推出 agent 用户付费能力高且需专用模型预处理。",
+      "seg": "3736–3751"
+    }
+  ],
+  "offerings": [
+    {
+      "name": "Jina Reader (r.jina.ai)",
+      "what": "URL 转大模型友好 Markdown 的 SaaS API，始终以无头浏览器渲染，支持网页与 PDF，按 token 计费，核心代码开源。",
+      "for_whom": "agent 开发者与 AI 应用",
+      "status": "launched"
+    }
+  ],
+  "why_needed": "许多 agent 软件已自带 URL 转 Markdown，Jina Reader 的差异是永远用无头浏览器渲染，保证拿到人能看到的内容，并提供匿名免费调用。",
+  "problem_approach": [
+    {
+      "problem": "agent 流量使匿名免费访问被滥用，网站反爬，传统广告模式遭到绕过。",
+      "approach": "不帮用户突破反爬，提供合规选项；设想让 agent 复述广告或完成由 embedding/reranker 自动验证的公开任务。"
+    },
+    {
+      "problem": "网页直接放入模型处理 token 成本很高。",
+      "approach": "先预处理，如去掉链接与图片地址，再用专用模型做抽取、摘要，或用切分、重排，而非把 Markdown 当终点。"
+    }
+  ],
+  "non_consensus": [
+    {
+      "kind": "prediction",
+      "point": "不看好让 agent 按请求付费来解决网页访问：价格锚高、全球不均、会引发数据倒卖灰产，主张在 gateway 层控制访问。",
+      "quote": "对此我个人并不是特别看好。",
+      "seg": "3775–3786",
+      "speaker": "Yanlong Wang"
+    },
+    {
+      "kind": "insight",
+      "point": "可用 reCAPTCHA 式可验证任务让 agent 为免费服务“付费”，例如翻译、摘要公开数据。",
+      "quote": "除了直接广告，也可以运用一些可以验证的任务，就像之前的 reCAPTCHA 一样。",
+      "seg": "3803–3809",
+      "speaker": "Yanlong Wang"
+    }
+  ],
+  "signals": [
+    {
+      "type": "data_signal",
+      "signal": "后台统计显示处理后网页 token 呈对数正态分布，原始 HTML 的 token 数是处理后的数倍，说明网页读取的主要成本在清洗而非内容本身。",
+      "value_as_heard": "处理后中位数约 4.5K–5K token；原始 HTML 约 30K",
+      "seg": "3721–3735"
+    },
+    {
+      "type": "metric_focus",
+      "signal": "追踪匿名访问占比的上升作为 agent 流量和滥用压力的指标，担心免费层不可持续。",
+      "value_as_heard": "匿名访问占比从 20% 升至 36.9%",
+      "seg": "3752–3759"
+    },
+    {
+      "type": "market_pattern",
+      "signal": "大站反爬为保护数据，小站为省 IT 成本，背后是广告商业模式被 agent 冲击；gateway 层流量集中，几家达成一致即可改变格局。",
+      "value_as_heard": "前四家流量占比超过 50%",
+      "seg": "3760–3794"
+    }
+  ],
+  "trend_categories": [
+    "memory_data_context",
+    "agent_harness_runtime"
+  ],
+  "novelty": 3,
+  "pr_level": 3,
+  "content_industry_note": "内容站和创作者的网页被 agent 大量读取却不产生广告浏览收入，讲者的 gateway 收费与 agent 广告之争直接关乎内容平台如何向 AI 访问变现。",
+  "filtered_consensus": [
+    "URL 转 Markdown 的基础功能",
+    "serverless 弹性",
+    "开源核心代码",
+    "反爬与合规",
+    "产品功能介绍"
+  ]
+}

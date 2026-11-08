@@ -1,0 +1,17 @@
+name,tier,booth_demo,what_they_offer,layer,source
+Copula Lab,Gold,"Nov 6 · Build AI's next challenge",专家数据、RL 环境、benchmark，服务前沿模型和垂直 agent 团队；数据产品含 Blender 3D、Three.js、Godot 游戏、游戏美术、网页开发、金融/法律长程任务；兼职专家招聘含视频剪辑、3D、游戏开发、金融、法律,eval_rl_data,https://www.copulalab.com/ ; /careers ; /products/data-products
+MindLab,Silver,,为药企、金融、政务、游戏公司做 benchmark、数据开发、后训练、推理部署，把行业经验变成专有模型能力,eval_rl_data,https://www.mindlab.im/
+Patsnap 智慧芽,Gold,,20 亿+ 专利、科研、生物医药等垂直数据，经 API / MCP 提供给 agent,search_data_api,https://www.zhihuiya.com/
+Brave,Gold,,搜索（Brave Search API）,search_data_api,https://brave.com/
+Raytone,Gold,"Nov 5 · Code Offline: Raytone AIBox Live",企业 token 全生命周期平台：统一调用公私有模型、预算与审计网关、agent 工厂,platform_gateway,https://raytone.ai/
+Tonbo,Gold,"Nov 5 · yield your agentic workload on your laptop and resume it anywhere",开源嵌入式数据库，面向 serverless、数据密集型 agent 负载,storage,https://tonbo.io/
+Sonar,Gold,"Nov 5 · Using SonarQube to Support AI Agent-Driven Software Development",AI 生成代码的质量与安全检查,coding_verification,https://www.sonarsource.com/
+Stripe,Gold,"Nov 5 · Monetization and Pricing Strategies for AI Products",支付与 AI 产品定价,payments,https://www.stripe.com/
+Adyen,Supported,,支付,payments,https://www.adyen.com/
+Clink,Silver,,面向人和 agent 的全球支付与订阅计费（Agentic Payments）,payments,https://www.clinkbill.com/
+AutoTrust AI,Supported,,开源决策模型、企业定制模型,model_decision,https://autotrust.ai/
+Alaya Lab,Silver,,AI 作为游戏引擎、世界模型、游戏 agent,model_generative,https://alayalab.ai/
+HellYeah,Supported,,AI 广告投放平台,app_vertical,https://www.hellyeahai.com/
+Baidao Data 百道数据,Gold,"Nov 5 · One Cloud. Full AI Stack.",谷歌云代理与托管运维,cloud_reseller,https://www.baidaodata.com/
+Sieger,Silver,,云、AI 与数据解决方案（亚太）,cloud_reseller,https://www.sieger-global.com/
+Akamai,Silver,,CDN 与边缘云,cloud,https://www.akamai.com/

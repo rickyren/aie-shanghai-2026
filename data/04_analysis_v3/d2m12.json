@@ -1,0 +1,29 @@
+{
+"talk_id":"d2m12","speakers":"Mingke Luo","org":"masons.ai",
+"value_chain_layer":"agent_infra","position":"Agent 间通信/交易网络层","target_customer":"developer","intent":"both",
+"skeleton":[
+"十年前做 AI Concierge 失败，因为 LLM 能解决语言与推理，但“行动/履约”需要对方开放环境与 API，当时靠人工呼叫中心兜底，无法规模化。",
+"做企业 agent 八年后发现核心难题是“主权”：各部门、各品牌都想掌握自己的环境，不愿被降级为白标 API，且个人 agent 存在代理人利益冲突。",
+"因此需要一个让主权 agent 互相通信、公平交易的网络层：“agent 是新的 web，网络即 AI”，在其上长出面向 agent 的多种市场与意图交换。",
+"号召听众让自己的个人 agent 先连上他的 agent，作为这一层的早期用户增长。"],
+"core_message":"masons.ai 主张在各自拥有主权的个人/服务 agent 之间建立开放的通信与交易网络层（意图交换、面向 agent 的市场），因为 agent 的真正瓶颈是对他人环境的“行动”，而品牌不愿被超级个人 agent 白标化、用户也无法确认个人 agent 是否忠于自己。",
+"frameworks":[
+{"name":"Agent 是新的 web；网络即 AI","gist":"agent 像 web 一样开放无许可，网络让能力不必自有、可跨 agent 调用，由此长出多种 agent 用户的市场。","seg":"2398–2425"},
+{"name":"目标+操作=行动 / 服务-客户二重性","gist":"行动是把环境从当前状态迁移到目标状态，在他人环境中行动需要许可；一个 agent 既是服务方又是客户。","seg":"2279–2356"}],
+"offerings":[
+{"name":"Agent 间通信/意图交换网络","what":"让不同框架的个人与服务 agent 以 agent-to-agent 方式互联、广播未满足的意图并交易。","for_whom":"agent 开发者、企业（采购/寻源）、个人 agent 用户","status":"preview"}],
+"why_needed":"对比“超级个人 agent（Codex、Claude Code、ChatGPT 等）收集意图再分发给各服务”的中心化路线：十年前的数字助理已证明品牌不愿被白标成履约 API，且用户难以确认个人 agent 是否代表自己利益，所以需要保留各方主权的去中心化互通层。",
+"problem_approach":[
+{"problem":"各方都要保有环境主权，导致 agent 孤岛，跨组织/品牌的行动难以落地。","approach":"在主权 agent 之间做框架无关的通信与公平交易层，企业内加治理层，跨组织做意图交换。"},
+{"problem":"个人 agent 的代理人问题：它究竟服务用户还是平台（类似广告交易所抽佣）。","approach":"以主权个人 agent 作为需求侧基础，保证个体独立性。"}],
+"non_consensus":[
+{"kind":"market_call","point":"超级个人 agent 收集意图并分发给服务的中心化模式，历史上品牌并不买账，agent 经济更可能需要主权 agent 间的互联层。","quote":"They don't want to be reduced to an API.","seg":"2357–2366","speaker":"Mingke Luo"},
+{"kind":"prediction","point":"agent 网络之上会出现多种面向 agent 用户的市场，而非单一的“agent 版 Google”。","quote":"not just one Google for the discoverability of all the webs, but different types of exchanges, trade places, marketplaces, except their users are agents.","seg":"2413–2425","speaker":"Mingke Luo"}],
+"signals":[
+{"type":"market_pattern","signal":"品牌与服务商抗拒被超级个人 agent 白标成履约接口，平台之间开始出现封锁他人 agent 的对抗（如亚马逊拒绝 Muse）。","value_as_heard":"","seg":"2279–2298"},
+{"type":"market_pattern","signal":"B2B 采购/寻源被设想为 agent 对 agent 的意图广播，而非传统 B2B 对接。","value_as_heard":"","seg":"2426–2436"}],
+"trend_categories":["personal_agent_ai_native","agent_harness_runtime"],
+"novelty":3,"pr_level":3,
+"content_industry_note":"创作者与内容平台若不愿被超级 agent 抽象成内容 API，需要自己的 agent 接口来保留与受众的直接关系，并在 agent 买方市场中定价与分发。",
+"filtered_consensus":["个人 agent 正在流行","LLM 解决语言与推理","企业 agent 落地需要既有 API","不同 harness 之间需要互通","agentic commerce 前景"]
+}

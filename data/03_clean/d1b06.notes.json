@@ -1,0 +1,42 @@
+{
+  "talk_id": "d1b06",
+  "speakers": [
+    {"name": "Davin YC Dong（董永超）", "name_as_heard": ["Devon", "董永超", "YC"], "org": "Cookiy Labs", "role": "创始人（自述'自己出来创业'；agenda: founder）", "background": "国内本科、美国读研；2013 年赴美，2015 年底搬到湾区；很早加入 Instagram（当时约 100 人）；之后在腾讯深圳、TikTok 新加坡工作；10 年职业生涯中前 7 年做 C 端产品（产品、运营、增长、商业化），后 3 年做 to B 营销相关工作。公司为美国公司，总部旧金山、新加坡有小 office，融资约 7.3 million（美元）；CTO 曾在 Meta、Airbnb 并做过 3 年 voice agent 创业；CRO Joven 曾长期在尼尔森。", "evidence_orders": [765]}
+  ],
+  "corrections": [
+    {"from": "Devon", "to": "Davin", "count": 3, "confidence": "high"},
+    {"from": "why combinator", "to": "Y Combinator", "count": 1, "confidence": "high"},
+    {"from": "CRO 久问", "to": "CRO Joven", "count": 1, "confidence": "medium"},
+    {"from": "to be 的营销", "to": "to B 的营销", "count": 1, "confidence": "high"},
+    {"from": "单向进", "to": "单向镜", "count": 2, "confidence": "high"},
+    {"from": "TLD", "to": "TL;DR", "count": 1, "confidence": "medium"},
+    {"from": "VA、VAD", "to": "VAD", "count": 1, "confidence": "high"},
+    {"from": "Pipekat", "to": "Pipecat", "count": 1, "confidence": "high"},
+    {"from": "全窗工", "to": "全双工", "count": 1, "confidence": "high"},
+    {"from": "GPT live", "to": "GPT-Live", "count": 1, "confidence": "high"},
+    {"from": "thinking machine的那个interactive model", "to": "Thinking Machines 的 interaction model", "count": 1, "confidence": "high"},
+    {"from": "集连", "to": "串联", "count": 3, "confidence": "medium"},
+    {"from": "一十万美金", "to": "十万美金", "count": 1, "confidence": "high"},
+    {"from": "容了少少的钱", "to": "融了少少的钱", "count": 1, "confidence": "high"},
+    {"from": "磨硬一体", "to": "模应一体〔?〕", "count": 1, "confidence": "medium"},
+    {"from": "人工仿现象", "to": "上人工访谈〔?〕", "count": 1, "confidence": "medium"},
+    {"from": "其实每笔模型贵多少", "to": "其实比模型贵不了多少〔?〕", "count": 1, "confidence": "medium"},
+    {"from": "向这个AI塞个小纸条（继续地）", "to": "持续地", "count": 1, "confidence": "medium"}
+  ],
+  "removed_non_content": [],
+  "uncertain": [
+    {"orders": "765–766", "issue": "Source jumps mid-sentence from 765 ('即便我们已经用了AI来') to 766 ('较高的') — content missing in the transcript; marked 〔无法辨识〕"},
+    {"orders": "808", "issue": "'大家肯定听过Jeff，大家肯定听过呃，那个decisions API' — referent unclear; marked 〔?〕"},
+    {"orders": "863", "issue": "'磨硬一体' — likely 模应一体 / 软硬一体 analogy; marked 〔?〕"},
+    {"orders": "874–879", "issue": "Talk cut off by time; orders 876–878 absent from input; last sentences partially garbled ('人工仿现象', '每笔模型贵多少')"},
+    {"orders": "765", "issue": "Chinese name 董永超 not web-verified; kept as self-stated (speaker confirms 超人的超, abbreviation YC)"}
+  ],
+  "verified": [
+    {"as_heard": "Devon / YC (founder)", "resolved_to": "Davin YC Dong, Cookiy Labs", "evidence": "https://cookiylabs.com/ — team lists Davin YC Dong (Founder and CEO); company based in San Francisco, $7M+ raised", "orders": "765"},
+    {"as_heard": "CRO 久问", "resolved_to": "Joven Lee (CRO, Cookiy)", "evidence": "https://cookiylabs.com/ and https://www.youtube.com/watch?v=lWrIHPrCzJw — Cookiy CRO Joven Lee", "orders": "765"},
+    {"as_heard": "董永超", "resolved_to": null, "evidence": "No source links 董永超 to Davin YC Dong; kept as self-stated", "orders": "765"},
+    {"as_heard": "GPT live", "resolved_to": "GPT-Live (OpenAI)", "evidence": "https://openai.com/index/introducing-gpt-live/ — full-duplex voice model delegating reasoning to a background model (big/small model pairing)", "orders": "795"},
+    {"as_heard": "thinking machine的那个interactive model", "resolved_to": "Thinking Machines Lab Interaction Models", "evidence": "https://thinkingmachines.ai/blog/interaction-models/ — real-time interaction model plus asynchronous background model", "orders": "795"},
+    {"as_heard": "Pipekat", "resolved_to": "Pipecat", "evidence": "well-known open-source voice agent framework alongside LiveKit/Agora (no separate search)", "orders": "776"}
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "talk_id": "d2m08",
+  "speakers": [
+    {"name": "Ronny He", "name_as_heard": ["Roni"], "org": "MiniMax", "role": "负责 MiniMax Code 的研发工作（R&D lead of MiniMax Code）", "background": "在 MiniMax 负责 MiniMax Code 研发；北大计算机背景（提到在北大计算机学习计算机原理）；做 AI 多年。", "evidence_orders": [1524, 1529, 1615, 1669]}
+  ],
+  "corrections": [
+    {"from": "Roni", "to": "Ronny", "count": 1, "confidence": "high"},
+    {"from": "玉博", "to": "玉伯", "count": 1, "confidence": "high"},
+    {"from": "MinMaxCode", "to": "MiniMax Code", "count": 1, "confidence": "high"},
+    {"from": "Opus 55", "to": "Opus 5.5", "count": 1, "confidence": "high"},
+    {"from": "奉诺归早", "to": "奉若圭臬", "count": 2, "confidence": "high"},
+    {"from": "compassion", "to": "compaction", "count": 3, "confidence": "high"},
+    {"from": "go 这个命令 / snatch go", "to": "goal 这个命令 / /goal", "count": 2, "confidence": "high"},
+    {"from": "plan and exec ute and verify", "to": "plan、execute and verify", "count": 1, "confidence": "high"},
+    {"from": "programming tool call", "to": "programmatic tool calling", "count": 2, "confidence": "high"},
+    {"from": "discovered inside a tool call", "to": "discovery inside a tool call", "count": 1, "confidence": "medium"},
+    {"from": "w ithout skills is better than with skills", "to": "without skills is better than with skills", "count": 1, "confidence": "high"},
+    {"from": "反而没有它会变更", "to": "反而没有它会变得更好", "count": 1, "confidence": "medium"},
+    {"from": "跟物理世界的交换", "to": "跟物理世界交互", "count": 1, "confidence": "high"},
+    {"from": "在没有和 AI 交换之前", "to": "在和 AI 交互之前", "count": 1, "confidence": "high"},
+    {"from": "token 消耗更好", "to": "token 消耗更少", "count": 1, "confidence": "medium"},
+    {"from": "how it's proving", "to": "how it's proven〔?〕", "count": 1, "confidence": "medium"},
+    {"from": "业界很多同事也做", "to": "业界很多同行也在做", "count": 1, "confidence": "medium"}
+  ],
+  "removed_non_content": [],
+  "uncertain": [
+    {"orders": "1602–1603", "issue": "Fourth harness dimension heard as 'how it's proving' — likely 'how it's proven' / verification; marked 〔?〕"},
+    {"orders": "1539–1540", "issue": "'Fable 5.5' kept as heard; model naming not web-verified"},
+    {"orders": "1546–1547", "issue": "Anthropic blog title paraphrased by speaker; kept as his paraphrase"}
+  ],
+  "verified": [
+    {"as_heard": "Roni (MiniMax Code 研发)", "resolved_to": "Ronny He", "evidence": "https://x.com/Ronny_MiniMax/status/2101293411479199934 — RonnyHe, Head of R&D at MiniMax Code", "orders": "1524"},
+    {"as_heard": "玉博", "resolved_to": "玉伯 (Baoping Wang / Yubo, YouMind)", "evidence": "https://github.com/FeeiCN/FEEI.CN/issues/830 — 'Frank Wang 玉伯：AIE Shanghai 2026 大会印象'; Yubo is an AIE Shanghai 2026 speaker", "orders": "1526"},
+    {"as_heard": "go 这个命令 / snatch go", "resolved_to": "/goal command", "evidence": "https://datasciencedojo.com/blog/claude-code-goal-command-vs-codex/ — Claude Code and Codex /goal command for running until a goal is met", "orders": "1562–1565"},
+    {"as_heard": "programming tool call (PTC)", "resolved_to": "Programmatic Tool Calling (PTC)", "evidence": "https://developers.openai.com/api/docs/guides/tools-programmatic-tool-calling — PTC: model writes code that orchestrates tool calls in a sandbox", "orders": "1632–1638"}
+  ]
+}

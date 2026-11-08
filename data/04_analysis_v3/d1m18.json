@@ -1,0 +1,40 @@
+{
+"talk_id":"d1m18",
+"speakers":"Do Tuan Anh",
+"org":"Techcombank",
+"value_chain_layer":"ai_adopter",
+"position":"银行 LLM 推理成本优化",
+"target_customer":"internal",
+"intent":"insight",
+"skeleton":[
+"规模化阶段 token 消耗暴涨，Techcombank 把全组织的有效混合单价（每百万 token，计缓存后）作为要压低的核心指标。",
+"企业买 LLM 推理有订阅制、按 token 付费、自购/租用 GPU 的 provisioned 三种方式，并提出 Efficiency Point 公式：GPU 月成本除以按 token 单价，得出月 token 量的切换点。",
+"实践路径：订阅超额先转按 token，用量超过效率点再转 provisioned（开源模型如 GLM），按 token 作为兜底；预期节省三到五成。",
+"切换不是唯一办法，语义与语言路由（尤其针对越南语、中文的 tokenization 成本）也能显著降本。"
+],
+"core_message":"银行自托管开源模型是否划算有一个可计算的盈亏点：把 GPU 月租金除以组织的有效混合 token 单价，用量超过它才应从按 token 付费转向 provisioned，低于它反而亏损；他们认为这条路径加上模型路由可降本三到五成。",
+"frameworks":[
+{"name":"Efficiency Point（效率点）","gist":"分子是 provisioned GPU 的月成本，分母是按 token 付费的有效混合单价，得到月 token 量盈亏点，超过才切换到自托管。","seg":"1982–2010"},
+{"name":"三种付费方式与切换顺序","gist":"订阅制（如 $200 套餐）超额后先转按 token 付费，用量超过效率点再转 provisioned，并在达到最大并发时再扩容。","seg":"1977–2025"}
+],
+"offerings":[],
+"why_needed":"",
+"problem_approach":[
+{"problem":"规模化后 token 消耗和 AI 总成本激增，用户偏好最强模型（如 Opus）使单价反弹。","approach":"以有效混合单价为核心指标，按效率点公式决定何时从订阅/按 token 转向 provisioned 开源模型，并结合路由降本。"},
+{"problem":"自托管 GPU 受 GPU 稀缺、峰值并发和扩缩容限制，纯 provisioned 有风险。","approach":"在 AI Gateway 层把 provisioned 模型设为主路径，按 token 的同一模型作兜底，试运行中用户感知不到差别。"}
+],
+"non_consensus":[
+{"kind":"practice","point":"自托管不是一律更便宜：低于效率点反而亏损，且用户偏好最强闭源模型会推高成本，需用公式判断切换时点。","quote":"Below this point, you actually run a deficit, because your GPU is not at an efficient consumption rate and you pay the full price of the GPU, since you are renting it.","seg":"2003–2010","speaker":"Do Tuan Anh"},
+{"kind":"practice","point":"除自托管外，语义路由与语言路由能因 tokenization 对越南语、中文的低效而显著降本，值得与 provisioned 并行采用。","quote":"To give you an example, some models are not as efficient in Vietnamese and Chinese as other models, so we pay very close attention to tokenization tax〔?〕.","seg":"2052–2058","speaker":"Do Tuan Anh"}
+],
+"signals":[
+{"type":"metric_focus","signal":"追踪全组织的有效混合每百万 token 成本（输入输出加权并扣除缓存），而非单一模型价格，说明关注点是规模化后的总拥有成本。","value_as_heard":"按 token 有效混合价约 2 美元，切换点约 8300 万 token（转写未核实）","seg":"1967–1972"},
+{"type":"market_pattern","signal":"企业用户从订阅制编码工具套餐（如 Claude Code）超额转向按 token 的开源模型 API，规模更大时转向在云上租 B200 自托管开源模型，GPU 稀缺是最大障碍。","value_as_heard":"","seg":"2019–2042"},
+{"type":"market_pattern","signal":"企业数据平台（如 Databricks）的 AI Gateway 承担主备路由，让 provisioned 与按 token 的同一模型无缝兜底。","value_as_heard":"","seg":"2043–2048"}
+],
+"trend_categories":["enterprise_agent_ops","open_models_posttrain_inference"],
+"novelty":3,
+"pr_level":1,
+"content_industry_note":"",
+"filtered_consensus":["规模化阶段成本暴涨","缓存率与输入输出比影响成本","模型越来越便宜","开源模型追赶闭源","延迟吞吐成本权衡","企业折扣影响实际价格"]
+}

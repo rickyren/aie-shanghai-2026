@@ -1,0 +1,92 @@
+{
+  "talk_id": "offagenda_AJ_WaytoAGI",
+  "speakers": "AJ",
+  "org": "WaytoAGI（通往AGI之路）",
+  "value_chain_layer": "capital_community",
+  "position": "社区的 AI 协作实践",
+  "target_customer": "internal",
+  "intent": "insight",
+  "skeleton": [
+    "AI 社区自己要 AI native：最重要的是上下文，把会议、录音、活动方案全部沉淀到云端共享知识库，并用 skill 让每个人自动归档，权限在上下文面前不重要。",
+    "AI 写得太多会产生 slop，所以用 ADHD skill 和画板（SVG）输出，让文档结构化、可视化，并写进 AGENTS.md。",
+    "做过两次以上的事就 SOP 化，做成黑客松、展会等可复用的工作台，会议结束后自动提炼、归档、分发，每晚共学自动剪辑切片、发布并改写成公众号文章。",
+    "同时保持好玩：自动生成日报和月度 AI 视频日记；skill 都已公开到 GitHub。"
+  ],
+  "core_message": "WaytoAGI 把一切会议、录音和活动记录沉淀为共享上下文，做过两次的事就写成 skill、SOP 和工作台，让社区几乎不用人工就能运转；上下文比权限更重要，输出还要为人类的阅读负担做可视化。",
+  "frameworks": [
+    {
+      "name": "做过两次就 SOP 化",
+      "gist": "重复两次以上的事情沉淀为 skill 和可视化工作台，最后由人工校准，团队成员复用。",
+      "seg": "932–951"
+    }
+  ],
+  "offerings": [
+    {
+      "name": "ADHD skill 与社区 skill 库",
+      "what": "把长篇 AI 输出改写为结构化、可视化的画板内容，以及会议归档、日报等自动化 skill，已公开在 GitHub 与 WaytoAGI 知识库。",
+      "for_whom": "社区成员与个人/小团队",
+      "status": "open_source"
+    }
+  ],
+  "why_needed": "",
+  "problem_approach": [
+    {
+      "problem": "多人、多空间、远程协作时，信息散落在不同人的会议和文档里，新同事和合作方得重复沟通。",
+      "approach": "让每个人装同一个 skill，会议结束后自动归档到全员可读的共享上下文，并按客户分类，必要时自动生成交接文档发给对方。"
+    },
+    {
+      "problem": "AI 输出过多、过长，人读起来费劲。",
+      "approach": "在 AGENTS.md 里要求用直白的写法、画板（SVG）输出，并把本地文件同步到云端文档。"
+    }
+  ],
+  "non_consensus": [
+    {
+      "kind": "practice",
+      "point": "上下文全员透明，权限不是首要问题；价值来自所有会议和记录都成为可调用的共享资产。",
+      "quote": "我希望这个东西全部都是透明的，大家经常会说权限的问题，我认为权限在上下文面前不是很重要。",
+      "seg": "930–930",
+      "speaker": "AJ"
+    },
+    {
+      "kind": "practice",
+      "point": "固化的规则是做过两次就沉淀成 SOP，而不是一开始就设计流程。",
+      "quote": "当你做这件事情做过两次以上的时候，你就要把它SOP化。",
+      "seg": "932–932",
+      "speaker": "AJ"
+    }
+  ],
+  "signals": [
+    {
+      "type": "data_signal",
+      "signal": "社区把自 2023 年起的所有录音、妙记、群聊、活动方案等持续采集为内部上下文资产，用于策划、联络和自动写作。",
+      "value_as_heard": "",
+      "seg": "930–930"
+    },
+    {
+      "type": "market_pattern",
+      "signal": "小团队、全球分布式协作成为常态，协作发生在文档、会议转写和 skill 而不是面对面沟通。",
+      "value_as_heard": "",
+      "seg": "932–932"
+    },
+    {
+      "type": "metric_focus",
+      "signal": "关注的是节省人工步骤的程度，如每晚直播后一键完成剪辑、分发、写文章，而不是模型指标。",
+      "value_as_heard": "",
+      "seg": "940–951"
+    }
+  ],
+  "trend_categories": [
+    "personal_agent_ai_native",
+    "memory_data_context"
+  ],
+  "novelty": 2,
+  "pr_level": 2,
+  "content_industry_note": "每晚直播结束后自动剪辑切片、发布社交媒体、改写成公众号文章和月度 AI 视频日记，说明小型内容社区已把“直播到多渠道分发”做成一键流水线。",
+  "filtered_consensus": [
+    "上下文最重要",
+    "知识库云端存储",
+    "远程协作",
+    "AI 写作 slop 问题",
+    "社区介绍与邀请"
+  ]
+}

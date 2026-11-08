@@ -1,0 +1,6 @@
+{"talk_id":"d2m09","speakers":[{"name":"何文智","name_as_heard":[],"org":"AiMoga Robotics（安徽墨甲机器人）","role":"工业具身智能产品负责人","background":"自述负责工业具身智能方向产品；产品为面向工业生产的智能化机器人，第一款产品下个月在合作伙伴的苏州工厂上线部署；公司软硬结合、偏硬件。","evidence_orders":[1721,1723,1724,1726,1727,1729,1730]}],
+"corrections":[{"from":"安徽莫甲集齐人","to":"安徽墨甲机器人 (AiMoga Robotics)","count":1,"confidence":"high"},{"from":"VRA","to":"VLA","count":6,"confidence":"high"},{"from":"微软 VRA 模型","to":"纯 VLA 模型","count":1,"confidence":"medium"},{"from":"VRM 模型","to":"VLM 模型","count":1,"confidence":"medium"},{"from":"MICE 系统","to":"MES 系统","count":1,"confidence":"high"},{"from":"呃/啊 etc.","to":"removed","count":50,"confidence":"high"},{"from":"超越视觉语言动作模型 (title)","to":"kept","count":1,"confidence":"high"},{"from":"接触力、滑动...摩擦","to":"light restructuring only","count":1,"confidence":"medium"}],
+"removed_non_content":[],
+"uncertain":[{"orders":"1731","issue":"'微软 VRA 模型' likely '纯 VLA 模型'"},{"orders":"1800","issue":"final sentence garbled ('并非用来来验证我们的真实的交互结果和商业价值'); best reading given"},{"orders":"1780","issue":"'物理或者是我们的基础' unclear; 'PCB 板' possibly misheard"}],
+"verified":[{"as_heard":"安徽莫甲 / AiMoga","resolved_to":"安徽墨甲机器人 (AiMOGA Robotics)","evidence":"https://aimoga-robot.com/ - official site, Chery-incubated humanoid/embodied robotics company, Anhui","orders":"1721–1729"}],
+"actual_topic_note":""}

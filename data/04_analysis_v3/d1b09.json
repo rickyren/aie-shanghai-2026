@@ -1,0 +1,84 @@
+{
+ "talk_id": "d1b09",
+ "speakers": "Peter Hoffmann",
+ "org": "Data4Life Asia",
+ "value_chain_layer": "ai_adopter",
+ "position": "harness 验证AI代码",
+ "target_customer": "internal",
+ "intent": "insight",
+ "skeleton": [
+  "用 agent 在两人小团队内重写开源医疗研究应用 Atlas，代码量大到无法逐行人工 review，核心问题变成如何验证生成代码。",
+  "除 agent 自身的指令/技能外，还要在代码外围搭验证 harness：spec、旧系统作 oracle、CI 门禁与变异测试、截图视觉验证，最后才由人终审。",
+  "人保留意图、品味和架构取舍，harness 负责契约、保真对比、测试有效性和视觉检查；剩余缺口是环境假设、门禁可靠性和领域判断。",
+  "能确定性检查就不要让 LLM 判断；有参考实现的迁移类任务容易，全新产品则更依赖人定 spec 与品味。"
+ ],
+ "core_message": "AI 生成大量代码后人已无法逐行 review，所以要把 harness 当作第一道 reviewer：以旧系统为 oracle、用变异测试检验 AI 写的测试是否真有效、再加截图视觉验证，人只守住意图与品味。有参考实现的重写类任务适合这套做法，全新产品仍需要人深度参与。",
+ "frameworks": [
+  {
+   "name": "harness 四件套（外围验证）",
+   "gist": "spec、oracle（旧系统）、gates（CI 与测试）、视觉验证四部分，依序校验 agent 生成的代码，之后才由人终审。",
+   "seg": "1010–1026"
+  },
+  {
+   "name": "人 vs harness 分工",
+   "gist": "人保留意图、选择与品味（UI、架构取舍）；harness 负责契约检查、与旧系统保真对比、测试有效性与视觉验证。",
+   "seg": "1085–1108"
+  }
+ ],
+ "offerings": [],
+ "why_needed": "",
+ "problem_approach": [
+  {
+   "problem": "agent 生成的测试可能恒真或覆盖率高却抓不到 bug，人又无法逐行 review 海量代码。",
+   "approach": "静态检查拦截恒真测试，并用变异测试（人为注入小 bug 看测试是否失败）度量测试有效性，再让 agent 据此补强测试。"
+  },
+  {
+   "problem": "重写应用时如何保证新旧行为一致。",
+   "approach": "把旧系统当 oracle：用网络上已验证的大量已发布 cohort 定义做导入/导出/修改回路，对比新旧结果，并把发现的 bug 沉淀成自动检测。"
+  }
+ ],
+ "non_consensus": [
+  {
+   "kind": "practice",
+   "point": "覆盖率会误导：高覆盖率的组件在变异测试下大部分注入 bug 未被发现，应以变异测试而非覆盖率衡量 AI 写的测试。",
+   "quote": "for one component we had a test coverage of nearly 90%, so it looked great.",
+   "seg": "1069–1079",
+   "speaker": "Peter Hoffmann"
+  },
+  {
+   "kind": "practice",
+   "point": "能写确定性检查就不要让 LLM 判断对错，长期更可靠。",
+   "quote": "if you can do a deterministic check, if you can write a test, I think that's always more reliable over time than letting the LLM decide whether something is correct.",
+   "seg": "1152–1166",
+   "speaker": "Peter Hoffmann"
+  }
+ ],
+ "signals": [
+  {
+   "type": "metric_focus",
+   "signal": "追踪变异测试通过率而非仅代码覆盖率，以衡量 AI 生成测试是否真有检出能力。",
+   "value_as_heard": "覆盖率约 98%，变异测试通过率 70% 以上",
+   "seg": "1069–1079"
+  },
+  {
+   "type": "market_pattern",
+   "signal": "开源社区 issue 由 agent 每日扫描、对照知识库起草回复或小修 PR，维护者只做审核，小团队借此应对社区反馈。",
+   "value_as_heard": "",
+   "seg": "1141–1151"
+  }
+ ],
+ "trend_categories": [
+  "eval_verifiability",
+  "agent_harness_runtime"
+ ],
+ "novelty": 3,
+ "pr_level": 1,
+ "content_industry_note": "视频/剪辑工具若由 agent 大规模重写，可借鉴旧版本作 oracle 的对比验证与截图视觉验证来保障剪辑与渲染结果一致，但审美类判断仍需人定。",
+ "filtered_consensus": [
+  "spec 要写清楚验收标准",
+  "CI 门禁需要类型检查与 lint",
+  "人在回路做最终确认",
+  "编码 agent 提升小团队产出",
+  "LLM 写的测试不一定有意义"
+ ]
+}

@@ -1,0 +1,22 @@
+{"talk_id":"d2m04","speakers":[{"name":"Shihui Zhu","name_as_heard":[],"org":"HICAP Group","role":"manufacturing executive (title not stated in transcript; agenda lists General Manager of Haiwei Software, HICAP Group)","background":"Represents a bottle-cap manufacturer with 6 smart factories in China whose customers cover almost all well-known domestic brands; built the Hiwork enterprise AI workbench, 50+ agents, ~100B tokens/month; also serves quasi-manufacturing clients with one-item-one-code and scan-code marketing.","evidence_orders":[717,718,723,724,725,860]}],
+"corrections":[
+{"from":"海哟天 / 要天的海","to":"要填的海〔?〕","count":2,"confidence":"medium"},
+{"from":"MS","to":"MES","count":2,"confidence":"high"},
+{"from":"不学系统","to":"不少系统","count":1,"confidence":"medium"},
+{"from":"高德拉特目标","to":"高德拉特《目标》","count":1,"confidence":"high"},
+{"from":"擦单","to":"砍单〔?〕","count":1,"confidence":"medium"},
+{"from":"一屋一马","to":"一物一码","count":1,"confidence":"medium"},
+{"from":"筹、组织","to":"组织","count":1,"confidence":"high"},
+{"from":"利国之本","to":"立国之本","count":1,"confidence":"medium"},
+{"from":"零散型制造业","to":"离散型〔?〕制造业","count":1,"confidence":"medium"},
+{"from":"流程性组织智能体","to":"流程型组织智能体","count":1,"confidence":"medium"},
+{"from":"剪人 / 开疆扩土","to":"减人 / 开疆拓土","count":1,"confidence":"medium"}],
+"removed_non_content":[{"orders":"710","what":"filler"},{"orders":"845","what":"filler"}],
+"uncertain":[{"orders":"711","issue":"'屠龙老师' previous speaker, unidentified"},{"orders":"714,727","issue":"'海哟天/要天的海' garbled"},{"orders":"856–860","issue":"'类制造业' possibly 泛快消/离散类 etc."},{"orders":"792","issue":"report name approximate"}],
+"verified":[
+{"as_heard":"Shihui Zhu / HICAP Group","resolved_to":"Shihui Zhu, HICAP Group","evidence":"https://ai.engineer/shanghai/2026/speakers?lang=cn - listed as General Manager of Haiwei Software, HICAP Group; talk title matches","orders":"717"},
+{"as_heard":"高德拉特目标 (非瓶颈上省下的时间是海市蜃楼)","resolved_to":"高德拉特《目标》","evidence":"https://www.yicai.com/news/746727.html - Goldratt quote about non-bottleneck savings being a mirage","orders":"785"},
+{"as_heard":"智能制造能力模型报告 6万家","resolved_to":"智能制造成熟度相关报告 (title kept as spoken with 〔?〕)","evidence":"https://www.digiwin.com/information/12274.html - report surveying ~60k manufacturers, 4% at level 4+","orders":"792–793"},
+{"as_heard":"屠龙老师","resolved_to":null,"evidence":"not searched; previous speaker, not identifiable from this transcript","orders":"711"},
+{"as_heard":"Hiwork","resolved_to":null,"evidence":"https://github.com/susie-jpg/HiWork - name match only, link to HICAP unconfirmed; kept as spoken","orders":"723"}],
+"actual_topic_note":""}

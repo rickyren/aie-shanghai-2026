@@ -1,0 +1,44 @@
+{
+  "talk_id": "d2m16",
+  "speakers": [
+    {
+      "name": "Grace Li",
+      "name_as_heard": [],
+      "org": "1Password",
+      "role": "",
+      "background": "No self-introduction in the transcript; name and organization come from the agenda only.",
+      "evidence_orders": []
+    }
+  ],
+  "corrections": [
+    {"from": "GEV, uh, CLEF, D1", "to": "GEV, Clef, d1", "count": 1, "confidence": "high"},
+    {"from": "LEA", "to": "Laya", "count": 2, "confidence": "high"},
+    {"from": "liquid D1", "to": "Liquid d1", "count": 1, "confidence": "high"},
+    {"from": "doesn't go off-post", "to": "doesn't go off-host", "count": 1, "confidence": "high"},
+    {"from": "the threat detection model on your production service", "to": "the threat detection service on your production account", "count": 1, "confidence": "medium"},
+    {"from": "investigate a failing task", "to": "investigate a failing service", "count": 1, "confidence": "medium"},
+    {"from": "the reason, the agent's reason", "to": "the agent's reasoning", "count": 1, "confidence": "medium"},
+    {"from": "AWS log filter", "to": "AWS logs filter", "count": 1, "confidence": "medium"},
+    {"from": "re-require labeling", "to": "require labeling", "count": 1, "confidence": "high"},
+    {"from": "This access level then is a plot, uh, a we apply policy", "to": "We then apply policy on top of these access levels", "count": 1, "confidence": "high"},
+    {"from": "this result enforces", "to": "this result reinforces", "count": 1, "confidence": "medium"},
+    {"from": "Qwen 2.7, 7 billion parameter", "to": "Qwen 2.7〔?〕, 7 billion parameters", "count": 1, "confidence": "medium"},
+    {"from": "my talk shows a common problem ... which is the answer", "to": "my talk addresses a common problem ... which is answering", "count": 1, "confidence": "medium"},
+    {"from": "How many safe calls are we letting through", "to": "The second is how many safe calls we are letting through", "count": 1, "confidence": "high"}
+  ],
+  "removed_non_content": [],
+  "uncertain": [
+    {"orders": "3047", "issue": "'Qwen 2.7, 7 billion parameter' — no Qwen 2.7 exists (Qwen2.5-7B is the likely model); kept as heard with 〔?〕."},
+    {"orders": "2988–2989", "issue": "Short stage hiccup ('oh, okay. Okay,') removed inline."}
+  ],
+  "verified": [
+    {"as_heard": "GEV", "resolved_to": "GEV (AutoTrust GEV-26B-Decide decision model)", "evidence": "https://huggingface.co/autotrust/GEV-26B-Decide — open-weight decision model, same category as the others compared", "orders": "3039"},
+    {"as_heard": "CLEF", "resolved_to": "Clef (Cloudflare open-weight decision model)", "evidence": "https://www.marktechpost.com/2026/10/01/cloudflare-releases-clef-and-clef-flash/ — open-weight decision models returning typed probabilities", "orders": "3039"},
+    {"as_heard": "D1 / liquid D1", "resolved_to": "Liquid AI d1", "evidence": "https://docs.liquid.ai/lfm/models/decision-models — Liquid AI d1 decision models; docs list agent tool-call approval as a use case", "orders": "3039–3044"},
+    {"as_heard": "LEA, a much smaller 400 million parameter model", "resolved_to": "Laya (Convai Innovations, ~421M parameters)", "evidence": "https://systemonemodels.org/models/laya/ — Laya open decision model, ModernBERT-large encoder + head, 421M total", "orders": "3039–3040"},
+    {"as_heard": "Kimi K3", "resolved_to": "Kimi K3 (Moonshot AI)", "evidence": "https://openrouter.ai/moonshotai/kimi-k3 — hosted LLM released July 2026", "orders": "3020"},
+    {"as_heard": "Qwen 2.7, 7 billion parameter", "resolved_to": null, "evidence": "Qwen version listings (https://en.wikipedia.org/wiki/Qwen) show no Qwen 2.7 or 3.7 7B; likely Qwen2.5-7B but not confirmed", "orders": "3047"},
+    {"as_heard": "Grace Li, 1Password (talk to be announced)", "resolved_to": "Grace Li, 1Password", "evidence": "https://ai.engineer/shanghai/2026/program?lang=cn — program lists Grace Li, 1Password, 'Talk to be announced'", "orders": "2985"}
+  ],
+  "actual_topic_note": "Agenda title is 'Talk to be announced'. Actual topic: runtime intent judging for AI agent tool calls — using small open decision models (GEV, Clef, d1, Laya) vs. an SLM to classify tool-call access level, plus an MCP-gateway + policy-gate reference architecture."
+}

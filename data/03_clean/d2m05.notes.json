@@ -1,0 +1,57 @@
+{
+  "talk_id": "d2m05",
+  "speakers": [
+    {
+      "name": "James Hush",
+      "name_as_heard": ["James", "James Hush"],
+      "org": "Daily.co (Pipecat); says \"I'm at Deepgram\" (Daily was being acquired by Deepgram)",
+      "role": "Works on Pipecat, the open source voice agent library",
+      "background": "Has lived in Asia for about six years; wife is Taiwanese; cannot read Chinese. Works on Pipecat, the open source, vendor-agnostic library that glues voice agent pipelines together; built a bubble tea ordering practice voice agent with Claude and Pipecat evals/simulations.",
+      "evidence_orders": [868, 878, 887, 919, 922, 1024]
+    }
+  ],
+  "corrections": [
+    {"from": "Pipecab", "to": "Pipecat", "count": 8, "confidence": "high"},
+    {"from": "daily (to transport the audio)", "to": "Daily", "count": 1, "confidence": "high"},
+    {"from": "Minimax", "to": "MiniMax", "count": 1, "confidence": "high"},
+    {"from": "you could use Deepgram to text to speech", "to": "you could use Deepgram for text-to-speech", "count": 1, "confidence": "high"},
+    {"from": "Why die?", "to": "外带", "count": 1, "confidence": "medium"},
+    {"from": "chubing / Chubing", "to": "qu bing (去冰)", "count": 2, "confidence": "high"},
+    {"from": "too ping", "to": "two 瓶", "count": 1, "confidence": "medium"},
+    {"from": "Jinju Naicha", "to": "zhenzhu naicha (珍珠奶茶)", "count": 1, "confidence": "high"},
+    {"from": "Donghua Cha", "to": "donggua cha (冬瓜茶)", "count": 1, "confidence": "high"},
+    {"from": "Jia Qiu Qiu", "to": "jia QQ〔?〕", "count": 1, "confidence": "medium"},
+    {"from": "Weitang, Waidai", "to": "weitang (微糖), waidai (外带)", "count": 1, "confidence": "high"},
+    {"from": "I'd answer with 真的看不懂中文", "to": "I 真的看不懂中文", "count": 1, "confidence": "medium"},
+    {"from": "哦，大家好，我叫James", "to": "大家好，我叫 James", "count": 1, "confidence": "high"},
+    {"from": "a scripted LLM is like someone doing stand-up comedy", "to": "a scripted eval is like someone doing stand-up comedy", "count": 1, "confidence": "medium"},
+    {"from": "an eval or simulation is more like improv", "to": "a simulation is more like improv", "count": 1, "confidence": "medium"},
+    {"from": "checks an agent that says something in a different run every time", "to": "check an agent that says something different every run", "count": 1, "confidence": "medium"},
+    {"from": "I can check double-check the success side", "to": "I can double-check the success criteria", "count": 1, "confidence": "medium"},
+    {"from": "I was saying \"two bottles.\"", "to": "It was saying \"two bottles.\"〔?〕", "count": 1, "confidence": "medium"},
+    {"from": "speak the whole call every more", "to": "speak the whole call every time anymore", "count": 1, "confidence": "medium"},
+    {"from": "我们刚为你光临", "to": "欢迎光临〔?〕", "count": 1, "confidence": "medium"},
+    {"from": "精品奶茶名为乌龙奶茶或珍珠奶茶", "to": "经典奶茶〔?〕有乌龙奶茶或珍珠奶茶", "count": 1, "confidence": "medium"},
+    {"from": "Hi Holly.", "to": "Hi，哈喽〔?〕。", "count": 1, "confidence": "medium"},
+    {"from": "So as. My bubble tea ordering skills", "to": "As for my bubble tea ordering skills", "count": 1, "confidence": "high"}
+  ],
+  "removed_non_content": [
+    {"orders": "943–944", "what": "demo playback chatter (\"Okay, I'm testing. Okay, I'll pause.\") — dropped from text, range kept inside paragraph [seg 943–947]"},
+    {"orders": "974–976", "what": "false start while showing generated simulation (\"Oh, there's some, some.\") — dropped from text, kept inside paragraph range"},
+    {"orders": "870, 873, 886, 921, 957, 990", "what": "standalone fillers (Uh/Um) — inside paragraph ranges"}
+  ],
+  "uncertain": [
+    {"orders": "883–884", "issue": "\"Why die?\" after 一杯珍珠奶茶 read as 外带 (waidai, takeaway), consistent with 'Waidai' at 1020; not certain."},
+    {"orders": "988–989", "issue": "STT bug example: 去冰 misheard as 'too ping' (two 瓶 = two bottles); line 989 'I was saying' likely 'It was saying' / 'It was hearing'."},
+    {"orders": "997–1001", "issue": "Simulation clip Chinese ASR garbled: 'Hi Holly' (probably Hi/哈喽), '我们刚为你光临' (probably 欢迎光临), '精品奶茶名为' (probably 经典奶茶有)."},
+    {"orders": "1019", "issue": "'Jia Qiu Qiu' — possibly 加QQ (chewy toppings, Taiwanese usage) or another topping; not confirmed."},
+    {"orders": "922", "issue": "'I'm at Deepgram' kept as heard; plausible since Deepgram announced acquiring Daily on 2026-10-29, agenda lists Daily.co."}
+  ],
+  "verified": [
+    {"as_heard": "James Hush / Daily / Pipecab", "resolved_to": "James Hush, Daily; Pipecat", "evidence": "https://www.linkedin.com/in/jameshush/ — James Hush at Daily, 'helping customers build voice and video AI agents with Pipecat and Daily', based in Taipei, posted about a Pipecat voice agent to practice ordering bubble tea in Chinese", "orders": "868–1024"},
+    {"as_heard": "Pipecab", "resolved_to": "Pipecat", "evidence": "https://github.com/pipecat-ai/pipecat — open source framework for voice agents maintained by Daily; https://docs.pipecat.ai/pipecat/evals/overview — Pipecat Evals with scripted evals, simulations, text/audio mode, judges", "orders": "919–973"},
+    {"as_heard": "I'm at Deepgram", "resolved_to": "Deepgram (acquiring Daily)", "evidence": "https://www.financialcontent.com/article/bizwire-2026-10-29-deepgram-is-acquiring-daily-makers-of-pipecat-to-offer-the-first-complete-production-ready-open-stack-for-conversational-voice-ai — Deepgram acquiring Daily, makers of Pipecat, announced 2026-10-29, explaining why a Daily speaker says he is at Deepgram", "orders": "922"},
+    {"as_heard": "Donghua Cha / Weitang / Chubing / Waidai", "resolved_to": "冬瓜茶 / 微糖 / 去冰 / 外带", "evidence": "https://www.soeasyedu.com.tw/blog/life-english/order-boba-tea and https://sutian.moe.edu.tw/zh-hant/su/1459/ — standard Taiwanese drink-ordering terms (冬瓜茶, 微糖, 去冰)", "orders": "1018–1020"},
+    {"as_heard": "Jia Qiu Qiu", "resolved_to": null, "evidence": "Same search for 加QQ returned no matching result; left as jia QQ〔?〕", "orders": "1019"}
+  ]
+}

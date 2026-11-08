@@ -1,0 +1,76 @@
+{
+  "_doc": "V1 tagging schema for one talk. Enum values are the allowed codes; labels are for humans. Output field values in Chinese except quotes (original language) and names.",
+  "enums": {
+    "value_chain_layer": {
+      "foundation_model": "基座模型（训练并发布通用模型的公司，如 StepFun、MiniMax、Kimi）",
+      "model_infra": "模型训练与推理服务（推理引擎/云、后训练服务、算力调度，如 Baseten）",
+      "agent_infra": "Agent 基础设施（sandbox、harness/运行时、LLM gateway、可观测、agent 平台，如 Daytona、Langfuse、Dify）",
+      "data_context": "数据与上下文（搜索、记忆、数据库、向量库、数据目录、数据供给/标注，如 Exa、Zilliz、TiDB、DataHub、LanceDB、Jina）",
+      "evaluation": "评测（评测平台、benchmark、验证工具，如 Arena）",
+      "general_agent_app": "通用 / 个人 Agent 应用（如 Manus、YouMind、OpenClaw）",
+      "vertical_app": "垂直与企业应用（面向特定行业或职能卖 AI 产品，如 Harvey 法律、HeyGen 视频、AhaCreator 达人营销）",
+      "ai_adopter": "AI 使用方（主业不是卖 AI，而是在自身业务里用 AI 的企业，如银行、支付、交易所、OTA、制造业）",
+      "embodied_world_model": "具身智能与世界模型（机器人整机/大脑、世界模型、3D 生成、物理 AI）",
+      "on_device": "端侧模型与推理（手机/PC/边缘设备上的模型与引擎，如 AutoArk、Liquid AI）",
+      "capital_community": "资本与社区（VC、社区、媒体、大会组织者）"
+    },
+    "org_type": {
+      "startup": "创业公司", "big_tech": "大厂", "model_lab": "模型实验室", "enterprise": "传统企业 / 非 AI 主业企业",
+      "investor": "投资机构", "community": "社区 / 媒体 / 组织者", "research": "学术机构", "independent": "独立开发者 / 个人"
+    },
+    "talk_type": {
+      "tech_practice": "技术实践（做法、踩坑、什么有效什么无效）",
+      "product_pitch": "产品介绍 / PR（功能、卖点、案例展示）",
+      "vision": "理念与愿景（观点、方法论、行业该往哪走）",
+      "industry_knowhow": "行业 know-how 与商业实践（某个领域里用 AI 做什么、怎么落地、行业特殊性）",
+      "investment_market": "投资与市场判断（赛道、机会、商业模式、竞争格局）",
+      "research": "研究进展（论文、模型、新范式）"
+    },
+    "claim_kind": {"fact": "事实/数据/经历", "opinion": "观点/判断", "prediction": "预测"},
+    "practice_outcome": {"works": "有效", "fails": "无效/踩坑", "mixed": "看条件", "proposed": "提出但未验证"},
+    "signal_type": {
+      "data": "数据信号：在采集/生产/购买/出售什么数据（含 RL 环境、轨迹、行业数据、人工标注、招特定专业人员做数据）",
+      "business_model": "商业模式 / 定价 / 收费方式",
+      "metric": "具体数字（规模、成本、效果、增长）",
+      "hiring": "招聘 / 团队构成",
+      "open_source": "开源动作",
+      "product_launch": "新产品 / 新功能发布",
+      "partnership": "合作 / 客户 / 生态",
+      "funding": "融资 / 估值 / 投资事件"
+    },
+    "entity_kind": {"company": "公司", "product": "产品", "model": "模型", "open_source": "开源项目", "paper": "论文/方法", "person": "人"},
+    "entity_role": {"self": "讲者自家", "customer": "客户", "partner": "合作方", "competitor": "竞品", "used": "使用的工具/依赖", "mentioned": "提及"},
+    "trend_category": {
+      "agent_harness_runtime": "Agent harness / 运行时与沙箱",
+      "open_models_posttrain_inference": "开源模型与后训练 / 推理工程",
+      "eval_verifiability": "评测与可验证性",
+      "enterprise_agent_ops": "企业级 agent 规模化运营",
+      "memory_data_context": "记忆、数据与上下文工程",
+      "personal_agent_ai_native": "个人 agent 与 AI 原生产品",
+      "world_model_spatial": "世界模型与空间智能",
+      "embodied_physical_ai": "具身 / Physical AI",
+      "on_device_decision_models": "端侧与决策模型",
+      "investment_startup": "投资与创业叙事"
+    }
+  },
+  "shape": {
+    "talk_id": "str",
+    "actual_title": "str，实际讲的主题（中文，一句话）",
+    "org": {"name": "str", "org_type": "enum org_type", "value_chain_layer": "enum value_chain_layer",
+            "sub_layer": "str，更细的位置，如『推理云』『coding agent』", "one_liner": "str，这家公司做什么（依据演讲内容）",
+            "layer_rationale": "str，为什么归到这一层"},
+    "talk_type": {"primary": "enum talk_type", "secondary": "enum talk_type 或 null"},
+    "core_message": "str，1–2 句话的核心观点",
+    "summary": "str，150–300 字摘要",
+    "key_claims": [{"claim": "str", "kind": "enum claim_kind", "quote": "str，清稿中的原句（逐字子串）", "seg": "A–B"}],
+    "practices": [{"practice": "str", "outcome": "enum practice_outcome", "conditions": "str 或空", "seg": "A–B"}],
+    "pain_points": [{"problem": "str", "seg": "A–B"}],
+    "predictions": [{"prediction": "str", "horizon": "str 或空", "seg": "A–B"}],
+    "signals": [{"type": "enum signal_type", "detail": "str", "seg": "A–B"}],
+    "entities": [{"name": "str", "kind": "enum entity_kind", "role": "enum entity_role"}],
+    "trend_categories": ["enum trend_category 或 'new:<中文名>'，按相关度排序，1–3 个"],
+    "scores": {"info_density": "1–5", "novelty": "1–5", "pr_level": "1–5", "rationale": "str，一句话说明打分理由"},
+    "quotable": [{"quote": "str，清稿原句", "seg": "A–B"}],
+    "content_industry_note": "str 或空：对内容行业（视频、剪辑、创作者、内容平台）的启发"
+  }
+}

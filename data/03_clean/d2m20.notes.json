@@ -1,0 +1,42 @@
+{
+  "talk_id": "d2m20",
+  "speakers": [
+    {
+      "name": "Yanlong Wang",
+      "name_as_heard": [],
+      "org": "Jina AI by Elastic",
+      "role": "",
+      "background": "Not self-introduced in the transcript; speaks for the Jina Reader team ('我们 Jina AI 开发的…工具').",
+      "evidence_orders": [3679]
+    }
+  ],
+  "corrections": [
+    {"from": "GNI / GNI AI", "to": "Jina / Jina AI", "count": 4, "confidence": "high"},
+    {"from": "GNI Reader", "to": "Jina Reader", "count": 3, "confidence": "high"},
+    {"from": "r.gna.ai", "to": "r.jina.ai", "count": 1, "confidence": "high"},
+    {"from": "技术 API", "to": "SaaS API (marked 〔?〕)", "count": 1, "confidence": "medium"},
+    {"from": "手无法编程", "to": "手写编程 (marked 〔?〕)", "count": 1, "confidence": "medium"},
+    {"from": "练，呃，链接的地址", "to": "链接的地址", "count": 1, "confidence": "high"},
+    {"from": "36.9", "to": "36.9%", "count": 1, "confidence": "high"},
+    {"from": "大战 / 小战", "to": "大站 / 小站", "count": 2, "confidence": "high"},
+    {"from": "泛洲国家", "to": "非洲国家 (marked 〔?〕)", "count": 1, "confidence": "medium"},
+    {"from": "recapture", "to": "reCAPTCHA", "count": 2, "confidence": "high"},
+    {"from": "OCR 数据的标定", "to": "OCR 数据的标注", "count": 1, "confidence": "medium"},
+    {"from": "re-ranker", "to": "reranker", "count": 2, "confidence": "high"},
+    {"from": "对面的网站", "to": "对方网站", "count": 1, "confidence": "medium"}
+  ],
+  "removed_non_content": [
+    {"orders": "3670–3677", "what": "Language-switch chatter (planned Mandarin vs English slides, apology to English speakers, '有点紧张，不好意思')"}
+  ],
+  "uncertain": [
+    {"orders": "3686–3687", "issue": "'技术 API 的一个形式' — likely 'SaaS API' (Reader is described publicly as Jina's first SaaS API)."},
+    {"orders": "3705", "issue": "'手无法编程' — probably 手写/手工编程 (pre-AI hand-written pipeline)."},
+    {"orders": "3738, 3748", "issue": "Price figures '中位数是 0.4' and '底价 0.45' are ambiguous (units / which is which); kept 0.45 floor, omitted no number but the '0.4' line is folded into '按中位数来比'."},
+    {"orders": "3780", "issue": "'泛洲国家' — likely 非洲国家; could be 泛…(other) region."}
+  ],
+  "verified": [
+    {"as_heard": "GNI Reader / r.gna.ai", "resolved_to": "Jina Reader / r.jina.ai", "evidence": "https://github.com/jina-ai/reader — 'Convert any URL to an LLM-friendly input with a simple prefix https://r.jina.ai/'; open-source, headless Chrome rendering", "orders": "3678–3694"},
+    {"as_heard": "(speaker, from agenda) Yanlong Wang", "resolved_to": "Yanlong Wang, Jina AI by Elastic", "evidence": "https://ai.engineer/shanghai/2026/speakers?lang=cn — listed as Principal Engineer, Jina AI by Elastic, talk 'Reading the Web at Trillion-Token Scale'", "orders": "3668–3812"},
+    {"as_heard": "技术 API", "resolved_to": null, "evidence": "Jina Reader is described as Jina AI's first SaaS API (github.com/jina-ai/reader timeline), which supports 'SaaS API' but does not confirm what was said", "orders": "3686–3687"}
+  ]
+}

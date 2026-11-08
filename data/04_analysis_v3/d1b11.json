@@ -1,0 +1,29 @@
+{
+"talk_id":"d1b11","speakers":"Sac","org":"Independent",
+"value_chain_layer":"vertical_app","position":"AI 独立开发 3D 游戏","target_customer":"consumer","intent":"insight",
+"skeleton":[
+"他用 AI 独立在 16 天内做出《小王子》3D 游戏并在全网获得巨大曝光，先回答“为什么能做成”。",
+"成功靠三种能力：判断 AI 能力边界（看社媒案例并在新模型发布当天用自己的提示词测试）、审美（用 Notion 库积累好案例）、懂社媒传播。",
+"实操流程：多个模型分工（设计、写代码、迭代），Tripo 生成 3D 资产，参考图驱动场景搭建，角色走建模、绑骨蒙皮、动作库加微调。",
+"经验：用 loop（盲审、真实图片库对比、让 agent 扮演角色自测）、human in the loop、把踩坑沉淀成 MD 文档；AI 带来技术平权，最重要的是想法。"],
+"core_message":"Sac 用自身经历说明，一个不懂游戏和建模的人借助 AI 十几天就能做出爆款 3D 游戏，关键不是技术而是三种能力：判断 AI 能力边界、审美、懂社媒传播，再配合 loop 式的 agent 工作流。",
+"frameworks":[
+{"name":"做成爆款的三种能力","gist":"知道 AI 的边界、具备审美、懂社媒传播机制，缺一不可。","seg":"1466–1526"},
+{"name":"AI 3D 游戏制作流程","gist":"场景设计（参考图、资产、Unity 搭建）加角色制作（模型、绑骨蒙皮、动作），由不同模型分工，用 loop 打磨。","seg":"1527–1573"}],
+"offerings":[],
+"why_needed":"",
+"problem_approach":[
+{"problem":"不懂建模和游戏的人，不知道哪些资产该用 3D 生成、哪些该用 Blender 做，也不知道要加哪些动作。","approach":"把技术路线和 PRD 交给 AI，让它分析参考图和剧情，给出资产与动作清单，再逐一测试。"},
+{"problem":"AI 生成的场景质感不真实（如云像棉花糖），自己也难判断还差什么。","approach":"让 agent 多机位拍摄并与参考图盲审，搜集真实图片建库对比打磨，并让 agent 扮演角色自己玩游戏找 bug。"}],
+"non_consensus":[
+{"kind":"insight","point":"新模型发布后第一时间用自己的私有提示词测试，是判断 AI 能力是否到临界点的方法；他认为某次发布是 AI 3D 建模可用的临界点。","quote":"所以当时我就尝试去复刻了一个移民员〔?〕的这种 3D 场景，这个场景是我直接一个提示词就出来的。","seg":"1486–1496","speaker":"Sac"},
+{"kind":"practice","point":"爆款的传播靠平台间的链路：X 上的好内容会被国内媒体和 KOL 当作选题转发，因此发布策略以 X 为起点，且他事先能预判流量。","quote":"我非常相信 X 上好的东西会被国内的社媒转发，因为它整个的传播机制就是这样","seg":"1515–1526","speaker":"Sac"}],
+"signals":[
+{"type":"market_pattern","signal":"个人独立开发者借助多个模型分工（设计、编码、迭代）和 3D 生成工具，把过去需要团队的 3D 游戏压缩到十几天，内容创作者兼具开发者、传播者身份。","value_as_heard":"","seg":"1456–1465"},
+{"type":"metric_focus","signal":"以社媒曝光量和传播来衡量作品成功，并能提前预判某平台的流量。","value_as_heard":"全网超过 4000 万曝光，X 帖子 3370 万；发布前预判 300 万","seg":"1456–1526"},
+{"type":"data_signal","signal":"创作者自建审美案例库（Notion）、真实场景图片库和动作库，作为 agent 对比和打磨的参照数据。","value_as_heard":"","seg":"1503–1573"}],
+"trend_categories":["personal_agent_ai_native"],
+"novelty":2,"pr_level":3,
+"content_industry_note":"独立创作者可用多模型分工和 3D 生成在两周内做出能出圈的游戏内容，传播上 X 到国内媒体和 KOL 的转发链路决定了出圈速度，审美与社媒理解成为创作者的核心竞争力。",
+"filtered_consensus":["human in the loop","沉淀 MD 文档","AI 带来技术平权","新模型能力不断提升","loop 迭代"]
+}

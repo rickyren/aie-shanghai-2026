@@ -1,0 +1,53 @@
+{
+  "talk_id": "offagenda:AJ (WaytoAGI)",
+  "speakers": [
+    {
+      "name": "AJ",
+      "name_as_heard": ["AJ"],
+      "org": "WaytoAGI（通往AGI之路）",
+      "role": "WaytoAGI 社区发起/负责人（自述“我们搞了一个社区叫WaytoAGI”）",
+      "background": "WaytoAGI 是一个AI开源社区；当天下午一点多在主会场参加过一场圆桌；社区管理多个线下实体空间、协作很多OPC，并有全职同学管理大楼；社区信息全部存放在飞书知识库/文档中；他本人从2023年开始对所有过程录音采集；社区办过很多黑客松和展会，和人大合办过线下课程，每天晚8点有直播共学；他把自己的skill公开到GitHub。",
+      "evidence_orders": [926, 927, 930, 932, 933, 944, 962, 971]
+    }
+  ],
+  "corrections": [
+    {"from": "Way to AGI / V2E摘", "to": "WaytoAGI", "count": 4, "confidence": "high"},
+    {"from": "非书妙计 / 非书文档", "to": "飞书妙记 / 飞书文档", "count": 2, "confidence": "high"},
+    {"from": "slope", "to": "slop", "count": 1, "confidence": "high"},
+    {"from": "cloud.md", "to": "CLAUDE.md", "count": 1, "confidence": "high"},
+    {"from": "agent.md", "to": "AGENTS.md", "count": 3, "confidence": "medium"},
+    {"from": "md.md的文件", "to": "md文件", "count": 1, "confidence": "medium"},
+    {"from": "I have ADHD", "to": "i-have-adhd（GitHub skill）", "count": 1, "confidence": "high"},
+    {"from": "AI实在最重要", "to": "AI时代最重要", "count": 1, "confidence": "high"},
+    {"from": "邀请家播、嘉宾", "to": "邀请嘉宾", "count": 1, "confidence": "medium"},
+    {"from": "尤其让10人团队", "to": "尤其是10人团队", "count": 1, "confidence": "high"},
+    {"from": "我要做一场下这个月的活动", "to": "我要做下个月的一场活动", "count": 1, "confidence": "medium"},
+    {"from": "飞书这样工作的台", "to": "飞书这样的工作台", "count": 1, "confidence": "medium"},
+    {"from": "我在A跟AI过对话的过程", "to": "我在跟AI对话的过程中", "count": 1, "confidence": "high"},
+    {"from": "末也可以变成成", "to": "慢慢也可以变成", "count": 1, "confidence": "medium"},
+    {"from": "重复多件事情的事情", "to": "重复多次的事情", "count": 1, "confidence": "medium"},
+    {"from": "资料包，呃，转移出去", "to": "资料包发出去", "count": 1, "confidence": "medium"},
+    {"from": "明天的会议是另外一个人开启的", "to": "明天的会议是另外一个人开的", "count": 1, "confidence": "medium"}
+  ],
+  "removed_non_content": [
+    {"orders": "926", "what": "host lead-in “我们有请下一位嘉宾。” removed from start of line"},
+    {"orders": "930", "what": "stage chatter “真的没人鼓掌吗……” removed"},
+    {"orders": "940", "what": "filler “嗯。” (covered within paragraph range)"},
+    {"orders": "964", "what": "“上那个” false start removed; content kept"},
+    {"orders": "934", "what": "not present in input (removed upstream); gap in 933–939 paragraph"}
+  ],
+  "uncertain": [
+    {"orders": "933–935", "issue": "Line 934 missing from input; transition from 人大院长 anecdote to the fix is incomplete. 935 “不要在信息或者是在人大那边获取原本的上下文” garbled; best reading “不要再在群信息或者是在人大那边获取…”, marked 〔?〕."},
+    {"orders": "937–938", "issue": "Sentence “然后他就会直接，” trails off; “比如说你用豆包工作” — 豆包 may be a mishearing of another Feishu AI/agent product; marked 〔?〕."},
+    {"orders": "939", "issue": "“主动帮你直接发到他的对话框” — whose chat window (the colleague taking over) is implied, kept as spoken."},
+    {"orders": "945", "issue": "“邀请家播、嘉宾” read as 邀请嘉宾; “家播” may also be 主播."},
+    {"orders": "953", "issue": "“不要把自己太当AI” kept as spoken; meaning plausibly ‘don’t act like a machine’."},
+    {"orders": "965", "issue": "“然后呢，末也可以变成成” read as “然后慢慢也可以变成”, marked 〔?〕."},
+    {"orders": "932", "issue": "“任何一个work agent的自动化” kept generic; could be a specific product name."}
+  ],
+  "verified": [
+    {"as_heard": "I have ADHD / ADHD skill", "resolved_to": "i-have-adhd (GitHub ayghri/i-have-adhd)", "evidence": "https://mcpservers.org/agent-skills/ayghri/i-have-adhd and https://skillselion.com/skills/ayghri/i-have-adhd — agent skill for Claude Code/Codex producing ADHD-friendly structured output, on GitHub; matches speaker's description", "orders": "930–932"},
+    {"as_heard": "Way to AGI / V2E摘 / AJ", "resolved_to": "WaytoAGI（通往AGI之路），founder AJ", "evidence": "https://www.waytoagi.com/zh/question/25875 and https://docs.feishu.cn/v/wiki/Hxrbwx4XridGlWkp0ZtcqKVanBn/a1 — open-source AI community built on a Feishu knowledge base with 共学 sessions, created by AJ; matches talk", "orders": "926, 939, 963, 971"}
+  ],
+  "actual_topic_note": "Agenda title is empty; the talk is AJ's ~10-minute share on how the WaytoAGI community runs AI-native collaboration: storing all context (Feishu docs, 妙记, recordings) in the cloud, skills such as i-have-adhd and whiteboard/SVG output via CLAUDE.md/AGENTS.md, SOP-ized workbenches (hackathon, exhibition), automated 共学 pipeline, and AI-generated daily/monthly diaries."
+}

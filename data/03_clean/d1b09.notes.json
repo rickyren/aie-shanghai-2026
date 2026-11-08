@@ -1,0 +1,46 @@
+{
+  "talk_id": "d1b09",
+  "speakers": [
+    {
+      "name": "Peter Hoffmann",
+      "name_as_heard": [],
+      "org": "Data4Life Asia",
+      "role": "",
+      "background": "Not stated in the transcript beyond: he started the Atlas rewrite himself and was joined by one other engineer (two-person team).",
+      "evidence_orders": [1001, 1144]
+    }
+  ],
+  "corrections": [
+    {"from": "Odyssey", "to": "OHDSI", "count": 1, "confidence": "high"},
+    {"from": "OSC network", "to": "OHDSI network", "count": 1, "confidence": "medium"},
+    {"from": "knockout JS", "to": "Knockout.js", "count": 1, "confidence": "high"},
+    {"from": "text stack", "to": "tech stack", "count": 2, "confidence": "high"},
+    {"from": "web API", "to": "WebAPI", "count": 2, "confidence": "high"},
+    {"from": "cloud code", "to": "Claude Code", "count": 1, "confidence": "high"},
+    {"from": "published code definitions", "to": "published cohort definitions", "count": 1, "confidence": "high"},
+    {"from": "leans in the wrong patient cohort", "to": "leads to the wrong patient cohort", "count": 1, "confidence": "high"},
+    {"from": "150 lines of source code / 150, 1,000 lines of test code", "to": "150,000 lines of source code / 150,000 lines of test code (marked 〔?〕)", "count": 1, "confidence": "medium"},
+    {"from": "five utility tests", "to": "five unit tests (marked 〔?〕)", "count": 1, "confidence": "medium"},
+    {"from": "Oracle", "to": "oracle (test oracle, i.e. legacy Atlas 2)", "count": 1, "confidence": "high"},
+    {"from": "if a test checks", "to": "fake tests (marked 〔?〕)", "count": 1, "confidence": "medium"},
+    {"from": "main judgment", "to": "domain judgment (marked 〔?〕)", "count": 1, "confidence": "medium"},
+    {"from": "your X", "to": "UX", "count": 2, "confidence": "high"},
+    {"from": "time outing", "to": "timing out", "count": 1, "confidence": "high"},
+    {"from": "Atlas two / Atlas three", "to": "Atlas 2 / Atlas 3", "count": 6, "confidence": "high"}
+  ],
+  "removed_non_content": [
+    {"orders": "1198", "what": "trailing fragment while switching slide ('And here's a, uh.')"}
+  ],
+  "uncertain": [
+    {"orders": "999–1000", "issue": "Code size numbers garbled ('150 lines of source code, 150, 1,000 lines of test code'); rendered as 150,000 each with 〔?〕."},
+    {"orders": "1006", "issue": "'five utility tests' — probably 'five unit tests'."},
+    {"orders": "1048", "issue": "'OSC network' — rendered as OHDSI network; could also refer to the OHDSI Phenotype Library."},
+    {"orders": "1111", "issue": "'we detect basically if a test checks' — likely fake/always-true tests, cf. order 1067."},
+    {"orders": "1136", "issue": "'main judgment' — likely 'domain judgment'."}
+  ],
+  "verified": [
+    {"as_heard": "Odyssey / Atlas rebuilt in Vue", "resolved_to": "OHDSI ATLAS / Atlas3 (Vue 3 reimplementation)", "evidence": "https://github.com/OHDSI/Atlas3 — 'complete reimplementation of OHDSI ATLAS ... built with Vue 3'; ATLAS 2.x built with Knockout JavaScript", "orders": "976–984"},
+    {"as_heard": "Peter Hoffmann (Data4Life Asia)", "resolved_to": "Peter Hoffmann, Data4Life Asia", "evidence": "https://github.com/p-hoffmann/ — contributor to OHDSI/Atlas3 (PR #346 by p-hoffmann); AIE Shanghai program lists the talk", "orders": "974–1197"},
+    {"as_heard": "web API", "resolved_to": "WebAPI (OHDSI backend)", "evidence": "https://github.com/OHDSI/Atlas3/releases/tag/v3.0.0 — ATLAS v3.0 requires WebAPI v3.0", "orders": "992, 996"}
+  ]
+}

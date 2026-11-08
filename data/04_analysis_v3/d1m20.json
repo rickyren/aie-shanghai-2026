@@ -1,0 +1,73 @@
+{
+  "talk_id": "d1m20",
+  "speakers": "Tang Feihu (唐飞虎)",
+  "org": "Moonshot AI (Kimi)",
+  "value_chain_layer": "foundation_model",
+  "position": "游戏开发流程被模型重写",
+  "target_customer": "developer",
+  "intent": "both",
+  "skeleton": [
+    "Kimi K3.1 Pro 的 demo 显示模型能独立完成场景渲染，甚至把非游戏开发者手绘的分镜变成动画，原因是长程任务能力大幅提升。",
+    "长程 benchmark 已改为给沙箱让 agent 直接交付结果，包括操作 RPG Maker、游戏引擎、Blender；原型构建时间大降，人转向验证和决策。",
+    "video to game 等 skill 把视频变成可玩游戏，社区一周内开源可玩的老太太 GTA，移植、非工程师做动作游戏等案例说明验证想法的成本降到极低。",
+    "模型能截图自检并修 bug、自己生成 3D 资产，主流游戏工作室已把大模型接入生产流程，人负责验收和设计。"
+  ],
+  "core_message": "Moonshot AI 用 Kimi K3.1 Pro 的游戏开发案例说明：长程 agent 能力让一个人几天就能做出可玩原型，视频、手绘分镜和旧游戏都能转成游戏，开发者的角色转向验收与决策。",
+  "frameworks": [],
+  "offerings": [
+    {
+      "name": "Kimi K3.1 Pro",
+      "what": "长程任务能力强的模型，可在沙箱里自主渲染、调试、生成 3D 资产并交付游戏原型。",
+      "for_whom": "游戏与应用开发者",
+      "status": "launched"
+    }
+  ],
+  "why_needed": "",
+  "problem_approach": [
+    {
+      "problem": "游戏原型制作需要引擎、美术、调试等多种技能，验证一个想法的成本高、周期长。",
+      "approach": "给 agent 一个目标和参考视频或代码，用 video to game 等 skill 让模型自主构建、截图自检并修 bug，生成 3D 资产。"
+    }
+  ],
+  "non_consensus": [
+    {
+      "kind": "practice",
+      "point": "开发者已不再手写，甚至不再逐行审查 AI 代码，因为量太大，职责转为验证与决策。",
+      "quote": "我们观察到周围很多之前的软件开发工程师，已经不再动手手写代码，不仅不手写代码，甚至都不去 review AI 写的代码，因为实在太多，review 不过来了。",
+      "seg": "2196–2202",
+      "speaker": "Tang Feihu"
+    },
+    {
+      "kind": "prediction",
+      "point": "AI 生成的视频预告片可被模型转成真实可玩的游戏，原型与宣传物料的界限消失。",
+      "quote": "但有了 video to game 这个 skill 之后，很快就可以把这样的预告片转化成一个真实可以 play 的游戏。",
+      "seg": "2221–2227",
+      "speaker": "Tang Feihu"
+    }
+  ],
+  "signals": [
+    {
+      "type": "market_pattern",
+      "signal": "模型公司用 DevRel 和社区展示个人开发者、非工程师用其模型做出游戏的案例，作为获客和能力证明，主流游戏工作室已接入大模型到生产流程。",
+      "value_as_heard": "",
+      "seg": "2259–2262"
+    },
+    {
+      "type": "metric_focus",
+      "signal": "以单人做出可玩原型所需的时间和 token 成本作为衡量模型价值的口径。",
+      "value_as_heard": "平均每个四天、约 3,000 元人民币 token",
+      "seg": "2207–2214"
+    },
+    {
+      "type": "market_pattern",
+      "signal": "agent 评测从聊天里给代码片段，转向在沙箱中操作 RPG Maker、游戏引擎、Blender 等真实软件并交付结果。",
+      "value_as_heard": "",
+      "seg": "2196–2206"
+    }
+  ],
+  "trend_categories": ["agent_harness_runtime", "eval_verifiability"],
+  "novelty": 2,
+  "pr_level": 4,
+  "content_industry_note": "手绘分镜转动画、视频转可玩游戏、逆向旧游戏和 AI 移植说明视频与游戏内容的边界在消失，创作者可以用一段视频或草图直接衍生出可交互产品。",
+  "filtered_consensus": ["AI 能自主长程任务", "编码 agent 提效", "token 成本下降", "人转向验收", "社区 demo 展示"]
+}

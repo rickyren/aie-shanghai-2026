@@ -1,0 +1,30 @@
+{
+"talk_id":"d2m18","speakers":"丁皓 Ding Hao (Xuanwo)","org":"LanceDB",
+"value_chain_layer":"data_context","position":"多模态数据湖格式","target_customer":"model_lab","intent":"both",
+"skeleton":[
+"机器人数据只在源头采集一次，但每次新模型、新 embedding 或新 caption 都要重算已有数据的列，本质上是对历史数据的一次重建，所以需要一个构建系统。",
+"类比软件构建：原始数据是源码，函数是构建规则，单元格（cell）带 dirty 状态，生成列是产物，snapshot 相当于 lock file。",
+"从底层往上落地：Lance 格式（加列零重写、分支与标签、Blob V2 管理视频音频图片、稀疏数据编码与 cell flag）、LanceDB Functions（用 Python UDF 绑定列，增量计算并分发 GPU worker，完成后整体发布）、snapshot 保证多相机对齐与训练可复现。",
+"Lance 从存储格式演进为计算格式，已被 LeRobot 原生支持，并有大规模工厂视频与大模型客户在用。"],
+"core_message":"机器人（多模态）训练数据的每次模型迭代都是对历史数据的重建，因此数据层要像构建系统那样提供列级增量计算、cell 级脏标记和可复现 snapshot；LanceDB 以 Lance 格式加 Functions 把存储格式推向计算格式，替代 Parquet 加手工补算的做法。",
+"frameworks":[
+{"name":"机器人数据即构建系统","gist":"原始数据=源码，functions=构建规则，cell 的 dirty 状态=增量判定，生成列=产物，snapshot=lock file。","seg":"3310–3316"}],
+"offerings":[
+{"name":"Lance format / table format","what":"面向 AI 训练的数据格式，加列无需重写、支持分支标签、Blob V2 统一管理多模态数据、稀疏数据编码与 cell flag。","for_whom":"机器人与多模态模型团队","status":"open_source"},
+{"name":"LanceDB Functions","what":"用 Python UDF 定义 embedding 等计算并绑定到列，后台增量刷新、分发到 GPU worker、完成后以新 snapshot 整体发布。","for_whom":"训练数据团队","status":"preview"}],
+"why_needed":"以 Parquet 加手工脚本的方式每次新增列或更换模型都要重写与补算数据，且无法区分 null 的含义、也难以复现训练所用数据版本；Lance 把这些做成格式与系统层能力。",
+"problem_approach":[
+{"problem":"每次换模型或 embedding 都要对机器人历史数据补算，且难以回答某次训练用的是哪一版数据。","approach":"cell 级 dirty 标记加列级增量 Functions，加 snapshot 记录训练所用版本与模型元数据。"},
+{"problem":"稀疏数据中 null 含义混杂（未采集、采集失败、有效空值），训练前要大量特殊处理。","approach":"cell flag 显式标记状态，并配合稀疏数据专用编码压缩存储。"}],
+"non_consensus":[
+{"kind":"insight","point":"机器人数据管理的核心问题不是存储，而是构建：数据一次采集、反复重建，应该用构建系统思路来管理。","quote":"LanceDB 在跟用户沟通和在生产实践中就发现，其实每一家公司的所有机器人数据，本质上需要的是一个构建系统。","seg":"3304–3309","speaker":"丁皓"},
+{"kind":"prediction","point":"数据格式厂商会从存储格式向计算格式延伸，把 functions、物化视图和流式物化视图并入同一体系。","quote":"我们从一个 storage format 进化到了一个计算的 format，就是把 functions、物化视图、流式的物化视图，全都并入到了一个大的 Lance 体系里面。","seg":"3399–3405","speaker":"丁皓"}],
+"signals":[
+{"type":"data_signal","signal":"机器人团队积累大规模视频与多相机多模态数据（如工厂视频），并在同一表中做切片、embedding 与检索，数据被反复二次加工。","value_as_heard":"25 TB factory video dataset","seg":"3389–3398"},
+{"type":"market_pattern","signal":"数据层厂商向上渗透到计算层，并与 Hugging Face LeRobot 等生态集成，服务大模型公司与自动驾驶仿真等客户。","value_as_heard":"","seg":"3384–3398"},
+{"type":"metric_focus","signal":"强调加列开销、读取吞吐、存储压缩率与可复现 snapshot，说明关注点是训练迭代成本与数据版本可追溯。","value_as_heard":"blob 89x vs Parquet; 3-5x vs LeRobot; sparse 300x","seg":"3333–3388"}],
+"trend_categories":["embodied_physical_ai","memory_data_context"],
+"novelty":3,"pr_level":4,
+"content_industry_note":"视频切片、逐片段 embedding 与检索在同一张表中完成，对海量视频素材库的版本化管理和增量重算同样适用。",
+"filtered_consensus":["数据飞轮","多模态数据湖","公司愿景介绍","数据是护城河"]
+}

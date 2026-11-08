@@ -1,0 +1,19 @@
+{
+"talk_id":"d2m01","speakers":"Christoph Lassner","org":"World Labs（联合创始人，以个人身份演讲）",
+"value_chain_layer":"embodied_world_model","position":"世界模型分类框架","target_customer":"n/a","intent":"insight",
+"skeleton":["“world model”一词被滥用于图形、机器人、生物、CRM 等完全不同的系统，需要一套共同词汇来比较。","RL 意义上的 world model 是对世界如何变化的预测模型；按功能可分为 render、simulate、plan 三类操作，模型可实现其任意子集。","再加上 domain、scale/resolution、coverage 三个轴，就能把 Google Maps、SLAM、LLM、视频生成等区分开。","展望：world model 是抽象推理（System 2）与各领域感知-行动回路（System 1）之间的接口，未来 agent 会挂接多个领域模块。"],
+"core_message":"“world model”被滥用，Lassner 提出用功能（渲染/模拟/规划）加领域、尺度、覆盖度来给它分类，以便看清不同模型到底在做什么；他判断 world model 将成为 agent 推理与现实（物理与数字）之间的接口。",
+"frameworks":[{"name":"World model 功能分类 + 三个附加轴","gist":"功能：render（产生观测）、simulate（产生世界状态）、plan（产生动作）；再加 domain、scale/resolution、coverage 描述一个具体模型。","seg":"96–105"},
+{"name":"System 2 + 领域 System 1 模块的 agent 架构","gist":"多模态大模型作长期 System 2 推理，各领域模块用自己的 world model 做实时状态估计与策略，跨领域冲突交 System 2 解决。","seg":"248–270"}],
+"offerings":[],"why_needed":"",
+"problem_approach":[{"problem":"world model 一词被用于差异极大的系统，沟通和选型困难。","approach":"用功能分类加 domain/尺度/覆盖度的多轴描述来定位模型，并区分预测型与描述型。"},
+{"problem":"生成式 3D/视频的局部一致画面未必满足应用对未观测变量（如红绿灯状态）持续一致的要求。","approach":"用 coverage 轴明确模型维护哪些变量，按应用需求判断是否足够。"}],
+"non_consensus":[{"kind":"insight","point":"LLM 和 Google Maps 在 RL 意义上都可算 world model，关键在于看它实现哪些功能而非是否可视。","quote":"I would very much argue that an LLM absolutely can qualify as a model of how a world behaves, right?","seg":"127–135","speaker":"Christoph Lassner"},
+{"kind":"prediction","point":"world model 将成为智能与世界交互的接口，成为 agent 长期推理与领域实时回路之间的桥梁。","quote":"World models are going to define how intelligence interfaces with the world.","seg":"271–280","speaker":"Christoph Lassner"}],
+"signals":[{"type":"market_pattern","signal":"“world model”一词在图形、机器人、视频生成、生物、企业软件中被泛用，市场叙事混杂，需要分类来区分真实能力。","value_as_heard":"","seg":"189–202"},
+{"type":"metric_focus","signal":"用 coverage（模型是否对未观测部分持续正确更新）而非单帧一致性来评价生成世界的质量。","value_as_heard":"","seg":"209–214"}],
+"trend_categories":["world_model_spatial","personal_agent_ai_native"],
+"novelty":3,"pr_level":2,
+"content_industry_note":"视频生成模型（如 Kling）只要求单帧或局部一致即可满足部分创作需求，但需要跨视角持续一致的场景（可导航 3D 世界、可编辑场景）才算更完整的 world model，两类工具对创作者的定位不同。",
+"filtered_consensus":["agent 需要好的感知与规划","模型能力持续提升","多模态模型可跨领域推理"]
+}

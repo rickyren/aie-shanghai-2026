@@ -1,0 +1,32 @@
+{
+"talk_id":"d1b10","speakers":"Harrison Zhao","org":"Datus AI",
+"value_chain_layer":"data_context","position":"语义层运行时","target_customer":"developer","intent":"both",
+"skeleton":[
+"data agent 的瓶颈不是写 SQL，而是数字可信：从写 SQL、到信任数字、到做决策，本体（ontology）要解决的是第三阶段。",
+"本体不等于知识图谱：图谱只告诉 agent “是什么”，缺少确定性引擎时多表 join 会算错（如 fan-out），行动层的难点也是决策是否可信。",
+"在已有语义层之上叠加本体，用 Apache Ossie（跨厂商开放语义规范）统一指标定义，Datus 做了 Rust 实现的运行时 Dosi，把 spec 编译成确定性 SQL。",
+"本体为语义层增加映射、规则、关系三类内容，可构成 North Star 指标驱动的“agent 探索、人验证、上线”决策闭环。"],
+"core_message":"可信的数据 agent 不能只靠知识图谱，而要在语义层之上加本体，并配一个把 Apache Ossie 规范编译成确定性 SQL 的运行时（Datus 的 Dosi），像编译器之于代码 RL 那样给 agent 提供可验证的反馈；知识图谱告诉 agent 事物是什么，语义层告诉它怎么算，本体则是语义层上的“确定性 RAG”地图。",
+"frameworks":[
+{"name":"data agent 三阶段","gist":"第一阶段写 SQL（大模型基本解决），第二阶段信任数字（指标定义），第三阶段做决策（本体要解决的）。","seg":"1232–1253"},
+{"name":"Ossie 四层架构","gist":"底层 SQL 表达式统一方言，第二层面向 BI，第三层指标（宽表查询接口），顶层本体（实体关系）。","seg":"1339–1349"}],
+"offerings":[
+{"name":"Dosi","what":"Rust 实现的语义运行时，把 Apache Ossie 的 YAML 规范翻译成多方言确定性 SQL，并拒绝 fan-out 等错误聚合，规划原生归因。","for_whom":"构建 data agent 与语义层的团队","status":"open_source"},
+{"name":"Datus 开源 data agent 与语义层","what":"开源的数据 agent 和语义层实现，作为 Dosi 的上层应用。","for_whom":"企业数据团队、开发者","status":"open_source"}],
+"why_needed":"Snowflake、Databricks、dbt 等各家语义层格式互不相通，纯知识图谱或放进 prompt 的本体又不能保证 join 与聚合正确；需要开放规范加确定性编译器，而不是依赖大模型概率性地生成 SQL，或照搬 Palantir 从零建本体。",
+"problem_approach":[
+{"problem":"同一问题换个上下文，data agent 给出不同数字；多表 join 容易 fan-out 重复计数。","approach":"在语义层之上用确定性引擎编译指标为 SQL，并用本体的值域规则拒绝错误调用。"},
+{"problem":"各厂商语义层规范割裂，难以在 BI 与 AI agent 间共享指标定义。","approach":"采用 Snowflake、Salesforce、dbt 发起并捐给 Apache 的 Ossie 作为单文件开放规范。"}],
+"non_consensus":[
+{"kind":"insight","point":"传统本体里手写推理机已不重要，大模型能覆盖推理，真正有价值的是概念与关系。","quote":"So the hand-built or native reasoner is not important anymore.","seg":"1254–1269","speaker":"Harrison Zhao"},
+{"kind":"insight","point":"本体是“确定性 RAG”：用业务形状的地图而非向量检索来索引表与指标。","quote":"And the last point: ontology is a deterministic RAG.","seg":"1440–1450","speaker":"Harrison Zhao"},
+{"kind":"prediction","point":"数据领域缺的是类似代码里的编译器与数学里的 Lean 的验证工具，有了它 RL 才能让数据 agent 变可靠。","quote":"Because reinforcement learning can learn from validation tools.","seg":"1350–1359","speaker":"Harrison Zhao"}],
+"signals":[
+{"type":"market_pattern","signal":"Snowflake、Salesforce、dbt 发起 Open Semantic Interchange 并捐给 Apache（Ossie），语义层正从各家私有走向开放标准。","value_as_heard":"","seg":"1326–1338"},
+{"type":"market_pattern","signal":"本体概念因 Palantir 重新流行，创业公司在已有语义层之上叠加本体，而非从零重建。","value_as_heard":"","seg":"1254–1325"},
+{"type":"metric_focus","signal":"强调数字一致性、指标正确率与可归因（“为什么变了”）而非 text-to-SQL 基准分。","value_as_heard":"","seg":"1360–1371"}],
+"trend_categories":["memory_data_context","eval_verifiability"],
+"novelty":3,"pr_level":4,
+"content_industry_note":"",
+"filtered_consensus":["大模型文本转 SQL 已较成熟","LLM 是概率模型","agent 需要好的上下文","AI 数学能力进步","可信决策需要人验证"]
+}

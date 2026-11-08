@@ -1,0 +1,33 @@
+{
+  "talk_id": "d1m16",
+  "speakers": [
+    {"name": "Xinghong Fang", "name_as_heard": ["Xinhong", "Xinghong"], "org": "Optiver", "role": "AI Engineer", "background": "AI engineer at Optiver, a global trading firm; involved in building and operating Optiver's internal multi-region LLM gateway serving ~3 million requests/day across four data centers.", "evidence_orders": [1639, 1640, 1858]}
+  ],
+  "corrections": [
+    {"from": "LM gateway", "to": "LLM gateway", "count": 8, "confidence": "high"},
+    {"from": "Xinhong", "to": "Xinghong", "count": 1, "confidence": "high"},
+    {"from": "global training firm", "to": "global trading firm", "count": 1, "confidence": "high"},
+    {"from": "Optiverse stands / Optiverse", "to": "Optiver stand / Optiver", "count": 2, "confidence": "high"},
+    {"from": "Ali cloud", "to": "Alibaba Cloud", "count": 1, "confidence": "high"},
+    {"from": "Arrow do happens", "to": "errors do happen", "count": 1, "confidence": "high"},
+    {"from": "3 million LM requests", "to": "3 million LLM requests", "count": 1, "confidence": "high"},
+    {"from": "Anthropic messages protocol", "to": "Anthropic Messages protocol", "count": 1, "confidence": "high"},
+    {"from": "AWS bedrock", "to": "AWS Bedrock", "count": 1, "confidence": "high"},
+    {"from": "one tool core", "to": "one tool call", "count": 1, "confidence": "high"},
+    {"from": "So removed all the authentication locally by creating replicates locally", "to": "we moved all authentication local by creating local replicas", "count": 1, "confidence": "medium"},
+    {"from": "cross Atlantic", "to": "across the Atlantic", "count": 1, "confidence": "high"},
+    {"from": "should be Anthropic OpenAI Ali cloud", "to": "it could be Anthropic, OpenAI, Alibaba Cloud", "count": 1, "confidence": "high"},
+    {"from": "Trace is the answer", "to": "Tracing is the answer", "count": 1, "confidence": "high"}
+  ],
+  "removed_non_content": [
+    {"orders": "1636–1636", "what": "opening thanks to host (好，谢谢)"}
+  ],
+  "uncertain": [
+    {"orders": "1641–1642", "issue": "Speaker reads a Slack complaint off the slide; the actual message text was not transcribed, rendered as ellipsis."},
+    {"orders": "1730–1741", "issue": "Speaker says 'one model'/'two models' where he appears to mean provider deployments behind the same model ID; kept as spoken."}
+  ],
+  "verified": [
+    {"as_heard": "Xinhong / Xinghong (Optiver AI engineer)", "resolved_to": "Xinghong Fang", "evidence": "https://ai.engineer/shanghai/2026/speakers?lang=cn — speaker list shows Xinghong Fang, AI Engineer at Optiver, talk 'Building a reliable, multi-region LLM gateway'", "orders": "1639–1639"},
+    {"as_heard": "tool search ... save our tokens in MCP tool; not supported on AWS bedrock", "resolved_to": "Anthropic tool search tool (beta flag); Amazon Bedrock", "evidence": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool — Anthropic beta feature that defers MCP tool definitions to save tokens; Bedrock support differs", "orders": "1735–1738"}
+  ]
+}

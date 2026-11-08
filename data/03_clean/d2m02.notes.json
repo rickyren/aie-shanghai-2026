@@ -1,0 +1,29 @@
+{"talk_id": "d2m02",
+ "speakers": [{"name": "Bin Liu", "name_as_heard": ["Bin", "Ben"], "org": "HeyGen", "role": "Runs HeyGen's agentic video business", "background": "Leads the team that built HeyGen's Video Agent and the open-source HyperFrames framework (HTML-to-video, open-sourced April 2026).", "evidence_orders": [296, 302, 303, 322, 378, 379, 482]}],
+ "corrections": [
+  {"from": "Haijin", "to": "HeyGen", "count": 3, "confidence": "high"},
+  {"from": "Hyperframes / Hyperframe", "to": "HyperFrames", "count": 6, "confidence": "high"},
+  {"from": "I'm Ben", "to": "I'm Bin", "count": 1, "confidence": "high"},
+  {"from": "HTML is a new markdown, unreasonable, effective HTML", "to": "\"HTML is the new markdown\", \"the unreasonable effectiveness of HTML\"", "count": 1, "confidence": "high"},
+  {"from": "Jenspark", "to": "Genspark", "count": 1, "confidence": "high"},
+  {"from": "3JS", "to": "Three.js", "count": 1, "confidence": "high"},
+  {"from": "After Effects Premiere Cut", "to": "After Effects, Premiere, or Final Cut", "count": 1, "confidence": "medium"},
+  {"from": "Frontier Labs", "to": "frontier labs", "count": 2, "confidence": "high"},
+  {"from": "back to be writing place", "to": "back to writing plays", "count": 1, "confidence": "high"},
+  {"from": "writing that wave", "to": "riding that wave", "count": 1, "confidence": "high"},
+  {"from": "globally number two installed skills", "to": "number two most-installed skill globally", "count": 1, "confidence": "medium"},
+  {"from": "Wenbo Miao", "to": "Wenbo, Miao", "count": 1, "confidence": "medium"}
+ ],
+ "removed_non_content": [{"orders": "402–417", "what": "video playback failure, laptop battery, waiting for AV team (incl. a Chinese interjection at 417)"}],
+ "uncertain": [
+  {"orders": "299", "issue": "previous speaker 'Chris' not verified"},
+  {"orders": "426", "issue": "'After Effects Premiere Cut' expanded to After Effects, Premiere, Final Cut"},
+  {"orders": "440–441", "issue": "'700,000 videos a day ... a week ago it was 500' kept as spoken (500 presumably 500,000)"},
+  {"orders": "484", "issue": "'Wenbo Miao' may be one person or two teammates (Wenbo Zhu, Miao Yang appear as HeyGen authors)"}
+ ],
+ "verified": [
+  {"as_heard": "Hyperframes", "resolved_to": "HyperFrames", "evidence": "https://github.com/heygen-com/hyperframes - HeyGen open-source HTML-to-video for agents, released mid-April 2026, ~80k stars", "orders": "378–476"},
+  {"as_heard": "Anthropic ... HTML is a new markdown, unreasonable, effective HTML", "resolved_to": "Thariq Shihipar (Anthropic), 'Using Claude Code: The Unreasonable Effectiveness of HTML' / 'HTML is the new markdown' (May 8, 2026)", "evidence": "https://x.com/trq212/status/2052811606032269638 - ~3 weeks after HyperFrames release", "orders": "395–399"},
+  {"as_heard": "Paper", "resolved_to": "Paper (paper.design)", "evidence": "https://paper.design/compare/figma - Figma-like design tool built on HTML/CSS", "orders": "453–454"},
+  {"as_heard": "Wenbo Miao", "resolved_to": null, "evidence": "No exact person found; HeyGen research lists Wenbo Zhu and Miao Yang (https://www.heygen.com/research/introducing-code2video-benchmark)", "orders": "484"}
+ ]}

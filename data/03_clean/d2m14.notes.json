@@ -1,0 +1,21 @@
+{"talk_id":"d2m14","speakers":[{"name":"吕俊 (Jun Lv)","name_as_heard":["吕俊"],"org":"穹彻智能 (Noematrix)","role":"researcher working on pre-training of embodied/physical AI models (title not stated)","background":"Over the past period worked on model pre-training in embodied physical AI; works on data collection, foundation model training, post-training and agentic Robot RSI system; has spent the last year at Noematrix.","evidence_orders":[2653,2654,2709,2791]}],
+"corrections":[
+{"from":"穷车智能 / 穷车 / 澈","to":"穹彻智能 / 穹彻 / 彻","count":12,"confidence":"high"},
+{"from":"卢策务","to":"卢策吾","count":2,"confidence":"high"},
+{"from":"李菲菲","to":"李飞飞","count":1,"confidence":"high"},
+{"from":"飞西科技","to":"非夕科技","count":1,"confidence":"high"},
+{"from":"滤项","to":"立项","count":1,"confidence":"medium"},
+{"from":"to be","to":"to B","count":2,"confidence":"high"},
+{"from":"无体 / 要操作","to":"无本体 / 遥操作","count":3,"confidence":"high"},
+{"from":"Zero Trust","to":"zero-shot","count":1,"confidence":"medium"},
+{"from":"机模能力","to":"基模能力","count":2,"confidence":"medium"},
+{"from":"2027年","to":"2022年〔?〕","count":1,"confidence":"medium"},
+{"from":"具身智能系数向","to":"具身智能系统向","count":1,"confidence":"medium"},
+{"from":"力学模态","to":"力模态","count":1,"confidence":"medium"}],
+"removed_non_content":[{"orders":"2652","what":"opening filler"},{"orders":"2655","what":"'Okay.' filler"},{"orders":"2674","what":"'sorry' aside"}],
+"uncertain":[{"orders":"2713","issue":"'2027年' likely 2022 (before company founding); marked 〔?〕"},{"orders":"2721","issue":"'EagleTrace' unrecognised dataset/product name"},{"orders":"2776","issue":"'GPT-6 Extra' unclear"},{"orders":"2784","issue":"'VEC 大会' in Shanghai 2024, unclear (maybe WAIC)"}],
+"verified":[
+{"as_heard":"穷车智能 / Noematrix","resolved_to":"穹彻智能 (Noematrix)","evidence":"https://www.noematrix.ai/ ; https://www.gasgoo.com/robot/news/70470469 - Noe-0 world action model released by 穹彻智能","orders":"2653–2673"},
+{"as_heard":"卢策务, 飞西科技, 王世全, 李菲菲","resolved_to":"卢策吾, 非夕科技, 王世全, 李飞飞","evidence":"https://m.chinaventure.com.cn/news/108-20241205-384170.html and related reports: 卢策吾 co-founded 穹彻 with 非夕科技 founder 王世全; postdoc under 李飞飞","orders":"2658–2663"},
+{"as_heard":"EagleTrace","resolved_to":null,"evidence":"Search for Noematrix/EagleTrace egocentric dataset returned nothing relevant","orders":"2721"}],
+"actual_topic_note":""}

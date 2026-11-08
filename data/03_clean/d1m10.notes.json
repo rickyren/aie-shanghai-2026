@@ -1,0 +1,219 @@
+{
+ "talk_id": "d1m10",
+ "speakers": [
+  {
+   "name": "Vincent Koc",
+   "name_as_heard": [
+    "Vincent",
+    "Vincent Koch"
+   ],
+   "org": "OpenClaw Foundation",
+   "role": "Chief Architect",
+   "background": "Previously gave a talk at AIE London about engineers becoming factory managers; runs OpenClaw's 'dark factory' (harness building the harness), personally running 300+ agents in parallel and shipping ~2,000 PRs a day; works on intent/proof engineering, CI cost reduction, adaptive testing and the ShellBench benchmark.",
+   "evidence_orders": [
+    496,
+    497,
+    499,
+    501,
+    505,
+    588,
+    589
+   ]
+  }
+ ],
+ "corrections": [
+  {
+   "from": "Open Cloud Foundation",
+   "to": "OpenClaw Foundation",
+   "count": 2,
+   "confidence": "high"
+  },
+  {
+   "from": "Vincent Koch",
+   "to": "Vincent Koc",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "Open Claw",
+   "to": "OpenClaw",
+   "count": 7,
+   "confidence": "high"
+  },
+  {
+   "from": "Claw Sweeper",
+   "to": "ClawSweeper",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "Shellbench",
+   "to": "ShellBench",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "sweep bench",
+   "to": "SWE-bench",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "Dora",
+   "to": "DORA (engineering metrics)",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "doom",
+   "to": "Doom",
+   "count": 2,
+   "confidence": "high"
+  },
+  {
+   "from": "lobsterville",
+   "to": "Lobsterville",
+   "count": 3,
+   "confidence": "high"
+  },
+  {
+   "from": "the C CI/CD",
+   "to": "CI/CD",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "comes from agentic—sorry, not agentic, like engineering metrics",
+   "to": "comes from engineering metrics",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "humans can verify it but that's very low",
+   "to": "very slow〔?〕",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "make the move factory move fast",
+   "to": "make the factory move fast",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "if the tests take too slow",
+   "to": "if the tests take too long",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "the first PR was opened to when the PR was merged",
+   "to": "from when the PR was opened to when the PR was merged",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "one of the main factors of slowing—fixing this",
+   "to": "one of the main factors in fixing this",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "we're now running less jobs",
+   "to": "we're now running fewer jobs",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "I keep putting my words on that",
+   "to": "I keep putting my word on that〔?〕",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "just to kind of iterate to people",
+   "to": "just to reiterate",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "this was before even this huge check changed and happened",
+   "to": "This was before this huge change〔?〕 even happened",
+   "count": 1,
+   "confidence": "medium"
+  }
+ ],
+ "removed_non_content": [
+  {
+   "orders": "493–493",
+   "what": "'谢谢' at handover from host, no talk content"
+  },
+  {
+   "orders": "560–560",
+   "what": "partial: 'actually I'm going to keep going' slide-navigation chatter dropped (rest of line kept)"
+  }
+ ],
+ "uncertain": [
+  {
+   "orders": "505–505",
+   "issue": "'shipped one and a half thousand to 1,000 PRs' yesterday — numbers garbled/inconsistent; kept as heard with 〔?〕"
+  },
+  {
+   "orders": "505–505",
+   "issue": "'humans can verify it but that's very low' — read as 'very slow'"
+  },
+  {
+   "orders": "505–505",
+   "issue": "'sweep bench or code bench' — SWE-bench is clear; 'code bench' unidentified, kept with 〔?〕"
+  },
+  {
+   "orders": "505–505",
+   "issue": "Speaker says Peter tweeted OpenClaw version two 'back in September'; OpenClaw 2.0 was announced Aug 31, 2026 (kept as spoken)"
+  },
+  {
+   "orders": "580–581",
+   "issue": "'before even this huge check changed and happened' unclear; '90.5 to 98 percent' reduction figure possibly misheard (e.g. 95)"
+  },
+  {
+   "orders": "590–590",
+   "issue": "'I keep putting my words on that' — meaning unclear"
+  },
+  {
+   "orders": "615–615",
+   "issue": "'you want to turn recurring pain' — sentence incomplete as spoken (likely '...into a better machine', cf. 619)"
+  }
+ ],
+ "verified": [
+  {
+   "as_heard": "Vincent Koch / Open Cloud Foundation Chief Architect",
+   "resolved_to": "Vincent Koc, Chief Architect, OpenClaw Foundation",
+   "evidence": "https://openclaw.ai/blog/introducing-openclaw-foundation — launch post lists Vincent Koc (Chief Architect); also ai.engineer/speakers/vincent-koc",
+   "orders": "496–497"
+  },
+  {
+   "as_heard": "Claw Sweeper",
+   "resolved_to": "ClawSweeper",
+   "evidence": "https://docs.openclaw.ai/reference/pull-request-review-flow — ClawSweeper is OpenClaw's AI review bot for issues and PRs, repo openclaw/clawsweeper (open source)",
+   "orders": "505–505"
+  },
+  {
+   "as_heard": "Shellbench",
+   "resolved_to": "ShellBench",
+   "evidence": "https://github.com/openclaw/shellbench/pull/94 — openclaw/shellbench by vincentkoc, 'pinned 135-task campaign', agent benchmark scoring harness+config+model",
+   "orders": "589–591"
+  },
+  {
+   "as_heard": "new version of Open Claw we call version two, multiplayer (Peter tweeted)",
+   "resolved_to": "OpenClaw 2.0 (multiplayer), announced by Peter Steinberger",
+   "evidence": "https://x.com/steipete/status/2094290652649636173 and https://venturebeat.com/technology/openclaw-2-0-is-here-what-it-means-for-enterprises — OpenClaw 2.0 multiplayer release; transcript keeps 'Peter' and 'version two' as spoken",
+   "orders": "505–505"
+  },
+  {
+   "as_heard": "doom (agent playing Doom in OpenClaw computer use)",
+   "resolved_to": null,
+   "evidence": "Search found no source on a Doom computer-use demo; 'Doom' capitalization kept from context (the game) only",
+   "orders": "505–505"
+  }
+ ],
+ "actual_topic_note": "Talk centers on 'proof engineering' (moving from intent engineering to verifiable proof/evals), with CI cost/adaptive testing and the ShellBench benchmark as case studies; consistent with but broader than the agenda title."
+}

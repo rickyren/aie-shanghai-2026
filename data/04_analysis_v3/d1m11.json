@@ -1,0 +1,100 @@
+{
+  "talk_id": "d1m11",
+  "speakers": "Alex",
+  "org": "AutoArk 无界方舟",
+  "value_chain_layer": "on_device",
+  "position": "端侧模型与 SDK 提供商",
+  "target_customer": "developer",
+  "intent": "product",
+  "skeleton": [
+    "智能硬件调用云端 API 有三个硬伤：产品卖得越好 token 成本越高、断网不可用、医疗投资法律等场景的隐私合规；端侧 AI 以即时响应、可用性、隐私和零 token 成本解决。",
+    "AutoArk 按算力把硬件分为小、中、大三档，分别提供开源模型：小算力用音视频小模型加 EVA SDK，中算力用可在手机上运行的大参数 MoE 模型，大算力用即将开源的笔记本级多模态 MoE 模型。",
+    "端侧大模型靠 MoE 稀疏激活加 prerouter 参数预加载突破内存墙和解码速度瓶颈。",
+    "案例：与韶音合作的 AI 运动耳机采用端侧加云端混合路由，简单意图全端侧处理，只有开放式问答才调用云端，大幅降低 token 成本。"
+  ],
+  "core_message": "无界方舟主张智能硬件不应依赖云端 API，因为成本随销量线性增长、断网不可用、隐私合规不过关，并按小、中、大算力三档提供全开源的端侧模型、推理引擎和 EVA SDK，让硬件在本机运行 AI，复杂问题再交给云端。",
+  "frameworks": [
+    {
+      "name": "小 / 中 / 大算力三档端侧部署",
+      "gist": "按硬件算力把端侧场景分档：小算力（眼镜、耳机）做实时音视频交互，中算力（手机、平板）做 personal agent / phone use，大算力（笔记本、台式机）做本地 vibe coding。",
+      "seg": "707–712"
+    },
+    {
+      "name": "简单意图走端侧、开放问答走云端的混合路由",
+      "gist": "用端侧 ASR 加 NLU 意图分类判断，简单指令全链路端侧完成，仅开放式问答调用云端，兼顾成本、延迟与离线可用。",
+      "seg": "813–820"
+    }
+  ],
+  "offerings": [
+    {
+      "name": "端侧开源模型与推理引擎",
+      "what": "覆盖小尺寸 ASR/TTS 音频模型、可在 iPhone 上运行的大参数 MoE 语言模型，以及首次预览、即将开源的笔记本级多模态 MoE 模型，并配套跨平台开源推理引擎。",
+      "for_whom": "智能硬件和 App 开发者",
+      "status": "open_source"
+    },
+    {
+      "name": "EVA SDK",
+      "what": "一站式 AI 交互开发套件，含降噪、回声消除和人声增强等 3A 算法、全双工可打断对话链路，集成端侧模型，覆盖 ESP32、Linux、iOS、Android 等平台，并提供一行命令安装的 Agent Skill 供 vibe coding 工具接入。",
+      "for_whom": "眼镜、耳机、可穿戴和 IoT 硬件厂商",
+      "status": "launched"
+    },
+    {
+      "name": "与韶音合作的 AI 运动耳机",
+      "what": "端侧加云端混合的 AI 智能体耳机，唤醒词交互、快捷指令走端侧。",
+      "for_whom": "运动耳机用户（通过硬件厂商）",
+      "status": "service"
+    }
+  ],
+  "why_needed": "硬件厂商默认调用 OpenAI 等云端大厂 API 来快速加入 AI 功能，但销量越高成本越高、断网不可用、专业场景隐私不合规；端侧 AI 用本机算力替代，而端侧部署平台碎片化（FreeRTOS、ESP32、iOS、Android 等）、工程成本高，因此需要现成的模型、引擎和 SDK。",
+  "problem_approach": [
+    {
+      "problem": "大参数 MoE 模型放不进手机内存，且逐 token 从 SSD 加载专家参数会导致解码极慢。",
+      "approach": "利用 MoE 稀疏激活只加载少量活跃参数，并用 prerouter 预测后续几个 token 需要的专家参数，后台异步预加载。"
+    },
+    {
+      "problem": "智能硬件调用云端 API，规模越大成本越高，且断网与隐私合规存在问题。",
+      "approach": "端侧意图分类，把占多数的简单指令放在本机处理，开放问答才上云，从而大幅降低 token 成本。"
+    }
+  ],
+  "non_consensus": [
+    {
+      "kind": "market_call",
+      "point": "硬件销量越高，云端 API 的 token 成本反而越让产品亏钱，这是端侧 AI 的核心商业论据。",
+      "quote": "这就会带来一个非常尴尬的情况：我们的产品销量越高，我们反而越赔钱。",
+      "seg": "655–663",
+      "speaker": ""
+    },
+    {
+      "kind": "prediction",
+      "point": "笔记本级端侧 MoE 模型可以让 vibe coding、视频制作和 computer use（如调用 Blender 建模）在本机完成，没有 token 费用。",
+      "quote": "这些场景都可以通过我们的端侧模型，在你自己的笔记本和电脑上去完成，不需要调用云端 API，也不会有任何 token 费用。",
+      "seg": "790–795",
+      "speaker": ""
+    }
+  ],
+  "signals": [
+    {
+      "type": "market_pattern",
+      "signal": "端侧 AI 的主要买家是智能硬件厂商，其中多数端侧公司仍停留在 demo 阶段；AutoArk 以开源模型加 SDK 加硬件厂商合作（韶音耳机）的方式切入。",
+      "value_as_heard": "",
+      "seg": "707–712"
+    },
+    {
+      "type": "metric_focus",
+      "signal": "以开源社区指标（Hugging Face trending、leaderboard 排名、引擎下载量）和端侧 token 成本节省比例来证明价值，说明其策略是靠开源获取开发者生态。",
+      "value_as_heard": "引擎下载超过 1500 万次，token 成本降低超过 92%",
+      "seg": "796–820"
+    },
+    {
+      "type": "launch",
+      "signal": "首次预览即将开源的约 150B 端侧 MoE 多模态模型，可在笔记本级内存中运行，定位本地 vibe coding。",
+      "value_as_heard": "150B，18 到 24G 内存",
+      "seg": "790–795"
+    }
+  ],
+  "trend_categories": ["on_device_decision_models", "open_models_posttrain_inference"],
+  "novelty": 3,
+  "pr_level": 4,
+  "content_industry_note": "该公司称端侧大模型可在笔记本上完成视频制作，并提供本机运行的 ASR/TTS（转录、情感语音合成、多语言），可降低字幕转录和配音类工具的云端成本并保护素材隐私，但讲者未展示视频制作的具体演示。",
+  "filtered_consensus": ["端侧模型越来越强", "芯片 NPU 算力提升", "云 API 成本高延迟高", "隐私合规需求", "vibe coding token 成本高", "开源社区下载量与榜单"]
+}

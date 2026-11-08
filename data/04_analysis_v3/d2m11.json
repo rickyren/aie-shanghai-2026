@@ -1,0 +1,84 @@
+{
+  "talk_id": "d2m11",
+  "speakers": "Leonie Monigatti",
+  "org": "Liquid AI",
+  "value_chain_layer": "on_device",
+  "position": "端侧开放决策模型",
+  "target_customer": "developer",
+  "intent": "both",
+  "skeleton": [
+    "决策模型（又称 System One 模型）是新一类前沿模型：一次前向传播直接返回带置信度的类型化答案，替代用 LLM 生成结构化 token 做小决策的方式，更快、更便宜、更可靠。",
+    "闭源的 Jev 只给出目标没有配方，开放生态在逆向复现：先用任意 LLM 加 option label 的推理式 baseline，但有位置偏置，所以要对分类任务做 SFT（LoRA 优于全量微调）训练成通用分类器。",
+    "Liquid 的做法是解码器架构去掉 causal mask 改成双向注意力，兼具 encoder 与 decoder 优点，并用 temperature scaling 校准置信度，不需要强化学习。",
+    "下一步是把模型做到约 2B 以放进手机和笔记本、支持多模态并增加新的决策原语（如视频中的目标检测），模型已在 Hugging Face 开放。"
+  ],
+  "core_message": "决策模型让 agent 的小决策从生成 token 变成一次前向传播输出带置信度的类型化答案，Liquid 展示了开放生态如何不靠强化学习而用 LoRA SFT、双向注意力和 temperature scaling 复现并推出可在端侧运行的开放决策模型。",
+  "frameworks": [
+    {
+      "name": "决策原语（primitives）",
+      "gist": "决策模型的调用接口：yes/no 判断、1 到 5 打分、多选一等，每个都返回类型化答案和置信度，由调用方设阈值决定自动执行还是转人工。",
+      "seg": "2061–2081"
+    },
+    {
+      "name": "决策模型的三步配方",
+      "gist": "推理式 baseline 有选项顺序偏置，所以先对分类任务做 SFT，再去掉 causal mask 用双向注意力，最后用 temperature scaling 校准过度自信的置信度。",
+      "seg": "2116–2159"
+    }
+  ],
+  "offerings": [
+    {
+      "name": "Liquid 决策模型系列（d1 系列）",
+      "what": "API 托管的高性能决策模型，以及可在端侧运行、约 2B 参数、文本加视觉或文本加视觉加音频的开放决策模型，支持新增的目标检测原语。",
+      "for_whom": "构建 agent 和端侧应用的开发者",
+      "status": "open_source"
+    }
+  ],
+  "why_needed": "Agent 当前用 LLM 生成结构化输出（tool calling）做小决策，既慢又贵且容易出错；闭源的 Jev 不公开配方，开放的端侧决策模型让开发者自己在手机和笔记本上跑，并通过置信度阈值控制何时转人工。",
+  "problem_approach": [
+    {
+      "problem": "把 next-token 预测的 LLM 直接改造成决策器，会有选项顺序偏置，且训练后置信度过度自信，导致置信度不可信。",
+      "approach": "对分类任务做 LoRA SFT，去掉 causal mask 做双向注意力，用 temperature scaling 校准置信度，不使用强化学习。"
+    }
+  ],
+  "non_consensus": [
+    {
+      "kind": "practice",
+      "point": "校准置信度不需要强化学习，开放生态用 temperature scaling 就能得到可用的校准，反驳闭源厂商宣称的“强化学习做校准决策”。",
+      "quote": "But it turns out we actually don't need any reinforcement learning at all.",
+      "seg": "2151–2159",
+      "speaker": ""
+    },
+    {
+      "kind": "practice",
+      "point": "做决策模型应当取消解码器的 causal mask，让模型看到全部 token，把 encoder 与 decoder 两条路线合并。",
+      "quote": "So we lift the causal mask and give it bidirectional attention, so it can look at all of the tokens — kind of like an encoder, right?",
+      "seg": "2137–2144",
+      "speaker": ""
+    }
+  ],
+  "signals": [
+    {
+      "type": "market_pattern",
+      "signal": "闭源的决策模型发布后，开放生态在极短时间内复现，说明这类模型缺少壁垒，竞争点转向基准榜单、端侧尺寸和多模态原语。",
+      "value_as_heard": "闭源团队潜伏两年，复现不到一周",
+      "seg": "2097–2107"
+    },
+    {
+      "type": "metric_focus",
+      "signal": "Liquid 以 Artificial Analysis Decision Index 排名和置信度校准程度（说 90% 是否真的 90% 正确）作为衡量决策模型的核心指标。",
+      "value_as_heard": "",
+      "seg": "2041–2046"
+    },
+    {
+      "type": "launch",
+      "signal": "Liquid 在几周内发布了多款决策模型，包括 API 托管版和约 2B 参数的多模态开放版，并在 Hugging Face 可下载。",
+      "value_as_heard": "约 2B 参数",
+      "seg": "2164–2174"
+    }
+  ],
+  "trend_categories": ["on_device_decision_models", "open_models_posttrain_inference"],
+  "novelty": 4,
+  "pr_level": 3,
+  "content_industry_note": "端侧多模态决策模型可在本地对视频流做目标检测并框选，可能被用于设备端的实时素材标注与剪辑辅助判断，但讲者只展示了笔记本摄像头的演示。",
+  "filtered_consensus": ["端侧模型更小更快", "开放生态追赶闭源", "多模态是趋势", "置信度阈值转人工", "SFT 比纯 prompt 更可靠"]
+}

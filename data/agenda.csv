@@ -1,0 +1,53 @@
+session_id,day,stage,topic_id,sched_start,sched_end,format,speakers,orgs,moderator,title
+d1m01,2026-11-05,main,290151883,09:35,09:45,opening,"Shawn ""swyx"" Wang",AI Engineer,,Opening with swyx · Video opening
+d1m02,2026-11-05,main,290151883,09:45,10:10,keynote,Marco Casalaina,Microsoft,,From Models to Working Enterprise Agents
+d1m03,2026-11-05,main,290151883,10:10,10:25,talk,Clemens Rawert,Langfuse by ClickHouse,,"Building Agents: Yesterday, Today, Tomorrow"
+d1m04,2026-11-05,main,290151883,10:25,10:45,talk,Ryo Lu,ex-Cursor,,"When we can do anything, do we still know what we want?"
+d1m05,2026-11-05,main,290151883,10:50,11:10,talk,David Li; Alex Triplett,You.com,,Post-Training at the Frontier: Teaching Open Models to Search and Browse the Web
+d1m06,2026-11-05,main,290151883,11:10,11:25,talk,Chen Wang,Baseten,,"Full-Stack Inference Engineering: Latency, Throughput and Cost"
+d1m07,2026-11-05,main,290151883,11:25,11:40,talk,Chen Peng,Arena,,Measure the frontier of AI for real world use
+d1m08,2026-11-05,main,738651866,13:00,13:40,panel,AJ; Koji; Kai Qu,WaytoAGI; Crossing / Zhenfund; 42 Chapters,高宁 (Linkloud),Community in the AI era
+d1m09,2026-11-05,main,738651866,13:45,14:05,talk,Ailing Teng,StepFun,,From Model Intelligence to Agent Harness: Enabling Long-Horizon Agents
+d1m10,2026-11-05,main,738651866,14:05,14:25,talk,Vincent Koc,OpenClaw Foundation,,Dark Factory to Lobsterville: Intent Engineering for Persistent Multiplayer Agents
+d1m11,2026-11-05,main,738651866,14:30,14:50,talk,Alex,AutoArk,,On-Device AI: Bringing Intelligence Closer to Everyone
+d1m12,2026-11-05,main,738651866,14:50,15:10,talk,Mislav Ivanda,Daytona,,Kubernetes Is Not Your Sandbox
+d1m13,2026-11-05,main,738651866,15:10,15:30,talk,Fan Bin,Manus AI,,"AI-Native Work at Manus: One Monorepo, Open Tasks"
+d1m14,2026-11-05,main,738651866,15:35,15:55,talk,Jakub Hojsan,Exa,,Powering open source personal agents with Exa search
+d1m15,2026-11-05,main,738651866,15:55,16:15,talk,Rentong Guo,Zilliz,,Your Agent's Memory Is Next Quarter's Training Data
+d1m16,2026-11-05,main,738651866,16:15,16:35,talk,Xinghong Fang,Optiver,,"Building a reliable, multi-region LLM gateway"
+d1m17,2026-11-05,main,738651866,16:40,17:00,talk,Lux Li,TiDB / PingCAP,,Nobody Planned AI Infra: How AI Builders Pushed a Database Beyond the Database
+d1m18,2026-11-05,main,738651866,17:10,17:25,talk,Do Tuan Anh,Techcombank,,"Optimizing Organization-Wide LLM Inference Cost: Seat License, Pay-per-Token, or Provisioned, and Beyond"
+d1m19,2026-11-05,main,738651866,17:25,17:35,rapid_fire,Tinsley Shi,Google,,Reinforcement Learning at Scale on Agent Substrate: Orchestrating Millions of Sandboxes
+d1m20,2026-11-05,main,738651866,17:35,17:45,rapid_fire,Tang Feihu (Xiaodao Laoshi),Kimi / Moonshot AI,,Life of a Game Developer in AI era
+d1b01,2026-11-05,breakout,1901713953,13:45,14:05,talk,Baoping Wang (Yubo),YouMind,,Building a Personal Agent for Growth with YouMind
+d1b02,2026-11-05,breakout,1901713953,14:05,14:20,talk,Joey Wang,Harvey,,"Trust Your Own Evals, Not the Leaderboard: What 10k+ Internal Agent PRs Taught Us About Adopting Open Models"
+d1b03,2026-11-05,breakout,1901713953,14:20,14:35,talk,Andy Wang,Dify,,Beyond the Pilot: Managing Your 500th AI Agent
+d1b04,2026-11-05,breakout,1901713953,14:40,14:55,talk,Robert Pei,Visa,,Beyond Reasoning: Building Infrastructure for AI Agents That Act
+d1b05,2026-11-05,breakout,1901713953,14:55,15:10,talk,Peng Gong,Meta / Instagram,,Beyond Screenshots: Building Agent-Native Verification for Mobile Apps
+d1b06,2026-11-05,breakout,1901713953,15:10,15:20,talk,Davin YC Dong,Cookiy Labs,,Agentic Harness: Real-Time Audio and Video AI Interviews
+d1b07,2026-11-05,breakout,1901713953,15:30,15:40,talk,Roman Shirochenko,Agoda (Booking Holdings),,Your Repo. Your Benchmark.
+d1b08,2026-11-05,breakout,1901713953,15:40,15:50,talk,Alyssa Lee,DataHub,,Trusted Context: Building the Layer Between Enterprise Data and AI Agents
+d1b09,2026-11-05,breakout,1901713953,15:50,16:10,talk,Peter Hoffmann,Data4Life Asia,,The Harness Is the First Reviewer
+d1b10,2026-11-05,breakout,1901713953,16:15,16:35,talk,Harrison Zhao,DatusAI,,Your Data Agent Needs More Than a Knowledge Graph -- From Semantic Layers to Executable Ontologies with Apache Ossie
+d1b11,2026-11-05,breakout,1901713953,16:35,16:45,talk,Sac,Independent,,From Idea to Viral Launch: How I Built a 3D Little Prince Game with AI
+d1b12,2026-11-05,breakout,1901713953,16:45,16:55,talk,Susan Peng,AhaCreator,,From Matching to Delivery: Scaling Creator Partnerships with AI
+d2m01,2026-11-06,main,1842167111,10:05,10:25,talk,Christoph Lassner,World Labs,,Taxonomy of World Models
+d2m02,2026-11-06,main,1842167111,10:25,10:45,talk,Bin Liu,HeyGen,,HTML is all your agents need: Redefining Context Engineering
+d2m03,2026-11-06,main,1842167111,10:45,11:05,talk,Ying Yang,CHILING CHUANYUE TECHNOLOGY,,AGI is decoding. Encoding is the moat.
+d2m04,2026-11-06,main,1842167111,11:10,11:25,talk,Shihui Zhu,HICAP Group,,AI in Manufacturing: The Last Mile Is Half the Journey
+d2m05,2026-11-06,main,1842167111,11:25,11:40,talk,James Hush,Daily.co,,Trusting Evals I Can't Read
+d2m06,2026-11-06,main,1842167111,11:40,11:50,talk,Satvik Sinha,"AICET, NUS",,"The Good, the Bad and the Ugly: What 3,000 live sessions taught us about streaming speech-to-text"
+d2m07,2026-11-06,main,1842167111,13:15,13:55,panel,Yusen Dai; Harry Wang; Patrick Liu,ZhenFund; Linear Capital; TaoZ Capital,Bibi (Xiaosheng Bibi / 第二次用火),"AI startups: products, markets & what comes next"
+d2m08,2026-11-06,main,1842167111,13:55,14:15,talk,Ronny He,MiniMax,,"Stronger Models, Leaner Harnesses: What to Control and What to Let Go"
+d2m09,2026-11-06,main,1842167111,14:15,14:30,talk,何文智,AiMoga Robotics,,Beyond Vision-Language-Action: First Principles for Building Physical AI
+d2m10,2026-11-06,main,1842167111,14:35,14:50,talk,Gavin Luo,VAST / Tripo AI,,From 3D Generation to World Models: Building Persistent Interactive Worlds for Physical AI
+d2m11,2026-11-06,main,1842167111,14:50,15:05,talk,Leonie Monigatti,Liquid AI,,How We're Building Open Decision Models for On-Device Agents
+d2m12,2026-11-06,main,1842167111,15:05,15:25,talk,Mingke Luo,masons.ai,,Communication Among Sovereign Agents: The Foundation of Agent Economy
+d2m13,2026-11-06,main,1842167111,15:30,15:50,talk,"Dicong ""David"" Qiu",QuantSparkle.ai 数耀量生,,Real2Real: A Quantum Embodied AI Paradigm for Optimal Behaviors Generation
+d2m14,2026-11-06,main,1842167111,15:50,16:05,talk,Jun Lv,Noematrix,,Noe-0: A World Action Model Built on Real-World Human Experience
+d2m15,2026-11-06,main,1842167111,16:05,16:20,talk,Zhong Shen,DYNA,,Building Robot Hardware for Rapidly Evolving Models
+d2m16,2026-11-06,main,1842167111,16:25,16:40,talk,Grace Li,1Password,,Talk to be announced
+d2m17,2026-11-06,main,1842167111,16:40,16:50,talk,Hao Zheng,Futuring Robot,,From Hardware to Intelligence: Full-Stack Evolution and Real-World Deployment of Home Service Robots
+d2m18,2026-11-06,main,1842167111,17:00,17:10,rapid_fire,Ding Hao (Xuanwo),LanceDB,,Robot Data Needs a Build System
+d2m19,2026-11-06,main,1842167111,17:10,17:20,rapid_fire,Siwei Gu,"Nowledge Labs, Inc",,"Memory Engineering, RSI and Team Knowledge Layer"
+d2m20,2026-11-06,main,1842167111,17:20,17:30,rapid_fire,Yanlong Wang,Jina AI by Elastic,,Reading the Web at Trillion-Token Scale

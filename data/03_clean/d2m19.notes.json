@@ -1,0 +1,41 @@
+{"talk_id": "d2m19",
+ "speakers": [{"name": "Siwei Gu", "name_as_heard": [], "org": "Nowledge Labs", "role": "Not stated in transcript (speaks for the team/company)", "background": "Team has worked on context/Knowledge Layer products since 2025 (Nowledge Mem); active in Graph and open-source communities. In 2019 did an OpenStack optimization (Bayesian optimization) to prepare for MWC. In April 2026 built a personal open-source AI terminal project (con) and independently arrived at an autoresearch-style RSI method; researching team-context internalization with a young Cornell researcher.", "evidence_orders": [3411, 3421, 3424, 3568, 3569, 3581, 3631, 3661]}],
+ "corrections": [
+  {"from": "Knowledge Labs", "to": "Nowledge Labs", "count": 1, "confidence": "high"},
+  {"from": "Knowledge Map", "to": "Nowledge Mem", "count": 1, "confidence": "high"},
+  {"from": "how db", "to": "HawDB", "count": 1, "confidence": "high"},
+  {"from": "con (项目)", "to": "con (con-terminal)", "count": 1, "confidence": "high"},
+  {"from": "try age", "to": "triage", "count": 1, "confidence": "high"},
+  {"from": "waiting", "to": "weighting", "count": 1, "confidence": "high"},
+  {"from": "眼睛的脉络", "to": "演进的脉络", "count": 1, "confidence": "high"},
+  {"from": "FRS / 抽卡记", "to": "FSRS / 抽认卡", "count": 1, "confidence": "high"},
+  {"from": "Alpha evolve ... 在 Blog 上", "to": "AlphaEvolve ... 在 Borg 上", "count": 1, "confidence": "medium"},
+  {"from": "Ohmstack", "to": "OpenStack", "count": 1, "confidence": "medium"},
+  {"from": "BAS 优化", "to": "贝叶斯优化", "count": 1, "confidence": "high"},
+  {"from": "pan, tabs / teamworks", "to": "panes, tabs / tmux", "count": 3, "confidence": "high"},
+  {"from": "Cloud Code", "to": "Claude Code", "count": 1, "confidence": "high"},
+  {"from": "auto research", "to": "autoresearch", "count": 2, "confidence": "high"},
+  {"from": "RSI lack", "to": "RSI-like", "count": 4, "confidence": "high"},
+  {"from": "滴水的果实", "to": "低垂的果实", "count": 1, "confidence": "high"},
+  {"from": "harmony harness", "to": "harness", "count": 1, "confidence": "high"},
+  {"from": "comply", "to": "compile", "count": 1, "confidence": "high"},
+  {"from": "opposite 点", "to": "Obsidian〔?〕", "count": 1, "confidence": "medium"},
+  {"from": "我们自己的时间来看", "to": "从我们自己的实践来看", "count": 1, "confidence": "medium"}
+ ],
+ "removed_non_content": [],
+ "uncertain": [
+  {"orders": "3457", "issue": "'像 JVLAC 的工作' — unidentified work (possibly GEPA); kept 〔?〕"},
+  {"orders": "3476", "issue": "'opposite 点' read as Obsidian; not confirmed"},
+  {"orders": "3582", "issue": "'Opus 4.8' in April 2026 — Opus 4.8 was released 2026-05-28, so speaker slip or mishearing (Opus 4.6/4.7 likely); kept as heard with 〔?〕"},
+  {"orders": "3625–3626", "issue": "'new corp 的 dot CO' reference company name unclear"},
+  {"orders": "3650", "issue": "'module adapter' may be 'model adapter'; kept as heard"}
+ ],
+ "verified": [
+  {"as_heard": "Knowledge Labs / Knowledge Map", "resolved_to": "Nowledge Labs / Nowledge Mem", "evidence": "https://github.com/nowledge-co/nowledge-mem — Nowledge Labs' memory/context manager, introduced by Wey Gu (Siwei Gu)", "orders": "3411, 3424"},
+  {"as_heard": "how db", "resolved_to": "HawDB", "evidence": "https://github.com/nowledge-co/hawdb — 'open-source Context/Knowledge Layer Database' by Nowledge Labs", "orders": "3659"},
+  {"as_heard": "con", "resolved_to": "con (nowledge-co/con-terminal)", "evidence": "https://github.com/nowledge-co/con-terminal — open-source AI terminal with agent understanding panes/tmux/SSH, developed by wey-gu", "orders": "3581–3589, 3661"},
+  {"as_heard": "CMU harness adapter paper", "resolved_to": "Hermit (CMU Infini-AI-Lab harness adapter framework, Oct 2026)", "evidence": "MarkTechPost/Sohu coverage: CMU's Hermit trains an external 'harness adapter', released 2026-10-25 ('上个月')", "orders": "3645–3646"},
+  {"as_heard": "Warp 还没有开源", "resolved_to": "Warp (open-sourced 2026-04-28)", "evidence": "https://itsfoss.com/news/warp-goes-open-source/ — consistent with 'in April Warp not yet open source'", "orders": "3582"},
+  {"as_heard": "Opus 4.8 和 GPT-5.4", "resolved_to": null, "evidence": "GPT-5.4 released 2026-03-05 (https://en.wikipedia.org/wiki/GPT-5.4); Opus 4.8 released 2026-05-28 (https://wavespeed.ai/blog/posts/opus-4-8/), after April — kept as heard with 〔?〕", "orders": "3582"}
+ ]
+}

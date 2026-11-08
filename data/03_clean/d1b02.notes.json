@@ -1,0 +1,179 @@
+{
+ "talk_id": "d1b02",
+ "speakers": [
+  {
+   "name": "Joey Wang",
+   "name_as_heard": [
+    "Joy",
+    "王仲宇"
+   ],
+   "org": "Harvey",
+   "role": "Engineer building internal agent Specter (title not stated)",
+   "background": "Said he has been at Harvey about three years, moving from serving lawyers to serving internal users; built Harvey's internal cloud Agent Specter used in Slack by 500+ people, producing 10k+ PRs.",
+   "evidence_orders": [
+    183,
+    184,
+    185,
+    186,
+    205,
+    214
+   ]
+  }
+ ],
+ "corrections": [
+  {
+   "from": "Joy",
+   "to": "Joey",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "contacts",
+   "to": "context",
+   "count": 4,
+   "confidence": "high"
+  },
+  {
+   "from": "Ripple",
+   "to": "REPL",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "LMS chart",
+   "to": "LLM judge",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "hue climb",
+   "to": "hill climb",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "千万",
+   "to": "千问 (Qwen)",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "DeepSeek V4呃.1的这个flash",
+   "to": "DeepSeek V4.1 Flash",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "opus max / opus",
+   "to": "Opus Max / Opus",
+   "count": 4,
+   "confidence": "high"
+  },
+  {
+   "from": "spectral",
+   "to": "Specter",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "actually (非常actually用)",
+   "to": "活跃地使用 (active)",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "祈祷",
+   "to": "启发",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "啊，就是啊的那个观点",
+   "to": "那位的观点 (earlier speaker)",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "同意的 (各可以同意)",
+   "to": "认同",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "让左边那个视频发一/按一下",
+   "to": "removed as stage chatter",
+   "count": 1,
+   "confidence": "high"
+  }
+ ],
+ "removed_non_content": [
+  {
+   "orders": "182",
+   "what": "checking how to use the clicker/screen"
+  },
+  {
+   "orders": "246-247",
+   "what": "lost train of thought"
+  },
+  {
+   "orders": "287",
+   "what": "asking AV to start the left video (partially removed)"
+  },
+  {
+   "orders": "313-314",
+   "what": "'this can be skipped' slide chatter"
+  }
+ ],
+ "uncertain": [
+  {
+   "orders": "187",
+   "issue": "referenced earlier speaker not identifiable"
+  },
+  {
+   "orders": "327-329",
+   "issue": "Q&A question inaudible; answer clarifies the 7h/$7,000 figures cover experiment runs plus all Specter runs"
+  },
+  {
+   "orders": "213",
+   "issue": "'身呃做一些自动化' garbled; rendered as 'or do some automation'"
+  }
+ ],
+ "verified": [
+  {
+   "as_heard": "Specter (Harvey internal agent)",
+   "resolved_to": null,
+   "evidence": "https://www.legalcheek.com/2026/02/legal-tech-giant-harvey-signs-harvey-specter-from-suits-as-brand-ambassador/ only shows Harvey is named after Harvey Specter; no public mention of the internal agent. Spelling kept from transcript (205, 329).",
+   "orders": "205-329"
+  },
+  {
+   "as_heard": "Big Law Bench / Legal Agent Bench",
+   "resolved_to": "BigLaw Bench / Legal Agent Benchmark (LAB)",
+   "evidence": "https://www.harvey.ai/blog/introducing-harveys-legal-agent-benchmark - Harvey's LAB builds on BigLaw Bench. Transcript form 'Big Law Bench' kept.",
+   "orders": "198"
+  },
+  {
+   "as_heard": "GLM / Kimi K3 open weight post-training",
+   "resolved_to": "GLM, Kimi K3",
+   "evidence": "https://fireworks.ai/blog/open-source-agents-frontier-advisors and https://www.techtimes.com/articles/327111/20260909/harvey-closes-550m-legal-ai-model-that-keeps-client-documents-firm-control.htm - Harvey post-trains open-weight models incl. GLM and Kimi K3.",
+   "orders": "201"
+  },
+  {
+   "as_heard": "DeepSeek V4.1 Flash",
+   "resolved_to": "DeepSeek V4.1 Flash",
+   "evidence": "https://kingy.ai/blog/qwen3-8-max-vs-kimi-k3-vs-deepseek-v4-flash/ and search results listing V4.1 Flash released Sept 2026.",
+   "orders": "298"
+  },
+  {
+   "as_heard": "千万",
+   "resolved_to": "千问 (Qwen)",
+   "evidence": "Search results (toloka.ai/yottalabs) show Qwen new releases; context is a new Chinese open model alongside DeepSeek.",
+   "orders": "235"
+  },
+  {
+   "as_heard": "王仲宇 / Joy",
+   "resolved_to": null,
+   "evidence": "Glossary lists Joey Wang at Harvey; no web result for the Chinese name characters, kept as spoken.",
+   "orders": "183"
+  }
+ ]
+}

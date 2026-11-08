@@ -1,0 +1,77 @@
+{
+  "talk_id": "d1b01",
+  "speakers": [
+    {
+      "name": "Baoping Wang (Yubo, 王保平/玉伯)",
+      "name_as_heard": [],
+      "org": "YouMind",
+      "role": "Speaker for YouMind; not stated in transcript (agenda lists him as the YouMind speaker). Speaks as the person deciding YouMind's direction: 'Gamma/Genspark 资金雄厚度会比我多', '我知道的是 YouMind 的未来'.",
+      "background": "From the transcript only: has spent two to three years on creation with AI/AIGC as the way to 'ignite' people's inner motivation (86); YouMind has 1,000+ Max subscribers paying $100/month who make ~15 PPTs per month, mostly for themselves (97–103); has used YouMind with it remembering 1+ year of his interactions (146); built the talk's slides in YouMind the night before and that morning (136); has used Claude Tag for nearly two months (13). No self-introduction of name or title in the transcript.",
+      "evidence_orders": [13, 86, 92, 97, 98, 100, 136, 146, 147, 148, 174, 175]
+    }
+  ],
+  "corrections": [
+    {"from": "UMind / UMA的 / UMA", "to": "YouMind", "count": 30, "confidence": "high"},
+    {"from": "瞎", "to": "虾 (OpenClaw, nicknamed 龙虾, released Nov 2025)", "count": 2, "confidence": "high"},
+    {"from": "Global Vault", "to": "Grok Bot", "count": 2, "confidence": "medium"},
+    {"from": "Tom / Tom AI", "to": "Tomo / Tomo AI", "count": 3, "confidence": "medium"},
+    {"from": "Instant的", "to": "Instinct", "count": 1, "confidence": "medium"},
+    {"from": "Minus有发表，有Q", "to": "Manus 发布了 Cue", "count": 1, "confidence": "high"},
+    {"from": "Dose", "to": "dots (OpenAI)", "count": 1, "confidence": "medium"},
+    {"from": "Art的王", "to": "Alexandr Wang", "count": 1, "confidence": "high"},
+    {"from": "JazzBug", "to": "Genspark〔?〕", "count": 2, "confidence": "medium"},
+    {"from": "Scale", "to": "Skill", "count": 3, "confidence": "high"},
+    {"from": "Notebook LM", "to": "NotebookLM", "count": 1, "confidence": "high"},
+    {"from": "AI GC", "to": "AIGC", "count": 1, "confidence": "high"},
+    {"from": "金融头条", "to": "今日头条", "count": 1, "confidence": "high"},
+    {"from": "谈谈成吃 / 更贪更撑更吃", "to": "贪嗔痴 / 更贪更嗔更痴", "count": 2, "confidence": "high"},
+    {"from": "界定会 / 界 / 会", "to": "戒定慧 / 戒 / 慧", "count": 3, "confidence": "high"},
+    {"from": "生业了", "to": "深夜了", "count": 1, "confidence": "high"},
+    {"from": "乐 (第二个场景)", "to": "Create to Earn / Earn", "count": 6, "confidence": "medium"},
+    {"from": "迎娶", "to": "赢取", "count": 3, "confidence": "high"},
+    {"from": "地区任务", "to": "定期任务", "count": 1, "confidence": "high"},
+    {"from": "全全线和那隐私", "to": "权限和隐私", "count": 1, "confidence": "high"},
+    {"from": "这一件那PA", "to": "这一届 PA", "count": 1, "confidence": "high"},
+    {"from": "去教一些朋友", "to": "去交一些朋友", "count": 1, "confidence": "high"},
+    {"from": "沉下来了", "to": "沉淀下来了", "count": 1, "confidence": "high"},
+    {"from": "琐事所想", "to": "所思所想", "count": 1, "confidence": "high"},
+    {"from": "大层面", "to": "大厂们", "count": 1, "confidence": "medium"},
+    {"from": "人事环境的反应器", "to": "人是环境的反应器", "count": 1, "confidence": "high"},
+    {"from": "UMA的一个地位", "to": "YouMind 的一个定位", "count": 1, "confidence": "high"},
+    {"from": "Person Agent", "to": "Personal Agent", "count": 4, "confidence": "high"},
+    {"from": "每周每个月平均会做15个PPT", "to": "每个月平均会做 15 个 PPT", "count": 1, "confidence": "high"},
+    {"from": "急剧的加剧", "to": "急剧地加速", "count": 1, "confidence": "medium"}
+  ],
+  "removed_non_content": [
+    {"orders": "6", "what": "'好，OK' transition filler (merged into paragraph 1–6)"},
+    {"orders": "133–134", "what": "'对，哎，我天呐' exclamation (likely slide/clicker hiccup), dropped within paragraph 127–135"}
+  ],
+  "uncertain": [
+    {"orders": "1", "issue": "Opening '读出来就是从最开始的话' is a truncated start; meaning of what 'the very beginning' refers to (probably OpenClaw) not recoverable."},
+    {"orders": "8–9", "issue": "'Tom' read as Tomo (launched June 2026) and 'Instant的' as Instinct (August 2026 surge); '机率' read as 记录〔?〕."},
+    {"orders": "32–33", "issue": "'Tom AI' as an email-centric agent built on Gmail — Tomo is a text-message-first agent with email connection; match is medium."},
+    {"orders": "65", "issue": "'主观那个能东西' — possibly 主观能动性; marked 〔?〕."},
+    {"orders": "82", "issue": "'但这跟小素描' unintelligible; kept with 〔?〕."},
+    {"orders": "89", "issue": "'被那个推荐给牵走，彼此带走' — second half unclear; rendered as 被推荐牵着走〔?〕."},
+    {"orders": "99–100", "issue": "'JazzBug' as a PPT competitor next to Gamma; Genspark is the most plausible but phonetically weak."},
+    {"orders": "107", "issue": "'能够越级' unclear; 'ToM' kept as spoken (probably 'To Me')."},
+    {"orders": "118–126", "issue": "Second scenario '乐' interpreted as 'Create to Earn' (变现, 赢得连接/信任/喜悦); could also be 乐 (joy)."},
+    {"orders": "130–131", "issue": "Hours for deliberate practice ('几万 / 10万小时') kept as heard; may be a misspeak or ASR error of 1 万小时."},
+    {"orders": "144", "issue": "'图图片法' read as 图片版〔?〕."},
+    {"orders": "174", "issue": "'Person Agent的一个场' rendered as 专场 (breakout track on Personal Agent)."}
+  ],
+  "verified": [
+    {"as_heard": "Muse / Art的王", "resolved_to": "Muse (Meta) / Alexandr Wang", "evidence": "https://www.axios.com/2026/09/08/meta-debuts-muse-personal-ai-agent — Meta personal agent built under Chief AI Officer Alexandr Wang, launched Sep 2026 (matches '9月份...Muse')", "orders": "2, 14, 57–59"},
+    {"as_heard": "Baoping Wang (Yubo) / YouMind (agenda)", "resolved_to": "王保平（玉伯），YouMind founder", "evidence": "https://pm-summit.org/speaker/946?uid=c1042 and https://m.sohu.com/a/914467477_122074763 — 玉伯 is YouMind founder; spelling of name and org confirmed", "orders": "1–177"},
+    {"as_heard": "JazzBug", "resolved_to": null, "evidence": "https://www.chatslide.ai/compare/gamma-vs-genspark — Genspark is a main Gamma competitor in AI slides, but phonetic match is weak; kept Genspark〔?〕", "orders": "99–100"},
+    {"as_heard": "Tom / Tom AI", "resolved_to": "Tomo", "evidence": "https://www.businesswire.com/news/home/20260625645270/en/ — Tomo personal AI agent emerged from stealth June 25, 2026, connects email/calendar (matches '6月份'); medium, marked 〔?〕 at first mention", "orders": "8, 32–33"},
+    {"as_heard": "Global Vault", "resolved_to": "Grok Bot", "evidence": "https://www.vktr.com/collaboration-productivity/xai-launches-grok-bot-ai-agents-in-beta/ — xAI's always-on personal agent (beta Aug 11, 2026) with Gmail/Slack connectors, listed alongside Muse and dots; phonetic match", "orders": "3, 14, 34"},
+    {"as_heard": "Claude Tag", "resolved_to": "Claude Tag (Anthropic)", "evidence": "https://deepnoodle.ai/atlas/timeline/2026-06-23-claude-tag — launched June 23, 2026 as an AI teammate in Slack, matching '6月23号' and '企业级'", "orders": "11–14"},
+    {"as_heard": "Dose", "resolved_to": "dots (OpenAI)", "evidence": "https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/ — OpenAI personal agent launched Sep 29, 2026, in the Sep–Nov wave", "orders": "15"},
+    {"as_heard": "Minus有发表，有Q", "resolved_to": "Manus 发布 Cue", "evidence": "https://theagentlog.com/updates/2026-09-28-manus-cue-launch/ — Manus launched Cue personal-agent app Sep 28, 2026", "orders": "15"},
+    {"as_heard": "俊元 ... Today", "resolved_to": "齐俊元 / Today AI", "evidence": "https://www.huxiu.com/article/4899418.html — 齐俊元's personal agent Today AI launched Sep 2026", "orders": "15"},
+    {"as_heard": "Instant的", "resolved_to": "Instinct", "evidence": "https://techcrunch.com/2026/08/26/viral-ai-startup-instinct-has-raised-350-million-at-a-2-5-billion-valuation/ — viral personal AI agent, surged early Aug 2026, connects email (matches '8月份', 连接邮箱)", "orders": "8–9"},
+    {"as_heard": "瞎 (从25年11月，从瞎开始)", "resolved_to": "虾 = OpenClaw (龙虾)", "evidence": "https://baike.baidu.com/item/OpenClaw/67313290 — OpenClaw, nicknamed 龙虾, released Nov 2025 by Peter Steinberger (matches '25年11月')", "orders": "2, 7"}
+  ],
+  "actual_topic_note": ""
+}

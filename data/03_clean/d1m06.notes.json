@@ -1,0 +1,36 @@
+{"talk_id": "d1m06",
+ "speakers": [{"name": "Chen Wang", "name_as_heard": [], "org": "Baseten", "role": "Not stated in transcript (agenda: Head of Partner Engineering)", "background": "Works at Baseten, which she describes as an inference platform providing serverless API, dedicated deployment and fine-tuning on open models; says full-stack inference engineering is 'what we do at Baseten'. No personal background given.", "evidence_orders": [1089, 1135, 1157]}],
+ "corrections": [
+  {"from": "base 10", "to": "Baseten", "count": 3, "confidence": "high"},
+  {"from": "DSV for one flash", "to": "DeepSeek V4.1 Flash", "count": 1, "confidence": "medium"},
+  {"from": "preto frontier", "to": "Pareto frontier", "count": 1, "confidence": "high"},
+  {"from": "VLM", "to": "vLLM", "count": 1, "confidence": "high"},
+  {"from": "SGLAN", "to": "SGLang", "count": 1, "confidence": "high"},
+  {"from": "open router", "to": "OpenRouter", "count": 1, "confidence": "high"},
+  {"from": "defensive mode", "to": "defensive moat", "count": 1, "confidence": "high"},
+  {"from": "The Hero, with a thousand faces", "to": "The Hero with a Thousand Faces", "count": 1, "confidence": "high"},
+  {"from": "inverse of input token inter token latency", "to": "inverse of inter-token latency", "count": 1, "confidence": "high"},
+  {"from": "MOE", "to": "MoE", "count": 1, "confidence": "high"},
+  {"from": "flash attention", "to": "FlashAttention", "count": 1, "confidence": "high"},
+  {"from": "KV cache is overloaded", "to": "KV cache is offloaded", "count": 1, "confidence": "high"},
+  {"from": "capacitive availability", "to": "capacity availability", "count": 1, "confidence": "high"},
+  {"from": "data residence", "to": "data residency", "count": 1, "confidence": "high"},
+  {"from": "entire vertical step", "to": "entire vertical stack", "count": 1, "confidence": "high"},
+  {"from": "this picture entirely by hand", "to": "I actually drew this picture entirely by hand", "count": 1, "confidence": "medium"},
+  {"from": "Tensor sorry expert parallelism", "to": "expert parallelism (self-correction)", "count": 1, "confidence": "high"}
+ ],
+ "removed_non_content": [
+  {"orders": "1080–1081", "what": "asking whether the screen can connect to her own laptop"},
+  {"orders": "1085–1087", "what": "laptop/screen check with staff"},
+  {"orders": "1119", "what": "garbled 'I'm closing my missed it' (marked 〔unintelligible〕)"}
+ ],
+ "uncertain": [
+  {"orders": "1119", "issue": "'I'm closing my missed it' unrecoverable"},
+  {"orders": "1154", "issue": "Model on Pareto chart heard as 'DSV for one flash'; read as DeepSeek V4.1 Flash (could be V4 Flash)"},
+  {"orders": "1154–1157", "issue": "Source lines 1154–1157 are very long run-on lines; split into several paragraphs sharing the same seg number"}
+ ],
+ "verified": [
+  {"as_heard": "base 10 / Chen Wang", "resolved_to": "Baseten; Chen Wang, Head of Partner Engineering", "evidence": "https://ai.engineer/shanghai/2026/speakers?lang=cn — speaker page lists same talk title", "orders": "1089"},
+  {"as_heard": "DSV for one flash", "resolved_to": "DeepSeek V4.1 Flash", "evidence": "https://www.baseten.co/library/deepseek-v41-flash/ — model served on Baseten; Baseten's Nov 2026 post discusses Flash models on the Pareto frontier", "orders": "1154"}
+ ]
+}

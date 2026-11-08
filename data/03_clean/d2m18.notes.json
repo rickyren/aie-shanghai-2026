@@ -1,0 +1,57 @@
+{
+  "talk_id": "d2m18",
+  "speakers": [
+    {
+      "name": "丁皓 Ding Hao (Xuanwo)",
+      "name_as_heard": ["丁浩", "漩涡"],
+      "org": "LanceDB",
+      "role": "未在演讲中说明（以 LanceDB 团队成员身份介绍公司与产品）",
+      "background": "自我介绍名字为丁皓，常用网名漩涡（Xuanwo）；第一次在上海做分享。介绍 LanceDB 为一家北美创业公司，目标是构建多模态数据湖，愿景是帮助大模型公司基于正确的数据构建数据飞轮。",
+      "evidence_orders": [3280, 3284, 3285, 3287]
+    }
+  ],
+  "corrections": [
+    {"from": "丁浩", "to": "丁皓", "count": 1, "confidence": "high"},
+    {"from": "LMDB", "to": "LanceDB", "count": 3, "confidence": "high"},
+    {"from": "LensDB / landing page", "to": "LanceDB", "count": 7, "confidence": "high"},
+    {"from": "Lens / Lens format", "to": "Lance / Lance format", "count": 12, "confidence": "high"},
+    {"from": "Block V2", "to": "Blob V2", "count": 1, "confidence": "high"},
+    {"from": "park（传统的这种park）", "to": "Parquet", "count": 2, "confidence": "high"},
+    {"from": "self-flag", "to": "cell flag", "count": 3, "confidence": "medium"},
+    {"from": "UTF", "to": "UDF", "count": 1, "confidence": "high"},
+    {"from": "Larabot", "to": "LeRobot", "count": 3, "confidence": "high"},
+    {"from": "还看 K Face Larabot", "to": "Hugging Face LeRobot", "count": 1, "confidence": "high"},
+    {"from": "up、up、applied institution", "to": "Applied Intuition", "count": 1, "confidence": "high"},
+    {"from": "log file", "to": "lock file", "count": 1, "confidence": "medium"},
+    {"from": "语音化的分析和检索", "to": "语义化的分析和检索", "count": 1, "confidence": "medium"},
+    {"from": "自底向下", "to": "自底向上", "count": 1, "confidence": "high"},
+    {"from": "ping 的机制", "to": "pin 的机制", "count": 1, "confidence": "medium"},
+    {"from": "正确的球体", "to": "正确的物体", "count": 1, "confidence": "medium"},
+    {"from": "然后这是tag", "to": "支持 tag", "count": 1, "confidence": "high"},
+    {"from": "我们把它叫、叫、叫为cell", "to": "我们把它叫作 cell", "count": 1, "confidence": "high"},
+    {"from": "还有一个其他的 18 个摄像头", "to": "还有其他 18 个摄像头", "count": 1, "confidence": "high"},
+    {"from": "当所有的这个训练全都算完之后", "to": "当所有的计算全都算完之后", "count": 1, "confidence": "medium"}
+  ],
+  "removed_non_content": [
+    {"orders": "3282–3283", "what": "设备调试时的“嗯 / Sorry”"},
+    {"orders": "3290–3293", "what": "调试结束时的 Thank you / OK / Sorry 等舞台杂音"}
+  ],
+  "uncertain": [
+    {"orders": "3316", "issue": "“log file” 按构建系统类比改为 lock file，未能从公开资料确认原话"},
+    {"orders": "3337", "issue": "“语音化的分析和检索” 推测为“语义化”"},
+    {"orders": "3347", "issue": "“球体” 推测为“物体”"},
+    {"orders": "3348–3355", "issue": "“self-flag” 推测为 cell flag（与前文 cell/dirty 状态呼应），网络检索未找到该术语；“管理它自己的表” 语义不清"},
+    {"orders": "3373", "issue": "“只会去重试已经操作过的 range” 逻辑不顺，可能原意为只重试未完成/失败的 range"},
+    {"orders": "3376–3377", "issue": "两行之间内容缺失（疑似切换幻灯片或识别丢失），“在 LanceDB 这个表里面……的时候”无法还原"},
+    {"orders": "3382", "issue": "“ping 的机制” 推测为 pin（LanceDB functions 有 pin 版本概念），也可能是 tag"},
+    {"orders": "3388", "issue": "“出、出、出去的摄入和训练” 推测为“数据的摄入和训练”"}
+  ],
+  "verified": [
+    {"as_heard": "丁浩 / 漩涡", "resolved_to": "丁皓 (Xuanwo)", "evidence": "https://rustcc.cn/2025conf/schedule.html — RustChinaConf 2025 列为“丁皓，Apache OpenDAL PMC 主席，LanceDB 高级工程师”；https://xuanwo.io/2025/04-thank-you-databend-hello-lancedb/ 加入 LanceDB", "orders": "3280"},
+    {"as_heard": "Block V2", "resolved_to": "Lance Blob V2", "evidence": "https://www.lancedb.com/blog/lance-blob-v2 — Lance 2.2 的多模态大二进制（image/audio/video）存储，并与 Parquet 做 blob 读取对比，匹配上下文", "orders": "3333–3338"},
+    {"as_heard": "Larabot / 还看 K Face Larabot", "resolved_to": "Hugging Face LeRobot", "evidence": "https://huggingface.co/blog/lerobot/lerobot-release-v070 — LeRobot 与 LanceDB 团队合作，原生读取 Lance 格式数据集用于训练，匹配“上游已原生支持 Lance”", "orders": "3385–3388"},
+    {"as_heard": "up、up、applied institution", "resolved_to": "Applied Intuition", "evidence": "https://www.lancedb.com/blog/announcing-reverie-summit-2026 — Applied Intuition 为 LanceDB 客户，用 Lance 管理 PB 级多模态传感器数据做模型训练", "orders": "3397–3398"},
+    {"as_heard": "self-flag", "resolved_to": null, "evidence": "检索 Lance 文档/论文（https://arxiv.org/html/2504.15247v1 等）未找到 cell flag 术语；按上下文推测为 cell flag，保留〔?〕", "orders": "3348–3355"},
+    {"as_heard": "LensDB functions / UTF / ping / log file", "resolved_to": "LanceDB functions / UDF（pin 与 lock file 未确认）", "evidence": "https://github.com/lancedb/lancedb/pull/4253 等 — Xuanwo 在 lancedb 仓库提交 Function 相关 PR，lancedb.functions 支持 Python UDF 注册并将 column pin 到 FunctionVersion；未找到 lock file 说法", "orders": "3316, 3356–3357, 3382"}
+  ]
+}

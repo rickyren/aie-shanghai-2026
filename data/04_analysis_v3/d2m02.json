@@ -1,0 +1,42 @@
+{
+ "talk_id": "d2m02",
+ "speakers": "Bin Liu",
+ "org": "HeyGen",
+ "value_chain_layer": "vertical_app",
+ "position": "HTML 视频 agent",
+ "target_customer": "consumer",
+ "intent": "both",
+ "skeleton": [
+  "HeyGen 做 AI 视频，认为视频是最好的沟通形式，因此要造一个让普通人轻松做视频的 agent。",
+  "最初让 agent 直接写编辑器的 2000 行以上 JSON，但模型并不能在自家 JSON 里推理，比如看不出布局错误，就像让莎士比亚写中文诗。",
+  "于是丢掉 JSON，让 agent 写 HTML/CSS/JS，并用开源框架 HyperFrames 渲染成 MP4，把上下文换成模型最擅长的代码形态。",
+  "判断标准是：模型变强 10 倍时，产品是更好还是被摧毁，答案取决于上下文的形状；幻灯片、设计、游戏都在转向 HTML。"
+ ],
+ "core_message": "HeyGen 开源 HyperFrames，让 agent 直接写 HTML 并渲染成视频；其论点是上下文应设计成模型本来最擅长的代码/文件形态，而不是自家私有的 JSON，这样模型每次变强产品也随之变强。",
+ "frameworks": [
+  {"name": "上下文的形状应贴合模型擅长的能力", "gist": "不要让模型写它没学过的私有格式（如 2000 行 JSON），而是用它最熟的代码和文件系统，让产品顺着模型进步而不是对抗。", "seg": "470–480"}
+ ],
+ "offerings": [
+  {"name": "HyperFrames", "what": "开源框架，agent 写纯 HTML/CSS/JavaScript，渲染成 MP4 视频。", "for_whom": "AI 构建者及有故事要讲但不会做视频的人", "status": "open_source"},
+  {"name": "HeyGen Video Agent", "what": "通过提示词让 agent 生成产品沟通类视频。", "for_whom": "构建者、创作者", "status": "launched"}
+ ],
+ "why_needed": "相对于让 agent 直接生成传统编辑器的 JSON 或学习 After Effects、Premiere、CapCut 等专业软件，HTML 是模型本来就擅长的形态，可靠性更好且随模型升级自动变强。",
+ "problem_approach": [
+  {"problem": "agent 能写 JSON 但无法在专有 JSON 结构里推理，看不出画面布局错误。", "approach": "放弃私有 JSON，让 agent 在代码和文件系统里工作，用 HTML 表达视频，再渲染成 MP4。"}
+ ],
+ "non_consensus": [
+  {"kind": "market_call", "point": "判断 AI 产品能否活过模型升级，关键看上下文是否贴合模型擅长的形态，而不是堆更多记忆和工具。", "quote": "A very popular question in Silicon Valley these days is: when models get 10x better, does your product get better, or does it get destroyed?", "seg": "470–480", "speaker": "Bin Liu"},
+  {"kind": "prediction", "point": "文档、幻灯片、设计工具甚至游戏都在转向以 HTML/代码为底层表示，因为 agent 最擅长写代码。", "quote": "Many companies, including the frontier labs, are replacing documents with HTML.", "seg": "443–461", "speaker": "Bin Liu"}
+ ],
+ "signals": [
+  {"type": "market_pattern", "signal": "Manus、Genspark、ChatGPT 等做幻灯片，以及 Paper 等设计工具，都在用 HTML 作为底层，内容创作工具正向代码化表示收敛。", "value_as_heard": "", "seg": "443–469"},
+  {"type": "market_pattern", "signal": "HeyGen 把自己与短剧、电影类视频厂商区分开，定位于用于沟通的视频，这一品类由 agent 驱动。", "value_as_heard": "", "seg": "325–338"},
+  {"type": "metric_focus", "signal": "追踪 GitHub star、skill 安装量和每日生成视频数，说明把增长视为 agent 生态的分发指标，并认为模型进步会带来自动增长。", "value_as_heard": "约 8 万 GitHub star，每日约 70 万视频", "seg": "432–442"},
+  {"type": "launch", "signal": "HyperFrames 于今年 4 月开源，用 HTML 渲染视频。", "value_as_heard": "", "seg": "372–380"}
+ ],
+ "trend_categories": ["personal_agent_ai_native", "memory_data_context"],
+ "novelty": 4,
+ "pr_level": 4,
+ "content_industry_note": "视频制作正在从时间线编辑器的私有数据结构转向 HTML 代码：谁掌握可被 agent 读写的开放格式，谁就能让不会剪辑的非专业人士批量生产沟通类视频，直接冲击传统剪辑软件和模板平台。",
+ "filtered_consensus": ["上下文工程包括记忆、工具、RAG", "模型变强带来产品变强", "agent 擅长写代码", "视频比文档更易沟通"]
+}

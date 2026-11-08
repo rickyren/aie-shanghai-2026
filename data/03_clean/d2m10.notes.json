@@ -1,0 +1,36 @@
+{"talk_id": "d2m10",
+ "speakers": [{"name": "Gavin Luo", "name_as_heard": ["Gavin"], "org": "VAST (team behind Tripo AI)", "role": "Not stated in transcript", "background": "Speaks for VAST, which builds Tripo (text/image to 3D models), serving tens of millions of creators in nearly 200 countries and regions; research team with 60+ papers and 50+ open-source projects; working on Project Eden and the open-source EdenLive real-time generative renderer.", "evidence_orders": [1807, 1809, 1813, 1821, 1824, 1825, 1826, 2007]}],
+ "corrections": [
+  {"from": "Triple", "to": "Tripo", "count": 12, "confidence": "high"},
+  {"from": "Triple SR", "to": "TripoSR", "count": 1, "confidence": "high"},
+  {"from": "Triple P2", "to": "Tripo P2", "count": 1, "confidence": "high"},
+  {"from": "Eden Life", "to": "EdenLive", "count": 10, "confidence": "high"},
+  {"from": "project Eden Work", "to": "Project Eden", "count": 1, "confidence": "medium"},
+  {"from": "Seagraph 2023", "to": "SIGGRAPH 2023", "count": 1, "confidence": "high"},
+  {"from": "three staircase", "to": "three-step staircase", "count": 1, "confidence": "medium"},
+  {"from": "GPT-6, Astra", "to": "GPT-6 Astra", "count": 1, "confidence": "high"},
+  {"from": "SaaS", "to": "Sac", "count": 1, "confidence": "high"},
+  {"from": "little prince, uh, across the stars", "to": "The Little Prince: Across the Stars", "count": 1, "confidence": "high"},
+  {"from": "Cloud", "to": "Claude", "count": 1, "confidence": "high"},
+  {"from": "college", "to": "colleague", "count": 1, "confidence": "high"},
+  {"from": "a 3D asset is a none", "to": "a 3D asset is a noun", "count": 1, "confidence": "high"},
+  {"from": "min view", "to": "main view", "count": 2, "confidence": "high"},
+  {"from": "consume state", "to": "custom state", "count": 1, "confidence": "medium"},
+  {"from": "5 billion model", "to": "5-billion-parameter (5B) model", "count": 1, "confidence": "high"},
+  {"from": "workability check", "to": "walkability check", "count": 1, "confidence": "medium"},
+  {"from": "Vast", "to": "VAST", "count": 3, "confidence": "high"}
+ ],
+ "removed_non_content": [],
+ "uncertain": [
+  {"orders": "1886", "issue": "'if the agents, um, either one calling it' read as 'if agents are the ones calling it'"},
+  {"orders": "1904", "issue": "Japanese creator name 'Nano' not verified"},
+  {"orders": "1962", "issue": "'robotics, like physical accuracy' read as 'robotics, physical AI'"},
+  {"orders": "1988", "issue": "'workability check' read as walkability check"}
+ ],
+ "verified": [
+  {"as_heard": "Eden Life / project Eden Work", "resolved_to": "EdenLive, part of Project Eden", "evidence": "https://github.com/VAST-AI-Research/EdenLive - VAST real-time generative renderer, Apache 2.0, 5B model ~24 FPS 720p; Project Eden world model research preview", "orders": "1830–2003"},
+  {"as_heard": "Triple SR / Triple P2", "resolved_to": "TripoSR / Tripo P2", "evidence": "https://www.tripo3d.ai/blog/tripo-p2-0-preview and huggingface.co/stabilityai/TripoSR - VAST models", "orders": "1847–1849"},
+  {"as_heard": "GPT-6, Astra", "resolved_to": "GPT-6 Astra", "evidence": "https://www.cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html - OpenAI model released Sept 2026", "orders": "1866–1869"},
+  {"as_heard": "Seagraph 2023 ... our CEO Simon", "resolved_to": "SIGGRAPH 2023; Simon Song (宋亚宸), VAST CEO", "evidence": "https://www.prnewswire.com/news-releases/ai-powered-innovation-vasts-vision-for-democratizing-3d-content-creation-takes-center-stage-as-the-first-chinese-keynote-speaker-at-siggraph-2023-301900118.html", "orders": "1841"},
+  {"as_heard": "SaaS ... little prince across the stars ... Cloud, Blender, and Triple", "resolved_to": "Sac; The Little Prince: Across the Stars; Claude, Blender, Tripo", "evidence": "https://x.com/Saccc_c/status/2109962425512734739 - built in 16 days with Claude Opus + Tripo + Blender", "orders": "1896–1899"}
+ ]}

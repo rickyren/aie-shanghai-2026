@@ -1,0 +1,33 @@
+{
+  "talk_id": "d2m06",
+  "speakers": [
+    {
+      "name": "Satvik Sinha",
+      "name_as_heard": ["Satvik"],
+      "org": "AICET, NUS (KouShi)",
+      "role": "Not stated in transcript (builds voice agents for KouShi)",
+      "background": "Has been building voice agents for more than two years; his agents are deployed to production and have run thousands of real sessions; builds the KouShi app whose voice agent LaoShi helps users practice speaking Chinese.",
+      "evidence_orders": [1040, 1041, 1042, 1057, 1137]
+    }
+  ],
+  "corrections": [
+    {"from": "fluorous benchmark / fluorous", "to": "FLEURS benchmark / FLEURS", "count": 3, "confidence": "high"},
+    {"from": "kosher / kosher.ai", "to": "KouShi / koushi.ai", "count": 2, "confidence": "high"},
+    {"from": "Lao Shi", "to": "LaoShi", "count": 1, "confidence": "high"},
+    {"from": "voice accuracy detector", "to": "voice activity detector", "count": 1, "confidence": "high"},
+    {"from": "people think they're the salt part", "to": "people think they're the solved part", "count": 1, "confidence": "high"},
+    {"from": "practice speak Chinese", "to": "practice speaking Chinese", "count": 1, "confidence": "high"},
+    {"from": "My agents deploy to production", "to": "My agents are deployed to production", "count": 1, "confidence": "high"},
+    {"from": "transcribes something entirely else", "to": "transcribed something else entirely", "count": 1, "confidence": "high"}
+  ],
+  "removed_non_content": [],
+  "uncertain": [
+    {"orders": "1028–1030", "issue": "Opening audio clip of a learner speaking Chinese; live ASR rendering is garbled and kept verbatim as a quote with 〔?〕 (the talk's point is that STT misheard it)"},
+    {"orders": "1098", "issue": "segment word 'Ho' kept as heard"}
+  ],
+  "verified": [
+    {"as_heard": "kosher / kosher.ai, Lao Shi", "resolved_to": "KouShi (koushi.ai), LaoShi", "evidence": "https://aicet.comp.nus.edu.sg/koushi-ai-the-future-of-oral-language-learning/ — AICET (NUS) voice platform for Chinese oral practice with AI tutor LaoShi; matches speaker org AICET, NUS", "orders": "1057, 1137"},
+    {"as_heard": "fluorous benchmark", "resolved_to": "FLEURS", "evidence": "https://evalscope.readthedocs.io/en/v1.5.0/benchmarks/fleurs.html — multilingual read-speech ASR benchmark, matches 'native speakers reading prepared sentences'", "orders": "1076–1081"},
+    {"as_heard": "Satvik", "resolved_to": "Satvik Sinha", "evidence": "https://www.linkedin.com/in/satviksinha02/ — Software Engineer at AI Centre for Educational Technologies (AICET); matches agenda org", "orders": "1040"}
+  ]
+}

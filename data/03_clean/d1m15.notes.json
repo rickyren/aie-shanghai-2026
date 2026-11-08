@@ -1,0 +1,34 @@
+{"talk_id": "d1m15",
+ "speakers": [{"name": "郭人通（Rentong Guo）", "name_as_heard": ["郭仁通"], "org": "Zilliz", "role": "Zilliz（演讲中未明确说明职位）", "background": "代表 Zilliz 介绍：Zilliz 一直做向量数据库，开源项目 Milvus 自 2018 年开源；中国区约 9/10 用过向量数据库的企业用户使用其开源或商业方案；2023 年开始商业化，覆盖全球 6 个主要公有云、约 39 个可用区；近一年到一年半把 infra 从向量数据库升级为 lakebase（湖库）架构。自称'偏老登'的程序员，参与过大型分布式系统相关工作（暗示）。", "evidence_orders": [1436, 1437, 1438, 1444, 1460, 1461, 1464, 1465, 1469, 1531]}],
+ "corrections": [
+  {"from": "Zelix", "to": "Zilliz", "count": 3, "confidence": "high"},
+  {"from": "郭仁通", "to": "郭人通", "count": 1, "confidence": "high"},
+  {"from": "Muse", "to": "Milvus", "count": 2, "confidence": "high"},
+  {"from": "限量数据库", "to": "向量数据库", "count": 2, "confidence": "high"},
+  {"from": "胡库 / 胡", "to": "湖库 / 湖", "count": 15, "confidence": "high"},
+  {"from": "infer（infra 这边）", "to": "infra", "count": 1, "confidence": "high"},
+  {"from": "Starfolk", "to": "Star 数", "count": 1, "confidence": "medium"},
+  {"from": "6个主要的供应云", "to": "6 个主要的公有云", "count": 1, "confidence": "medium"},
+  {"from": "性能型实力、容量型实力、成本优化的实力", "to": "性能型实例、容量型实例、成本优化型实例", "count": 3, "confidence": "high"},
+  {"from": "油管", "to": "YouTube", "count": 1, "confidence": "high"},
+  {"from": "破天的流量", "to": "泼天的流量", "count": 2, "confidence": "high"},
+  {"from": "扎皮杯子", "to": "扎啤杯", "count": 5, "confidence": "high"},
+  {"from": "短句 / 多级的这种转短句", "to": "短剧 / 多集的短剧", "count": 3, "confidence": "high"},
+  {"from": "red job", "to": "Ray〔?〕 job", "count": 1, "confidence": "medium"},
+  {"from": "加一钱", "to": "多花一点钱", "count": 1, "confidence": "medium"},
+  {"from": "每一级的话呢，是一个十个数量级啊……一个数量级，不好意思", "to": "每一级之间是一个数量级（演讲者自我更正）", "count": 1, "confidence": "high"},
+  {"from": "千大千亿万亿", "to": "千亿、万亿", "count": 1, "confidence": "medium"},
+  {"from": "数据释放到最底下", "to": "数据放到最底下", "count": 1, "confidence": "medium"},
+  {"from": "每掉一跳", "to": "每跳一级", "count": 1, "confidence": "medium"}
+ ],
+ "removed_non_content": [],
+ "uncertain": [
+  {"orders": "1600", "issue": "'spark或者red job'——Spark 确定，'red job' 推断为 Ray job，标〔?〕。"},
+  {"orders": "1522–1523", "issue": "演讲者称 Cursor 在 24 年底/25 年初几个月内换了四套数据库，按原话保留（外部资料显示讲座时间线与数量可能不同，但不做改动）。"},
+  {"orders": "1567–1570", "issue": "三层成本 0.025 / 三毛 / 三块（美元/GB/月）按原话保留；'三分这一档'与 0.025 对应。"}
+ ],
+ "verified": [
+  {"as_heard": "Zelix 郭仁通 / lakebase 湖库 / Muse", "resolved_to": "Zilliz 郭人通（Robert Guo）；Zilliz Vector Lakebase；Milvus", "evidence": "https://www.blocksandfiles.com/ai-ml/2026/07/16/zilliz-launches-milvus-vector-lakebase/5273617 及 Zilliz 官网 — Zilliz 推出 Milvus Vector Lakebase；郭人通为 Zilliz 产品副总裁、Milvus 架构师", "orders": "1436–1445"},
+  {"as_heard": "Cursor CTO Stanford 讲座 / 数据库选择这个公司差点凉凉", "resolved_to": "Cursor CTO Sualeh Asif，Stanford CS153 讲座；中文标题《Cursor CTO 斯坦福讲座：数据库选错，公司差点凉凉》", "evidence": "https://blog.csdn.net/Bytebase/article/details/147503449 — 讲座讲到数据库撑不住后整体重构为对象存储，与演讲描述一致", "orders": "1519–1526"}
+ ]
+}

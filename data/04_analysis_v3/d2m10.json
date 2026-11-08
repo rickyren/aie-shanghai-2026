@@ -1,0 +1,100 @@
+{
+  "talk_id": "d2m10",
+  "speakers": "Gavin Luo",
+  "org": "VAST / Tripo AI",
+  "value_chain_layer": "embodied_world_model",
+  "position": "3D 生成转向世界模型",
+  "target_customer": "developer",
+  "intent": "both",
+  "skeleton": [
+    "三年前提出「物体、场景、世界」的三级阶梯；Tripo 在物体层已从 TripoSR 走到细节更丰富的 Tripo P2。",
+    "今年 coding agent 能用代码直接搭出室内场景，让 3D 公司必须重新回答模型该做什么；结论是「能描述的由 agent 写代码，只能识别的由模型学」。",
+    "Project Eden 把世界状态显式放在程序里，由学习型模型负责渲染，使灭火、涂鸦等变化持久、多视角一致；EdenLive 是其实时渲染器并已开源。",
+    "仍有未解问题：角色漂移需要更好的记忆、控制不足、评测难（agent 会在可走性测试里作弊）。"
+  ],
+  "core_message": "Tripo 面对 coding agent 能用代码搭场景的冲击，把定位改为 agent 的工具：规则可描述的部分交给程序，难以描述的细节（人脸、生物）交给 3D 模型；并推出开源的 EdenLive，让游戏程序持有世界状态、生成模型实时渲染画面，朝可持续运行的世界和机器人环境推进。",
+  "frameworks": [
+    {
+      "name": "能描述 vs 只能识别",
+      "gist": "能描述的内容（门的位置、得分、房间布局）由 agent 写代码；只能识别的细节（脸、生物形状）必须由模型从数据中学习。",
+      "seg": "1885–1894"
+    },
+    {
+      "name": "物体、场景、世界三级阶梯",
+      "gist": "先生成资产，再搭建能发生事情的场景，最终是持续运行、服务人和机器人的世界。",
+      "seg": "1839–1845"
+    }
+  ],
+  "offerings": [
+    {
+      "name": "Tripo（含 Tripo P2）",
+      "what": "文本或图片生成 3D 模型与角色，可供 agent 调用。",
+      "for_whom": "创作者、游戏开发者及其 agent",
+      "status": "launched"
+    },
+    {
+      "name": "EdenLive",
+      "what": "实时生成式渲染器：游戏程序保留规则与状态，模型据参考画面和提示生成更丰富的画面。",
+      "for_whom": "游戏、动画、机器人仿真开发者",
+      "status": "open_source"
+    },
+    {
+      "name": "Project Eden",
+      "what": "显式世界状态加学习型渲染，使世界变化被持久记录的研究预览。",
+      "for_whom": "研究者与世界模型开发者",
+      "status": "preview"
+    }
+  ],
+  "why_needed": "相对 coding agent 直接用代码搭 3D 场景，Tripo 提供代码难以写出的细节资产；相对纯视频式世界模型，Eden 让程序持有状态，以保证规则、得分和变化持续一致。",
+  "problem_approach": [
+    {
+      "problem": "纯生成式世界模型难以保证物体状态持久、多视角一致和规则确定。",
+      "approach": "状态与规则由游戏程序显式维护，学习型模型只负责渲染画面，可随意换镜头和风格而状态不变。"
+    },
+    {
+      "problem": "3D 模型公司面临 coding agent 用代码直接生成场景的替代。",
+      "approach": "把模型定位为 agent 的工具，专攻难以用代码描述的细节资产。"
+    }
+  ],
+  "non_consensus": [
+    {
+      "kind": "insight",
+      "point": "agent 与 3D 模型的分工边界是能否被描述，而不是模型强弱。",
+      "quote": "if you can describe it, an agent can write it; but if you can only recognize it, a model has to learn it.",
+      "seg": "1885–1894",
+      "speaker": "Gavin Luo"
+    },
+    {
+      "kind": "practice",
+      "point": "世界模型的状态应由程序显式持有，生成模型只负责渲染，所以风格改变不会改变得分归属。",
+      "quote": "Keep the world state explicit: the program knows what happens — where the door is, whether it is open or closed, and what happens when you walk through it.",
+      "seg": "1909–1923",
+      "speaker": "Gavin Luo"
+    }
+  ],
+  "signals": [
+    {
+      "type": "market_pattern",
+      "signal": "coding agent 能力提升直接威胁纯 3D 生成公司，后者转而成为 agent 可调用的资产工具，并向世界模型延伸。",
+      "value_as_heard": "",
+      "seg": "1862–1884"
+    },
+    {
+      "type": "launch",
+      "signal": "EdenLive 的模型权重和流式接口代码以 Apache 2.0 开源，支持实时渲染与离线重渲染。",
+      "value_as_heard": "",
+      "seg": "1970–1976"
+    },
+    {
+      "type": "data_signal",
+      "signal": "机器人示范视频被重渲染成不同视觉变体（手换成机械臂），用于扩充机器人学习数据，但物理准确性与有效性尚未验证。",
+      "value_as_heard": "",
+      "seg": "1961–1969"
+    }
+  ],
+  "trend_categories": ["world_model_spatial", "embodied_physical_ai"],
+  "novelty": 4,
+  "pr_level": 4,
+  "content_industry_note": "EdenLive 可保留布局与动作、只替换画面风格，对游戏预览、动画风格化和真实素材重渲染直接相关，视频和动画创作者可把粗略引擎输出或实拍素材当作参考，由模型完成成片画面。",
+  "filtered_consensus": ["coding agent 越来越强", "评测难", "世界模型需要记忆", "开源", "公司和用户规模介绍"]
+}

@@ -1,0 +1,94 @@
+{
+  "talk_id": "d2m07",
+  "speakers": "戴雨森 Yusen Dai; 王淮 Harry Wang; 刘勇 Patrick Liu（主持：比比）",
+  "org": "真格基金; 线性资本; TaoZ Capital",
+  "value_chain_layer": "capital_community",
+  "position": "早期投资人圆桌",
+  "target_customer": "n/a",
+  "intent": "insight",
+  "skeleton": [
+    "模型公司对应用的挤压主要来自第一方应用（Claude Code、Codex、ChatGPT）而非模型本身，但模型变强变便宜整体利好应用层，应用要在 token 之上赚增量价值。",
+    "Personal agent 是否成立：戴雨森认为须是扩张新需求而非提效，王淮看好边云结合的本地 AI 硬件与 agent 作为 doer，刘勇认为它不是创业公司的机会。",
+    "AI native 方向判断：情绪价值、强数据垂类（医疗法律）和视频/短剧被认为已出现，纯应用早期靠模型套利多已死亡。",
+    "选人与拒绝清单：偏好动手做出结果的 builder 与真天才，对学者型 Neolab、RSI 概念创业、世界模型大脑持谨慎态度。"
+  ],
+  "core_message": "三位早期投资人认为，吞噬应用的是模型公司的第一方产品而非模型本身，创业者的机会在于创造新的需求（情绪价值、强数据垂类、视频短剧）而不是给已有需求提效，同时对 personal agent 能否成为创业公司的机会存在明显分歧。投资上看重动手做出结果的 builder，对学者型 Neolab 和空泛的 RSI 创业保持谨慎。",
+  "frameworks": [
+    {
+      "name": "新需求扩张 vs 已有需求提效",
+      "gist": "戴雨森：移动互联网成功的公司都在扩张普通人的需求（电商、娱乐），而提效型产品（黑莓式）难成大众市场，personal agent 只有创造增量需求才是大机会，否则只是抢中间人的蛋糕。",
+      "seg": "1293–1313"
+    },
+    {
+      "name": "智能三层 + 横纵轴",
+      "gist": "王淮：智能 = 基座模型 + agentic（完成任务）+ context 三层；横轴是个人/企业的本地 AI 与边云结合硬件，纵轴是各垂类（如实时视频生成）。",
+      "seg": "1226–1253"
+    }
+  ],
+  "offerings": [],
+  "why_needed": "",
+  "problem_approach": [
+    {
+      "problem": "第一方应用（背靠补贴 token）挤压第三方应用，应用公司如何赚钱不清晰。",
+      "approach": "在模型 token 之上创造增量价值，如 personal agent 按帮用户省钱或成交额抽成，走“羊毛出在猪身上”的 AI native 商业模式，并进入有 context/数据/部署壁垒的医疗、金融、法律。"
+    },
+    {
+      "problem": "Personal agent 留存一般、不是刚需，且大模型公司在算力、算法、数据上占优。",
+      "approach": "从扩张新需求（个性化健康推荐、情绪价值）切入；王淮主张本地 AI 硬件与单 session 管家式 agent，刘勇主张转向无限需求（情绪、娱乐、搜索、社交）。"
+    }
+  ],
+  "non_consensus": [
+    {
+      "kind": "market_call",
+      "point": "吞噬小应用公司的是模型公司的第一方应用（靠补贴 token）而不是模型能力本身，模型变强变便宜对应用层是利好。",
+      "quote": "其实我们看到所谓吞食小应用公司的，我认为并不是模型本身，而是模型公司自己做的第一方应用，比如 Claude Code、Codex、ChatGPT。",
+      "seg": "1178–1185",
+      "speaker": "戴雨森"
+    },
+    {
+      "kind": "market_call",
+      "point": "Personal agent 无论软硬件都是大机会，但不是创业公司的机会，算力、算法、数据都不如大模型公司，历史上类似品类最终被平台公司占据。",
+      "quote": "做一个 personal agent，你的这三个要素不会比大模型公司更好。",
+      "seg": "1367–1378",
+      "speaker": "刘勇"
+    },
+    {
+      "kind": "insight",
+      "point": "大众市场产品必须扩张新需求而非提升已有需求的效率，因此提效型 personal agent 留存一般。",
+      "quote": "所以我觉得要真的做到一个大众市场，得是一个新需求扩张的产品，而不是一个已有需求提高效率的产品。",
+      "seg": "1293–1302",
+      "speaker": "戴雨森"
+    }
+  ],
+  "signals": [
+    {
+      "type": "market_pattern",
+      "signal": "模型公司第一方应用靠大幅补贴 token 与第三方应用竞争，早期 Manus、Genspark 的成功被认为部分来自在最新模型上的套利，该空间随模型延伸而收窄。",
+      "value_as_heard": "补贴 20 倍 token",
+      "seg": "1178–1185"
+    },
+    {
+      "type": "data_signal",
+      "signal": "大模型训练数据中，金融、旅行等垂直领域的长程轨迹与环境远远不足，目前只有 coding 做得好，其他领域是厂商优先级问题而非能力问题。",
+      "value_as_heard": "",
+      "seg": "1354–1362"
+    },
+    {
+      "type": "market_pattern",
+      "signal": "中文 AI 世界的 token 消耗以短剧/视频内容为主，美国则以生产力工具和 coding 为主，两个市场应用结构不同；投资人看好情绪价值与视频方向。",
+      "value_as_heard": "短剧占中文 token 消耗 55%",
+      "seg": "1275–1283"
+    },
+    {
+      "type": "metric_focus",
+      "signal": "真格用 GitHub 开源热度与真实用户反馈衡量早期 builder 团队的动手成果（如从热门视频复刻视频的 Hypit），而不看学术背景光环。",
+      "value_as_heard": "4 万多 star",
+      "seg": "1414–1421"
+    }
+  ],
+  "trend_categories": ["investment_startup", "personal_agent_ai_native"],
+  "novelty": 3,
+  "pr_level": 3,
+  "content_industry_note": "投资人明确看好情绪价值与视频/短剧为已出现的 AI native 方向，且 Hypit 这类从热门视频的节奏与叙事复刻视频的开源工具获得大量关注，说明内容创作工具是资本关注的真实需求。",
+  "filtered_consensus": ["模型变强变便宜", "推理成本每年下降", "垂类数据是壁垒", "应用生态百花齐放", "创业要动手去做", "pilot 到变现的距离"]
+}

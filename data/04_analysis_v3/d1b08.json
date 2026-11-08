@@ -1,0 +1,96 @@
+{
+  "talk_id": "d1b08",
+  "speakers": "Alyssa Lee",
+  "org": "DataHub",
+  "value_chain_layer": "data_context",
+  "position": "中立的企业上下文层",
+  "target_customer": "enterprise",
+  "intent": "product",
+  "skeleton": [
+    "agent 取代人去跑查询，且更自信、规模更大，企业 agent 出错多半是缺上下文而非模型问题。",
+    "DataHub 的 AI context layer 分四步：接入、理解（自动生成候选上下文）、专家验证、激活（MCP、skills、API、SDK），并为每条上下文打信任等级。",
+    "已正式上线并有生产案例（准确率提升、使用量提升）。",
+    "各大云与数据平台都在做自家上下文层，所以企业应自己拥有业务逻辑，以厂商中立格式存放，买底层基础设施。"
+  ],
+  "core_message": "DataHub 推出开源、厂商中立的 AI 上下文层，把分散在仓库、BI、文档里的数据含义经专家验证后带信任等级交给 agent；并劝企业不要把“高风险”之类的业务定义锁进 Snowflake、Databricks 等平台各自的上下文层。",
+  "frameworks": [
+    {
+      "name": "上下文生命周期：接入、理解、验证、激活",
+      "gist": "自动生成候选上下文，经专家验证后带信任等级，再通过 MCP、skills、API 等激活给 agent 和人。",
+      "seg": "1698–1714"
+    },
+    {
+      "name": "数据地图类比",
+      "gist": "数据资产是分散的城市街道，DataHub 像 Google Maps 以信任信号帮 agent 导航。",
+      "seg": "1744–1752"
+    }
+  ],
+  "offerings": [
+    {
+      "name": "DataHub 上下文平台（含 Context Hub）",
+      "what": "统一接入元数据与文档，自动生成语义上下文，供专家验证后通过 MCP、API 等激活给 agent。",
+      "for_whom": "有数据仓库与 BI 的企业数据团队及其 agent",
+      "status": "launched"
+    },
+    {
+      "name": "开源 DataHub",
+      "what": "最大的开源上下文与元数据管理项目，附公开文档和社区。",
+      "for_whom": "数据工程师与开发者",
+      "status": "open_source"
+    }
+  ],
+  "why_needed": "Snowflake Cortex、Databricks Unity/Genie、AWS、Microsoft Fabric IQ、Google 等平台都在做自己的上下文层；DataHub 主张厂商中立，因为数据不会全部在一个系统里，也不应让别人定义你的业务逻辑。",
+  "problem_approach": [
+    {
+      "problem": "agent 缺少企业特定定义时会合理地猜测并自信地给出错误答案，例如错用风险阈值。",
+      "approach": "从查询日志、BI 看板、文档自动生成候选语义，经专家验证后检索真实术语表。"
+    },
+    {
+      "problem": "各平台各自把业务逻辑绑进自家上下文层，造成锁定与碎片化。",
+      "approach": "以厂商中立格式自己持有业务定义，购买底层上下文基础设施而非自研拼凑。"
+    }
+  ],
+  "non_consensus": [
+    {
+      "kind": "market_call",
+      "point": "企业应自己持有业务逻辑，不要把它锁进云或数据平台的上下文层；自研拼凑的上下文基础设施几个季度就会被抛弃。",
+      "quote": "Nobody else should own what \"high-risk\" means at your company.",
+      "seg": "1732–1743",
+      "speaker": "Alyssa Lee"
+    }
+  ],
+  "signals": [
+    {
+      "type": "market_pattern",
+      "signal": "各大云与数据平台都在做自家的上下文层，数据和元数据厂商与平台之间的竞争转向“谁掌握语义/业务定义”。",
+      "value_as_heard": "",
+      "seg": "1732–1743"
+    },
+    {
+      "type": "metric_focus",
+      "signal": "以 agent 答案准确率、使用量和人工文档工作量的变化来证明上下文价值，且给每条上下文标信任等级。",
+      "value_as_heard": "Miro 准确率约 50% 升至 90%",
+      "seg": "1723–1731"
+    },
+    {
+      "type": "launch",
+      "signal": "DataHub 上下文平台经过 beta 后正式上线，并与数十家客户共建。",
+      "value_as_heard": "30 多个客户；beta 3 个月",
+      "seg": "1715–1722"
+    }
+  ],
+  "trend_categories": [
+    "memory_data_context",
+    "enterprise_agent_ops"
+  ],
+  "novelty": 2,
+  "pr_level": 5,
+  "content_industry_note": "",
+  "filtered_consensus": [
+    "agent 失败多为上下文问题",
+    "需要专家验证",
+    "企业数据碎片化",
+    "客户案例与徽标",
+    "社区与 star 号召"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "talk_id": "d1b11",
+  "speakers": [
+    {
+      "name": "Sac",
+      "name_as_heard": ["Sack"],
+      "org": "Independent",
+      "role": "AI 独立开发者、AI influencer",
+      "background": "Built the 3D game《小王子》alone in 16 days (rendered in Unity); does self-media (自媒体) and posts mainly on X; says classmates in university criticized his taste; describes himself as not knowing game development or 3D modeling and relying on AI for every technical decision; uses a Mac.",
+      "evidence_orders": [1453, 1454, 1459, 1473, 1499, 1501, 1540, 1548, 1582]
+    }
+  ],
+  "corrections": [
+    {"from": "Sack", "to": "Sac", "count": 4, "confidence": "high"},
+    {"from": "记忆之星量子位", "to": "机器之心、量子位", "count": 1, "confidence": "high"},
+    {"from": "FIBO 5.5", "to": "Fable 5.5", "count": 4, "confidence": "medium"},
+    {"from": "FIBO 5.1", "to": "Fable 5.1", "count": 1, "confidence": "medium"},
+    {"from": "零件点", "to": "临界点", "count": 1, "confidence": "high"},
+    {"from": "Lotion数据库", "to": "Notion 数据库", "count": 1, "confidence": "high"},
+    {"from": "building public", "to": "build in public", "count": 2, "confidence": "high"},
+    {"from": "Triple", "to": "Tripo", "count": 2, "confidence": "high"},
+    {"from": "Blender CI 和 Unity CI", "to": "Blender CLI 和 Unity CLI (marked 〔?〕)", "count": 1, "confidence": "medium"},
+    {"from": "文献管理", "to": "文件管理 (marked 〔?〕)", "count": 1, "confidence": "medium"},
+    {"from": "仿古和蒙皮 / 蒙古和旁皮", "to": "绑骨和蒙皮", "count": 3, "confidence": "high"},
+    {"from": "娇花", "to": "浇花", "count": 1, "confidence": "high"},
+    {"from": "手要和这个弧", "to": "手要和这个壶", "count": 1, "confidence": "high"},
+    {"from": "多脚位的拍摄", "to": "多机位的拍摄", "count": 1, "confidence": "high"},
+    {"from": "已经的参考图", "to": "已有的参考图", "count": 1, "confidence": "high"},
+    {"from": "一样经验的质感", "to": "一样的质感", "count": 1, "confidence": "medium"},
+    {"from": "AIAI", "to": "AI", "count": 1, "confidence": "high"}
+  ],
+  "removed_non_content": [],
+  "uncertain": [
+    {"orders": "1457", "issue": "'我在这里简洁一个游戏的片段' — probably 剪辑/放一个片段; rendered '放了一个游戏的片段〔?〕'."},
+    {"orders": "1490", "issue": "'复刻了一个移民员的这种3D场景' — the scene name is unrecoverable (颐和园? 一名员?); kept as heard with 〔?〕."},
+    {"orders": "1533", "issue": "'Blender CI 和 Unity CI' — likely CLI (or MCP); marked."},
+    {"orders": "1537", "issue": "'方便文献管理' — likely 文件管理."},
+    {"orders": "1578–1580", "issue": "'沉淀 Nest 的 MD' — some markdown knowledge file (lessons.md / skill MD?); unclear."},
+    {"orders": "1462–1463", "issue": "Numbers as spoken (4,000 万 total exposure, 3,370 万 on X); public reports at launch cite ~200–300 万 — kept the speaker's numbers unchanged."}
+  ],
+  "verified": [
+    {"as_heard": "Sack (小王子 3D 游戏作者)", "resolved_to": "Sac (@Saccc_c)", "evidence": "https://x.com/Saccc_c/status/2109962425512734739 — '花费16天，我用 Opus 5.5 将小王子的故事制作成了3D剧情游戏 结合Tripo+Blender'", "orders": "1453–1459"},
+    {"as_heard": "Triple", "resolved_to": "Tripo", "evidence": "Same X post and BlockBeats coverage (https://x.com/BlockBeatsAsia/status/2110304752684929417): 'Opus 5.5 + Tripo + Blender'", "orders": "1533, 1544"},
+    {"as_heard": "FIBO 5.5 / FIBO 5.1", "resolved_to": "Fable 5.5 / Fable 5.1 (Claude Fable)", "evidence": "https://x.com/minchoi/status/2117363234957373506 — viral 'Fable 5.5' code-generated animation videos on X; Claude Fable 5.1 is a released Anthropic model", "orders": "1480–1482, 1531"},
+    {"as_heard": "GPT-6 Astra", "resolved_to": "GPT-6 Astra", "evidence": "https://www.rdworldonline.com/how-kimi-k3-1-pro-stacks-up-against-claude-opus-5-5-and-gpt-6-astra/ — GPT-6 Astra is an existing OpenAI model; Sac's tutorial title mentions 'Opus 5.5 / Astra + Tripo'", "orders": "1488–1494"}
+  ]
+}

@@ -1,0 +1,141 @@
+{
+ "talk_id": "d1b08",
+ "speakers": [
+  {
+   "name": "Alyssa Lee",
+   "name_as_heard": [
+    "Alyssa"
+   ],
+   "org": "DataHub",
+   "role": "Chief of Staff and Head of Open Source Community",
+   "background": "Describes DataHub as the largest open-source context management platform; says DataHub just went GA after a private/public beta with 30+ customers. No personal career background given.",
+   "evidence_orders": [
+    1682,
+    1683,
+    1715,
+    1716
+   ]
+  }
+ ],
+ "corrections": [
+  {
+   "from": "a survey I venture beat",
+   "to": "a survey by VentureBeat",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "Snowflake context agent, Cortex agent",
+   "to": "Snowflake Cortex Agent",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "at a Miro",
+   "to": "at Miro",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "Microsoft Fabric, IQ",
+   "to": "Microsoft Fabric IQ",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "Google's knowledge catalog",
+   "to": "Google's Knowledge Catalog",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "AWS context",
+   "to": "AWS Context",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "Snowflake Cortex, Horizon",
+   "to": "Snowflake Cortex and Horizon",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "fixes the realized that the loan the LTV is actually 76%",
+   "to": "realize that the LTV threshold is actually 76%",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "continuous progress",
+   "to": "continuous process",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "So we're all of your data ever living one system",
+   "to": "So will all of your data ever live in one system?",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "navigate all these three streets",
+   "to": "navigate all these streets",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "because it sounds possible",
+   "to": "because it sounds plausible",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "tend to move in a couple of quarters",
+   "to": "tend to move on in a couple of quarters",
+   "count": 1,
+   "confidence": "medium"
+  }
+ ],
+ "removed_non_content": [],
+ "uncertain": [
+  {
+   "orders": "1751",
+   "issue": "'be entirely identified through autonomous agents' — intended word unclear (amplified/handled?); kept with 〔?〕"
+  },
+  {
+   "orders": "1715",
+   "issue": "Speaker says 3-month beta; DataHub press says five-month beta — kept as spoken"
+  },
+  {
+   "orders": "1695",
+   "issue": "'only 17% call their AI outcomes consistently reliable' not found in VentureBeat write-ups; kept as spoken"
+  }
+ ],
+ "verified": [
+  {
+   "as_heard": "survey I venture beat (57%, 31%)",
+   "resolved_to": "VentureBeat (VB Pulse) survey",
+   "evidence": "https://venturebeat.com/data/57-of-enterprises-have-watched-ai-agents-be-confidently-wrong-the-fix-is-an-agentic-context-layer-but-who-has-one — 57% traced wrong answer to missing context, 31% more than once",
+   "orders": "1691–1694"
+  },
+  {
+   "as_heard": "at a Miro (50%→90%), Pinterest 10x, Block MCP",
+   "resolved_to": "Miro, Pinterest, Block (DataHub customers)",
+   "evidence": "https://datahub.com/news/datahub-cloud-context-general-availability/ and related DataHub posts — Miro ~50% to ~90%, Pinterest 10x usage, Block via MCP",
+   "orders": "1724–1730"
+  },
+  {
+   "as_heard": "Microsoft Fabric, IQ / Google's knowledge catalog",
+   "resolved_to": "Microsoft Fabric IQ; Google Knowledge Catalog (formerly Dataplex)",
+   "evidence": "https://cloud.google.com/products/knowledge-catalog ; Fabric IQ community blog — both context layers for agents",
+   "orders": "1736"
+  },
+  {
+   "as_heard": "AWS context",
+   "resolved_to": "AWS Context",
+   "evidence": "flur.ee context-layer comparison mentions 'AWS Context ... listed as coming soon'; weak but consistent",
+   "orders": "1734"
+  }
+ ]
+}

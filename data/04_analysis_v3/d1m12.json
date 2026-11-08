@@ -1,0 +1,19 @@
+{
+"talk_id":"d1m12","speakers":"Mislav Ivanda","org":"Daytona",
+"value_chain_layer":"agent_infra","position":"Agent 沙箱服务商","target_customer":"developer","intent":"both",
+"skeleton":["sandbox 的含义已从跑生成代码，扩展到 shell 访问、agent 运行时、RL 大规模并发和 computer-use agent。","Kubernetes 为长期运行的无状态 web 服务而生，而 agent 需要有状态、短生命周期、按需启停，需求恰好相反。","在 K8s 上补状态要挂外部存储，会带来 IOPS 下降、挂载慢、单节点密度降低；Daytona 用本地快照、快照分发、增量传输来解决。","基准测试显示总耗时更短、突发负载成本更低，因此应买 sandbox 服务，不要自建。"],
+"core_message":"Daytona 主张 Kubernetes 不适合做 agent 的 sandbox 基础设施：K8s 为无状态长驻服务设计，而 agent 需要有状态、短命、海量并发的隔离环境，所以应使用专业 sandbox 提供商（如 Daytona），而不是自己在 K8s 上自建。",
+"frameworks":[{"name":"sandbox 提供商三支柱","gist":"基础设施（性能/吞吐/并发）、primitives（fork、snapshot 等）、tools（给 agent 的工具并防止泄露密钥）。","seg":"886–894"}],
+"offerings":[{"name":"Daytona sandbox","what":"面向 agent 的有状态隔离计算环境，含本地快照、快照分发与增量传输。","for_whom":"构建 agent、RL 评测与后训练、computer-use 的团队","status":"launched"}],
+"why_needed":"对比的替代方案是由内部 infra 团队在 Kubernetes 上自建 sandbox：K8s 无状态、启动串行慢、外部存储拖累 IOPS 和密度，且自建若泄露密钥后果严重，所以用专业 sandbox 服务。",
+"problem_approach":[{"problem":"agent 需要有状态且短命的 sandbox，而 K8s 无状态，补状态要挂外部网络存储，拖慢 IO 并降低节点密度。","approach":"默认有状态，把停止的 sandbox 留在 runner 本地，按使用频率分发快照，只传增量。"},
+{"problem":"RL、评测、computer-use 需要同时拉起成千上万个 sandbox，spin-up 时间和成本成为瓶颈。","approach":"按需起停、按运行时间计费，避免为突发负载长期闲置自建集群。"}],
+"non_consensus":[{"kind":"practice","point":"不要让 infra 团队默认用 K8s 来做 agent sandbox，“用 sandbox 来做你的 sandbox”，不要自造轮子。","quote":"As we like to say: use a sandbox for your sandbox.","seg":"979–987","speaker":"Mislav Ivanda"}],
+"signals":[{"type":"market_pattern","signal":"sandbox 用途从跑代码演进到 agent 运行时，再到 RL 评测/后训练的大规模并发和 computer-use，需求侧由模型训练推动。","value_as_heard":"","seg":"862–875"},
+{"type":"metric_focus","signal":"追踪 sandbox 启动时间、总任务耗时和突发负载成本，称成本与性能是 agent 领域的首要要求。","value_as_heard":"耗时少 36%，成本低 2.7 倍","seg":"958–978"},
+{"type":"market_pattern","signal":"自建（K8s）与托管 sandbox 服务的竞争，类比自建认证与使用认证平台。","value_as_heard":"","seg":"979–987"}],
+"trend_categories":["agent_harness_runtime"],
+"novelty":2,"pr_level":4,
+"content_industry_note":"",
+"filtered_consensus":["agent 需要隔离执行环境","成本与吞吐很重要","不要自造轮子（泛泛说法）"]
+}

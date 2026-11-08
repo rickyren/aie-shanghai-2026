@@ -1,0 +1,30 @@
+{
+"talk_id":"d2m08","speakers":"Ronny He","org":"MiniMax",
+"value_chain_layer":"agent_infra","position":"harness 随模型做减法","target_customer":"developer","intent":"insight",
+"skeleton":[
+"模型越强，Anthropic 越在给 Claude Code 的 harness 做减法：砍掉大部分系统提示词、以强单 agent 取代精巧 sub-agent、去掉 to-do 与 plan mode，MiniMax 推演下一个会被去掉的是 /goal。",
+"harness 要决定四件事（模型看到什么、能做什么、如何延续、如何被证明），每个功能都要追问删掉是否更糟、对模型是否有意义、能否撤销、如何评测，唯一不变的是对 token 效率和任务完成率的追求。",
+"MiniMax 的案例：把 MCP 收进 connector CLI 以保住前缀缓存，采用 programmatic tool calling，长耗时前台命令自动转后台，克制开启 sub-agent，并像珍惜内存一样珍惜 context。",
+"harness 工程是实验科学：生成实验已经近乎免费，稀缺的是好奇心、从 1 到 100 的执行力和科学方法。"],
+"core_message":"随着模型变强，harness 应该动态做减法，把模型已内化的 prompt、skill、plan、sub-agent 等工程手段逐项审视并删除，只守住 token 效率与任务完成率，并用假设-验证的科学方法迭代；MiniMax Code 以此为内部实践准则。",
+"frameworks":[
+{"name":"harness 决定的四件事","gist":"模型看到什么（context）、能做什么（工具）、如何延续（压缩与交接）、如何被证明（验证），每一项都随模型能力变化重新评估。","seg":"1569–1605"},
+{"name":"功能保留的四问","gist":"删掉会更坏吗、对模型有意义吗、出错能撤销或重做吗、如何设计评测；答不上来就不上线。","seg":"1610–1615"}],
+"offerings":[],
+"why_needed":"",
+"problem_approach":[
+{"problem":"MCP 工具动态加载导致工具列表变化、前缀缓存失效，agent 运行变得昂贵。","approach":"把 MCP 工具放进 connector CLI，通过渐进式披露在工具调用内部发现与执行工具，保证前缀缓存稳定。"},
+{"problem":"模型逐步输出工具调用的循环效率低、占用大量中间结果 token。","approach":"采用 programmatic tool calling，由模型一次性写脚本在沙箱中批量并发调用工具；长耗时命令自动转后台并回传结果。"}],
+"non_consensus":[
+{"kind":"practice","point":"模型变强后应对 harness 做减法：过去被奉为圭臬的提示词、skill、sub-agent、plan mode 会逐步被模型内化，反而增加 token 消耗。","quote":"随着模型变得越来越强，你的 harness 应该是动态的，而且要慢慢地去审视你原来奉若圭臬、觉得非常宝贵的一些工程或者 prompt 上的 trick，是不是应该做减法，做一些删减。","seg":"1561–1568","speaker":"Ronny He"},
+{"kind":"prediction","point":"/goal 这类命令会被从 harness 中去除，因为模型训练时就应让每个任务本身即目标，一直做到交付。","quote":"所以不需要你后面再去 /goal，去告诉它你就是要去完成这个目标——你的每一个任务就应该是一个目标。","seg":"1561–1568","speaker":"Ronny He"},
+{"kind":"insight","point":"生成实验近乎免费之后，稀缺的是好奇心、从 1 到 100 的执行力和科学方法，agent 做 0 到 1 很快，1 到 100 仍需要人做大量决策。","quote":"因为 agent 做 0 到 1 真的太快了，但 agent 做 1 到 100 是需要人做非常多的 decision 的。","seg":"1692–1697","speaker":"Ronny He"}],
+"signals":[
+{"type":"metric_focus","signal":"始终追踪 token 效率与任务完成率两项，并以前缀缓存命中作为设计约束。","value_as_heard":"","seg":"1606–1609"},
+{"type":"market_pattern","signal":"harness 层同行之间互相对标，Claude Code 的做法被视为风向标，Codex 把 programmatic tool calling 设为默认；国产模型公司自研 coding agent 并跟进这些趋势。","value_as_heard":"","seg":"1535–1648"},
+{"type":"market_pattern","signal":"新的行业说法认为部分 skill 反而降低效果，skill 需要做减法。","value_as_heard":"","seg":"1571–1585"}],
+"trend_categories":["agent_harness_runtime","eval_verifiability"],
+"novelty":3,"pr_level":2,
+"content_industry_note":"",
+"filtered_consensus":["context 需要精心管理","sub-agent 与 compaction 的基本做法","MCP 工具接入","长任务需要验证","evaluation 的重要性","AI 让执行成本下降"]
+}

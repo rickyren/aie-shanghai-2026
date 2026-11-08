@@ -1,0 +1,40 @@
+{
+  "talk_id": "d2m11",
+  "speakers": [
+    {
+      "name": "Leonie Monigatti",
+      "name_as_heard": ["Leonie"],
+      "org": "Liquid AI",
+      "role": "Post-training team",
+      "background": "Works on the post-training team at Liquid AI, which builds efficient models for the edge; active on X and LinkedIn.",
+      "evidence_orders": [2024, 2025, 2026, 2202]
+    }
+  ],
+  "corrections": [
+    {"from": "GEV / GeF", "to": "Jev", "count": 10, "confidence": "high"},
+    {"from": "Typesafe AI / Typesafe", "to": "TypeSafe AI / TypeSafe", "count": 6, "confidence": "high"},
+    {"from": "system one models", "to": "System One models", "count": 1, "confidence": "high"},
+    {"from": "D1 Ultra", "to": "d1-ultra", "count": 1, "confidence": "high"},
+    {"from": "the decision index, the artificial intelligence decision index", "to": "the Artificial Analysis Decision Index", "count": 1, "confidence": "high"},
+    {"from": "called a null", "to": "called a noul", "count": 1, "confidence": "high"},
+    {"from": "option-level token", "to": "option label token", "count": 2, "confidence": "medium"},
+    {"from": "LFM3 family", "to": "LFM3 family (kept, verified)", "count": 1, "confidence": "high"},
+    {"from": "D1, 2B", "to": "d1-2B", "count": 1, "confidence": "high"},
+    {"from": "Open Ecosystem", "to": "open ecosystem", "count": 4, "confidence": "high"},
+    {"from": "kind of in an encoder", "to": "kind of like an encoder", "count": 1, "confidence": "medium"},
+    {"from": "make predict, uh, make decisions", "to": "make decisions", "count": 1, "confidence": "high"}
+  ],
+  "removed_non_content": [
+    {"orders": "2175–2184", "what": "demo video failing to load, exchange with AV crew"},
+    {"orders": "2190–2192", "what": "stage chatter while demo stopped"}
+  ],
+  "uncertain": [
+    {"orders": "2168–2173", "issue": "'both are in the 2 billion parameter count' — rendered as 2-billion-parameter range; the two models are presumably d1-2B and d1-Omni-2B (not named explicitly in talk)"}
+  ],
+  "verified": [
+    {"as_heard": "GEV / Typesafe AI / system one models", "resolved_to": "Jev by TypeSafe AI (System One model)", "evidence": "https://www.datacamp.com/blog/system-one-models-jev — TypeSafe released Jev, a System One decision model, Sept 2026", "orders": "2028–2031"},
+    {"as_heard": "D1 Ultra / artificial intelligence decision index", "resolved_to": "d1-ultra, Artificial Analysis Decision Index", "evidence": "https://www.liquid.ai/blog/d1-ultra — Liquid AI d1-ultra #1 on Artificial Analysis Decision Index", "orders": "2045–2046"},
+    {"as_heard": "a null (yes/no primitive)", "resolved_to": "noul", "evidence": "https://spring.io/blog/2026/09/21/spring-ai-typesafe-structured-judgment/ — Noul is the yes/no primitive alongside Choice and Score", "orders": "2064–2065"},
+    {"as_heard": "LFM3 / D1, 2B", "resolved_to": "LFM3, d1-2B", "evidence": "https://huggingface.co/LiquidAI/d1-2B — Liquid AI d1-2B decision model built on LFM3, locates objects in pictures", "orders": "2104, 2186"}
+  ]
+}

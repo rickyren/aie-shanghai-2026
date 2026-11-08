@@ -1,0 +1,40 @@
+{
+ "talk_id": "d1m06",
+ "speakers": "Chen Wang",
+ "org": "Baseten",
+ "value_chain_layer": "model_infra",
+ "position": "全栈开源模型推理平台",
+ "target_customer": "enterprise",
+ "intent": "both",
+ "skeleton": [
+  "开源模型采用在过去一年多快速增长，企业按成本、规模和数据护城河分别选择 serverless API、专属部署或微调，开源推理也是避免权力集中的生态基础。",
+  "推理要在延迟、吞吐和成本之间权衡，单节点靠 prefill-decode 分离、量化、投机解码等技术。",
+  "生产环境是跨云跨区域的系统级编排：按 KV cache 命中路由、扩缩容、故障转移。",
+  "Baseten 覆盖从编排到基础设施的整条垂直栈，各层必要但单独不充分。"
+ ],
+ "core_message": "Baseten 提供覆盖编排到基础设施的全栈开源模型推理服务（serverless API、专属部署、微调），主张企业应在开源模型上掌握自己的客户信号和性能，而推理性能必须靠单节点优化与跨集群编排的整套垂直栈才能达成。",
+ "frameworks": [
+  {"name": "开源模型三种采用路径", "gist": "关注成本用 serverless API，规模化用专属部署，数据是护城河则微调开源模型。", "seg": "1121–1134"}
+ ],
+ "offerings": [
+  {"name": "Baseten 推理平台", "what": "开源模型的 serverless API、专属部署和微调，覆盖从编排到基础设施的全栈。", "for_whom": "需要高吞吐低延迟或自有数据护城河的企业", "status": "launched"}
+ ],
+ "why_needed": "相对于闭源前沿模型 API 以及直接从 Hugging Face 下载权重自行运行的未优化基线，开源推理平台可降低成本、保留客户信号，并通过全栈优化取得高性能与高可用。",
+ "problem_approach": [
+  {"problem": "生产级推理要在低延迟、高吞吐和成本之间取舍，且流量跨云跨区域并不断变化。", "approach": "单节点用 prefill-decode 分离、量化、投机解码等，集群层用 KV cache 感知路由、快速扩容和故障转移。"}
+ ],
+ "non_consensus": [
+  {"kind": "insight", "point": "把开源推理视为防止 AI 权力集中、避免赛博朋克式未来的生态基础设施，而不仅是技术或商业选择。", "quote": "I believe the pathway to a future where humans remain in firm control of AI is building a thriving open ecosystem to diffuse the concentration of power and to create more choices in every layer of the AI stack.", "seg": "1141–1152", "speaker": "Chen Wang"},
+  {"kind": "market_call", "point": "企业微调开源模型的一大动机，是不再把客户信号无偿交给闭源模型厂商改进其产品。", "quote": "And most importantly, they're no longer handing their most valuable asset, which is their customer signal, on a silver platter to the model providers for them to improve their own products on the same set of use cases.", "seg": "1121–1134", "speaker": "Chen Wang"}
+ ],
+ "signals": [
+  {"type": "market_pattern", "signal": "开源模型在 OpenRouter 上的 token 消耗已超过闭源模型，并且差距仍在扩大。", "value_as_heard": "自年初起", "seg": "1135–1140"},
+  {"type": "data_signal", "signal": "客户使用产生的信号被视为企业核心资产，开源微调让企业自己保留而非流向模型厂商。", "value_as_heard": "", "seg": "1121–1134"},
+  {"type": "metric_focus", "signal": "同时关注 TTFT、token 间延迟、单 GPU 聚合吞吐、P90 延迟和可用性，说明其卖点是企业级性能与稳定性。", "value_as_heard": "四个九的可用性", "seg": "1157–1158"}
+ ],
+ "trend_categories": ["open_models_posttrain_inference"],
+ "novelty": 2,
+ "pr_level": 4,
+ "content_industry_note": "",
+ "filtered_consensus": ["开源模型正在追上闭源", "延迟吞吐成本权衡", "KV cache 与量化等通用推理技术", "数据是护城河", "英雄之旅叙事铺垫"]
+}

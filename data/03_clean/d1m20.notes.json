@@ -1,0 +1,129 @@
+{
+ "talk_id": "d1m20",
+ "speakers": [
+  {
+   "name": "Tang Feihu (唐飞虎, Xiaodao Laoshi)",
+   "name_as_heard": [
+    "唐飞虎"
+   ],
+   "org": "Moonshot AI (Kimi)",
+   "role": "Head of Developer Relations (said 'R&D engineer' then corrected himself)",
+   "background": "Says he reverse-engineered an old game and built a sailing game, and a RollerCoaster Tycoon-like game with model-generated assets.",
+   "evidence_orders": [
+    2187,
+    2248,
+    2255
+   ]
+  }
+ ],
+ "corrections": [
+  {
+   "from": "moonshot",
+   "to": "Moonshot AI",
+   "count": 2,
+   "confidence": "high"
+  },
+  {
+   "from": "Kimi K3 point one pro",
+   "to": "Kimi K3.1 Pro",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "unreal fast",
+   "to": "Unreal Fest",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "software marathon / agent last exam",
+   "to": "Software Marathon / Agent Last Exam",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "agent到mark down",
+   "to": "agent.md",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "Timmy的社区大使",
+   "to": "Kimi 社区大使",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "type time maker",
+   "to": "TypeTime Maker",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "魔塔",
+   "to": "魔塔 (Magic Tower)",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "老老补了一个...老太太GTA",
+   "to": "老太太 GTA",
+   "count": 2,
+   "confidence": "medium"
+  },
+  {
+   "from": "过山车大亨",
+   "to": "《过山车大亨》",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "3000块",
+   "to": "3,000 块人民币",
+   "count": 1,
+   "confidence": "high"
+  }
+ ],
+ "removed_non_content": [
+  {
+   "orders": "2189–2190",
+   "what": "false start 'we... '"
+  },
+  {
+   "orders": "2259",
+   "what": "filler"
+  }
+ ],
+ "uncertain": [
+  {
+   "orders": "2200",
+   "issue": "Agent Last Exam name"
+  },
+  {
+   "orders": "2229",
+   "issue": "'agent到mark down' read as agent.md"
+  },
+  {
+   "orders": "2232",
+   "issue": "'Timmy' read as Kimi"
+  },
+  {
+   "orders": "2234",
+   "issue": "'type time maker' tool name"
+  }
+ ],
+ "verified": [
+  {
+   "as_heard": "Kimi K3.1 Pro (Moonshot AI)",
+   "resolved_to": "Kimi K3.1 Pro",
+   "evidence": "https://x.com/Kimi_Moonshot/status/2113680701770068067 - K3.1 Pro advertises games in Unreal/Unity/Godot and Blender; Moonshot game dev suite (retailnews.asia)",
+   "orders": "2190"
+  },
+  {
+   "as_heard": "唐飞虎 / 小岛老师",
+   "resolved_to": null,
+   "evidence": "Search returned no page naming the speaker; name kept from agenda/transcript.",
+   "orders": "2187"
+  }
+ ]
+}

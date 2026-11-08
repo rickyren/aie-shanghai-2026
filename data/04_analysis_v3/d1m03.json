@@ -1,0 +1,33 @@
+{
+"talk_id":"d1m03","speakers":"Clemens Rawert","org":"Langfuse by ClickHouse",
+"value_chain_layer":"evaluation","position":"agent 观测与评测平台","target_customer":"developer","intent":"both",
+"skeleton":[
+"agent 靠迭代改进而非事前写验收标准：跑起来、读 trace、修复、写测试，循环往复，更像手艺而非科学。",
+"agent 架构从直接调用、链式、RAG、agent graph 回到“模型+工具+沙箱+文件系统”的循环，本质趋同于 coding agent；Halo 是其内部参考实现。",
+"人工读 trace 已不可扩展：先把 trace 压缩成 trajectory、摘要、聚类、排序（面向数据的渐进披露），再交给 coding agent 处理。",
+"未来由后台 agent 接管改进循环，人保留质量定义、可信反馈信号和发布决策；循环产生的标注数据可进一步用于自建 RL 环境。"],
+"core_message":"agent 架构已收敛到 coding-agent 模式，其产生的 trace 量远超人力可读，所以需要用 coding agent/后台 agent 在“压缩成 trajectory、聚类、排序”的数据之上自动跑“发现失败—写 eval—改—回测—发布”循环（Langfuse 做这个观测与评测底座）；人只保留对质量的定义、可信反馈信号和发布决策。",
+"frameworks":[
+{"name":"面向数据的渐进披露","gist":"trace 先压成 trajectory，再用小模型按领域维度摘要，嵌入聚类并排序，只把最严重的完整 trace 交给 coding agent。","seg":"586–600"},
+{"name":"人机分工：agent 跑改进循环、人守质量","gist":"默认形态的任务可由 agent 自动改进，定制或超前沿任务仍需人写 eval 与 skill；人负责定义好坏、反馈信号和发布。","seg":"608–623"}],
+"offerings":[
+{"name":"Langfuse","what":"开源的 agent 评测与可观测平台，帮助开发者理解 agent 行为并在生产中改进。","for_whom":"agent 开发者与团队","status":"open_source"},
+{"name":"Halo","what":"Langfuse 内置 agent，帮助用户读 trace、发现问题，运行改进循环。","for_whom":"Langfuse 用户","status":"launched"}],
+"why_needed":"人工读 trace、手写 eval 的改进循环依赖稀缺的工程师时间，且 trace 体量已超出人和单个 coding agent 的上下文；需要在可观测平台上先做数据压缩再交给 coding agent，而不是直接把原始日志喂给它。",
+"problem_approach":[
+{"problem":"agent 与流量变大后 trace 无法人工阅读，也塞不进 coding agent 上下文。","approach":"trajectory 摘要、小模型按维度总结、聚类与排序，只回传最严重失败的完整 trace。"},
+{"problem":"改进循环由人驱动，慢且贵，占用最稀缺的工程师资源。","approach":"用后台长时间运行的 agent 持续发现失败、提方案、回测；人只做质量判断和发布决策。"}],
+"non_consensus":[
+{"kind":"prediction","point":"最佳团队下一步会用改进循环产出的标注构建自己的 RL 环境，训练开源模型，在自身任务上做到饱和。","quote":"And the next step that we see the best teams starting to take right now is to build their own reinforcement learning environments, because the labels you get from running the improvement loop are signals you can use to build tasks, build verifiers, and in the end train your own open-source models that saturate on task quality for what you need.","seg":"624–628","speaker":"Clemens Rawert"},
+{"kind":"insight","point":"前沿智能已足够解决许多问题，瓶颈在 agent 的可靠性而非智能。","quote":"In general, at Langfuse we think frontier intelligence is already very close to helping you solve many of the problems out there, and that the reliability of your agents is generally the bigger issue.","seg":"617–620","speaker":"Clemens Rawert"},
+{"kind":"practice","point":"agent 循环放在后端 worker 里，沙箱只作为一个按需调用的工具，以节省沙箱算力成本。","quote":"And, which might be interesting, this loop runs in our backend workers, not in a sandbox.","seg":"524–532","speaker":"Clemens Rawert"}],
+"signals":[
+{"type":"data_signal","signal":"运行改进循环产生的 eval 与标注构成应用专属数据集，领先团队把它转化为任务、verifier 和 RL 环境。","value_as_heard":"","seg":"624–628"},
+{"type":"market_pattern","signal":"可观测与评测平台的角色正从“给人看 trace”转向“为 coding agent 提供经过压缩的数据层”（MCP/API/CLI 接入）。","value_as_heard":"","seg":"568–577"},
+{"type":"market_pattern","signal":"agent 架构趋同为 coding-agent 模式（工具循环+skill+沙箱+文件系统），并扩展到子 agent 与常驻的 ambient agent。","value_as_heard":"","seg":"495–514"},
+{"type":"metric_focus","signal":"关注 agent 可靠性与失败类别（如工具调用报错），以失败 trace 而非整体分数驱动改进。","value_as_heard":"","seg":"453–465"}],
+"trend_categories":["eval_verifiability","agent_harness_runtime"],
+"novelty":3,"pr_level":3,
+"content_industry_note":"",
+"filtered_consensus":["agent 需要好的上下文与工具","coding agent 提升生产力","评测很重要","人在回路","agent 架构从 RAG 到工具循环的演进史","公司与收购介绍"]
+}

@@ -1,0 +1,374 @@
+{
+ "talk_id": "d2m07",
+ "speakers": [
+  {
+   "name": "比比（小声比比）",
+   "name_as_heard": [
+    "小声比比",
+    "比比"
+   ],
+   "org": "第二次用火",
+   "role": "创始人；本场主持人",
+   "background": "自我介绍为小声比比和第二次用火的创始人，担任本场主持。",
+   "evidence_orders": [
+    1157,
+    1178
+   ]
+  },
+  {
+   "name": "戴雨森 Yusen Dai",
+   "name_as_heard": [
+    "代语森",
+    "语森",
+    "宇森",
+    "雨生"
+   ],
+   "org": "真格基金 ZhenFund",
+   "role": "投资人（真格基金）",
+   "background": "真格基金专做早期投资，投了小红书、Manus、Kimi 等公司的第一笔 check，也投了 Genspark、HeyGen；大学毕业九个月后拿徐小平 200 万做聚美（最初做游戏内广告系统，后来卖化妆品上市）；Stanford 读书；真格 18、19 年提出“小天才、老司机、操盘手、科学家”框架；近期投了两位前真格实习生做的 Hypit，以及做灵巧手的舞肌。",
+   "evidence_orders": [
+    1160,
+    1161,
+    1179,
+    1180,
+    1335,
+    1336,
+    1414,
+    1472,
+    1488,
+    1499,
+    1503,
+    1504
+   ]
+  },
+  {
+   "name": "王淮 Harry Wang",
+   "name_as_heard": [
+    "王怀 Harry",
+    "Eric",
+    "Harry"
+   ],
+   "org": "线性资本 Linear Capital",
+   "role": "创始人",
+   "background": "线性资本聚焦早期科技投资，过去十年做得最多的是软硬结合，早年投地平线，近年投它石（机器人）等；Stanford 读书；今年投得最多、拒得最多的都是 physical AI；今年开始做视频播客。",
+   "evidence_orders": [
+    1162,
+    1163,
+    1218,
+    1336,
+    1422,
+    1423,
+    1510
+   ]
+  },
+  {
+   "name": "刘勇 Patrick Liu",
+   "name_as_heard": [
+    "Patrick 刘勇",
+    "Patrick"
+   ],
+   "org": "TaoZ Capital（会上未说机构名；agenda）",
+   "role": "基金创始人",
+   "background": "以前在蓝驰创投，参与投了这一波 AI；去年年底从蓝驰出来做小而美的基金，专注在北大投资孵化北大的老师和学生；北大校友，在北大开设 AI 创业与投资课（600 多人选课）；早年创业做 2C，第一家公司做中国最早的社交网络之一（与王兴同代），第二家做游戏；在蓝驰时投过北大教授带学生做的具身智能公司。",
+   "evidence_orders": [
+    1164,
+    1165,
+    1167,
+    1169,
+    1384,
+    1385,
+    1449,
+    1459
+   ]
+  }
+ ],
+ "corrections": [
+  {
+   "from": "代语森 / 语森 / 宇森 / 雨生",
+   "to": "戴雨森 / 雨森",
+   "count": 9,
+   "confidence": "high"
+  },
+  {
+   "from": "王怀 Harry",
+   "to": "王淮 Harry",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "Eric 怎么看",
+   "to": "Harry 怎么看",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "蓝池创投 / 南慈 / 蓝旗",
+   "to": "蓝驰创投 / 蓝驰",
+   "count": 4,
+   "confidence": "high"
+  },
+  {
+   "from": "踏实机器人",
+   "to": "它石机器人（它石智航）",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "AI 创意与投资",
+   "to": "AI 创业与投资",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "Web 自己做的",
+   "to": "微软自己做的",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "长线型的用户",
+   "to": "尝鲜型的用户",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "GrokBot",
+   "to": "Clawdbot",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "DeepSeek 4.0 Flash",
+   "to": "DeepSeek V4 Flash",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "Harvard",
+   "to": "Harvey",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "宏观短句 / 短句",
+   "to": "红果短剧 / 短剧",
+   "count": 2,
+   "confidence": "high"
+  },
+  {
+   "from": "operator magic",
+   "to": "Operator、Magic",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "James Park",
+   "to": "Genspark",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "DeepSeek 的 super agent",
+   "to": "DeepSeek 的 Super-agent",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "杨志林 / 志林",
+   "to": "杨植麟 / 植麟",
+   "count": 3,
+   "confidence": "high"
+  },
+  {
+   "from": "插院",
+   "to": "叉院",
+   "count": 2,
+   "confidence": "high"
+  },
+  {
+   "from": "正规的实习生 / 在正规认识 / 征格",
+   "to": "真格的实习生 / 在真格认识 / 真格",
+   "count": 3,
+   "confidence": "high"
+  },
+  {
+   "from": "HYPIT",
+   "to": "Hypit",
+   "count": 2,
+   "confidence": "high"
+  },
+  {
+   "from": "聚到最多的",
+   "to": "拒得最多的",
+   "count": 4,
+   "confidence": "high"
+  },
+  {
+   "from": "New Lab / NeoLab",
+   "to": "Neolab",
+   "count": 2,
+   "confidence": "medium"
+  },
+  {
+   "from": "原培学院 / 清华摇班",
+   "to": "元培学院 / 清华姚班",
+   "count": 2,
+   "confidence": "high"
+  },
+  {
+   "from": "巨声智能",
+   "to": "具身智能",
+   "count": 2,
+   "confidence": "high"
+  },
+  {
+   "from": "早会",
+   "to": "早慧",
+   "count": 2,
+   "confidence": "high"
+  },
+  {
+   "from": "30 and 30",
+   "to": "30 under 30",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "5G 做机械手的",
+   "to": "舞肌，做机械手的",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "UI/UX 毕业",
+   "to": "UIUC 毕业",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "很走的",
+   "to": "横轴〔?〕的",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "踩在你兜里",
+   "to": "揣在你兜里",
+   "count": 1,
+   "confidence": "high"
+  }
+ ],
+ "removed_non_content": [],
+ "uncertain": [
+  {
+   "orders": "1168",
+   "issue": "“相比这个语声他们”比较对象不明（可能指雨森/真格或清华），保留原音并标〔?〕"
+  },
+  {
+   "orders": "1170",
+   "issue": "“不幸成为一门网课”推测为“网红课”"
+  },
+  {
+   "orders": "1244",
+   "issue": "“很走的”推测为“横轴的”（与后文 X/Y、横轴纵轴呼应）"
+  },
+  {
+   "orders": "1255",
+   "issue": "“三年前的应用成功时”推测为“应用创业公司”"
+  },
+  {
+   "orders": "1273–1274",
+   "issue": "“用技术来去完成它”“硬件的浮肿（辅助？）”语义不完整"
+  },
+  {
+   "orders": "1291",
+   "issue": "personal agent 产品 “Muse” 未能确认"
+  },
+  {
+   "orders": "1363",
+   "issue": "“加剧”推测为“接下来”"
+  },
+  {
+   "orders": "1395",
+   "issue": "“反正到最后又要回到红果短剧上了”可能是 Patrick 自嘲，也可能是主持人插话；归入刘勇发言"
+  },
+  {
+   "orders": "1413",
+   "issue": "“课代表立正这个平台”——未确认是否为误识别（可能指本次大会/某平台）"
+  },
+  {
+   "orders": "1456",
+   "issue": "“亲中两代结合”推测为“青中两代结合”"
+  },
+  {
+   "orders": "1488",
+   "issue": "“5G”推测为舞肌（Wuji，UIUC 毕业、先做电机后做灵巧手）；说话人称 22 年投资，按原话保留"
+  },
+  {
+   "orders": "1494–1496",
+   "issue": "说话人切换不明：1494 句首“所以我觉得天才是一个”为戴雨森收尾残句（已删），其后关于硅谷 genius 的观察推测为王淮"
+  },
+  {
+   "orders": "1504",
+   "issue": "“在实验室的自动化系统”可能误识别（Manus 团队早期产品），标〔?〕"
+  },
+  {
+   "orders": "1514",
+   "issue": "“前世今世 / 后世今世”疑为“往后看 / 往前看”之类，保留原音并标〔?〕"
+  },
+  {
+   "orders": "1517",
+   "issue": "“就像这个菲尔兹奖似的，但它已经不难了”语义不清"
+  }
+ ],
+ "verified": [
+  {
+   "as_heard": "王怀 Harry / 踏实机器人",
+   "resolved_to": "王淮 Harry（线性资本创始人）；它石智航（线性资本参与天使轮）",
+   "evidence": "https://baike.baidu.com/item/%E7%8E%8B%E6%B7%AE/16414139 ; https://finance.sina.com.cn/wm/2025-03-26/doc-ineqxyiu1769758.shtml — 线性资本创始人王淮，首个项目地平线；它石智航天使轮线性资本跟投",
+   "orders": "1162–1163"
+  },
+  {
+   "as_heard": "Patrick 刘勇 / 蓝池创投 / 南慈",
+   "resolved_to": "刘勇 Patrick Liu，原蓝驰创投投资合伙人，TaoZ Capital（道中资本）创始合伙人",
+   "evidence": "https://mp.ofweek.com/ai/a256714407647 — TaoZ Capital 刘勇在北大《AI创业与投资》课授课；曾创办亿友网、热酷，2021 年加入蓝驰；蓝驰领投 Genspark（news.pedaily.cn）",
+   "orders": "1164–1170, 1259, 1384–1385"
+  },
+  {
+   "as_heard": "instinct / GrokBot",
+   "resolved_to": "Instinct；Clawdbot（OpenClaw 前身）",
+   "evidence": "https://www.usecarly.com/blog/instinct-review/ ; https://en.wikipedia.org/wiki/OpenClaw — Instinct 为 2026 年爆红的 personal agent；Clawdbot 为 OpenClaw 2026 年初的名字",
+   "orders": "1204, 1287, 1291, 1347"
+  },
+  {
+   "as_heard": "HYPIT",
+   "resolved_to": "Hypit",
+   "evidence": "https://hypit.ai/zh/ — 开源 AI agent 复刻爆款视频结构的工具，与描述一致（未能确认与真格实习生的关系）",
+   "orders": "1414–1417"
+  },
+  {
+   "as_heard": "DeepSeek 4.0 Flash / DeepSeek 的 super agent",
+   "resolved_to": "DeepSeek V4 Flash；DeepSeek Super-agent 架构",
+   "evidence": "https://zh.wikipedia.org/zh-cn/DeepSeek-V4 ; https://finance.sina.com.cn/tech/csj/2026-11-01/doc-inixepty4335109.shtml — Super-agent 于 2026-10-31 发布，Router 统一管理、Worker 独立上下文，与描述吻合",
+   "orders": "1238, 1349–1352"
+  },
+  {
+   "as_heard": "5G 做机械手的 / UI/UX 毕业",
+   "resolved_to": "舞肌科技（潘韫哲，UIUC 毕业，先做电机后做 Wuji Hand 灵巧手，真格为股东）",
+   "evidence": "https://www.163.com/dy/article/KA23S7EO0511B6FU.html — 真格文章：UIUC 毕业的潘韫哲回国创业做电机，后做灵巧手",
+   "orders": "1488–1493"
+  },
+  {
+   "as_heard": "the year of R",
+   "resolved_to": "The Year of R（戴雨森 2026 开年提出）",
+   "evidence": "https://www.sohu.com/a/966881108_355029 — 真格基金戴雨森 2026 开年 AI 对谈：The Year of R",
+   "orders": "1172"
+  },
+  {
+   "as_heard": "Astra",
+   "resolved_to": "GPT-6 Astra（OpenAI，冲击具身大脑模型）",
+   "evidence": "https://www.huxiu.com/article/4903132.html — GPT-6 Astra 发布冲击具身智能，大脑公司承压，与上下文一致",
+   "orders": "1430–1431"
+  }
+ ]
+}

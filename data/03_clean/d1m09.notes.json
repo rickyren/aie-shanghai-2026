@@ -1,0 +1,43 @@
+{"talk_id": "d1m09",
+ "speakers": [{"name": "Ailing Teng", "name_as_heard": ["Eileen", "小狼"], "org": "StepFun 阶跃星辰", "role": "General Manager; leads model product, platform and ecosystem (also some marketing)", "background": "Community name 小狼 (as heard); says she grew up in the open-source community; for the past ten-plus years worked in the cloud-native tech stack and explored infra. Her team created new roles of model product and product engineer. In June she launched an internal project on model aesthetics/judgment (heard as 每预计划).", "evidence_orders": [339, 340, 341, 342, 344, 345, 347, 349, 418]}],
+ "corrections": [
+  {"from": "Eileen", "to": "Ailing", "count": 1, "confidence": "high"},
+  {"from": "Stepfarm / 接月 / stepfund", "to": "StepFun / 阶跃 / StepFun", "count": 4, "confidence": "high"},
+  {"from": "Marin", "to": "Mandarin", "count": 1, "confidence": "high"},
+  {"from": "step five preview / step fight preview", "to": "Step 5 Preview", "count": 3, "confidence": "high"},
+  {"from": "step code / step code bench", "to": "Step Code / Step Code Bench", "count": 4, "confidence": "high"},
+  {"from": "open cloud", "to": "OpenClaw", "count": 2, "confidence": "high"},
+  {"from": "技术站", "to": "技术栈", "count": 5, "confidence": "high"},
+  {"from": "EM的上下文", "to": "1M的上下文", "count": 3, "confidence": "high"},
+  {"from": "薪水的models", "to": "心水的models", "count": 1, "confidence": "medium"},
+  {"from": "待计划的差异", "to": "代际化的差异", "count": 1, "confidence": "medium"},
+  {"from": "七层的评测者", "to": "七成的评测者", "count": 1, "confidence": "medium"},
+  {"from": "porkman", "to": "Pokémon", "count": 1, "confidence": "high"},
+  {"from": "调油", "to": "调优", "count": 1, "confidence": "high"},
+  {"from": "任务数", "to": "任务树", "count": 2, "confidence": "medium"},
+  {"from": "take / cape目标", "to": "track / keep目标", "count": 2, "confidence": "medium"},
+  {"from": "用户和黑和harness", "to": "用户和harness", "count": 1, "confidence": "high"},
+  {"from": "boost那边", "to": "booth那边", "count": 1, "confidence": "high"},
+  {"from": "stepfund.com", "to": "stepfun.com", "count": 1, "confidence": "high"},
+  {"from": "远远端的工具", "to": "远端的工具", "count": 1, "confidence": "high"},
+  {"from": "drop code", "to": "job code (uncertain)", "count": 3, "confidence": "medium"}
+ ],
+ "removed_non_content": [],
+ "uncertain": [
+  {"orders": "341", "issue": "Community name heard as 小狼; not verifiable"},
+  {"orders": "344–348", "issue": "'drop code' likely 'job code'/role"},
+  {"orders": "361–362", "issue": "'almost the efficiency的这一类的任务' garbled; dropped the fragment, meaning (end-to-end quality/efficiency not good) kept"},
+  {"orders": "382", "issue": "'待计划的差异' read as 代际化的差异"},
+  {"orders": "392", "issue": "'七层的评测者' read as 七成 (70%) of evaluators"},
+  {"orders": "418", "issue": "Project name '每预计划' – best guess 美育计划 (aesthetics), not verified"},
+  {"orders": "456", "issue": "'budget给' – likely a budget/trimming step; unclear"},
+  {"orders": "486", "issue": "'生产力的sponsor' probably 'support'"}
+ ],
+ "verified": [
+  {"as_heard": "step five preview ... 9月份发布 ... 激活27B / EM的上下文", "resolved_to": "Step 5 Preview (StepFun, Sept 2026, 600B total / 27B active, 1M context)", "evidence": "https://www.marktechpost.com/2026/09/20/stepfun-launches-step-5-preview/ – 27B active, 1M context, flagship agentic model", "orders": "365, 372–375"},
+  {"as_heard": "step code ... open source的agent harness", "resolved_to": "Step Code (stepfun-ai/Step-Code)", "evidence": "https://github.com/stepfun-ai/Step-Code – StepFun's open-source agent harness built around Step 5 Preview", "orders": "366, 452, 480–481"},
+  {"as_heard": "studio", "resolved_to": "StepFun AI Studio (studio.stepfun.ai)", "evidence": "Search results list AI Studio as a StepFun product alongside Step Code; kept as 'Studio' as spoken", "orders": "367–368, 482"},
+  {"as_heard": "Eileen, general manager at Stepfarm ... model product platform and ecosystem", "resolved_to": "Ailing Teng, GM Model Product, Platform and Ecosystem @StepFun", "evidence": "https://x.com/EileenTal – X profile 'GM, Model Product, Platform and Ecosystem @StepFun'", "orders": "339–342"},
+  {"as_heard": "小狼 (community name)", "resolved_to": null, "evidence": "No search result linking 小狼 to Ailing Teng", "orders": "341"}
+ ],
+ "actual_topic_note": ""}

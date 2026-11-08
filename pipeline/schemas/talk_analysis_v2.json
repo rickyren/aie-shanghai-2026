@@ -1,0 +1,49 @@
+{
+  "_doc": "V2 lean schema: one message per talk plus only non-consensus content. Prose in Chinese; quotes verbatim in the transcript's language.",
+  "enums": {
+    "value_chain_layer": {
+      "foundation_model": "基座模型",
+      "model_infra": "模型训练与推理服务",
+      "agent_infra": "Agent 基础设施（sandbox、harness、gateway、可观测、agent 平台）",
+      "data_context": "数据与上下文（搜索、记忆、数据库、数据供给）",
+      "evaluation": "评测",
+      "general_agent_app": "通用 / 个人 Agent 应用",
+      "vertical_app": "垂直与企业应用",
+      "ai_adopter": "AI 使用方（主业不卖 AI 的企业）",
+      "embodied_world_model": "具身智能与世界模型 / 3D",
+      "on_device": "端侧模型与推理",
+      "capital_community": "资本与社区"
+    },
+    "message_type": {"product": "产品 message", "insight": "认知", "both": "产品 + 认知"},
+    "fact_type": {"metric": "数字", "data_signal": "数据信号", "launch": "发布 / 开源", "other": "其他"},
+    "trend_category": {
+      "agent_harness_runtime": "Agent harness / 运行时与沙箱",
+      "open_models_posttrain_inference": "开源模型与后训练 / 推理工程",
+      "eval_verifiability": "评测与可验证性",
+      "enterprise_agent_ops": "企业级 agent 规模化运营",
+      "memory_data_context": "记忆、数据与上下文工程",
+      "personal_agent_ai_native": "个人 agent 与 AI 原生产品",
+      "world_model_spatial": "世界模型与空间智能",
+      "embodied_physical_ai": "具身 / Physical AI",
+      "on_device_decision_models": "端侧与决策模型",
+      "investment_startup": "投资与创业叙事"
+    }
+  },
+  "shape": {
+    "talk_id": "str",
+    "speakers": "str，讲者（多人用顿号）",
+    "org": "str，机构",
+    "value_chain_layer": "enum value_chain_layer",
+    "position": "str，≤15 字，细分位置，如『开源模型推理云』『端侧决策小模型』",
+    "message_type": "enum message_type",
+    "core_message": "str，1–2 句",
+    "non_consensus": [{"point": "str，一句话", "quote": "str，清稿原句", "seg": "A–B", "speaker": "str，多人场次必填，否则可省略"}],
+    "hard_facts": [{"type": "enum fact_type", "fact": "str，一句话", "seg": "A–B"}],
+    "trend_categories": ["enum trend_category 或 'new:<中文名>'，1–2 个"],
+    "novelty": "int 1–5：这场对资深从业者的新信息量（1=几乎都是共识，5=多个真正新的认知）",
+    "pr_level": "int 1–5：自家产品推销占比",
+    "content_industry_note": "str 或空",
+    "filtered_consensus": ["str，2–6 个短语"]
+  },
+  "limits": {"non_consensus": 3, "hard_facts": 3, "trend_categories": 2, "filtered_consensus": 6}
+}

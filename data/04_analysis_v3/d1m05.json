@@ -1,0 +1,32 @@
+{
+"talk_id":"d1m05","speakers":"Alex Triplett, Ryan Lee, David Li","org":"You.com",
+"value_chain_layer":"data_context","position":"agent 专用搜索引擎","target_customer":"model_lab","intent":"product",
+"skeleton":[
+"You.com 是为 AI agent 和 LLM 构建的网页搜索引擎，通过 Search、Contents、Answers、Research 等 API 以及授权的结构化数据提供，主打企业级规模、零数据留存和与模型公司的合作。",
+"亚太负责人强调在亚洲设立总部和团队，服务中国模型公司与互联网大厂出海及全球实时信息接入，覆盖性能到成本的整条帕累托曲线。",
+"案例：与 NVIDIA、CoreWeave 合作后训练开源 30B Nemotron，用 You.com 的 web graph 取中等热度网页生成难题，经难度过滤后做 SFT + RLVR。",
+"结果与流程：很小的数据集和短时间训练即带来 BrowseComp 明显提升，且模型学会验证、减少工具调用；总结为强工具、真实网页造题、难度过滤、SFT、GRPO、度量准确率与效率的通用配方。"],
+"core_message":"You.com 把自己定位为 AI agent 和模型公司的搜索基础设施，并用与 NVIDIA/CoreWeave 后训练 Nemotron 的案例说明：用其 web graph 和搜索 API 生成经难度过滤的小规模可验证 RL 数据，就能让开源小模型的网页研究能力显著提升。",
+"frameworks":[
+{"name":"搜索型 agent 后训练通用配方","gist":"强工具起步，从真实网页造题，按难度过滤，用自有轨迹做拒绝采样 SFT 再 GRPO，最后同时度量准确率与效率。","seg":"1065–1072"},
+{"name":"RL 数据按热度与通过率筛选","gist":"取中等热度网页以避开模型已记住的内容和长尾垃圾，用 pass@8 过滤掉全对或全错的题，保留 1 到 7 次通过的题。","seg":"1009–1031"}],
+"offerings":[
+{"name":"You.com Search / Contents / Answers / Research API","what":"为 agent 和 LLM 提供全网搜索、整页内容抓取、多轮扇出研究，以及 World Bank、S&P、Polymarket 等授权结构化数据。","for_whom":"AI agent 公司、模型公司、企业","status":"launched"},
+{"name":"模型公司搜索合作与后训练数据服务","what":"为模型预训练、后训练和推理时联网搜索提供数据与搜索，案例为联合后训练 Nemotron。","for_whom":"开源与闭源模型公司","status":"service"}],
+"why_needed":"对比 Baidu、Google、Bing 等面向人类设计的搜索引擎：agent 查得更快、消费信息更多，需要专为机器设计的搜索，并满足企业零数据留存、海量查询与实时 SLA 要求。",
+"problem_approach":[
+{"problem":"较小的开源模型做复杂网页研究时会陷入死循环式反复搜索、工具使用差、已找到答案仍继续搜索，token 消耗大。","approach":"用 web graph 生成难度恰当且不在模型权重内的 RL 任务，做 SFT 加 RLVR，模型学会找到答案后验证并停止。"},
+{"problem":"RL 训练数据既要足够难又要可自动验证，且不能含评测答案。","approach":"取中等热度网页由模型生成问答，做去污染，用 pass@8 过滤难度，全程使用可验证奖励而无需人工标注。"}],
+"non_consensus":[
+{"kind":"practice","point":"搜索 agent 后训练中，RL 数据集的质量比工具或环境更重要，小而精的数据集即可达到比其大几倍的数据集相近的收益。","quote":"这个RL data set在你做后训练的时候，其实比tooling或者environment更重要。","seg":"974–980","speaker":"David Li"},
+{"kind":"insight","point":"只奖励答案正确性也会带来效率提升的副作用，模型学会验证后不再继续无谓搜索。","quote":"So you're actually seeing that you can gain both performance and efficiency when you're doing RL.","seg":"1046–1049","speaker":"David Li"}],
+"signals":[
+{"type":"market_pattern","signal":"搜索供应商把自己定位成模型公司的搜索伙伴，向上延伸到为开源模型做搜索后训练，并在亚洲设点服务中国模型公司和出海需求。","value_as_heard":"","seg":"933–960"},
+{"type":"data_signal","signal":"RL 数据直接由搜索供应商的 web graph 与网页内容合成问答，辅以开源数据子集并做去污染，不依赖人工标注。","value_as_heard":"","seg":"1002–1020"},
+{"type":"metric_focus","signal":"同时追踪 BrowseComp 准确率与工具调用数和 token 消耗，既要更准也要更省。","value_as_heard":"37 -> 45.45 分；313 次工具调用降到 7 次","seg":"1040–1064"},
+{"type":"market_pattern","signal":"称机器搜索量已超过人类搜索，搜索被重新定义为面向 agent 的基础设施。","value_as_heard":"","seg":"905–912"}],
+"trend_categories":["open_models_posttrain_inference","memory_data_context"],
+"novelty":3,"pr_level":4,
+"content_industry_note":"网页内容的主要读者正在变成 agent，内容平台与创作者的页面需要面向 agent 检索与授权，搜索供应商也开始授权结构化数据源。",
+"filtered_consensus":["agent 无法联网就无法做对决策","开源模型 token 与推理效率高","数据集质量决定后训练效果","RLVR 与 GRPO 流程","零数据留存与企业 SLA","公司与客户介绍"]
+}

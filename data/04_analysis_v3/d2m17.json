@@ -1,0 +1,20 @@
+{
+"talk_id":"d2m17","speakers":"Hao Zheng","org":"Futuring Robot（未来不远）",
+"value_chain_layer":"embodied_world_model","position":"家庭服务机器人整机","target_customer":"consumer","intent":"both",
+"skeleton":["家庭服务机器人是高度耦合的硬件与软件系统，需要时间戳对齐和不同频率（模型与电机）的平滑衔接。","核心是 self-evolving WAM：世界动作模型联合生成动作和预期未来，并用 Top-K 并行想象和真机交互数据闭环，不靠人工决策更新时机。","在叠衣、晾衣、做意面、辣椒炒肉任务上，多轮迭代后成功率明显提升；通用大模型 agent 作 System 2、自己的 WAM/VLA 作 System 1 是下一代架构方向。","真正的进化要把机器人放进真实家庭，已进入几百户并积累了大量工时。"],
+"core_message":"未来不远推广家庭服务机器人 F2，主张让世界动作模型（WAM）利用真实交互、失败与想象过的候选轨迹形成闭环数据，持续自进化；并用通用大模型 agent 做 System 2、WAM 做 System 1，同时强调必须把机器人放进真实家庭才能进化。",
+"frameworks":[{"name":"System 2 通用 agent + System 1 自进化 WAM/VLA","gist":"通用大模型或 agent 负责高层任务，自训练的世界动作模型或 VLA 负责精细执行，底层受本体控制与保护策略约束。","seg":"3256–3267"}],
+"offerings":[{"name":"F2 家庭服务机器人与 self-evolving WAM","what":"带升降、手臂和底盘的家庭机器人，搭载可持续自进化的世界动作模型。","for_whom":"家庭用户","status":"launched"}],
+"why_needed":"",
+"problem_approach":[{"problem":"家庭任务中物体形态变化快、有外部干扰，开环的起点到终点动作无法纠偏。","approach":"用世界动作模型结合视觉观测与本体状态，预测动作后果并持续修正。"},
+{"problem":"机器人模型迭代依赖人工决定何时训练更新，缺少训练数据来源。","approach":"保存真实执行、失败和 Top-K 想象的未执行轨迹，形成统一闭环数据，用于 post-train 和偏好学习。"}],
+"non_consensus":[{"kind":"practice","point":"把未执行但想象过的候选轨迹和失败数据也存下来作为训练数据，形成无需人工决策的自进化闭环。","quote":"所以自进化机制的核心是：不要人为参与来决策模型什么时候进步、什么时候更新，而是由一个统一的闭环数据来源，来解决新一代模型训练的养料问题。","seg":"3166–3172","speaker":"Hao Zheng"},
+{"kind":"insight","point":"机器人评测榜单前列都是 agent 或 agent 加 WAM 架构，通用大模型会在具身大脑中承担更多角色。","quote":"这给我们的启发是，通用大模型能力的提升，可能会在下一代体系设计里参与更多角色。","seg":"3256–3267","speaker":"Hao Zheng"}],
+"signals":[{"type":"data_signal","signal":"训练数据来自第一人称人类视频与自家各代机器人的真机数据，并持续回收真实家庭使用中的成功、失败和候选轨迹。","value_as_heard":"约 1 万小时第一人称数据、3 万小时真机数据","seg":"3173–3175"},
+{"type":"metric_focus","signal":"追踪各家务任务平均成功率随自进化迭代轮数的提升，以及家庭部署数量和累计工时。","value_as_heard":"成功率 45.4% 到 86.6%；500 多个家庭、5 万多小时","seg":"3206–3212"},
+{"type":"market_pattern","signal":"家庭机器人公司把真实用户家庭试用作为产品与模型的数据来源，部署规模本身成为核心竞争力。","value_as_heard":"","seg":"3268–3274"}],
+"trend_categories":["embodied_physical_ai","world_model_spatial"],
+"novelty":3,"pr_level":3,
+"content_industry_note":"第一人称视频被用作机器人训练数据，意味着第一人称/生活场景视频的价值可能从内容平台扩展到具身智能数据采购。",
+"filtered_consensus":["真机数据重要","通用模型能力提升","可靠性与稳定性很重要","硬件软件耦合"]
+}

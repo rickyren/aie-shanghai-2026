@@ -1,0 +1,133 @@
+{
+  "_doc": "V3: reconstruct the speaker's intent and skeleton first, then a lean set of fields that each feed a section of the final report. Prose in Chinese; quotes verbatim in the transcript's language. Numbers come from speech recognition and are unverified: record which metric a speaker tracks, not its value.",
+  "enums": {
+    "value_chain_layer": {
+      "foundation_model": "基座模型",
+      "model_infra": "模型训练与推理服务",
+      "agent_infra": "Agent 基础设施（sandbox、harness、gateway、可观测、agent 平台）",
+      "data_context": "数据与上下文（搜索、记忆、数据库、数据供给）",
+      "evaluation": "评测",
+      "general_agent_app": "通用 / 个人 Agent 应用",
+      "vertical_app": "垂直与企业应用",
+      "ai_adopter": "AI 使用方（主业不卖 AI 的企业）",
+      "embodied_world_model": "具身智能与世界模型 / 3D",
+      "on_device": "端侧模型与推理",
+      "capital_community": "资本与社区"
+    },
+    "target_customer": {
+      "developer": "开发者",
+      "enterprise": "企业",
+      "model_lab": "模型公司",
+      "consumer": "消费者 / 创作者",
+      "internal": "内部使用（不对外卖）",
+      "n/a": "不适用"
+    },
+    "intent": {
+      "product": "推产品 / 服务",
+      "insight": "分享认知 / 实践",
+      "both": "两者"
+    },
+    "offering_status": {
+      "launched": "已上线",
+      "open_source": "开源",
+      "preview": "预览 / 内测",
+      "service": "服务 / 合作模式",
+      "internal": "内部工具"
+    },
+    "nc_kind": {
+      "insight": "认知",
+      "practice": "实践做法",
+      "prediction": "预测",
+      "market_call": "市场 / 投资判断"
+    },
+    "trend_category": {
+      "agent_harness_runtime": "Agent harness / 运行时与沙箱",
+      "open_models_posttrain_inference": "开源模型与后训练 / 推理工程",
+      "eval_verifiability": "评测与可验证性",
+      "enterprise_agent_ops": "企业级 agent 规模化运营",
+      "memory_data_context": "记忆、数据与上下文工程",
+      "personal_agent_ai_native": "个人 agent 与 AI 原生产品",
+      "world_model_spatial": "世界模型与空间智能",
+      "embodied_physical_ai": "具身 / Physical AI",
+      "on_device_decision_models": "端侧与决策模型",
+      "investment_startup": "投资与创业叙事"
+    },
+    "signal_type": {
+      "data_signal": "数据信号：谁在采集/生产/购买/出售什么数据",
+      "metric_focus": "关注的指标：讲者在追踪/优化哪个指标，以及这说明他在意什么",
+      "market_pattern": "市场格局 / 规律：谁在买什么、商业模式变化、竞争关系、行业分工等定性现象",
+      "launch": "发布 / 开源"
+    }
+  },
+  "shape": {
+    "talk_id": "str",
+    "speakers": "str",
+    "org": "str",
+    "value_chain_layer": "enum value_chain_layer",
+    "position": "str ≤15 字",
+    "target_customer": "enum target_customer",
+    "intent": "enum intent",
+    "skeleton": [
+      "str：按演讲顺序的 2–4 个主要论点，每条一句，讲者视角"
+    ],
+    "core_message": "str 1–2 句",
+    "frameworks": [
+      {
+        "name": "str，讲者提出的划分/分类/公式",
+        "gist": "str 一句话",
+        "seg": "A–B"
+      }
+    ],
+    "offerings": [
+      {
+        "name": "str",
+        "what": "str 一句话",
+        "for_whom": "str",
+        "status": "enum offering_status"
+      }
+    ],
+    "why_needed": "str 或空：在什么替代方案已存在的背景下，为什么还需要它（点名替代方案）",
+    "problem_approach": [
+      {
+        "problem": "str",
+        "approach": "str"
+      }
+    ],
+    "non_consensus": [
+      {
+        "kind": "enum nc_kind",
+        "point": "str",
+        "quote": "str 清稿原句",
+        "seg": "A–B",
+        "speaker": "str（多人场次必填）"
+      }
+    ],
+    "signals": [
+      {
+        "type": "enum signal_type",
+        "signal": "str，定性一句话，不依赖具体数值",
+        "value_as_heard": "str 或空：metric_focus 时可记原话中的数值，仅供参考（转写未核实）",
+        "seg": "A–B"
+      }
+    ],
+    "trend_categories": [
+      "enum trend_category 或 'new:<中文名>'，1–2 个"
+    ],
+    "novelty": "int 1–5",
+    "pr_level": "int 1–5",
+    "content_industry_note": "str 或空",
+    "filtered_consensus": [
+      "str 短语"
+    ]
+  },
+  "limits": {
+    "skeleton": 4,
+    "frameworks": 2,
+    "offerings": 3,
+    "problem_approach": 2,
+    "non_consensus": 3,
+    "trend_categories": 2,
+    "filtered_consensus": 6,
+    "signals": 4
+  }
+}

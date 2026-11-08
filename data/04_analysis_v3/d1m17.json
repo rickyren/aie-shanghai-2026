@@ -1,0 +1,44 @@
+{
+"talk_id":"d1m17",
+"speakers":"Lux Li（李粒）",
+"org":"TiDB / PingCAP",
+"value_chain_layer":"agent_infra",
+"position":"agent 全生命周期数据层",
+"target_customer":"enterprise",
+"intent":"product",
+"skeleton":[
+"从一个客户请求（做成评审工作台、明天同事接手、还要持续修改）出发，说明 agent 任务会把数据库逐步推向新需求。",
+"状态与文件：agent 中断后的 session 快照与事件需要大规模、免分片的 meta 存储；sandbox 被回收后文件需要独立于 sandbox 的持久文件系统，取代自建备份恢复。",
+"交付与运营：agent 不断产出应用，平台需要海量隔离的数据库；长任务 trace 数据巨大，需要 Lake 做排障与成本、成功率分析。",
+"改进闭环：用 trace 提问题、checkpoint 保存现场、fork 出分支在同一起点比较改法；最终主张用一套 TiDB data layer 让团队少维护底层，把精力放在 agent 迭代上。"
+],
+"core_message":"TiDB 把自己定位成 agent platform 的完整 data layer：用分布式 SQL 存 session meta、可跨 sandbox 的海量隔离文件系统、海量隔离数据库（Starter）和 trace 分析 Lake，加上 checkpoint 与 fork 支撑优化闭环，让 agent 团队不必自建分片、备份恢复和实例池。要点是这一整套并非事先规划，而是被 agent 客户的需求一步步推出来的。",
+"frameworks":[
+{"name":"agent 数据层四类增长与对应能力","gist":"meta 增长用分布式 SQL 免分片，项目增长用持久工作区，应用增长用海量隔离数据库，trace 增长用 Lake 做清洗检索聚合。","seg":"1942–1943"},
+{"name":"trace 到 checkpoint 再到 fork 的优化闭环","gist":"由历史 trace 发现问题，用保存的 checkpoint 还原现场，fork 出多个分支在同一起点上比较改法，产生新的验收证据。","seg":"1930–1939"}
+],
+"offerings":[
+{"name":"TiDB 文件系统（跨 sandbox 持久工作区）","what":"把 agent 工作区独立于 sandbox 持久保存，每个 project 独立空间，支持最小权限与 quota，并可 fork。","for_whom":"agent 平台","status":"service"},
+{"name":"TiDB Cloud Starter","what":"为 agent 交付的每个应用提供海量隔离的数据库实例，共享底层存储，由 TiDB Cloud 处理权限、用量与计算调度。","for_whom":"agent 平台 / 建站类 agent 公司","status":"launched"},
+{"name":"TiDB Cloud Lake","what":"在对象存储上加载原始 trace，用 SQL 展开 JSON，支持排障定位和批量的质量与成本分析、评测样本准备。","for_whom":"agent 厂商","status":"service"}
+],
+"why_needed":"对比自建方案：平台自己做 sandbox 加 EBS 快照备份恢复、多库分片路由、实例池维护和 trace 流水线，工程与运维成本很高；TiDB 用统一 SQL 入口、持久文件系统和海量隔离数据库把这些职责接过去。",
+"problem_approach":[
+{"problem":"sandbox 回收后 agent 产生的文件丢失，自建快照备份恢复流程繁琐且难以可靠维护。","approach":"提供独立于 sandbox 的持久文件系统，session A 结束释放 sandbox，session B 直接挂载同一工作区。"},
+{"problem":"评估 agent 改动是否真的更好时，重新跑一遍会因输入、工具返回、文件变化而不可比。","approach":"把 meta 快照、事件与文件系统 checkpoint 绑定，从同一现场 fork 出独立分支，在相同配置下验收比较。"}
+],
+"non_consensus":[
+{"kind":"insight","point":"只有 trace 不足以做 agent 优化：trace 只说明发生过什么，必须保留 checkpoint 与现场快照才能做可比的分支实验。","quote":"trace 只能告诉我们发生过什么，但我们要保存一些 checkpoint 或者当时的 snapshot，才能真正去做优化，以及还原当时的现场。","seg":"1930–1930","speaker":"Lux Li"},
+{"kind":"insight","point":"AI infra 不是预先规划出来的，而是 agent 客户的真实需求把数据库一步步推向 agent 数据层。","quote":"最后，没有人一开始就计划建设这么多的 AI infra，其实是用户的诉求把数据库推到了这里。","seg":"1944–1945","speaker":"Lux Li"}
+],
+"signals":[
+{"type":"data_signal","signal":"agent 的 session 快照、事件和长任务 trace 已成为体量极大的新数据类别，单条复杂 trace 可达很大规模，平台每日写入量巨大，催生专门的分析链路。","value_as_heard":"meta 几 TB 到 PB 级；trace 单条上百 MB、十万级步骤；每日数百 TB","seg":"1873–1919"},
+{"type":"market_pattern","signal":"数据库厂商正把自己重新定位为 agent data layer，覆盖 meta、文件、应用数据库和 trace 分析，与自建加云厂商组件的方案竞争。","value_as_heard":"","seg":"1942–1945"},
+{"type":"metric_focus","signal":"客户关注含失败重试的单位成本和任务成功率，而不是只看单次成败，用于判断工具价值与改动收益。","value_as_heard":"","seg":"1920–1924"}
+],
+"trend_categories":["agent_harness_runtime","memory_data_context"],
+"novelty":3,
+"pr_level":4,
+"content_industry_note":"长时间运行的视频生成或剪辑 agent 会产生大量中间文件和超长 trace，需要跨 sandbox 的持久工作区和可 fork 的 checkpoint，以便用户第二天继续修改同一项目。",
+"filtered_consensus":["agent 需要记忆与持久状态","tracing 与可观测很重要","评测要可复现","代码生成加速带来运维压力","降低 infra 维护负担","分片运维复杂"]
+}

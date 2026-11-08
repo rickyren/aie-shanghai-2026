@@ -1,0 +1,43 @@
+{
+  "talk_id": "d1b05",
+  "speakers": [
+    {"name": "Peng Gong", "name_as_heard": ["Peng"], "org": "Meta / Instagram (Edits)", "role": "Engineer on Instagram Edits (agenda: Staff Engineer)", "background": "Works on Instagram Edits, Meta's mobile video editing app (compared to CapCut); built agentic mobile verification for Edits (observability, semantic actions CLI, verification agent).", "evidence_orders": [704, 705, 706, 707]}
+  ],
+  "corrections": [
+    {"from": "IDs (app name)", "to": "Edits (Instagram Edits)", "count": 7, "confidence": "high"},
+    {"from": "cap cut", "to": "CapCut", "count": 1, "confidence": "high"},
+    {"from": "two call(s)", "to": "tool call(s)", "count": 5, "confidence": "high"},
+    {"from": "fail (file)", "to": "file", "count": 4, "confidence": "high"},
+    {"from": "2080p", "to": "1080p", "count": 2, "confidence": "high"},
+    {"from": "long price", "to": "long press", "count": 2, "confidence": "high"},
+    {"from": "it needs to sync", "to": "it needs to think", "count": 1, "confidence": "medium"},
+    {"from": "You can sync it something like", "to": "you can think of it as something like", "count": 1, "confidence": "high"},
+    {"from": "Android Jetpack compose", "to": "Android Jetpack Compose", "count": 1, "confidence": "high"},
+    {"from": "check the login", "to": "check the logging", "count": 1, "confidence": "medium"},
+    {"from": "LM", "to": "LLM", "count": 4, "confidence": "high"},
+    {"from": "the features and the LM ... by features I mean the deterministic stuff", "to": "fixtures and the LLM ... by fixtures I mean", "count": 2, "confidence": "medium"},
+    {"from": "free stuff (setup)", "to": "pre-work", "count": 1, "confidence": "medium"},
+    {"from": "call responding CLI actions", "to": "corresponding CLI actions", "count": 1, "confidence": "high"},
+    {"from": "explore the exhaust the app", "to": "exhaustively explore the app", "count": 1, "confidence": "medium"},
+    {"from": "this basically comprised", "to": "this basically compressed", "count": 1, "confidence": "high"},
+    {"from": "conclusive very rates", "to": "conclusive verification rate", "count": 1, "confidence": "medium"},
+    {"from": "cloud code", "to": "Claude Code", "count": 1, "confidence": "high"},
+    {"from": "dedicated to the agent", "to": "delegated to the agent", "count": 1, "confidence": "medium"},
+    {"from": "speed over a certain value video", "to": "speed of a certain video", "count": 1, "confidence": "medium"}
+  ],
+  "removed_non_content": [
+    {"orders": "709–709", "what": "mic check (does this work?)"}
+  ],
+  "uncertain": [
+    {"orders": "738", "issue": "'make it like usually is for the actual for useful validation' — likely 'impractical/useless for validation', marked 〔?〕"},
+    {"orders": "738", "issue": "'reduce the two calls by average of 38 to nine' — unclear whether 38→9 calls or a percentage; kept as spoken with 〔?〕"},
+    {"orders": "740", "issue": "CLI command 'IDs reorder clip clip 20' — exact command name uncertain, rendered as `edits reorder-clip`〔?〕"},
+    {"orders": "747", "issue": "'a editing audit' for the Hindi language check — possibly i18n/localization audit; kept with 〔?〕"},
+    {"orders": "749", "issue": "'conclusive very rates' rendered 'conclusive verification rate' 〔?〕"},
+    {"orders": "750–758", "issue": "talk ends in fragments ('Running one. But for.'); marked unintelligible"}
+  ],
+  "verified": [
+    {"as_heard": "IDs (Instagram video editing app like cap cut)", "resolved_to": "Edits (Instagram Edits)", "evidence": "https://petapixel.com/2025/04/22/instagrams-capcut-competitor-edits-is-now-available/ — Instagram's video editing app Edits, a CapCut competitor", "orders": "704–707"},
+    {"as_heard": "Peng from Meta Instagram IDs", "resolved_to": "Peng Gong (Meta / Instagram Edits)", "evidence": "https://ai.engineer/shanghai/2026/program?lang=cn — program lists Peng Gong, Meta/Instagram, founding Android engineer on Instagram Edits, talk on agent-native verification", "orders": "704"}
+  ]
+}

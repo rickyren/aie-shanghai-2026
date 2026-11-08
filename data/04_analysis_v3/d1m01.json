@@ -1,0 +1,33 @@
+{
+  "talk_id": "d1m01",
+  "speakers": "Shawn \"swyx\" Wang",
+  "org": "AI Engineer",
+  "value_chain_layer": "capital_community",
+  "position": "AIE 社区主办方致辞",
+  "target_customer": "n/a",
+  "intent": "insight",
+  "skeleton": [
+    "AI Engineer 是以动手构建真实产品和可靠基础设施的工程师为中心的社区，而不是谈论 AI 抢工作或请政要发言的会议。",
+    "上海站是 AIE 在全球的第六个合作站点，也是第一次进入中国，后续还将去印度和非洲，目标是推动这类工程师对话。",
+    "请参会者自己拍照、录像、发推传播，因为这是第一场没有直播的 AIE。"
+  ],
+  "core_message": "swyx 通过视频致辞说明 AI Engineer 的定位是务实的工程师社区，上海站是其进入中国的第一步和全球扩张的一部分，且这场会议首次不做直播，需要靠参会者的内容传播出去。",
+  "frameworks": [],
+  "offerings": [],
+  "why_needed": "",
+  "problem_approach": [],
+  "non_consensus": [],
+  "signals": [
+    {
+      "type": "market_pattern",
+      "signal": "AIE 品牌通过各地合作伙伴向全球扩张，并开始进入中国；参会的既有基础设施、应用公司，也有模型实验室，社区正在成为 AI 工程生态的连接点。",
+      "value_as_heard": "第六个合作站点",
+      "seg": "43–48"
+    }
+  ],
+  "trend_categories": ["new:AI 工程师社区与会议"],
+  "novelty": 1,
+  "pr_level": 2,
+  "content_industry_note": "该会议首次不做直播，传播依赖参会者自行拍摄和发布的照片与视频，说明现场内容的二次创作与分发由个人创作者承担。",
+  "filtered_consensus": ["欢迎致辞", "社区连接工程师", "参会公司名单", "拒绝炒作与安全恐慌", "感谢嘉宾"]
+}

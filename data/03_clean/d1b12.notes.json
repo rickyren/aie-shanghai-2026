@@ -1,0 +1,23 @@
+{"talk_id": "d1b12",
+ "speakers": [{"name": "Susan Peng（彭姗）", "name_as_heard": ["Susan"], "org": "AhaCreator", "role": "Co-founder（联创）", "background": "10+ years of experience at large tech companies (大厂), mainly in growth and brand; AhaCreator is an AI-native two-sided marketplace for overseas creator marketing, built over ~2.5 years, serving 600+ brands, raising Series A.", "evidence_orders": [1587, 1589, 1591, 1596, 1620, 1626]}],
+ "corrections": [
+  {"from": "Ahat Creator", "to": "AhaCreator", "count": 4, "confidence": "high"},
+  {"from": "TK Ins", "to": "TikTok、Instagram", "count": 1, "confidence": "high"},
+  {"from": "500多去水的金钗的达人", "to": "500 多万去水、精筛的达人", "count": 1, "confidence": "medium"},
+  {"from": "18万家", "to": "18 万", "count": 1, "confidence": "medium"},
+  {"from": "SSOP", "to": "SOP", "count": 1, "confidence": "high"},
+  {"from": "五五到八年", "to": "五到八年", "count": 1, "confidence": "high"},
+  {"from": "大语大语言模型", "to": "大语言模型", "count": 1, "confidence": "high"},
+  {"from": "爆款的传播的效用", "to": "爆款的传播效应", "count": 1, "confidence": "high"},
+  {"from": "离大厂三条马路的一条一个状态", "to": "离大厂三条马路的一个状态", "count": 1, "confidence": "medium"},
+  {"from": "进入分阶段查看", "to": "分阶段查看", "count": 1, "confidence": "medium"}
+ ],
+ "removed_non_content": [{"orders": "1601", "what": "'放我来放一下' – starting the promo video (range kept, text dropped)"}],
+ "uncertain": [
+  {"orders": "1597", "issue": "'500多去水的金钗的达人' – read as 500 多万 de-duplicated/curated creators; 万 inferred from AhaCreator public figures (5M+ reachable creators)"},
+  {"orders": "1602–1611", "issue": "promo video narration, set as quote; first sentence starts mid-thought"},
+  {"orders": "1660", "issue": "'上一个嘉宾…小王子的热点' refers to an earlier speaker; kept as said"}
+ ],
+ "verified": [
+  {"as_heard": "Ahat Creator / Susan", "resolved_to": "AhaCreator; Susan = 彭姗 (Peng Shan), co-founder & CGO", "evidence": "https://finance.sina.com.cn/tech/roll/2026-10-26/doc-iniwqarn2408781.shtml - AhaCreator彭姗; reports 140+ countries, 5M+ real creators, 600+ brand clients – matches talk", "orders": "1587–1597"}
+ ]}

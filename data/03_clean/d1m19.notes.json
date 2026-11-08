@@ -1,0 +1,16 @@
+{"talk_id":"d1m19","speakers":[{"name":"Tinsley Shi (诗婷)","name_as_heard":["诗婷"],"org":"Google","role":"Product Manager, Google Agent Infra","background":"Product manager on Google's Agent Infra team; presents Google's open-source sandbox infrastructure for RL post-training (agent sandbox on Kubernetes, next-gen agent substrate).","evidence_orders":[2072]}],
+"corrections":[
+{"from":"脱扣","to":"tool call〔?〕","count":1,"confidence":"medium"},
+{"from":"hello今天的hello AI engineer伤害","to":"hello，今天的 AI Engineer Shanghai〔?〕","count":1,"confidence":"medium"},
+{"from":"sweet bench","to":"SWE-bench","count":2,"confidence":"high"},
+{"from":"条轨迹","to":"条轨迹 (每一条轨迹)","count":1,"confidence":"high"},
+{"from":"16个16个任务","to":"16 个 rollout","count":1,"confidence":"medium"},
+{"from":"1000个1000个task","to":"1000 个 task","count":1,"confidence":"high"},
+{"from":"装填","to":"装填 (kept)","count":2,"confidence":"medium"},
+{"from":"Qwen的379B","to":"Qwen 的 379B〔?〕","count":1,"confidence":"medium"},
+{"from":"手首次指令","to":"首次指令","count":1,"confidence":"high"},
+{"from":"诗婷","to":"诗婷（Tinsley Shi）","count":1,"confidence":"high"}],
+"removed_non_content":[{"orders":"2077,2081","what":"'Okay.' filler"}],
+"uncertain":[{"orders":"2099","issue":"'脱扣' probably tool call"},{"orders":"2103","issue":"garbled joke about hello AI Engineer"},{"orders":"2170","issue":"Qwen model size 379B uncertain"}],
+"verified":[],
+"actual_topic_note":""}

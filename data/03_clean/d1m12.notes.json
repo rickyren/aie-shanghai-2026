@@ -1,0 +1,27 @@
+{
+  "talk_id": "d1m12",
+  "speakers": [
+    {"name": "Mislav Ivanda", "name_as_heard": ["Mislav"], "org": "Daytona", "role": "Developer Experience Engineer", "background": "Works at Daytona, a sandbox provider; Daytona uses Kubernetes for its own control plane but built a separate infra layer for agent sandboxes.", "evidence_orders": [838, 841, 851, 886]}
+  ],
+  "corrections": [
+    {"from": "developer experienced engineer", "to": "developer experience engineer", "count": 1, "confidence": "high"},
+    {"from": "database approach", "to": "delta-based approach", "count": 1, "confidence": "high"},
+    {"from": "EOPS", "to": "IOPS", "count": 1, "confidence": "high"},
+    {"from": "SVE test", "to": "SWE tasks", "count": 1, "confidence": "high"},
+    {"from": "prevent the pooling", "to": "prevent pulling", "count": 1, "confidence": "high"},
+    {"from": "we are all distribution algorithm", "to": "our distribution algorithm", "count": 1, "confidence": "high"},
+    {"from": "low long running web stateless services", "to": "long-running, stateless web services", "count": 1, "confidence": "high"},
+    {"from": "47, uh, 176 hours", "to": "176 hours (false start dropped)", "count": 1, "confidence": "medium"},
+    {"from": "Second one was ... / tier two one", "to": "Tier one ... / tier two", "count": 1, "confidence": "medium"},
+    {"from": "that's the test that we took at Daytona", "to": "that's the task we took on at Daytona", "count": 1, "confidence": "medium"},
+    {"from": "Kubernetes ... use them", "to": "use it", "count": 1, "confidence": "high"}
+  ],
+  "removed_non_content": [],
+  "uncertain": [
+    {"orders": "941", "issue": "\"30 to 19 seconds\" is not a valid range; likely \"30 to 90 seconds\" but kept as spoken with 〔?〕"},
+    {"orders": "975", "issue": "\"47, uh, 176 hours\" treated as false start; 176 h matches 9-to-5 for a month"}
+  ],
+  "verified": [
+    {"as_heard": "Mislav, developer experienced engineer from Daytona", "resolved_to": "Mislav Ivanda, Developer Experience Engineer, Daytona", "evidence": "https://www.daytona.io/dotfiles/brainbases-universal-harness-api-on-daytona — author bio: Developer Experience Engineer at Daytona; same talk title listed at Daytona AI Builders London (luma.com/ai-builders-london-02)", "orders": "838"}
+  ]
+}

@@ -1,0 +1,28 @@
+{
+"talk_id":"d2m13","speakers":"Dicong \"David\" Qiu","org":"QuantSparkle.ai 数耀量生",
+"value_chain_layer":"embodied_world_model","position":"量子计算训练具身模型","target_customer":"model_lab","intent":"both",
+"skeleton":[
+"物理 AI 同时受算法、数据、算力三方面制约：真机数据昂贵且有噪声，仿真有 sim-to-real 差距，且训练样本选择与多模态分布难以建模。",
+"传统生成模型用高斯分布会出现多模态表示不全与模式抑制（机器人撞向两扇门之间的墙），混合高斯也需预先指定个数。",
+"他们用玻尔兹曼能量景观拟合任意多模态分布，并借助量子采样求全局最优，在开源基准上显著超过 OpenPI 基线。",
+"进一步提出量子 RSI：用少量真机样本锚定能量景观，采样全局最优、真机执行、更新景观，闭环迭代。"],
+"core_message":"QuantSparkle 提供用量子计算重塑具身模型隐空间、并用量子采样驱动“采样-真机执行-更新”闭环的训练方法，主张它能突破经典 GPU 训练的性能平台期，并以更少数据和算力解决多模态与样本选择问题。",
+"frameworks":[
+{"name":"Real2Real 能量建模 + 量子采样","gist":"以玻尔兹曼能量景观锚定真实世界分布，用量子采样求全局最优，真机执行后更新景观，形成量子 RSI 闭环。","seg":"2548–2617"}],
+"offerings":[
+{"name":"量子-经典混合训练方法（隐空间重塑）","what":"只微调量子重塑后的隐空间，使物理 AI 模型突破经典训练的平台期并减少 GPU 需求。","for_whom":"具身智能/物理 AI 公司及模型团队","status":"service"}],
+"why_needed":"对比用经典 GPU/CPU 全参数微调现有 SOTA（OpenPI）：作者称经典训练到一定成功率后无法继续提升，且高斯/混合高斯难以表示多模态，而量子采样可处理经典不可行的全局优化。",
+"problem_approach":[
+{"problem":"物理 AI 的真机数据昂贵、有偏有噪，仿真存在 sim-to-real 差距，且难以挑选下一个最有学习价值的样本。","approach":"用少量真机样本锚定能量景观，量子采样选全局最优样本，真机执行后更新景观（量子 RSI）。"},
+{"problem":"高斯及混合高斯无法完整表示多模态行为分布，导致模式抑制。","approach":"改用玻尔兹曼能量景观分布，并借助量子采样解决经典不可解的采样。"}],
+"non_consensus":[
+{"kind":"prediction","point":"量子计算可作为训练具身模型的实际算力手段，使模型越过经典训练的性能平台期，且极小的量子比特隐空间能同时容纳大量复杂任务。","quote":"But our method is able to do that, because our quantum technology is able to leverage one thing we call globally optimal optimization.","seg":"2516–2522","speaker":"Dicong \"David\" Qiu"}],
+"signals":[
+{"type":"data_signal","signal":"仅用几十条真机样本启动闭环，数据获取的重点从大规模采集转向挑选下一个最有价值的真机样本。","value_as_heard":"","seg":"2598–2603"},
+{"type":"market_pattern","signal":"头部物理 AI 客户已在自有真机数据上测试该方法，并反馈优于其基线，量子算力开始被包装成具身训练服务。","value_as_heard":"","seg":"2618–2623"},
+{"type":"metric_focus","signal":"关注基准任务平均成功率及达到该成功率所需训练轮数与 GPU，尤其是复杂任务上相对基线的优势。","value_as_heard":"93.7% -> 98%，12,000 对 80,000 epochs，复杂任务提升约 25%–33%","seg":"2525–2547"}],
+"trend_categories":["embodied_physical_ai","open_models_posttrain_inference"],
+"novelty":4,"pr_level":3,
+"content_industry_note":"",
+"filtered_consensus":["真机数据昂贵且有噪声","sim-to-real 差距","仿真数据补充","团队与履历介绍","基准成功率提升"]
+}

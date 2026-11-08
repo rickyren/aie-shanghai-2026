@@ -1,0 +1,20 @@
+{
+"talk_id":"d1m19","speakers":"Tinsley Shi（诗婷）","org":"Google",
+"value_chain_layer":"agent_infra","position":"RL 后训练沙箱基础设施","target_customer":"model_lab","intent":"both",
+"skeleton":["前沿实验室的 RL 后训练规模越来越大，瓶颈已转到如何持续调度海量沙箱。","大规模 RL 带来并发、镜像拉取、数据质量被基础设施故障污染以及沙箱大量空闲浪费 GPU 等问题。","Google 的开源方案（基于 Kubernetes 的 agent sandbox）用预热池、镜像放置与缓存、控制面优化、精简网络 identity 实现百万并发、亚秒级首条指令。","下一代 agent substrate 用快照恢复和新的数据平面进一步提升密度、降低成本。"],
+"core_message":"Google Agent Infra 推广其开源的 RL 后训练沙箱基础设施（Kubernetes 上的 agent sandbox，下一代为 agent substrate），主张 RL 的瓶颈已从算力转到沙箱调度，并通过预热池、镜像缓存、控制面和快照优化解决高并发、数据污染与空闲浪费。",
+"frameworks":[{"name":"RL 沙箱调度的四层架构","gist":"上层极简 Python SDK 让研究员只写算法/数据，下层处理镜像放置缓存、控制面和网络 identity 的高吞吐调度。","seg":"2150–2159"}],
+"offerings":[{"name":"Agent Sandbox（开源）","what":"为 RL 后训练设计的 Kubernetes 沙箱调度系统，支持预热池、镜像缓存、GPU 与 TPU 验证。","for_whom":"模型实验室与做 RL 的创业者","status":"open_source"},
+{"name":"Agent substrate（下一代）","what":"基于快照恢复和新数据平面的亚秒级起停，提高密度、降低成本。","for_whom":"大规模 RL 与 agent 工作负载","status":"preview"}],
+"why_needed":"对比传统容器基础设施和通用 agent serving 场景：它们没见过 RL 这样的并发量，控制平面易崩溃或超时，镜像拉取慢，沙箱起停等待被 reward 误判为任务失败而污染训练数据。",
+"problem_approach":[{"problem":"RL 训练中基础设施延迟和故障（超时、内存溢出）被 reward 记为任务失败，污染训练数据并影响模型权重。","approach":"用预热池、镜像缓存、控制面优化使首条指令亚秒级，减少由基础设施引起的误判。"},
+{"problem":"沙箱大部分时间空闲在等待模型生成，昂贵 GPU 也跟着等待，资源浪费。","approach":"下一代 agent substrate 用快照快速起停，将空闲时间优化掉并提高沙箱密度。"}],
+"non_consensus":[{"kind":"insight","point":"RL 训练的数据质量问题有一部分来自沙箱基础设施而非模型或任务本身。","quote":"这样你整体的训练数据其实就被污染了：它没有正确地评定任务是否真的完成，而是因为基础设施的问题被判定为没有完成。","seg":"2125–2131","speaker":"Tinsley Shi"}],
+"signals":[{"type":"data_signal","signal":"RL 训练用的数据以海量打包好的代码仓库/SWE 类镜像形式存在，数量庞大且单个镜像很大，成为调度和存储压力。","value_as_heard":"超过 150 万个镜像，每个超过 1 GB","seg":"2117–2124"},
+{"type":"market_pattern","signal":"前沿实验室普遍做 RL 后训练且规模不断扩大，基础设施厂商把 RL 沙箱调度当作新的服务对象，并以开源方式吸引国内实验室和创业者。","value_as_heard":"","seg":"2083–2091"},
+{"type":"metric_focus","signal":"关注沙箱并发规模、首条指令延迟、预热装填时间、节点密度，以及沙箱真实工作时间占比。","value_as_heard":"百万并发、首条指令 1 秒内、100 万沙箱 12 分钟装填、空闲约 80%","seg":"2138–2149"}],
+"trend_categories":["agent_harness_runtime","open_models_posttrain_inference"],
+"novelty":3,"pr_level":4,
+"content_industry_note":"",
+"filtered_consensus":["RL 后训练提升 coding 能力","基础设施是瓶颈","低延迟高吞吐","GPU 昂贵需提高利用率"]
+}

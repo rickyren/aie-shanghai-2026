@@ -1,0 +1,116 @@
+{
+  "talk_id": "d2m19",
+  "speakers": "Siwei Gu",
+  "org": "Nowledge Labs, Inc",
+  "value_chain_layer": "data_context",
+  "position": "记忆与团队知识层",
+  "target_customer": "developer",
+  "intent": "both",
+  "skeleton": [
+    "组织和 agent 都会“遗忘”，所以要做 Knowledge Layer；Nowledge Mem 的 memory engineering 包括保留全量轨迹、时间维度、关系与健康维护、遗忘衰减（FSRS）和超图结构。",
+    "memory benchmark 基本只测检索，不能当全部；团队内部用四五十个自建评测，并在春季后转向半闭环的 RSI-like（自动研究式）自我优化。",
+    "团队运转进入“dark office”：夜间和周末 agent 持续产出，半闭环下验证仍离不开人，因此需要团队知识层来减少对专家的依赖。",
+    "对 team context 的实验显示：把它内化到模型参数收效有限，编译成 harness adapter 效果更好；并开源 HawDB 等项目。"
+  ],
+  "core_message": "记忆不只是检索，而是需要时间、关系、遗忘与健康维护的知识层；Nowledge 把这套做法推进到团队层面，主张团队上下文应像 adapter 一样编译进 harness，而不是内化进模型参数，用来支撑夜间无人值守的半闭环 agent 工作。",
+  "frameworks": [
+    {
+      "name": "全闭环 vs 半闭环 RSI-like 任务",
+      "gist": "最值得研究且最常见的是半闭环：验证环节无法完全脱离人，只能以批量方式用品味和判断来 steer。",
+      "seg": "3551–3562"
+    },
+    {
+      "name": "团队上下文连续性四级（L1–L4）",
+      "gist": "按团队上下文连续性分四级，讲者团队实践中 L3、L4 带来最多“aha”。",
+      "seg": "3619–3629"
+    }
+  ],
+  "offerings": [
+    {
+      "name": "Nowledge Mem",
+      "what": "面向 agent 与个人/组织的记忆与知识层产品，含全量轨迹、语义记忆、工作记忆、身份图与超图。",
+      "for_whom": "使用 agent 的个人、开发者与团队",
+      "status": "launched"
+    },
+    {
+      "name": "HawDB 与 RSI 式优化项目",
+      "what": "面向上下文的原生数据库，以及讲者个人的 terminal 模拟器自动研究项目，均开源，优化记录公开。",
+      "for_whom": "开发者与社区",
+      "status": "open_source"
+    }
+  ],
+  "why_needed": "agent memory 已经高度商品化，且多数基于检索；讲者主张做得不好的记忆系统还不如没有，需要结构、时间、关系维护和衰减。",
+  "problem_approach": [
+    {
+      "problem": "无法预知半年后哪些蒸馏的知识值得保留，且记忆只存不维护会导致拿到过时或残缺的脉络。",
+      "approach": "先完整保存全部轨迹作为情景记忆，再用小模型分诊；加入双重时间维度、关系维护，并用 FSRS 结合使用反馈做遗忘衰减。"
+    },
+    {
+      "problem": "团队知识难以让 agent 在夜间继续推进，且把团队上下文内化进参数效果不佳。",
+      "approach": "把团队 harness 与上下文编译成 harness adapter，让 agent 在半闭环中少依赖专家。"
+    }
+  ],
+  "non_consensus": [
+    {
+      "kind": "insight",
+      "point": "遗忘/衰减是记忆系统的功能而非缺陷；糟糕的记忆比没有更糟。",
+      "quote": "decay of your knowledge 是非常重要的，是一个 feature，而不是一个 bug。",
+      "seg": "3487–3499",
+      "speaker": "Siwei Gu"
+    },
+    {
+      "kind": "insight",
+      "point": "主流 memory benchmark 基本只测检索，对真实 agent 场景有偏，只能当低垂果实的提示。",
+      "quote": "简单来说，大部分的这种 memory benchmark，哪怕是针对 agent 已经设计过的，其实都是 retrieval based 的。",
+      "seg": "3515–3535",
+      "speaker": "Siwei Gu"
+    },
+    {
+      "kind": "practice",
+      "point": "将团队上下文内化进模型参数的多数实验无收益，编译成 harness adapter 反而更好。",
+      "quote": "我们发现最好的方式是让 team context 以 harness adapter 的方式被 leverage。",
+      "seg": "3630–3653",
+      "speaker": "Siwei Gu"
+    }
+  ],
+  "signals": [
+    {
+      "type": "data_signal",
+      "signal": "记忆产品选择保存全量原始轨迹作为情景记忆，再按需蒸馏，轨迹本身被视作长期资产；评测集靠真实数据与用户反馈自建，并有专家参与。",
+      "value_as_heard": "四五十个维度的评测",
+      "seg": "3443–3457"
+    },
+    {
+      "type": "market_pattern",
+      "signal": "agent memory 已经商品化、同质竞争，差异化转向团队层知识、时间/关系结构与 harness 集成。",
+      "value_as_heard": "",
+      "seg": "3435–3442"
+    },
+    {
+      "type": "metric_focus",
+      "signal": "团队不依赖公共 memory benchmark，而是跟踪记忆整合、蒸馏、实体图抽取等自建评测，并用来驱动 RSI-like 自动优化。",
+      "value_as_heard": "",
+      "seg": "3536–3550"
+    },
+    {
+      "type": "market_pattern",
+      "signal": "AI 原生团队出现“dark office”工作方式：夜间和周末 agent 无人值守产出，瓶颈在人的验证与品味。",
+      "value_as_heard": "",
+      "seg": "3604–3618"
+    }
+  ],
+  "trend_categories": [
+    "memory_data_context",
+    "enterprise_agent_ops"
+  ],
+  "novelty": 4,
+  "pr_level": 3,
+  "content_industry_note": "团队创作风格、审美偏好和历史项目若被编译成可复用的 context adapter，内容团队可让 agent 在夜间继续初剪、整理素材，但最终取舍仍需人的批量审阅。",
+  "filtered_consensus": [
+    "agent 需要记忆与上下文",
+    "benchmark 不是全部",
+    "人在回路中",
+    "模型能力提升带来新范式",
+    "人脑与记忆系统类比"
+  ]
+}

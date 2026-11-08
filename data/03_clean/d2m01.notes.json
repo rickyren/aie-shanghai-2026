@@ -1,0 +1,47 @@
+{"talk_id": "d2m01",
+ "speakers": [{"name": "Christoph Lassner", "name_as_heard": ["Chris"], "org": "World Labs (co-founder; no longer holds an active role, speaking in a personal capacity)", "role": "Co-founder of World Labs", "background": "Background at the intersection of machine learning, computer vision and computer graphics; prior academic work on 3D reconstruction and rendering, including reconstructing physical properties (hair, plush materials) for simulation. Co-founded World Labs in early 2024 with Fei-Fei Li, Justin Johnson and Ben Mildenhall; World Labs' first public model/product is Marble. Stepped back after an e-scooter accident earlier this year; this is his first public talk since recovery.", "evidence_orders": [26, 37, 38, 39, 40, 41, 45, 46, 47, 54, 55, 58, 61]}],
+ "corrections": [
+  {"from": "co-fund World Labs", "to": "co-found World Labs", "count": 1, "confidence": "high"},
+  {"from": "Ben Mildenhal", "to": "Ben Mildenhall", "count": 1, "confidence": "high"},
+  {"from": "first public relea-released model", "to": "first publicly released model", "count": 1, "confidence": "high"},
+  {"from": "Billa Wal", "to": "Bilawal (likely Bilawal Sidhu)", "count": 1, "confidence": "medium"},
+  {"from": "David Hahn and Schmidt Huber", "to": "David Ha and Schmidhuber", "count": 1, "confidence": "high"},
+  {"from": "Fidi Gaussian splatting", "to": "3D Gaussian splatting", "count": 1, "confidence": "high"},
+  {"from": "Jetbal", "to": "JEPA (uncertain)", "count": 1, "confidence": "medium"},
+  {"from": "spatial localization and mapping", "to": "simultaneous localization and mapping (SLAM)", "count": 1, "confidence": "high"},
+  {"from": "inexpensible taxonomy", "to": "extensible taxonomy", "count": 1, "confidence": "high"},
+  {"from": "rendering ... reconstruction rendering", "to": "3D reconstruction and rendering", "count": 1, "confidence": "high"},
+  {"from": "spatial world's digital domains", "to": "spatial world, digital domains", "count": 1, "confidence": "medium"},
+  {"from": "system two / system one / system zero", "to": "System 2 / System 1 / System 0", "count": 8, "confidence": "high"},
+  {"from": "two-domain modules", "to": "two domain modules", "count": 1, "confidence": "medium"},
+  {"from": "The world, in turn, helps uh, the world model", "to": "The world model, in turn, helps", "count": 1, "confidence": "high"},
+  {"from": "I don't do not hold an active role with a company", "to": "I do not hold an active role with the company", "count": 1, "confidence": "medium"}
+ ],
+ "removed_non_content": [
+  {"orders": "56–57", "what": "slide/clicker interjection ('Whoop. And here we go.')"},
+  {"orders": "65–68", "what": "clicker trouble while showing the tweet (content sentence kept)"},
+  {"orders": "124–125", "what": "slide advance slip ('We oop. Here we go.')"},
+  {"orders": "131–133", "what": "partial: audience-reaction chatter ('What's going on here?')"},
+  {"orders": "141–145", "what": "partial: show-of-hands chatter"},
+  {"orders": "152–160", "what": "clicker not working, swapping clicker"},
+  {"orders": "171–175", "what": "slides going backwards"}
+ ],
+ "uncertain": [
+  {"orders": "65", "issue": "'Billa Wal' read as Bilawal (Bilawal Sidhu, a well-known world-model commentator); the specific August tweet could not be confirmed"},
+  {"orders": "71", "issue": "'Meng Ying' – presumably the conference organizer who invited him; spelling not verifiable from inputs"},
+  {"orders": "113", "issue": "'These operations around the agent's representation' – verb missing, likely 'are organized around'"},
+  {"orders": "152", "issue": "'Jetbal' – best guess JEPA (Yann LeCun's architecture, mentioned earlier); could also be another model name"},
+  {"orders": "201", "issue": "'CRMs, a subject of world model, engineering' – garbled list of tweet topics; 'a subject of' unclear"},
+  {"orders": "252", "issue": "'with more intelligence, we need more space' – possibly 'more structure'; kept as heard"}
+ ],
+ "verified": [
+  {"as_heard": "co-fund World Labs ... Fei-Fei Li, Justin Johnson, and Ben Mildenhal / Chris", "resolved_to": "World Labs co-founders Fei-Fei Li, Justin Johnson, Ben Mildenhall, Christoph Lassner", "evidence": "https://www.worldlabs.ai/about ; https://x.com/JarsyInc/status/2105160781239378092 – lists the four co-founders", "orders": "26–46"},
+  {"as_heard": "Atlas model, from World Labs", "resolved_to": "Atlas (World Labs world model, Sept 2026)", "evidence": "https://www.worldlabs.ai/blog/atlas – World Labs' omni world model launched Sept 1, 2026", "orders": "31–32"},
+  {"as_heard": "Marble", "resolved_to": "Marble (World Labs' first public product)", "evidence": "https://the-decoder.com/world-labs-unveils-atlas-... – Marble, first commercial model, public Nov 2025", "orders": "47"},
+  {"as_heard": "Billa Wal", "resolved_to": null, "evidence": "Searched Bilawal Sidhu tweets (x.com/bilawalsidhu) – he posts about world models, but the specific August meme tweet was not found; kept with 〔?〕", "orders": "65"},
+  {"as_heard": "blog post about what world models are in the summer / functional taxonomy", "resolved_to": "World Labs blog 'A Functional Taxonomy of World Models' (June 2026)", "evidence": "https://www.worldlabs.ai/blog/taxonomy-of-world-models – render/simulate/plan taxonomy, matches talk", "orders": "69, 97–105"},
+  {"as_heard": "David Hahn and Schmidt Huber", "resolved_to": "David Ha and Jürgen Schmidhuber ('World Models', 2018)", "evidence": "https://worldmodels.github.io/ – Ha & Schmidhuber World Models paper", "orders": "149"},
+  {"as_heard": "livex.earth", "resolved_to": "livex.earth", "evidence": "https://livex.earth/ – live 3D Earth globe with clouds, satellites, weather", "orders": "211–212"},
+  {"as_heard": "Kling 4.0", "resolved_to": "Kling 4.0 (Kuaishou, Oct 2026)", "evidence": "https://fal.ai/learn/tools/what-is-kling-4-0 – Kling 4.0 video model released Sept/Oct 2026", "orders": "218"}
+ ],
+ "actual_topic_note": ""}

@@ -1,0 +1,28 @@
+{
+"talk_id":"d2m15","speakers":"Zhong Shen","org":"DYNA Robotics",
+"value_chain_layer":"embodied_world_model","position":"为快速迭代的模型做可预测硬件","target_customer":"enterprise","intent":"insight",
+"skeleton":[
+"通用机器人硬件夹在工业机器人（求精度、刚度、耐用）和科研平台（求突破、不计成本）之间，既要新能力又要耐用低成本。",
+"模型可以每周迭代，硬件一年只能做一两次大迭代，且通用机器人难以定义长期不变的需求，导致两边节奏错配。",
+"DYNA 的答案是“可预测硬件”：运动可被模型预测，传感反馈可信，并作为稳定接口让模型反复复用同一物理平台。",
+"以关节传动为例：选行星而非谐波减速器，降低内阻、简化执行器模型，缩小 sim-to-real 差距，并让电流到力矩更透明以估计外力。"],
+"core_message":"模型迭代远快于硬件，DYNA 的对策是把硬件设计成“可预测”的稳定接口：用更简单的行星传动让执行器行为易建模、力反馈可信，从而缩小 sim-to-real 差距，使同一硬件能撑过多年的模型演进。",
+"frameworks":[
+{"name":"可预测硬件（运动 + 传感）","gist":"硬件需求按两方面定义：运动上可被模型预测，传感上提供真实可信的物理状态反馈，同时作为稳定接口供模型复用。","seg":"2868–2885"},
+{"name":"机器人的两种传统用途与通用机器人的折中","gist":"工业机器人重刚度与耐用，科研平台重突破轻成本，通用机器人两头都要。","seg":"2811–2847"}],
+"offerings":[],
+"why_needed":"",
+"problem_approach":[
+{"problem":"模型每周可迭代，硬件只能一两次大迭代，通用机器人又无法预先定义长期不变的需求。","approach":"把需求定为“可预测”：硬件行为可被模型预测，并作为跨年稳定的物理接口。"},
+{"problem":"谐波减速器有迟滞、内阻随负载和温度变化，执行器模型复杂，sim-to-real 与外力估计困难。","approach":"选用行星传动，降低内阻并简化执行器模型，使电流到力矩透明，用于外力估计。"}],
+"non_consensus":[
+{"kind":"practice","point":"机器人硬件选型的目标不是单项性能最强，而是让执行器行为简单到模型能预测，以此缩小 sim-to-real 差距，并让硬件寿命跨越多代模型。","quote":"In short, we want to design the hardware to narrow the sim-to-real gap, so that the hardware can last long enough for fast-evolving models.","seg":"2967–2971","speaker":"Zhong Shen"}],
+"signals":[
+{"type":"metric_focus","signal":"追踪从仿真到真机的位置跟踪误差增量，以及外力估计误差，衡量硬件对模型是否“可预测”。","value_as_heard":"仿真到真机 RMSE 仅增加约 0.3 mm；腕部外力估计平均误差约 1.39 N，肘部约 0.8 N","seg":"2912–2966"},
+{"type":"market_pattern","signal":"具身公司在软硬件之间形成垂直整合：硬件团队服务于快速迭代的基础模型，而硬件设计取舍由模型的可学习性主导。","value_as_heard":"","seg":"2848–2876"},
+{"type":"launch","signal":"发布 DYNA 2.1，当前一代机器人进入量产，同时探索下一代。","value_as_heard":"","seg":"2890–2974"}],
+"trend_categories":["embodied_physical_ai"],
+"novelty":3,"pr_level":2,
+"content_industry_note":"",
+"filtered_consensus":["模型迭代快于硬件","仿真与真机存在差距","机器人要兼顾成本与耐用","招聘与公司介绍"]
+}

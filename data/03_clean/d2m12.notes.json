@@ -1,0 +1,36 @@
+{"talk_id": "d2m12",
+ "speakers": [{"name": "Mingke Luo", "name_as_heard": ["Mingke"], "org": "masons.ai", "role": "Speaker (founder per agenda; role not stated in transcript)", "background": "Founded a personal-agent startup ~2016 ('AI Concierge') that used AI for intent understanding and a ~20-person call center as 'human APIs' for fulfillment; it failed. Pivoted to enterprise agents: built the Visa Concierge (2017) and, over eight years, enterprise agents for BMW, Porsche, Intel etc.; built an Intelligent Personal Assistant (IPA) for BMW and in 2019 enabled framework-agnostic communication between departmental agents within one organization. Splits time between San Francisco and Shanghai.", "evidence_orders": [2211, 2218, 2224, 2243, 2250, 2253, 2302, 2305, 2306, 2314, 2324, 2334]}],
+ "corrections": [
+  {"from": "intentive recognition", "to": "intent recognition", "count": 1, "confidence": "high"},
+  {"from": "EPA (Intelligent Personal Assistant)", "to": "IPA", "count": 1, "confidence": "high"},
+  {"from": "we called it Agent back in 2016", "to": "we called it agent back in 2016", "count": 1, "confidence": "high"},
+  {"from": "It's at the back end", "to": "At the back end", "count": 1, "confidence": "high"},
+  {"from": "But what is why action is very important?", "to": "But why is action very important?", "count": 1, "confidence": "high"},
+  {"from": "to make this transaction", "to": "to make this transition", "count": 1, "confidence": "medium"},
+  {"from": "Grokbot / GrabBot", "to": "Clawdbot〔?〕", "count": 2, "confidence": "medium"},
+  {"from": "Grab Instinct", "to": "Claw instance〔?〕", "count": 1, "confidence": "medium"},
+  {"from": "Slash if", "to": "TEDx〔?〕", "count": 1, "confidence": "medium"},
+  {"from": "Hermes agent", "to": "Hermes Agent", "count": 1, "confidence": "high"},
+  {"from": "ads exchange", "to": "ad exchanges", "count": 1, "confidence": "high"}
+ ],
+ "removed_non_content": [
+  {"orders": "2208–2209", "what": "opening 'Okay. Thank you.' before talk"},
+  {"orders": "2233", "what": "AV request 'You can have a volume' (video playback)"},
+  {"orders": "2276", "what": "'Let's see.' slide filler"}
+ ],
+ "uncertain": [
+  {"orders": "2232", "issue": "'I did a talk at Slash if' — venue unclear; speaker has a TEDxShanghai talk (2021), but ASR match is weak"},
+  {"orders": "2251", "issue": "'I brought a lot of VCs money' — could be 'burned' or 'raised'; kept 'brought'"},
+  {"orders": "2275–2277", "issue": "'first-century concept' — possibly 'fifteenth-century'; kept as heard"},
+  {"orders": "2321", "issue": "'In front of the car' — possibly 'in the car' / 'in front of the customer'"},
+  {"orders": "2360", "issue": "'Dot' among super personal agents — possibly Doubao; not resolved"},
+  {"orders": "2374, 2441, 2443", "issue": "'Grokbot'/'GrabBot'/'Grab Instinct' — probably Clawdbot / OpenClaw instance; not confirmed"}
+ ],
+ "verified": [
+  {"as_heard": "Mingke / masons.ai", "resolved_to": "Mingke Luo, founder & CEO of Masons (masons.ai)", "evidence": "https://ai.engineer/shanghai/2026/speakers?lang=cn and https://masons.ai/about — same talk title; prior company MRS.ai served BMW, Porsche, Intel, Visa", "orders": "2211"},
+  {"as_heard": "Muse (Amazon banned Muse)", "resolved_to": "Meta's Muse personal agent", "evidence": "https://www.geekwire.com/2026/amazon-blocks-metas-muse-ai-assistant-in-new-standoff-over-agentic-shopping/ — Amazon blocked Meta's Muse agent Sept 2026", "orders": "2296, 2374, 2443"},
+  {"as_heard": "Hermes agent", "resolved_to": "Hermes Agent (Nous Research)", "evidence": "https://github.com/nousresearch/hermes-agent — open-source personal agent, peer of OpenClaw", "orders": "2443"},
+  {"as_heard": "Grokbot / GrabBot", "resolved_to": null, "evidence": "https://en.wikipedia.org/wiki/OpenClaw — OpenClaw was formerly Clawdbot; plausible but ASR match not confirmed, kept 〔?〕", "orders": "2374, 2441"},
+  {"as_heard": "Slash if", "resolved_to": null, "evidence": "https://www.ted.com/talks/mingke_luo_artificial_unintelligence_a_hybrid_future_of_ai_and_mankind — speaker gave a TEDxShanghai talk; Slush Shanghai search found no talk by him; kept 〔?〕", "orders": "2232"}
+ ]
+}

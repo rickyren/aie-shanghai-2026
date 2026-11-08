@@ -1,0 +1,105 @@
+{
+ "talk_id": "d2m17",
+ "speakers": [
+  {
+   "name": "Hao Zheng",
+   "name_as_heard": [
+    "正浩"
+   ],
+   "org": "Futuring Robot (未来不远机器人, Shanghai)",
+   "role": "Not stated; presents the company's home service robot work",
+   "background": "Says their company builds home service robots; latest product F2 (1,500+ parts, 21 DoF, 22 sensors); deployed to 500+ homes with 50,000+ cumulative working hours.",
+   "evidence_orders": [
+    3122,
+    3125,
+    3272
+   ]
+  }
+ ],
+ "corrections": [
+  {
+   "from": "self-involving WM / WM",
+   "to": "self-evolving WAM (世界动作模型)",
+   "count": 8,
+   "confidence": "medium"
+  },
+  {
+   "from": "start K",
+   "to": "Top-K",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "有没有歧义",
+   "to": "有没有奇异 (singularity)",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "正浩",
+   "to": "Hao Zheng (agenda); Chinese characters unconfirmed",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "疏通",
+   "to": "kept (alignment of 30Hz model and 500Hz motors)",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "控制的规律",
+   "to": "控制律",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "我目前已经把机器人推广",
+   "to": "我们目前已经把机器人推广",
+   "count": 1,
+   "confidence": "medium"
+  }
+ ],
+ "removed_non_content": [
+  {
+   "orders": "3120–3121",
+   "what": "thanks to organizers kept briefly; filler removed"
+  }
+ ],
+ "uncertain": [
+  {
+   "orders": "3122",
+   "issue": "speaker given name 正浩 vs agenda Hao Zheng; characters unconfirmed"
+  },
+  {
+   "orders": "3153–3156",
+   "issue": "'self-involving W M' read as self-evolving WAM"
+  },
+  {
+   "orders": "3184",
+   "issue": "'start K' read as Top-K"
+  },
+  {
+   "orders": "3179",
+   "issue": "'歧义' possibly 奇异"
+  },
+  {
+   "orders": "3204",
+   "issue": "'另外的三种' implies K=4"
+  }
+ ],
+ "verified": [
+  {
+   "as_heard": "未来不远 / F2 / 世界动作模型 WAM",
+   "resolved_to": "未来不远机器人 (Futuring Robot), F2, WAM",
+   "evidence": "https://www.bjnews.com.cn/detail/1780648128129239.html - 未来不远机器人 releases self-evolving WAM model; F2 product at https://ai.futuringrobot.com/",
+   "orders": "3122-3154"
+  },
+  {
+   "as_heard": "正浩",
+   "resolved_to": null,
+   "evidence": "Search for 郑浩 + 未来不远 returned no person match; left as heard/agenda 'Hao Zheng'.",
+   "orders": "3122"
+  }
+ ]
+}

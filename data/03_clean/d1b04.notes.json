@@ -1,0 +1,47 @@
+{
+  "talk_id": "d1b04",
+  "speakers": [
+    {
+      "name": "裴晟 (Robert Pei)",
+      "name_as_heard": ["裴圣", "Robert"],
+      "org": "Visa",
+      "role": "大中华区产品负责人（在大中华区负责产品）",
+      "background": "Visa 大中华区负责产品；介绍 Visa 于 2025 年 5 月提出的 Visa Intelligent Commerce 及 Trusted Agent Protocol、CLI 产品、micro payment 方案等。",
+      "evidence_orders": [529, 530, 541, 542]
+    }
+  ],
+  "corrections": [
+    {"from": "裴圣", "to": "裴晟", "count": 1, "confidence": "high"},
+    {"from": "Grokbot / Grobot", "to": "Grok Bot", "count": 4, "confidence": "high"},
+    {"from": "Mask", "to": "Musk", "count": 1, "confidence": "high"},
+    {"from": "Grokbot也被Muse block，被Amazon block", "to": "Grok Bot 也被 Amazon block 了", "count": 1, "confidence": "high"},
+    {"from": "instinct", "to": "Instinct", "count": 1, "confidence": "high"},
+    {"from": "open cloud", "to": "OpenClaw", "count": 1, "confidence": "high"},
+    {"from": "MS", "to": "Hermes", "count": 1, "confidence": "medium"},
+    {"from": "machine payment protocol", "to": "Machine Payments Protocol", "count": 1, "confidence": "high"},
+    {"from": "trusty agent protocol", "to": "Trusted Agent Protocol", "count": 3, "confidence": "high"},
+    {"from": "stable coin", "to": "stablecoin", "count": 1, "confidence": "high"},
+    {"from": "卡组", "to": "卡组织", "count": 1, "confidence": "high"},
+    {"from": "page rank", "to": "PageRank", "count": 2, "confidence": "high"},
+    {"from": "卡机的交易", "to": "卡基交易", "count": 1, "confidence": "medium"},
+    {"from": "我都用户需要进行一次确认", "to": "用户都需要进行一次确认", "count": 1, "confidence": "high"},
+    {"from": "其再再次", "to": "再次", "count": 1, "confidence": "high"},
+    {"from": "智智能体", "to": "智能体", "count": 1, "confidence": "high"}
+  ],
+  "removed_non_content": [],
+  "uncertain": [
+    {"orders": "624", "issue": "'我用这个MS' — 个人 agent harness 名称，按语境读作 Hermes，标 〔?〕"},
+    {"orders": "631", "issue": "'商户以后是不是也会被拖没' 含义不明，保留原词并标 〔?〕"},
+    {"orders": "689–690", "issue": "'传统的卡机的交易的限额比较' 句子不完整，读作 卡基交易的限额，标 〔?〕"},
+    {"orders": "683–685", "issue": "'进行存在' 与 '那么就写说啊' 为口误/错听片段，作为 false start 删去"},
+    {"orders": "536", "issue": "球鞋 '好像是Air' 按原话保留"}
+  ],
+  "verified": [
+    {"as_heard": "裴圣 / Robert", "resolved_to": "裴晟 (Robert Pei)", "evidence": "https://www.linkedin.com/in/robertpei/ + 2026-08 Visa/环亚通 press release naming 'Visa大中华区产品部总经理裴晟' — matches Visa Greater China products role", "orders": "529–530"},
+    {"as_heard": "Grokbot / Muse 被 Amazon block", "resolved_to": "Grok Bot (xAI), Muse (Meta)", "evidence": "https://www.geekwire.com/2026/amazon-blocks-metas-muse-ai-assistant-in-new-standoff-over-agentic-shopping/ — Amazon blocked Meta's Muse (Sept 2026) and later Grok Bot (Oct 2026)", "orders": "535–551"},
+    {"as_heard": "trusty agent protocol", "resolved_to": "Trusted Agent Protocol", "evidence": "https://investor.visa.com/news/news-details/2025/Visa-Introduces-Trusted-Agent-Protocol-An-Ecosystem-Led-Framework-for-AI-Commerce/default.aspx — Visa framework for agent–merchant trust/handshake", "orders": "676, 685"},
+    {"as_heard": "machine payment protocol", "resolved_to": "Machine Payments Protocol (MPP)", "evidence": "https://corporate.visa.com/en/sites/visa-perspectives/innovation/visa-card-specification-sdk-for-machine-payments-protocol.html — Visa card spec for Stripe/Tempo MPP", "orders": "603–604"},
+    {"as_heard": "CLI 产品", "resolved_to": "Visa CLI", "evidence": "https://eco.com/support/en/articles/14114474-what-is-visa-cli-how-command-line-commerce-works-for-developers — Visa command-line payments tool for developers/agents (transcript kept generic 'CLI 的产品')", "orders": "687"},
+    {"as_heard": "MS (personal agent harness)", "resolved_to": null, "evidence": "not searched to confirmation; Hermes is a contextual guess only", "orders": "624"}
+  ]
+}

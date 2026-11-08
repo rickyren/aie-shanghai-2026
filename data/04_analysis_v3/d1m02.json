@@ -1,0 +1,31 @@
+{
+"talk_id":"d1m02","speakers":"Marco Casalaina","org":"Microsoft",
+"value_chain_layer":"agent_infra","position":"agent 独立身份与权限隔离","target_customer":"enterprise","intent":"both",
+"skeleton":[
+"主流厂商（Meta Muse、OpenAI dots、Claude Tag、Gemini agent）都在给 agent 配身份，但 Meta 是为了拟人化和提升互动、变现，Microsoft 是为了安全。",
+"让 agent 冒充用户（on-behalf-of）很危险：它继承用户全部权限，权限开关在 harness 里形同虚设，agent 总能绕过（shell、写 Python）。",
+"Microsoft 的做法：Autopilot 有自己的 Entra ID、邮箱、Teams、OneDrive，在独立安全上下文中按最小权限运行，由 Agent 365 统一管控。",
+"接下来 6–12 个月 agent 之间将出现无编排的临时协作，测试负担上升：需要基于 rubric 的评测和模拟世界（OpenEnv）来隔离测试每个 agent。"],
+"core_message":"Agent 身份的价值不在拟人化互动，而在让 agent 跑在独立安全上下文里、按最小权限约束，才能从根本上防止它越权；随着 agent 之间开始自发协作，行业必须用 rubric 评测和模拟环境来严格测试它们。",
+"frameworks":[
+{"name":"agent 身份的两种目的与深度","gist":"Meta 的身份只是名字深度、为互动变现而拟人化；Microsoft 的身份是系统级（Entra ID、邮箱、文件空间），目的是独立安全上下文与最小权限。","seg":"126–136"},
+{"name":"幼儿园 vs 高中：编排式协作 vs 临时协作","gist":"现在的多 agent 是人来编排的幼儿园玩伴会，接下来 agent 会像高中生一样自己发起协作（ad hoc / unorchestrated collaboration）。","seg":"343–352"}],
+"offerings":[
+{"name":"Microsoft Autopilot（有独立身份的 agent）","what":"Copilot 的演进，拥有自己的 Entra ID、邮箱、Teams 和 OneDrive，可开箱即用或基于 Foundry 自建。","for_whom":"企业员工与企业开发者","status":"launched"},
+{"name":"Microsoft Agent 365","what":"agent 管理控制台，管理员可建 agent 模板、设定权限类别，用户据此创建实例。","for_whom":"企业 IT 管理员","status":"launched"}],
+"why_needed":"相对于让 agent 冒充用户（Copilot、ChatGPT 等 on-behalf-of 模式）以及 harness 内可选的权限开关，独立身份让权限由身份系统在外部强制执行，agent 无法通过 shell 或写代码绕过。",
+"problem_approach":[
+{"problem":"冒充用户的 agent 继承全部权限，harness 层的权限开关挡不住聪明的 agent 绕行。","approach":"给 agent 独立身份和安全上下文，按最小权限（如只读文件）在身份层强制限制。"},
+{"problem":"agent 之间自发协作后，通用 eval（groundedness、fluency 等）不足以检验其行为。","approach":"转向针对具体职责的 rubric 评测（安全、合规、正确性），并用 OpenEnv 之类的模拟环境围绕每个 agent 模拟其他 agent、人和工具，隔离测试。"}],
+"non_consensus":[
+{"kind":"insight","point":"agent 身份的真正用途是安全隔离而非拟人化；harness 内的权限开关不可靠，因为 agent 无所不用其极，只有身份层权限才真正约束得住。","quote":"No, it is exactly this: it is so that these agents run in their own security context.","seg":"285–297","speaker":"Marco Casalaina"},
+{"kind":"prediction","point":"未来 6–12 个月 agent 将自行发起互相调用的协作，不再由人编排，测试需要为每个 agent 模拟一个“母体”式的世界。","quote":"We're going to have to simulate a whole world around it, so that we can test each agent in isolation.","seg":"389–400","speaker":"Marco Casalaina"}],
+"signals":[
+{"type":"market_pattern","signal":"Meta、OpenAI、Anthropic、Google、Microsoft 都在推出带独立身份的 agent，但商业逻辑分化：消费端靠互动变现，企业端靠安全治理。","value_as_heard":"","seg":"126–169"},
+{"type":"market_pattern","signal":"企业 agent 分为自建（Foundry）与开箱即用（Autopilot）两类，由 Agent 365 这类控制台统一管理，形成 agent 管理平台这一新层。","value_as_heard":"","seg":"298–307"},
+{"type":"data_signal","signal":"模拟环境（OpenEnv，Hugging Face 与 Microsoft 等联合）成为 agent 测试与训练所需的新型数据与基础设施供给。","value_as_heard":"","seg":"401–407"}],
+"trend_categories":["agent_harness_runtime","eval_verifiability"],
+"novelty":3,"pr_level":3,
+"content_industry_note":"创作者和内容平台上的 AI 助手若要代为发布、删除或收款，应采用独立身份和最小权限，而不是冒充创作者账号。",
+"filtered_consensus":["harness 是 agent 的身体","模型是大脑","通用 eval 不够用","负责任 AI 需要信任","agent 各厂商都在做"]
+}

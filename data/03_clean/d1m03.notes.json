@@ -1,0 +1,23 @@
+{"talk_id": "d1m03",
+ "speakers": [{"name": "Clemens Rawert", "name_as_heard": ["Clemens"], "org": "Langfuse by ClickHouse", "role": "Co-founder, Langfuse", "background": "Co-founder of Langfuse, an open-source platform for agent evals and observability, which was acquired by ClickHouse (the real-time database company) at the start of the year. Langfuse built Halo, an in-app agent that helps developers run the agent improvement loop.", "evidence_orders": [426, 427, 428, 429, 430, 454]}],
+ "corrections": [
+  {"from": "Landfield", "to": "Langfuse", "count": 4, "confidence": "high"},
+  {"from": "Langviews", "to": "Langfuse", "count": 2, "confidence": "high"},
+  {"from": "total cost underscore sum / sum underscore total cost", "to": "`total_cost_sum` / `sum_total_cost`", "count": 1, "confidence": "high"},
+  {"from": "You do it your desktop", "to": "you do at your desktop", "count": 1, "confidence": "medium"},
+  {"from": "Was very useful. Yet.", "to": "not good enough yet ... to be very useful", "count": 1, "confidence": "medium"},
+  {"from": "We basically got better back to the architecture", "to": "we basically got back to the architecture", "count": 1, "confidence": "medium"},
+  {"from": "A long dimensions", "to": "along dimensions", "count": 1, "confidence": "high"},
+  {"from": "tool loops are tool calls fail", "to": "tool calls fail", "count": 1, "confidence": "medium"},
+  {"from": "hundreds, dozens, thousands", "to": "dozens, hundreds, thousands", "count": 1, "confidence": "medium"},
+  {"from": "What is good look like", "to": "What does good look like", "count": 1, "confidence": "high"},
+  {"from": "reliability of your agents is generally the bigger issues", "to": "the bigger issue", "count": 1, "confidence": "high"},
+  {"from": "Agents have gotten a lot— or coding agents.", "to": "Coding agents have gotten a lot better (false start merged)", "count": 1, "confidence": "high"}
+ ],
+ "removed_non_content": [],
+ "uncertain": [{"orders": "466–469", "issue": "'You do it your desktop' read as 'not a scientific process you do at your desktop'; exact intended phrasing unclear but meaning preserved."}],
+ "verified": [
+  {"as_heard": "Halo (Landfield in-app agent)", "resolved_to": "Halo (Langfuse in-app assistant, formerly Langfuse Assistant)", "evidence": "https://langfuse.com/blog/2026-10-21-building-the-langfuse-assistant — 'How we built Langfuse Halo'; agent loop runs in worker, outside sandbox, matching the talk", "orders": "454–455, 518–530"},
+  {"as_heard": "Landfield / Clemens, acquired by ClickHouse", "resolved_to": "Langfuse; Clemens Rawert (co-founder)", "evidence": "https://clickhouse.com/blog/clickhouse-acquires-langfuse-open-source-llm-observability — ClickHouse acquired Langfuse (Jan 2026), co-founders incl. Clemens Rawert", "orders": "426–430"}
+ ]
+}

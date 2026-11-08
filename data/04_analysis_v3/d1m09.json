@@ -1,0 +1,117 @@
+{
+  "talk_id": "d1m09",
+  "speakers": "Ailing Teng",
+  "org": "StepFun 阶跃星辰",
+  "value_chain_layer": "foundation_model",
+  "position": "模型+harness+托管执行",
+  "target_customer": "developer",
+  "intent": "both",
+  "skeleton": [
+    "长时任务要靠三层配合：Step 5 Preview 模型、开源 agent harness Step Code、托管云端执行的 Studio。",
+    "模型层强调长任务需要的四项基础能力：低单步开销（激活参数小）、1M 上下文、原生视觉、工具调用；并用自建 Step Code Bench 和审美类 domain knowledge 做针对性训练，「做了才有，没做就没有」。",
+    "用 kernel 优化、后训练数据流程、Pokémon 等长时实验归纳出 harness 的四类工程需求：目标与进度、上下文选择、判断与验收、持续执行。",
+    "runtime 采用「脑与手」分工：云端 harness 负责计划、上下文和检查，本地电脑或远端 sandbox 负责执行。"
+  ],
+  "core_message": "阶跃星辰认为长时 agent 的瓶颈已从模型智能转向 harness 工程，因此同时提供 Step 5 Preview 模型、开源的 Step Code harness 和托管云端执行的 Studio；核心做法是把目标进度外存、按需组装上下文、事先定义验收条件，并让云端「脑」与本地或沙箱「手」分工。",
+  "frameworks": [
+    {
+      "name": "模型、harness、托管执行三层",
+      "gist": "Step 5 Preview 负责理解和决策，Step Code 把目标、上下文、工具和验证串起来，Studio 托管云端 harness 与远端工具。",
+      "seg": "364–371"
+    },
+    {
+      "name": "脑与手",
+      "gist": "云端 harness 是脑，负责计划、选上下文、选工具、检查结果；本地电脑和远端 sandbox 是手，负责执行操作。",
+      "seg": "474–479"
+    }
+  ],
+  "offerings": [
+    {
+      "name": "Step 5 Preview",
+      "what": "9 月发布的旗舰模型，面向长时 agent，强调原生视觉、1M 上下文和 bug 修复与重构能力。",
+      "for_whom": "开发者与 agent 构建者",
+      "status": "launched"
+    },
+    {
+      "name": "Step Code",
+      "what": "开源 agent harness，整合目标、上下文、工具调用与结果验证。",
+      "for_whom": "开发者",
+      "status": "open_source"
+    },
+    {
+      "name": "Studio",
+      "what": "stepfun.com 上的托管执行体验站点，承载云端 harness 和远端 sandbox，桌面端计划 11 月发布。",
+      "for_whom": "开发者与企业用户",
+      "status": "launched"
+    }
+  ],
+  "why_needed": "相对大家各自拼装的模型、harness 和 sandbox 技术栈（以及 OpenClaw 这类早期 agent 栈在端到端完成度与质量上的不足），StepFun 提供模型、harness、托管执行一体化的体验，并把任务在本地客户端断开后仍能在云端继续推进作为卖点。",
+  "problem_approach": [
+    {
+      "problem": "步骤变多后 agent 会忘记早先要求或重复失败路径，日志和输出也越来越多。",
+      "approach": "用任务树、计划、会话和文件系统保存长期状态，每步只取回与当前目标相关的内容，subagent 只回传结论，完整记录外存按需检索。"
+    },
+    {
+      "problem": "agent 做完一步无法判断是否更接近目标，特别是网页等主观交付物。",
+      "approach": "在执行前就由用户和 harness 共同定义验收条件，并把构建、测试、渲染结果与任务对照，形成 verify 循环，同时像约束代码库一致性那样约束 harness 的产出标准。"
+    }
+  ],
+  "non_consensus": [
+    {
+      "kind": "insight",
+      "point": "模型的能力很大程度上是专门做出来的，而非等待泛化涌现；专注做 bug 修复与重构评测就会在这两项上表现好。",
+      "quote": "所以这个地方教会我的一课是：有些事情你做了就有，你没有做就没有，不是所有的事情都是等待泛化的。",
+      "seg": "408–412",
+      "speaker": "Ailing Teng"
+    },
+    {
+      "kind": "insight",
+      "point": "审美本质是选择与判断，属于 verify 层，必须先灌入 domain knowledge，缺少领域知识时输出就不稳定。",
+      "quote": "这个审美能力本身其实是一个选择，是一个判断，它更多是verify这一层的工作。",
+      "seg": "418–423",
+      "speaker": "Ailing Teng"
+    },
+    {
+      "kind": "insight",
+      "point": "1M 上下文主要对代码、长文档和任务记录有用，超出这三类需求未必更好。",
+      "quote": "所以如果你的需求不在这三个范围之内，其实过长的上下文不一定能有最好的效果。",
+      "seg": "375–380",
+      "speaker": "Ailing Teng"
+    }
+  ],
+  "signals": [
+    {
+      "type": "market_pattern",
+      "signal": "模型公司从只卖模型扩展到开源 harness 加托管云端执行，向 Claude Code 类的完整 agent 体验靠拢；团队设置了 model product 和 product engineer 新岗位。",
+      "value_as_heard": "",
+      "seg": "341–350"
+    },
+    {
+      "type": "metric_focus",
+      "signal": "关注 agent 能连续执行的时长和长时任务的完成质量，认为这决定模型能处理的任务复杂度。",
+      "value_as_heard": "agent 执行时长可到 26 小时甚至 48 小时",
+      "seg": "391–397"
+    },
+    {
+      "type": "data_signal",
+      "signal": "自建 Step Code Bench，自定义仓库、语言和任务，并投入审美类 domain knowledge 数据，使模型形成自己的「品味」。",
+      "value_as_heard": "",
+      "seg": "398–407"
+    }
+  ],
+  "trend_categories": [
+    "agent_harness_runtime",
+    "open_models_posttrain_inference"
+  ],
+  "novelty": 3,
+  "pr_level": 4,
+  "content_industry_note": "审美被视为可训练的判断与 verify 能力，需要灌输设计类 domain knowledge，说明模型厂商会向设计和创意领域的专家数据与评价标准寻求供给。",
+  "filtered_consensus": [
+    "长上下文会成标配",
+    "工具调用已通用",
+    "后训练仍重要",
+    "上下文工程",
+    "verify 循环",
+    "云端 agent 持续运行"
+  ]
+}

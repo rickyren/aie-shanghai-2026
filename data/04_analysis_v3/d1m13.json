@@ -1,0 +1,29 @@
+{
+"talk_id":"d1m13","speakers":"范斌 (Fan Bin)","org":"Manus AI",
+"value_chain_layer":"ai_adopter","position":"Manus 内部协作实践","target_customer":"internal","intent":"insight",
+"skeleton":[
+"早期 AI 原生化的难点是组织上下文分散在个人仓库和内部系统，需要人先收集上下文，协作摩擦拖累整体效率。",
+"答案之一是 Manus mono repo：把全部代码、知识库、内部工具及 Slack、Notion 连接器与全链路日志追踪放在一起，产品与设计也能直接提交代码，并配合插件化架构和扁平组织。",
+"答案之二是任务公开化：所有人可见、可接力他人的 agent 任务，进而出现数字分身和自动接单系统，但发现人定优先级的决策更关键。",
+"踩坑：瓶颈回到人，注意力成为不可再生资源，token 成本要花在方案设计与阶段性验证上，而不是让 AI 自动驾驶。"],
+"core_message":"Manus 内部通过把上下文、工具和任务全部公开到单一 mono repo 与可接力的 agent 任务中，让需求可以端到端交给 AI 完成，同时发现 AI 越强，人的优先级决策、注意力分配和复合型能力就越关键。",
+"frameworks":[
+{"name":"mono 解决 AI 看不全上下文，任务公开化解决人看不全上下文","gist":"两件事共同消除组织内的上下文缺失与协作摩擦。","seg":"1102–1111"}],
+"offerings":[],
+"why_needed":"",
+"problem_approach":[
+{"problem":"上下文分散在不同仓库和系统，AI 要干活仍需人先收集上下文，需求交接摩擦大。","approach":"所有代码、知识库、工具和 Slack/Notion 连接器合并为 mono repo，并将每个人的 agent 任务公开可接力。"},
+{"problem":"自动接单 bot 提 PR 的速度远超人合并的速度，且缺少优先级。","approach":"强调人在优先级等关键决策上的作用，注意力当作投资资产，常规决策沉淀为 skill 与 memory。"}],
+"non_consensus":[
+{"kind":"insight","point":"AI 时代 token 可再生而人的注意力不可再生，应有选择地分配注意力，把常规决策沉淀为 skill 与 memory。","quote":"因为现在AI时代，token是一个可再生资源，而人的注意力变成了一个不可再生资源。","seg":"1138–1147","speaker":"范斌"},
+{"kind":"practice","point":"产品和设计人员在旗舰模型加旗舰 review 系统与领域负责人审核机制下可直接提交 PR，代码质量可控。","quote":"我们实践下来，目前没有发生过在线上因为代码质量而导致的事故。","seg":"1073–1079","speaker":"范斌"},
+{"kind":"insight","point":"AI 自动化研发若无人定优先级，只是在浪费 token。","quote":"因为如果没有人去定优先级，AI的自动化研发很可能只是在浪费token而已。","seg":"1117–1125","speaker":"范斌"}],
+"signals":[
+{"type":"market_pattern","signal":"AI 原生公司的角色边界被打破：产品、设计也提交代码，工程师同时并行处理大量需求，对复合型人才的需求上升。","value_as_heard":"","seg":"1062–1137"},
+{"type":"metric_focus","signal":"关注故障定位耗时和 PR 合并吞吐，并反思 token 花费是否值得，而非追求单纯的自动化比例。","value_as_heard":"一般 20 分钟内、极速模式 5 分钟内定位；有人一个月花 10 万美元 token","seg":"1054–1162"},
+{"type":"data_signal","signal":"公司内部的会话、文档、日志与任务轨迹被统一沉淀到 mono 与公开任务中，成为 agent 的上下文来源。","value_as_heard":"","seg":"1021–1061"}],
+"trend_categories":["enterprise_agent_ops","personal_agent_ai_native"],
+"novelty":3,"pr_level":2,
+"content_industry_note":"产品与设计人员借助 agent 直接生成原型和动态交互演示视频来沟通需求，说明内容生产正嵌入团队协作流程。",
+"filtered_consensus":["coding agent 提升产研效率","上下文对 agent 很重要","插件化架构利于 AI 开发","人在回路与 code review","token 成本需要控制","公司与产品介绍"]
+}

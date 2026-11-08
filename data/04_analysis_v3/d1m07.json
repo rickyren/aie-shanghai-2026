@@ -1,0 +1,104 @@
+{
+  "talk_id": "d1m07",
+  "speakers": "Chen Peng",
+  "org": "Arena",
+  "value_chain_layer": "evaluation",
+  "position": "真实数据 agent 评测",
+  "target_customer": "model_lab",
+  "intent": "both",
+  "skeleton": [
+    "Arena 靠数百万真实用户的并排对战投票做评测，避免静态基准易被刷、易饱和的问题。",
+    "评测 agent 更难，所以 Arena 自己做了 agent mode 产品，并用随机分配编排模型的随机对照实验，从真实会话轨迹中挖掘成功率、夸奖/投诉、可引导性等信号打分。",
+    "结果：美国前沿实验室领先，中国开源模型在性价比帕累托前沿上有位置；并在做对齐指数、harness 评测、用户模拟器自动评测。",
+    "最终面向模型公司卖共同发布、私测，并把轨迹转成 rubric 和 RL 环境，形成从评测到后训练的闭环。"
+  ],
+  "core_message": "Arena 把消费者产品当成评测数据工厂：用 agent mode 的真实长任务会话做随机对照实验来评 agent，再把评测、私测和 rubric/RL 环境卖给模型公司，形成评测到后训练的闭环。",
+  "frameworks": [
+    {
+      "name": "随机对照实验式 agent 评测",
+      "gist": "每个 agent 会话随机分配编排模型，使各模型面对可比的任务分布，再从轨迹中用 LLM 评判加人工整理提取五类信号汇总成分数。",
+      "seg": "1175–1177"
+    }
+  ],
+  "offerings": [
+    {
+      "name": "Agent Arena / agent mode 与榜单",
+      "what": "类似 Manus 或 Genspark 的 agent 产品，同时产出 agent 能力榜、性价比帕累托前沿和对齐指数。",
+      "for_whom": "用户、开发者、企业（选模型）与模型公司",
+      "status": "launched"
+    },
+    {
+      "name": "模型公司服务与后训练数据产品",
+      "what": "联合发布、联合营销、发布前私有测试，以及由轨迹生成的 rubric 和 RL 环境，另有用户模拟器自动评测。",
+      "for_whom": "前沿及新兴模型实验室",
+      "status": "service"
+    }
+  ],
+  "why_needed": "静态基准用预定义题集，容易被刷也容易饱和；Arena 主张用真实用户和真实任务的实时数据评测，并把 harness、编排模型等变量随机化。",
+  "problem_approach": [
+    {
+      "problem": "agent 是模型、harness 与环境的复杂交互，任务多样且不断变化，人类投票只是一部分信号。",
+      "approach": "自建 agent 产品收集真实长程会话，随机分配编排模型并从轨迹挖掘多维信号，下一步随机化 harness。"
+    },
+    {
+      "problem": "要积累大量会话才能评 agent，周期以天甚至周计。",
+      "approach": "用百万级真实会话训练用户模拟器，几小时内完成 agent 自动评测。"
+    }
+  ],
+  "non_consensus": [
+    {
+      "kind": "practice",
+      "point": "评测不再只看能力，加入对齐行为（未授权操作、错误归因、欺骗性完成）并与成本做帕累托比较。",
+      "quote": "This is why a month ago we launched the Alignment Index at Arena.",
+      "seg": "1186–1187",
+      "speaker": "Chen Peng"
+    },
+    {
+      "kind": "market_call",
+      "point": "评测平台向上游延伸：把真实轨迹变成 rubric 与 RL 环境，卖后训练数据给模型公司。",
+      "quote": "Eventually we hope to provide a closed-loop flywheel that goes from evals to actionable insights to post-training products, such as rubrics and RL environments, that help labs actually improve the performance of their models.",
+      "seg": "1189–1189",
+      "speaker": "Chen Peng"
+    }
+  ],
+  "signals": [
+    {
+      "type": "data_signal",
+      "signal": "Arena 以消费者免费产品换取海量用户提示、投票和 agent 会话轨迹，这些数据被转为评测榜单、rubric 和 RL 环境出售给模型公司。",
+      "value_as_heard": "月访问超 1500 万；超 10 亿提示、6000 万投票、500 万 agent 会话",
+      "seg": "1167–1168"
+    },
+    {
+      "type": "market_pattern",
+      "signal": "模型公司是 Arena 的付费客户：买联合发布、营销背书、发布前私测，评测方同时是榜单发布者和服务提供商。",
+      "value_as_heard": "",
+      "seg": "1192–1192"
+    },
+    {
+      "type": "metric_focus",
+      "signal": "agent 能力由五类轨迹信号合成：确认成功、夸奖与投诉、可引导性、bash 可靠性、工具幻觉，侧重用户实际感受与无需纠正的程度。",
+      "value_as_heard": "",
+      "seg": "1176–1177"
+    },
+    {
+      "type": "market_pattern",
+      "signal": "榜单显示美国实验室领先，部分中国开源模型虽非榜首但处于性价比前沿；harness 对比（Claude Code、Codex 等）将成为新的评测维度。",
+      "value_as_heard": "",
+      "seg": "1178–1188"
+    }
+  ],
+  "trend_categories": [
+    "eval_verifiability",
+    "memory_data_context"
+  ],
+  "novelty": 3,
+  "pr_level": 4,
+  "content_industry_note": "Arena 已把图像、视频生成纳入并排投票榜单，真实用户偏好成为生成模型的事实评价标准，内容平台的用户反馈数据可被类似机制变现。",
+  "filtered_consensus": [
+    "静态基准易饱和被刷",
+    "成本与性能需权衡",
+    "中国开源模型追赶中",
+    "安全对齐很重要",
+    "公司与榜单介绍"
+  ]
+}

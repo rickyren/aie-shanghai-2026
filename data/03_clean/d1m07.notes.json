@@ -1,0 +1,46 @@
+{
+  "talk_id": "d1m07",
+  "speakers": [
+    {
+      "name": "Chen Peng",
+      "name_as_heard": ["Chen"],
+      "org": "Arena",
+      "role": "Head of Data and Applied Machine Learning",
+      "background": "His team is responsible for building most of the data and evaluation products at Arena.",
+      "evidence_orders": [1164]
+    }
+  ],
+  "corrections": [
+    {"from": "arena. / ai (split across lines)", "to": "arena.ai", "count": 1, "confidence": "high"},
+    {"from": "Arena AI (consumer product)", "to": "arena.ai", "count": 1, "confidence": "medium"},
+    {"from": "cn.aiarena.ai", "to": "cn.arena.ai (marked 〔?〕; speaker says cn.arena.ai at the end)", "count": 1, "confidence": "medium"},
+    {"from": "image narration", "to": "image generation", "count": 1, "confidence": "high"},
+    {"from": "GenSpark", "to": "Genspark", "count": 1, "confidence": "high"},
+    {"from": "document correct creation", "to": "document creation", "count": 1, "confidence": "high"},
+    {"from": "batch operation", "to": "bash operations", "count": 1, "confidence": "high"},
+    {"from": "computer user", "to": "computer use", "count": 1, "confidence": "high"},
+    {"from": "rack pipeline", "to": "RAG pipeline", "count": 1, "confidence": "high"},
+    {"from": "randomized control trial", "to": "randomized controlled trials", "count": 1, "confidence": "high"},
+    {"from": "orchestrated model", "to": "orchestration model", "count": 4, "confidence": "medium"},
+    {"from": "batch reliability ... use a batch", "to": "Bash reliability ... use bash", "count": 1, "confidence": "high"},
+    {"from": "two hallucination", "to": "tool hallucination", "count": 1, "confidence": "high"},
+    {"from": "preto frontier / preto curve", "to": "Pareto frontier / Pareto curve", "count": 4, "confidence": "high"},
+    {"from": "MIMO", "to": "MiMo (Xiaomi)", "count": 1, "confidence": "high"},
+    {"from": "decept completion", "to": "deceptive completion", "count": 1, "confidence": "high"},
+    {"from": "clock code codex pi and open code", "to": "Claude Code, Codex, Pi and OpenCode", "count": 1, "confidence": "high"},
+    {"from": "IO environment / our environment", "to": "RL environments", "count": 3, "confidence": "high"},
+    {"from": "x.com arena", "to": "x.com/arena", "count": 1, "confidence": "high"}
+  ],
+  "removed_non_content": [],
+  "uncertain": [
+    {"orders": "1166", "issue": "China leaderboard domain heard as 'cn.aiarena.ai'; speaker later says 'cn.arena.ai' (1193). Could not confirm either domain by web search; used cn.arena.ai with 〔?〕."}
+  ],
+  "verified": [
+    {"as_heard": "Chen (head of data and applied ML at Arena)", "resolved_to": "Chen Peng, Head of Data & Applied ML at Arena", "evidence": "https://www.linkedin.com/in/chen-peng-4a728b19/ — joined LMArena as Head of Data & Applied ML", "orders": "1164"},
+    {"as_heard": "unauthorized action / false attribution / decept completion (alignment index)", "resolved_to": "Arena Alignment Index: Unauthorized Action, False Attribution, Deceptive Completion", "evidence": "https://x.com/arena/status/2108226499560214777 — Arena Alignment Index announcement lists the three signals", "orders": "1187"},
+    {"as_heard": "Kimi K3.1", "resolved_to": "Kimi K3.1 (Pro), Moonshot AI", "evidence": "https://x.com/arena/status/2118088183594541527 — Kimi K3.1 Pro #1 among open models in Agent Arena", "orders": "1182"},
+    {"as_heard": "batch reliability", "resolved_to": "Bash Reliability", "evidence": "Arena Agent Arena signals include 'Bash Reliability (successful shell commands)' and 'Steerability' (reported in Kimi K3.1 Pro Agent Arena coverage, https://x.com/arena/status/2118088183594541527)", "orders": "1176"},
+    {"as_heard": "clock code codex pi", "resolved_to": "Claude Code, Codex, Pi", "evidence": "https://arena.ai/blog/coding-agents-harness-tax — Arena harness study compares Claude Code, Codex CLI and Pi", "orders": "1188"},
+    {"as_heard": "cn.aiarena.ai / cn.arena.ai", "resolved_to": null, "evidence": "Search found arena.ai and unofficial arena-cn mirror only; no official cn subdomain confirmed", "orders": "1166, 1193"}
+  ]
+}

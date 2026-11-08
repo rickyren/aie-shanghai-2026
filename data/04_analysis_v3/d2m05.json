@@ -1,0 +1,29 @@
+{
+"talk_id":"d2m05","speakers":"James Hush","org":"Daily.co (Pipecat, Deepgram)",
+"value_chain_layer":"agent_infra","position":"开源语音 agent 框架","target_customer":"developer","intent":"both",
+"skeleton":[
+"LLM 让写作变廉价，没人读得完所有产出，所以要停止检查成果本身，转而检查“检查者”：用 LLM 检查 LLM，即 eval 驱动开发。",
+"语音 agent 是流水线（传输、STT、LLM、TTS），Pipecat 作为开源、厂商中立的胶水框架，提供构建、测试、评测语音 agent 的前后端库。",
+"用 judge（是非判断）、eval（多次运行看通过率）、simulation（让第三个 LLM 扮演对话方）三者组合，解决“不知测什么、看不懂结果、手测太慢”；文字模式快而便宜，音频模式能发现 STT 类问题。",
+"构建与检查形成循环：机器干活、judge 检查、人检查 judge；这一思路适用于任何缺乏领域专长的 agent。"],
+"core_message":"当产出多到没人读得过来、甚至自己看不懂（如不会中文却要测中文语音 agent），就应让 LLM 写测试和扮演模拟用户，人只用英文写成功标准并“检查检查者”；Pipecat 提供开源、厂商中立的语音 agent 构建与评测工具链来跑这个循环。",
+"frameworks":[
+{"name":"测试、脚本化 eval、模拟三件套","gist":"确定性测试抓确定性问题，脚本化 eval（像背好的单口喜剧）测已知用例，simulation（像即兴表演）用于不知道该测什么的情形。","seg":"962–972"},
+{"name":"机器干活、judge 检查、人检查 judge","gist":"构建与检查相互产出的循环，人的位置上移到审核 judge 与成功标准。","seg":"1004–1008"}],
+"offerings":[
+{"name":"Pipecat","what":"开源、厂商中立的语音 agent 管线框架，可接任意 STT/LLM/TTS，并含构建、测试与评测的前后端库及音频模拟。","for_whom":"语音 agent 开发者","status":"open_source"}],
+"why_needed":"",
+"problem_approach":[
+{"problem":"语音 agent 手工测试慢，且开发者缺乏业务领域与语言能力，不知道该测什么、也看不懂结果。","approach":"用 LLM 写 eval 并扮演模拟用户并行跑几十上百次，人只审核英文写的成功标准。"},
+{"problem":"纯文本测试发现不了语音链路问题。","approach":"在音频模式下端到端模拟，文本模式用于便宜快速的回归，音频模式抓 STT 错误（如“去冰”被误识别）。"}],
+"non_consensus":[
+{"kind":"prediction","point":"预测到 2027 年，应用开发者将普遍用英文写检查、由 LLM 写代码的 eval 驱动方式开发软件。","quote":"I write the checks in English, and then Claude or ChatGPT writes the code in Python.","seg":"907–912","speaker":"James Hush"},
+{"kind":"insight","point":"所有人其实都“读不了”：写作成本趋近零后，信息量超过任何人可核查的范围，所以检查对象应从成果转向检查者。","quote":"We have to stop checking the work itself and start checking the checkers.","seg":"907–912","speaker":"James Hush"}],
+"signals":[
+{"type":"market_pattern","signal":"语音 agent 栈由开源胶水层连接各家 STT/TTS/LLM（含 Deepgram、MiniMax 与中国端侧模型），厂商中立成为卖点；Daily/Pipecat 正并入 Deepgram。","value_as_heard":"","seg":"919–926"},
+{"type":"metric_focus","signal":"以多次运行下的通过率（而非单次结果）衡量非确定性的语音 agent。","value_as_heard":"","seg":"959–961"}],
+"trend_categories":["eval_verifiability","agent_harness_runtime"],
+"novelty":3,"pr_level":3,
+"content_industry_note":"语音与音频类内容的质量检查可用 LLM judge 加模拟听众批量完成，减少人工逐条收听。",
+"filtered_consensus":["评测很重要","LLM 当裁判","vibe coding 能快速出原型","写作成本下降信息过载","开源厂商中立"]
+}

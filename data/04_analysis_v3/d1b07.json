@@ -1,0 +1,28 @@
+{
+"talk_id":"d1b07","speakers":"Roman Shirochenko","org":"Agoda (Booking Holdings)",
+"value_chain_layer":"ai_adopter","position":"企业内部 repo 基准","target_customer":"internal","intent":"insight",
+"skeleton":[
+"大型组织每年有海量已合并 MR，可回放这些 MR（准备任务、让 agent 重做、用已有的黄金测试评估）来给自己的上下文建基准。",
+"用 A/B 回放测试各种上下文与压缩工具，结果因仓库而异甚至相反，所以通用结论不可靠，要以自己的仓库为准。",
+"让 agent 对着人工评审、测试与 LLM judge 迭代直到一次通过，并输出“上下文 MR”补丁，发现上下文冲突（如 AGENT.md 指示与评审要求相悖）。",
+"结论：复用开源评测框架（Harbor），聚焦自家仓库做增量改进，用已合并 MR 来训练自己的 agent。"],
+"core_message":"别相信通用的上下文或压缩工具结论：Agoda 把已合并的 MR 回放成自家仓库的基准，用 A/B 判断各工具是否真的有效，并让 agent 通过评审与测试反推出上下文补丁，把 merged MR 当作训练 agent 的数据。",
+"frameworks":[
+{"name":"MR 回放三步法","gist":"由工单与描述生成提示，让 agent 回放，再用已合并 MR 中的黄金测试评估结果。","seg":"893–896"}],
+"offerings":[],
+"why_needed":"",
+"problem_approach":[
+{"problem":"不知道团队精心写的上下文与第三方压缩、图谱工具在自家仓库里是否真正划算，同一工具在不同仓库效果相反。","approach":"用自家已合并 MR 回放做 A/B，比较解决率与成本，只信自己仓库的结果。"},
+{"problem":"agent 无法一次完成任务，常因上下文冲突被评审打回。","approach":"以人工评审、测试和 LLM judge 为反馈迭代，并输出改进上下文的补丁 MR。"}],
+"non_consensus":[
+{"kind":"practice","point":"上下文压缩、图谱类工具的收益取决于具体仓库，同一工具在两个仓库上结果相反，所以必须用自己的仓库做基准。","quote":"After this we came to one single conclusion: we should focus on our own benchmark and our own repositories.","seg":"907–907","speaker":"Roman Shirochenko"},
+{"kind":"practice","point":"把已合并的 MR 当作训练 agent 的数据来源，用它们改进上下文。","quote":"you should start to use your merged MRs to train your agent.","seg":"919–924","speaker":"Roman Shirochenko"}],
+"signals":[
+{"type":"data_signal","signal":"企业把历史已合并 MR、评审意见与测试这类内部工程数据，转化为 agent 评测集与上下文改进的素材。","value_as_heard":"over 100,000 MRs per year","seg":"888–896"},
+{"type":"metric_focus","signal":"同时追踪任务解决率与每任务成本，用两者的权衡判断上下文及压缩工具是否值得上线，以及一次通过率。","value_as_heard":"cost +8%; compaction cost -50% but pass rate -30%","seg":"897–906"},
+{"type":"market_pattern","signal":"采用方倾向复用开源评测框架（Harbor，来自 Terminal-Bench 作者）而不是自建。","value_as_heard":"","seg":"919–924"}],
+"trend_categories":["eval_verifiability","agent_harness_runtime"],
+"novelty":3,"pr_level":1,
+"content_industry_note":"",
+"filtered_consensus":["上下文工程很重要","评测要用自己的数据","coding agent 提升效率","成本与质量权衡","企业公司介绍"]
+}

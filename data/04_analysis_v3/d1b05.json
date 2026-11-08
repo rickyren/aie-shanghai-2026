@@ -1,0 +1,88 @@
+{
+  "talk_id": "d1b05",
+  "speakers": "Peng Gong",
+  "org": "Meta / Instagram (Edits)",
+  "value_chain_layer": "ai_adopter",
+  "position": "移动端 agent 验证实践",
+  "target_customer": "internal",
+  "intent": "insight",
+  "skeleton": [
+    "视频剪辑 app 状态多、手势复杂、存在隐藏状态（如导出是否真的完成），agent 只靠截图像用户一样操作，验证不可靠。",
+    "让 app 可观测：暴露无障碍树、组件语义、app 状态、输出文件配置和日志，给 agent 工程师视角；再为复杂手势做语义化 CLI 动作（如 reorder-clip）。",
+    "验证 agent = 确定性 fixtures（构建、安装、登录、清理）+ LLM（把提示词翻译成 CLI 调用），用于编码内循环、CI 外循环、批量特效测试和多语言审计。",
+    "验证 agent 读取自己的历史遥测，由另一个 agent 每天提议修复，形成自我改进飞轮，人从执行环节退出，只负责验证、解阻塞和规划。"
+  ],
+  "core_message": "Instagram Edits 让 agent 不再像用户一样看截图点屏幕，而是通过暴露语义、状态和 CLI 动作像工程师一样验证剪辑 app，把确定性流程交给脚本、只让 LLM 做理解，从而把批量特效测试和多语言审计从数周压缩到数小时，并让人退出执行环节。",
+  "frameworks": [
+    {
+      "name": "fixtures（确定性）与 LLM（理解）分工",
+      "gist": "构建、安装、登录、准备素材、清理等确定性步骤用脚本，只让 LLM 把提示词解释成 CLI 与可发现性工具调用。",
+      "seg": "742–742"
+    },
+    {
+      "name": "内循环与外循环",
+      "gist": "内循环是编码 agent 写代码时由验证 agent 自检直到达标，外循环是每个合格变更在 CI 中自动验证。",
+      "seg": "743–744"
+    }
+  ],
+  "offerings": [],
+  "why_needed": "",
+  "problem_approach": [
+    {
+      "problem": "视频剪辑 app 的多指手势、拖拽和导出等隐藏状态，agent 靠截图和 UI 操作很难完成并验证。",
+      "approach": "暴露无障碍树、组件语义、app 状态与日志，并把复杂手势封装成语义化 CLI 动作，一次调用即可完成并校验。"
+    },
+    {
+      "problem": "QA 人力有限，大量特效和多语言界面无法充分测试。",
+      "approach": "把验证 agent 放进 for 循环批量运行，并让它穷尽探索界面、对比英语与印地语界面，再由工程师和内容设计师复核。"
+    }
+  ],
+  "non_consensus": [
+    {
+      "kind": "practice",
+      "point": "改造 app 本身使其对 agent 可观测，比提升 agent 的截图操作能力更有效。",
+      "quote": "So by making the app observable, we provide an engineer's view to the agent, so the agent can operate the app much more efficiently, more like a developer than a normal user.",
+      "seg": "738–738",
+      "speaker": "Peng Gong"
+    },
+    {
+      "kind": "practice",
+      "point": "确定性环节不用 LLM，只在理解提示词时调用模型，既省 token 又保证每次运行隔离。",
+      "quote": "For those setups we do not need the LLM, because they are deterministic and we don't want to waste tokens there.",
+      "seg": "742–742",
+      "speaker": "Peng Gong"
+    },
+    {
+      "kind": "prediction",
+      "point": "有了 agent 验证，人从执行回路中退出，转为验证、解阻塞和规划。",
+      "quote": "Once we have agentic verification, the human is actually out of the loop: the execution part is taken away and delegated to the agent.",
+      "seg": "749–758",
+      "speaker": "Peng Gong"
+    }
+  ],
+  "signals": [
+    {
+      "type": "metric_focus",
+      "signal": "追踪验证 agent 的有结论验证率和每日验证次数，并以天为周期让另一个 agent 分析失败遥测、提议改进。",
+      "value_as_heard": "conclusive rate from around 10% to around 55% in one month",
+      "seg": "748–749"
+    },
+    {
+      "type": "metric_focus",
+      "signal": "以工具调用次数和 token 消耗衡量语义暴露的收益，说明关注 agent 验证的成本效率。",
+      "value_as_heard": "tool calls from 38 to nine; tokens reduced by over 90%",
+      "seg": "738–738"
+    },
+    {
+      "type": "market_pattern",
+      "signal": "视频编辑 app 厂商把 QA 瓶颈（特效覆盖、多语言审计）通过 agent 批量化，测试节奏从周级降到小时级。",
+      "value_as_heard": "eight weeks to around three hours",
+      "seg": "745–746"
+    }
+  ],
+  "trend_categories": ["agent_harness_runtime", "eval_verifiability"],
+  "novelty": 3,
+  "pr_level": 3,
+  "content_industry_note": "Edits 是对标 CapCut 的短视频剪辑 app，其经验说明剪辑类应用要想被 agent 操作和测试，必须暴露语义化动作与导出状态，这也预示未来 agent 操作剪辑软件所需的接口形态。",
+  "filtered_consensus": ["agent 能操作手机", "人机协同", "评测与验证重要", "token 成本", "LLM 擅长语言理解"]
+}

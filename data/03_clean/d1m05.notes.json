@@ -1,0 +1,245 @@
+{
+ "talk_id": "d1m05",
+ "speakers": [
+  {
+   "name": "Alex Triplett",
+   "name_as_heard": [
+    "Alex"
+   ],
+   "org": "You.com",
+   "role": "Chief Operating Officer",
+   "background": "Introduces You.com: search engine/index built for LLMs and AI agents; founder Richard Socher; processes billions of queries a month; backed by NVIDIA, Salesforce and other investors; enterprise and model-lab focus.",
+   "evidence_orders": [
+    879,
+    905,
+    926,
+    927,
+    933
+   ]
+  },
+  {
+   "name": "Ryan Lee",
+   "name_as_heard": [
+    "Ryan",
+    "Ryan Lee"
+   ],
+   "org": "You.com",
+   "role": "Head of APAC",
+   "background": "Responsible for You.com's APAC business; You.com set up an Asia HQ with dedicated engineers and business teams; customers include Chinese internet majors and leading Chinese AI model labs.",
+   "evidence_orders": [
+    882,
+    941,
+    942,
+    948,
+    949,
+    950
+   ]
+  },
+  {
+   "name": "David Li",
+   "name_as_heard": [
+    "David"
+   ],
+   "org": "You.com",
+   "role": "Leads field engineering (worldwide and Asia); introduced as Head of Field Engineering / founding engineer",
+   "background": "Born in China, now based in New York. Presented the You.com x NVIDIA x CoreWeave case study post-training Nemotron 3.5 Lightning for web search.",
+   "evidence_orders": [
+    882,
+    961,
+    966,
+    967,
+    968,
+    969
+   ]
+  }
+ ],
+ "corrections": [
+  {
+   "from": "Nematron / NemoTron 3.5 Lightning",
+   "to": "Nemotron / Nemotron 3.5 Lightning",
+   "count": 3,
+   "confidence": "high"
+  },
+  {
+   "from": "NemoGen",
+   "to": "NeMo Gym",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "Browsecom / browse comp",
+   "to": "BrowseComp",
+   "count": 5,
+   "confidence": "high"
+  },
+  {
+   "from": "A searcher",
+   "to": "ASearcher",
+   "count": 2,
+   "confidence": "high"
+  },
+  {
+   "from": "Web Sailor",
+   "to": "WebSailor",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "valuation",
+   "to": "evaluation",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "帕雷托的曲线",
+   "to": "帕累托曲线",
+   "count": 2,
+   "confidence": "high"
+  },
+  {
+   "from": "所有市区",
+   "to": "所有时区",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "data zero retention",
+   "to": "zero data retention",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "pass at 8 square",
+   "to": "pass@8 sweep (uncertain)",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "100a database times",
+   "to": "8 out of 8 times",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "中文RL中文后训练时候",
+   "to": "做完RL、做完后训练",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "然后用了buttons。1.3 million tokens",
+   "to": "然后用了1.3 million tokens",
+   "count": 1,
+   "confidence": "medium"
+  },
+  {
+   "from": "gRPO",
+   "to": "GRPO",
+   "count": 2,
+   "confidence": "high"
+  },
+  {
+   "from": "or backed by NVIDIA",
+   "to": "and are backed by NVIDIA",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "page rank",
+   "to": "PageRank",
+   "count": 1,
+   "confidence": "high"
+  },
+  {
+   "from": "you.com",
+   "to": "You.com",
+   "count": 8,
+   "confidence": "high"
+  }
+ ],
+ "removed_non_content": [
+  {
+   "orders": "923",
+   "what": "'Lots of clicks.' slide-advance remark"
+  }
+ ],
+ "uncertain": [
+  {
+   "orders": "933",
+   "issue": "'We also focus on search labs' – probably 'on (model) labs'; kept with 〔?〕"
+  },
+  {
+   "orders": "972",
+   "issue": "'跟一个solid的NVIDIA solid的模型' – comparison target model unclear"
+  },
+  {
+   "orders": "974",
+   "issue": "'用了几个trainer这个policy' – garbled; rendered as '用了几个trainer'"
+  },
+  {
+   "orders": "1005",
+   "issue": "'a cyclic graph 或者cyclic graph' – possibly 'a directed/cyclic graph'"
+  },
+  {
+   "orders": "1022",
+   "issue": "'pass at 8 square' – likely pass@8 sweep/scoring"
+  },
+  {
+   "orders": "1042",
+   "issue": "'中文RL中文后训练' read as 做完RL、做完后训练"
+  },
+  {
+   "orders": "1044–1045",
+   "issue": "Speaker says 23% then 22% relative gain (CoreWeave blog: 22.94%); both kept"
+  },
+  {
+   "orders": "1054",
+   "issue": "BrowseComp example question wording ('他卖这个light bulb的时候他是开哪种车') partly garbled"
+  }
+ ],
+ "verified": [
+  {
+   "as_heard": "CoreWeave / NVIDIA / Nematron post-train case study; NemoTron 3.5 Lightning",
+   "resolved_to": "Nemotron 3.5 Lightning (30B-A3B), post-trained by You.com, NVIDIA, CoreWeave",
+   "evidence": "https://www.coreweave.com/blog/post-training-at-the-frontier – BrowseComp 36.97%→45.45%, 168 tool calls baseline, 8-hour RL; matches talk",
+   "orders": "883, 939, 970–1045"
+  },
+  {
+   "as_heard": "NemoTron 3.5 Lightning ... 30B",
+   "resolved_to": "NVIDIA Nemotron 3.5 Lightning",
+   "evidence": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-... – open 30B MoE, Aug 2026",
+   "orders": "971, 1022"
+  },
+  {
+   "as_heard": "NemoGen",
+   "resolved_to": "NeMo Gym",
+   "evidence": "https://github.com/NVIDIA-NeMo/Gym – NVIDIA RL environment library; You.com search provider PR #5149 for browsecomp harness",
+   "orders": "975"
+  },
+  {
+   "as_heard": "OpenSeeker / A searcher / Web Sailor",
+   "resolved_to": "OpenSeeker, ASearcher, WebSailor",
+   "evidence": "https://arxiv.org/pdf/2603.15594 (OpenSeeker, compares WebSailor); https://github.com/inclusionAI/ASearcher; CoreWeave blog cites OpenSeeker + ASearcher hard subsets",
+   "orders": "1018, 1033"
+  },
+  {
+   "as_heard": "Alex, Chief Operating Officer of you.com",
+   "resolved_to": "Alex Triplett, COO, You.com",
+   "evidence": "https://you.com/about – lists Alex Triplett as Chief Operating Officer",
+   "orders": "879"
+  },
+  {
+   "as_heard": "David ... lead field engineering",
+   "resolved_to": "David Li (You.com, New York)",
+   "evidence": "https://www.linkedin.com/in/davidli3100/ – You.com engineer in New York who announced this Nemotron talk",
+   "orders": "966–969"
+  },
+  {
+   "as_heard": "Ryan Lee, our Head of APAC",
+   "resolved_to": null,
+   "evidence": "Search found no public page linking a Ryan Lee to You.com APAC; name kept as introduced on stage",
+   "orders": "941–942"
+  }
+ ],
+ "actual_topic_note": "Talk includes a You.com company pitch (Alex Triplett) and a short Chinese APAC pitch (Ryan Lee) before the Nemotron post-training case study (David Li)."
+}

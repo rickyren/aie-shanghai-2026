@@ -1,0 +1,49 @@
+{
+  "talk_id": "d1m11",
+  "speakers": [
+    {
+      "name": "Alex",
+      "name_as_heard": ["Alex"],
+      "org": "AutoArk 无界方舟",
+      "role": "CTO",
+      "background": "AutoArk is a company dedicated to on-device (端侧) AI models; it open-sources its models, inference engines and SDKs (EVA SDK, Edge0) and works with Shokz (韶音) on an AI sports headset.",
+      "evidence_orders": [639, 802, 804, 821]
+    }
+  ],
+  "corrections": [
+    {"from": "Auto Arc", "to": "AutoArk", "count": 1, "confidence": "high"},
+    {"from": "一罐产品", "to": "一款产品", "count": 1, "confidence": "high"},
+    {"from": "及时响应", "to": "即时响应", "count": 1, "confidence": "high"},
+    {"from": "现在云端的端侧 AI", "to": "现在端侧 AI", "count": 1, "confidence": "medium"},
+    {"from": "tops", "to": "TOPS", "count": 4, "confidence": "high"},
+    {"from": "Arm、Linux", "to": "Arm Linux", "count": 1, "confidence": "medium"},
+    {"from": "SR 语音转录模型", "to": "ASR 语音转录模型", "count": 1, "confidence": "high"},
+    {"from": "人声的智能加强", "to": "人声的智能增强", "count": 1, "confidence": "medium"},
+    {"from": "iPhone Intelligence", "to": "Apple Intelligence (marked 〔?〕)", "count": 1, "confidence": "medium"},
+    {"from": "MOE 大模大语言模型 / MOE", "to": "MoE 大语言模型 / MoE", "count": 10, "confidence": "high"},
+    {"from": "风 use", "to": "phone use", "count": 1, "confidence": "high"},
+    {"from": "pre-router", "to": "prerouter", "count": 1, "confidence": "high"},
+    {"from": "LM", "to": "LLM", "count": 2, "confidence": "medium"},
+    {"from": "每一座一个 Token", "to": "每做一个 token", "count": 1, "confidence": "high"},
+    {"from": "profile 的 Token 的每秒的速度", "to": "每秒 1,000 token 的 prefill 速度", "count": 1, "confidence": "high"},
+    {"from": "training 搒单", "to": "trending 榜单", "count": 1, "confidence": "high"},
+    {"from": "切割", "to": "切歌", "count": 1, "confidence": "high"},
+    {"from": "商业算法 VAD", "to": "声学算法〔?〕、VAD", "count": 1, "confidence": "medium"},
+    {"from": "Edge 0", "to": "Edge0", "count": 1, "confidence": "high"},
+    {"from": "极大多数", "to": "绝大多数", "count": 1, "confidence": "high"}
+  ],
+  "removed_non_content": [],
+  "uncertain": [
+    {"orders": "684", "issue": "Speaker said '通过调用云端模型的话呢，它自然就不会遇到任何体验方面的问题' — contradicts the argument; rendered as '不需要调用云端模型〔?〕'."},
+    {"orders": "720, 723–728", "issue": "Demo audio playback (ASR/TTS samples in English, Chinese, Korean, Japanese, German) picked up by the transcription; kept as quoted demo audio. Japanese line may be misrecognized."},
+    {"orders": "750", "issue": "'iPhone Intelligence' — likely Apple Intelligence; not web-verified."},
+    {"orders": "815", "issue": "'端侧的商业算法 VAD' — probably 声学算法 / 3A 算法 + VAD; uncertain."}
+  ],
+  "verified": [
+    {"as_heard": "无界方舟 Auto Arc", "resolved_to": "AutoArk 无界方舟", "evidence": "https://www.autoarkai.com/ — 'Autoark - 专注端侧模型，让硬件无需连云也能思考'; AIE Shanghai speakers page lists Alex as AutoArk CTO", "orders": "639"},
+    {"as_heard": "EVA SDK", "resolved_to": "EVA SDK (AutoArk)", "evidence": "https://github.com/AutoArk/eva-skills — official Agent Skills repo for AutoArk EVA SDK, installed via one command", "orders": "734–745"},
+    {"as_heard": "Edge 0 / 35B MOE on iPhone / pre-router", "resolved_to": "Edge0 (Edge0-35B MoE) with prerouter routing prediction", "evidence": "https://github.com/Edge0-AI/edge0 — 'Run 35B MoE models in ~2.5 GB of RAM ... a trained router predicts loads a step ahead'; AutoArk site lists Edge0-35B", "orders": "753–784, 824"},
+    {"as_heard": "韶音", "resolved_to": "韶音 Shokz", "evidence": "https://landing.autoarkai.com/about — AutoArk lists Shokz (韶音) as a smart-headphone customer", "orders": "804"},
+    {"as_heard": "音频模型 最小 0.1B", "resolved_to": "Audio8-ASR-0.1B", "evidence": "https://huggingface.co/Edge0/Audio8-ASR-0.1B — 0.1B ASR model under Edge0", "orders": "729"}
+  ]
+}

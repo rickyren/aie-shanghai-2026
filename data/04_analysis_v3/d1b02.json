@@ -1,0 +1,90 @@
+{
+  "talk_id": "d1b02",
+  "speakers": "Joey Wang（王仲宇）",
+  "org": "Harvey",
+  "value_chain_layer": "vertical_app",
+  "position": "法律 AI 公司内部实践",
+  "target_customer": "internal",
+  "intent": "insight",
+  "skeleton": [
+    "Harvey 做了内部协作 agent Specter，让多人在 Slack 里与同一个云端 agent 协作，同时把每个 PR 的完整流程沉淀为可重放的内部评测集。",
+    "模型每隔几周发布一次，是直接换新模型、信 benchmark，还是自己测，成为新问题；论点是别人的 leaderboard 不能代表自己的 harness、context 与任务，应该相信自己的 eval。",
+    "三个案例（PR description、code review、fix CI）用每次只改一个变量加 LLM judge 重放：多数时候要改的不是模型或 harness，而是自己的代码 bug、评测集筛选和流程，开放权重模型接近闭源前沿。",
+    "结论：差距常常来自没花时间优化流程；不要因为开放模型首次结果差就放弃，要在自己的 eval 上 hill climb。"
+  ],
+  "core_message": "Harvey 用内部 agent 产生的大量真实 PR 作为自建评测集，发现换用更便宜的开放权重模型常常接近 Opus 的效果，真正的差距往往在自己的代码与流程而不在模型或 harness，因此应该相信自己公司内部数据的 eval 而不是公开 leaderboard。",
+  "frameworks": [
+    {
+      "name": "单变量重放评测法",
+      "gist": "把 agent 完成任务的固定流程变成可重放的评测 case，用 LLM judge 打分，每次只改模型、harness 或 prompt 中的一个变量来判断瓶颈在哪里。",
+      "seg": "264–273"
+    }
+  ],
+  "offerings": [
+    {
+      "name": "Specter",
+      "what": "Harvey 内部的云端 agent，在 Slack、GitHub、Linear 中让多人协作，从产品设计到 PR、修 CI、上线，并保留完整 context 和 traces。",
+      "for_whom": "Harvey 内部员工",
+      "status": "internal"
+    }
+  ],
+  "why_needed": "",
+  "problem_approach": [
+    {
+      "problem": "新模型每隔几周就发布，公开 benchmark 与自己的 harness、context、任务并不一致，团队不知道是否该换、何时换模型，且 token 成本和 PR review 成为瓶颈。",
+      "approach": "用内部 agent 的真实 PR 历史构建可重放评测集，逐个变量对比模型与 harness，找出真正的问题（代码 bug、评测集污染、流程）并在 eval 上持续 hill climb。"
+    },
+    {
+      "problem": "本地运行的 coding agent 丢失 context 与 thinking traces，团队协作时同事只看到结果。",
+      "approach": "把 agent 沙箱放到团队实际工作的云端环境（Slack/GitHub/Linear），使多人协作可见，并把过程数据作为内部可收集的评测数据。"
+    }
+  ],
+  "non_consensus": [
+    {
+      "kind": "practice",
+      "point": "换模型或改 harness 往往不是答案，评测中最先暴露的是自己代码里的小 bug 和流程问题，修掉这些就能显著提升，不需要训练模型。",
+      "quote": "最后我们发现，模型和 harness 都不是真正要改的东西。",
+      "seg": "264–273",
+      "speaker": ""
+    },
+    {
+      "kind": "insight",
+      "point": "在 code review 任务上，当 prompt 与 harness 优化后，更便宜的开放权重模型（DeepSeek Flash 级）接近 Opus，最贵配置多抓出的问题经人工审查并不重要，应降级用便宜模型。",
+      "quote": "所以与其用 Opus Max，不如直接用 Opus；与其用 Opus，不如直接用 DeepSeek 的 Flash。",
+      "seg": "296–301",
+      "speaker": ""
+    },
+    {
+      "kind": "practice",
+      "point": "构建评测集时，最耗时的是判断收集到的数据哪些可用（回放会被后续 review 或新改动污染），测试本身比测试结果更重要。",
+      "quote": "所以我发现花更多时间的是研究这个评测集该怎么选出来。",
+      "seg": "289–295",
+      "speaker": ""
+    }
+  ],
+  "signals": [
+    {
+      "type": "data_signal",
+      "signal": "云端协作 agent 把人与 agent 的完整 context 和 thinking traces 留在公司内部，转化为可重放的内部评测数据，而本地 agent 这些数据会丢失。",
+      "value_as_heard": "上万个 PR，500 多人活跃使用",
+      "seg": "214–232"
+    },
+    {
+      "type": "metric_focus",
+      "signal": "关注每个任务的成本、完成速度（thinking 时长与 CI 重试）和质量的权衡，而不是公开榜单分数；开放权重模型思考更多、耗时更长，会占用沙箱运行时间。",
+      "value_as_heard": "实验约 7 小时、7000 美元，预计每月节省上万美元",
+      "seg": "302–326"
+    },
+    {
+      "type": "market_pattern",
+      "signal": "法律 AI 公司同时自建法律评测集（Big Law Bench、Legal Agent Bench）、对开放权重模型做后训练，并在内部用开放权重替代昂贵的闭源模型。",
+      "value_as_heard": "",
+      "seg": "194–204"
+    }
+  ],
+  "trend_categories": ["eval_verifiability", "open_models_posttrain_inference"],
+  "novelty": 3,
+  "pr_level": 3,
+  "content_industry_note": "",
+  "filtered_consensus": ["评测比公开榜单重要", "开放模型追上闭源", "harness 与 prompt 工程", "成本与速度的权衡", "agent 增加 review 瓶颈", "Slack 里多人协作"]
+}

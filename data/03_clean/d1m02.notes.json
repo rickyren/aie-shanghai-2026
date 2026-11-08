@@ -1,0 +1,61 @@
+{
+  "talk_id": "d1m02",
+  "speakers": [
+    {
+      "name": "Marco Casalaina",
+      "name_as_heard": ["Marco Casalena"],
+      "org": "Microsoft",
+      "role": "VP Products, Core AI Group; Silicon Valley title: AI Futurist",
+      "background": "Based in the San Francisco Bay Area rather than Seattle; uses agents (Copilot, ChatGPT) for his own work and family calendar; has a 16-year-old daughter.",
+      "evidence_orders": [94, 95, 96, 97, 98, 217, 218, 219, 349]
+    }
+  ],
+  "corrections": [
+    {"from": "Marco Casalena", "to": "Marco Casalaina", "count": 2, "confidence": "high"},
+    {"from": "muse", "to": "Muse (Meta Muse)", "count": 5, "confidence": "high"},
+    {"from": "autopilot", "to": "Autopilot (Microsoft Copilot Autopilot agents)", "count": 6, "confidence": "high"},
+    {"from": "WorkIQ", "to": "Work IQ", "count": 5, "confidence": "high"},
+    {"from": "foundry agent / foundry", "to": "Foundry agent / Microsoft Foundry", "count": 3, "confidence": "high"},
+    {"from": "security contacts", "to": "security context", "count": 1, "confidence": "high"},
+    {"from": "files. read.all / files.read.write.all", "to": "Files.Read.All / Files.ReadWrite.All", "count": 2, "confidence": "high"},
+    {"from": "crew", "to": "CrewAI", "count": 1, "confidence": "high"},
+    {"from": "Microsoft agent framework", "to": "Microsoft Agent Framework", "count": 1, "confidence": "high"},
+    {"from": "OpenEnd", "to": "OpenEnv", "count": 1, "confidence": "high"},
+    {"from": "recruited — so this is my mic —", "to": "rubrics", "count": 1, "confidence": "medium"},
+    {"from": "regulation E and regulation P", "to": "Regulation E and Regulation P", "count": 1, "confidence": "high"},
+    {"from": "Marcos Teller", "to": "Marco's Teller", "count": 1, "confidence": "medium"},
+    {"from": "because it's user just can't do that", "to": "because its user just can't do that", "count": 1, "confidence": "high"},
+    {"from": "OpenAI has dots", "to": "OpenAI has dots (OpenAI's personal agent product)", "count": 1, "confidence": "high"}
+  ],
+  "removed_non_content": [
+    {"orders": "88–92", "what": "plugging in laptop, waiting for screen"},
+    {"orders": "104–106", "what": "live demo vs. screenshots remark"},
+    {"orders": "139–150", "what": "hotel internet failure, switching to screenshots"},
+    {"orders": "153–154", "what": "searching for the demo tab"},
+    {"orders": "175–176", "what": "checking whether a tab loaded"},
+    {"orders": "231", "what": "aside: model page can't load due to internet"},
+    {"orders": "252–253", "what": "aside about remaining time"},
+    {"orders": "270–271", "what": "demo loaded remark"},
+    {"orders": "308–310", "what": "trying to load page / screenshot fallback"},
+    {"orders": "320–335", "what": "asking organizers about remaining time; failed attempt to reload Teams tab"}
+  ],
+  "uncertain": [
+    {"orders": "119–121", "issue": "'This is the age of agents / Cards. That I have... baseball card' — likely refers to an agent identity card shown on screen; exact wording unrecoverable"},
+    {"orders": "123", "issue": "'Lily' presumably the name he gave his Muse agent; not confirmed"},
+    {"orders": "182", "issue": "Agent name 'Marcos Teller' read as 'Marco's Teller'"},
+    {"orders": "235–236", "issue": "Joke 'Traffic lights in India, they are optional' appears truncated; likely compares permission systems to optional traffic lights"},
+    {"orders": "300–314", "issue": "Out-of-the-box Autopilot name 'Dante' not confirmed (user-named agent)"},
+    {"orders": "315–317", "issue": "Colleague name 'Sheffy' spelling uncertain"},
+    {"orders": "376", "issue": "'here, I have recruited — so this is my mic —' interpreted as 'here I have rubrics'"}
+  ],
+  "verified": [
+    {"as_heard": "Meta Muse / muse", "resolved_to": "Muse (Meta's personal AI agent)", "evidence": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/ — Meta's personal AI agent launched Sept 2026, users name their agent", "orders": "109–169"},
+    {"as_heard": "OpenAI has dots", "resolved_to": "dots (OpenAI)", "evidence": "https://www.dragapp.com/blog/personal-ai-agents-compared/ — compares Claude, OpenAI dots, Meta Muse, Gemini agent", "orders": "159"},
+    {"as_heard": "Claude Tag", "resolved_to": "Claude Tag (Anthropic)", "evidence": "https://www.helpnetsecurity.com/2026/06/24/anthropic-claude-tag-agent-identity-model/ — Claude Tag gives agents independent identities", "orders": "160"},
+    {"as_heard": "Gemini agents", "resolved_to": "Gemini agent (Google)", "evidence": "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026 — Gemini agent with its own identity/email", "orders": "161"},
+    {"as_heard": "autopilot", "resolved_to": "Autopilot (Microsoft Copilot)", "evidence": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/ — Autopilot agents with own Entra identity", "orders": "146–191"},
+    {"as_heard": "WorkIQ / Entra ID / Agent 365", "resolved_to": "Work IQ, Microsoft Entra Agent ID, Microsoft Agent 365", "evidence": "https://learn.microsoft.com/en-us/microsoft-agent-365/developer/identity — Agent 365 identity, OBO mode, Work IQ MCP servers", "orders": "172–258"},
+    {"as_heard": "OpenEnd", "resolved_to": "OpenEnv", "evidence": "https://huggingface.co/blog/openenv-agentic-rl — OpenEnv agent environments backed by Hugging Face, Microsoft and others", "orders": "401–402"},
+    {"as_heard": "Dante", "resolved_to": null, "evidence": "Search on Microsoft Autopilot + Dante found nothing; Autopilot agents are user-named, so likely his own agent name", "orders": "300–314"}
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "talk_id": "d1m14",
+  "speakers": "Jakub Hojsan",
+  "org": "Exa",
+  "value_chain_layer": "data_context",
+  "position": "面向 Agent 的搜索层",
+  "target_customer": "developer",
+  "intent": "both",
+  "skeleton": [
+    "从聊天机器人到云端 agent 再到个人 agent，搜索的用法发生了质变；个人 agent 的关键是跨请求的连续性（记忆、搜索、工具、持久化）。",
+    "用「在上海找餐厅」一个请求演示全流程：读取预算记忆、搜索候选、用 browser use 看照片、按同行人偏好分别存记忆、查天气、保存计划。",
+    "用 Mem0 + Browser Use + Qwen 开源权重模型 + Exa 搭出可检视的开源个人 agent，原则是「先搜索、再按需升级工具」，并用 highlights 只取最少 token。",
+    "Exa 索引不止网页（新闻、SEC、播客、POI、天气），并可通过 Exa Monitors 或定时搜索加 browser use 实现按条件才打扰用户的主动助理。"
+  ],
+  "core_message": "Exa 定位为个人 agent 的搜索层：既有独立网页索引，又有 POI、天气、新闻等实体数据，并用只返回相关片段的 highlights 控制 token；讲者用一个开源个人 agent 示例说明，闭源个人 agent（Muse、Instinct、Grok Bot）之外，开发者也能用 Mem0 + Qwen + Browser Use + Exa 搭出可检视、能主动提醒的版本。",
+  "frameworks": [
+    {
+      "name": "先搜索、再升级工具（search first）",
+      "gist": "先读搜索返回的 highlights，判断任务还缺什么，再升级到 browser use 等工具，使每次工具调用只针对任务的一部分。",
+      "seg": "1332–1337"
+    }
+  ],
+  "offerings": [
+    {
+      "name": "Exa 搜索 API 与 highlights",
+      "what": "独立网页索引加数据合作伙伴，按查询抽取式返回页面中相关 token，避免整页进入模型上下文。",
+      "for_whom": "做 LLM、coding agent、个人 agent 的开发者",
+      "status": "launched"
+    },
+    {
+      "name": "Exa 实体索引（POI、新闻、播客、财报、天气）",
+      "what": "除网页外，新增大规模兴趣点索引，并覆盖新闻、SEC 文件、播客转写、活动和天气。",
+      "for_whom": "做个人 agent 和垂直 agent 的开发者",
+      "status": "launched"
+    },
+    {
+      "name": "Exa Monitors",
+      "what": "按计划监测网页事件，用于主动通知类 agent。",
+      "for_whom": "做主动式助理的开发者",
+      "status": "launched"
+    }
+  ],
+  "why_needed": "相对闭源个人 agent（Muse、Instinct、Grok Bot）把用户信息全交给厂商且无法检视，开发者可用开源组件加 Exa 搭一个能看到记忆内容、工具调用原因和失败时间的版本；相对直接抓整页喂给模型，highlights 只取下一步决策所需的最少 token，适合小模型和快速 agent。",
+  "problem_approach": [
+    {
+      "problem": "整页内容喂给小模型会撑爆上下文、增加幻觉并拖慢端到端时间。",
+      "approach": "用 highlights 做查询相关的抽取式返回，片段不够时再升级到 browser use。"
+    },
+    {
+      "problem": "个人 agent 要区分不同人的偏好，并且不能被每封邮件或事件频繁打扰。",
+      "approach": "记忆里把朋友的偏好作为独立对象存储，主动提醒时先对照记忆、日历和预算，条件都满足才通知，否则保持安静。"
+    }
+  ],
+  "non_consensus": [
+    {
+      "kind": "practice",
+      "point": "个人 agent 应以搜索为第一步，只在 highlights 不足时才升级到浏览器，闭源产品大概也是这样设计的。",
+      "quote": "So I think the guiding principle here is search first.",
+      "seg": "1332–1337",
+      "speaker": "Jakub Hojsan"
+    },
+    {
+      "kind": "practice",
+      "point": "主动助理的关键不是推送，而是用记忆里的条件过滤，大多数事件应当静默。",
+      "quote": "Only when these conditions match would it notify me; otherwise it would just stay quiet.",
+      "seg": "1406–1416",
+      "speaker": "Jakub Hojsan"
+    }
+  ],
+  "signals": [
+    {
+      "type": "market_pattern",
+      "signal": "搜索 API 的客户从 coding agent 和 CRM 数据补全，扩展到个人 agent，被视为增长最快的垂直方向。",
+      "value_as_heard": "",
+      "seg": "1251–1255"
+    },
+    {
+      "type": "data_signal",
+      "signal": "搜索供应商因个人 agent 兴起，专门购买或抓取并索引大规模兴趣点（含中国地点）、天气、新闻、播客转写等实体数据。",
+      "value_as_heard": "over 200 million points of interest",
+      "seg": "1359–1364"
+    },
+    {
+      "type": "metric_focus",
+      "signal": "追踪每次决策送入模型的 token 量和端到端任务时间，说明搜索供应商在为小模型和快速 agent 优化。",
+      "value_as_heard": "as little as 300 milliseconds on average",
+      "seg": "1243–1250"
+    }
+  ],
+  "trend_categories": ["personal_agent_ai_native", "memory_data_context"],
+  "novelty": 2,
+  "pr_level": 4,
+  "content_industry_note": "个人 agent 需要把图片和页面来源绑定后带回对话，并用 browser use 看场馆相册，这意味着创作者和平台的图片、探店内容将更多被 agent 抓取判断，而非被用户直接浏览。",
+  "filtered_consensus": ["记忆对 agent 很重要", "开源模型可替代闭源", "上下文要精简", "chatbot 到 agent 的演进", "公司客户 logo 介绍"]
+}

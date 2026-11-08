@@ -1,0 +1,26 @@
+{"talk_id": "d2m03",
+ "speakers": [{"name": "杨滢 (Ying Yang)", "name_as_heard": [], "org": "CHILING CHUANYUE TECHNOLOGY", "role": "Brand owner in the beauty industry (agenda lists Founder & CEO)", "background": "Describes herself as a scientist who has worked on algorithms, self-media (自媒体), and the retail industry; is the owner of a beauty brand; her company builds a beauty/skincare AI agent (consumer Q&A mini-program with tens of thousands of users) and plans to expand to small brands, large brands, and the supply chain.", "evidence_orders": [506, 583, 646]}],
+ "corrections": [
+  {"from": "边界码", "to": "编解码", "count": 2, "confidence": "high"},
+  {"from": "林奈双分类", "to": "林奈双名法", "count": 2, "confidence": "medium"},
+  {"from": "绝地三尺", "to": "掘地三尺", "count": 2, "confidence": "high"},
+  {"from": "我们到武装他们的大脑", "to": "我们要武装他们的大脑", "count": 1, "confidence": "high"},
+  {"from": "大中", "to": "大众", "count": 1, "confidence": "high"},
+  {"from": "给他就是说盘", "to": "帮他盘", "count": 1, "confidence": "medium"},
+  {"from": "24、22个月到24个月", "to": "22 到 24 个月", "count": 1, "confidence": "high"},
+  {"from": "做了全球上千万个备案信息", "to": "收录了全球上千万条备案信息", "count": 1, "confidence": "medium"},
+  {"from": "结弊端广告", "to": "接品牌广告", "count": 1, "confidence": "medium"},
+  {"from": "对信息", "to": "对接信息", "count": 1, "confidence": "medium"},
+  {"from": "有敏感", "to": "是敏感肌", "count": 1, "confidence": "medium"}
+ ],
+ "removed_non_content": [],
+ "uncertain": [
+  {"orders": "506", "issue": "opening '听说我是一个就是科学家' — self-introduction garbled, name not stated in transcript"},
+  {"orders": "599", "issue": "'很多女生浪费成分' meaning unclear"},
+  {"orders": "602", "issue": "'结弊端广告' read as 接品牌广告"},
+  {"orders": "641", "issue": "'柜体或者瓶体' meaning unclear (possibly product sizes/variants)"}
+ ],
+ "verified": [
+  {"as_heard": "Ying Yang (agenda)", "resolved_to": "杨滢 (Ying Yang), Founder & CEO, CHILING CHUANYUE TECHNOLOGY", "evidence": "https://ai.engineer/shanghai/2026/speakers/ying-yang?lang=cn - conference speaker page, same talk title", "orders": "506"},
+  {"as_heard": "冰寒老师", "resolved_to": "冰寒（许德田），皮肤学博士研究生，痤疮护理书作者，创立护肤品牌", "evidence": "https://baike.baidu.com/item/%E5%86%B0%E5%AF%92/23791841 - skincare expert, dermatology PhD student, books and own brands (ACW/DMX), acne focus", "orders": "648–649"}
+ ]}

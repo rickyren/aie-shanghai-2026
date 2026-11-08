@@ -1,0 +1,40 @@
+{
+  "talk_id": "d1b03",
+  "speakers": [
+    {
+      "name": "Andy Wang",
+      "name_as_heard": ["Andy Wang"],
+      "org": "Dify",
+      "role": "Chief Marketing Officer",
+      "background": "Leads Dify's global go-to-market; says his Chinese is not fluent enough to present in Chinese; arrived in Shanghai two and a half days before the talk and spent two days meeting Dify customers in China.",
+      "evidence_orders": [339, 340, 341, 342, 386, 387]
+    }
+  ],
+  "corrections": [
+    {"from": "Diffie", "to": "Dify", "count": 5, "confidence": "high"},
+    {"from": "AI engineering（活动）", "to": "AI Engineer", "count": 1, "confidence": "medium"},
+    {"from": "managing your 500 agent", "to": "Managing Your 500th Agent", "count": 2, "confidence": "high"},
+    {"from": "150,000 GitHub starts stars", "to": "150,000 GitHub stars", "count": 1, "confidence": "high"},
+    {"from": "You want the standard up fast", "to": "You want to stand it up fast", "count": 1, "confidence": "medium"},
+    {"from": "LLM ops", "to": "LLMOps", "count": 1, "confidence": "high"},
+    {"from": "Gartner ... AI agent management platform, Magic Quadrant", "to": "AI Agent Management Platform Magic Quadrant", "count": 1, "confidence": "high"},
+    {"from": "knowledge basis", "to": "knowledge bases", "count": 2, "confidence": "high"},
+    {"from": "European user phone", "to": "European user forum", "count": 1, "confidence": "high"},
+    {"from": "the three takeaway", "to": "the three takeaways", "count": 1, "confidence": "high"},
+    {"from": "scale stages come way later ... But it's not", "to": "the scale stage comes way later ... But it doesn't", "count": 1, "confidence": "medium"},
+    {"from": "They will always be other platforms", "to": "There will always be other platforms", "count": 1, "confidence": "high"},
+    {"from": "it came way faster", "to": "it comes way faster", "count": 1, "confidence": "medium"},
+    {"from": "one of the 50 different countries", "to": "operating in 50 different countries〔?〕", "count": 1, "confidence": "medium"}
+  ],
+  "removed_non_content": [],
+  "uncertain": [
+    {"orders": "337", "issue": "'包括Steve speaker' — likely 'slides、speaker'; marked 〔?〕."},
+    {"orders": "402–403", "issue": "Transcript breaks off after 'It's probably' and jumps to 'Optimize'; the remainder of Build plus the overviews of Operate/Govern appear to be missing from the source. Marked 〔unintelligible〕."},
+    {"orders": "421–422", "issue": "'We had a customer in their industry; one of the 50 different countries' — read as a customer operating in 50 countries; marked 〔?〕."},
+    {"orders": "514", "issue": "Speaker lists 'one to translate' twice; kept a single listing of feedback / translate / dispatch / reprioritize."}
+  ],
+  "verified": [
+    {"as_heard": "Gartner ... very first AI agent management platform, Magic Quadrant, last week ... Dify included", "resolved_to": "Gartner Magic Quadrant for AI Agent Management Platforms (2026, first edition; Dify named Niche Player)", "evidence": "https://dify.ai/blog/dify-gartner-magic-quadrant-ai-agent-management-platforms-2026 — Dify blog announcing inclusion in the first MQ for AI Agent Management Platforms, published late Oct 2026", "orders": "379–383"},
+    {"as_heard": "Andy Wang, Chief Marketing Officer for Dify", "resolved_to": "Andy Wang", "evidence": "https://www.linkedin.com/in/andydwang/ and https://crustdata.com/profiles/company/difyai — Andy Wang listed at Dify as Chief Marketing Officer", "orders": "341"}
+  ]
+}
