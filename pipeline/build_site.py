@@ -95,8 +95,11 @@ def link_cites(h, prefix):
 
 def build_report(root, talks):
     body = (root / "data/05_synthesis/report_body.md").read_text(encoding="utf-8")
-    body = body.replace("{{LANDSCAPE}}", (root / "data/05_synthesis/landscape.svg").read_text(encoding="utf-8")).replace("{{LOOP}}", landscape_svg.loop())
+    # figures go in after markdown, so blank lines inside the SVG are not turned into <p> breaks
+    figs = {"{{LANDSCAPE}}": (root / "data/05_synthesis/landscape.svg").read_text(encoding="utf-8"), "{{LOOP}}": landscape_svg.loop()}
     h = markdown.markdown(body, extensions=["tables", "sane_lists"])
+    for k, svg in figs.items():
+        h = h.replace(f"<p>{k}</p>", svg).replace(k, svg)
     h = link_cites(h, "")
     h = h.replace("（推断）", '<span class="infer">（推断）</span>')
     intro = ('<p class="muted">依据现场同传转写整理（53 场 + 展区信息），数字均未核实。方括号编号可跳到单场页；'
