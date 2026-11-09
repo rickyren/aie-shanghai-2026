@@ -28,7 +28,8 @@ CSS = """
 .wrap{max-width:1040px;margin:0 auto;padding:0 24px 64px}
 nav{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:5}
 nav .wrap{display:flex;gap:22px;align-items:center;padding-top:12px;padding-bottom:12px}
-nav a{color:var(--sub);text-decoration:none;font-size:14px} nav a.on{color:var(--ink);font-weight:600} nav .brand{color:var(--blue);font-weight:700;margin-right:8px}
+nav a{color:var(--sub);text-decoration:none;font-size:14px}
+.crumb{font-size:13px;color:var(--sub);margin:18px 0 -6px} .crumb a{color:var(--blue);text-decoration:none} .crumb span{margin:0 6px;color:#c9cfd6} nav a.on{color:var(--ink);font-weight:600} nav .brand{color:var(--blue);font-weight:700;margin-right:8px}
 h1{font-size:24px;margin:32px 0 8px} h2{font-size:19px;margin:36px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)} h3{font-size:16px;margin:26px 0 8px}
 a{color:var(--blue)} .muted{color:var(--muted);font-size:13px}
 a.cite{font-size:11px;background:var(--blue-bg);color:var(--blue);border-radius:4px;padding:0 4px;text-decoration:none;margin:0 1px;white-space:nowrap}
@@ -94,7 +95,7 @@ def link_cites(h, prefix):
 
 def build_report(root, talks):
     body = (root / "data/05_synthesis/report_body.md").read_text(encoding="utf-8")
-    body = body.replace("{{LANDSCAPE}}", landscape_v2.landscape()).replace("{{LOOP}}", landscape_svg.loop())
+    body = body.replace("{{LANDSCAPE}}", (root / "data/05_synthesis/landscape.svg").read_text(encoding="utf-8")).replace("{{LOOP}}", landscape_svg.loop())
     h = markdown.markdown(body, extensions=["tables", "sane_lists"])
     h = link_cites(h, "")
     h = h.replace("（推断）", '<span class="infer">（推断）</span>')
@@ -136,7 +137,7 @@ def build_talk_list(talks, analyses, enums, promo):
             f'<a href="#" class="toggle muted" onclick="this.closest(\'tr\').classList.toggle(\'open\');return false;">展开 / 收起明细</a></td>'
             f'<td data-v="{a.get("novelty", 0)}">{a.get("novelty", "")}</td><td data-v="{a.get("pr_level", 0)}">{a.get("pr_level", "")}</td></tr>')
     opts = "".join(f'<option>{E(x)}</option>' for x in layers)
-    body = f"""<h1>全部分享与打标</h1>
+    body = f"""<p class="crumb"><a href="index.html">← 报告</a><span>/</span>全部分享与打标</p><h1>全部分享与打标</h1>
 <p class="muted">53 场分享（含 1 场议程外）的逐场分析。打标内容来自校对后的转写，不含原文；点场次编号进入单场页查看完整转写。
 「新」= 对资深从业者的新信息量，「PR」= 自家产品推销浓度，均为 1–5 分。「偏宣传」为人工判断，报告的分方向结论未采用这些场次的观点。</p>
 <div class="filters"><input id="q" placeholder="搜索讲者、机构、观点…" size="28"><select id="layer"><option value="">全部版图层级</option>{opts}</select></div>
@@ -159,7 +160,7 @@ def build_talk_page(t, a, enums, clean_md, raw_lines, promo):
         _, head, text = clean_md.split("---", 2)
     text = SEG.sub(lambda m: f'<span class="seg">seg {m.group(1)}{"–" + m.group(2) if m.group(2) else ""}</span>', text)
     clean_h = markdown.markdown(text, extensions=["sane_lists"])
-    parts = [f'<p class="muted"><a href="../talks.html">← 全部分享</a></p>',
+    parts = [f'<p class="crumb"><a href="../index.html">报告</a><span>/</span><a href="../talks.html">全部分享与打标</a><span>/</span>{E(t["talk_id"])}</p>',
              f'<h1>{E(t["title"] or a.get("speakers", ""))}</h1>',
              f'<p class="muted">{E(a.get("speakers") or t["speakers"])} · {E(a.get("org") or t["orgs"])} · {t["day"]} '
              f'{"主会场" if t["stage"] == "main" else "分会场"} · {t["actual_start"]}–{t["actual_end"]} · 场次 {E(t["talk_id"])}'
