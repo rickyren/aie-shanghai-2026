@@ -2,7 +2,6 @@
 
 Usage: python3 -I pipeline/review_analysis_v3.py <project_root> <out_html> [<file_id> ...]   (no ids = all in data/04_analysis_v3)
 """
-import csv
 import html
 import json
 import re
@@ -10,40 +9,11 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from review_analysis import norm, seg_range  # noqa: E402
+from analysis_validation import validate  # noqa: E402
 from review_clean import parse_md  # noqa: E402
+from validate_data import read_csv, require_valid  # noqa: E402
 
 DIR = "data/04_analysis_v3"
-
-
-def validate(doc, schema, paras):
-    enums, limits = schema["enums"], schema["limits"]
-    issues = []
-    full = norm("".join(t for _, t, _ in paras))
-    lo, hi = min(r[0] for _, _, r in paras), max(r[1] for _, _, r in paras)
-    for key in ("value_chain_layer", "target_customer", "intent"):
-        if doc.get(key) not in enums[key]:
-            issues.append(f"{key}: 非法取值 {doc.get(key)!r}")
-    checks = [("offerings", "status", "offering_status"), ("non_consensus", "kind", "nc_kind"), ("signals", "type", "signal_type")]
-    for field, key, enum in checks:
-        for x in doc.get(field, []):
-            if x.get(key) not in enums[enum]:
-                issues.append(f"{field}.{key}: 非法取值 {x.get(key)!r}")
-    for t in doc.get("trend_categories", []):
-        if not str(t).startswith("new:") and t not in enums["trend_category"]:
-            issues.append(f"trend_categories: 非法取值 {t!r}")
-    for field, cap in limits.items():
-        if len(doc.get(field, [])) > cap:
-            issues.append(f"{field}: {len(doc[field])} 条，超过上限 {cap}")
-    for i, p in enumerate(doc.get("non_consensus", [])):
-        if norm(p.get("quote")) not in full:
-            issues.append(f"non_consensus[{i}]: 引用在清稿中找不到")
-    for field in ("non_consensus", "signals", "frameworks"):
-        for i, p in enumerate(doc.get(field, [])):
-            r = seg_range(p.get("seg"))
-            if not r or r[0] < lo or r[1] > hi:
-                issues.append(f"{field}[{i}]: seg {p.get('seg')!r} 不在 {lo}–{hi}")
-    return issues
 
 
 def card(doc, schema, issues, title):
@@ -107,18 +77,24 @@ def landscape_table(docs, schema):
 
 def main(root, out_html, *ids):
     root = Path(root)
+    if not ids:
+        require_valid(root)
     schema = json.loads((root / "pipeline/schemas/talk_analysis_v3.json").read_text(encoding="utf-8"))
     titles = {re.sub(r"[^A-Za-z0-9-]+", "_", t["talk_id"]).strip("_"): t["title"]
-              for t in csv.DictReader((root / "data/01_talks.csv").open(encoding="utf-8"))}
+              for t in read_csv(root / "data/01_talks.csv")}
     if not ids:  # agenda order
         ids = [f for f in titles if (root / f"{DIR}/{f}.json").exists()]
     cards, report, docs = [], {}, []
     for fid in ids:
         doc = json.loads((root / f"{DIR}/{fid}.json").read_text(encoding="utf-8"))
-        doc["_fid"] = fid
         _, blocks = parse_md((root / f"data/03_clean/{fid}.md").read_text(encoding="utf-8"))
         issues = validate(doc, schema, [b for b in blocks if b[0] == "p" and b[2]])
         report[fid] = issues
+        if issues:
+            cards.append(f'<section><h2>{html.escape(fid)}</h2>'
+                         + "".join(f'<p class="warn">{html.escape(issue)}</p>' for issue in issues) + '</section>')
+            continue
+        doc["_fid"] = fid  # presentation metadata is not part of the analysis schema
         docs.append(doc)
         cards.append(card(doc, schema, issues, titles.get(fid, "")))
     landscape = landscape_table(docs, schema)
@@ -145,6 +121,8 @@ table.land{{border-collapse:collapse;width:100%;font-size:13px}} .land td,.land 
     for k, v in report.items():
         for i in v:
             print(" ", k, i)
+    if any(report.values()):
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

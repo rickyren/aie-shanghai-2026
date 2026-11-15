@@ -9,7 +9,7 @@
 "problem_approach":[{"problem":"world model 一词被用于差异极大的系统，沟通和选型困难。","approach":"用功能分类加 domain/尺度/覆盖度的多轴描述来定位模型，并区分预测型与描述型。"},
 {"problem":"生成式 3D/视频的局部一致画面未必满足应用对未观测变量（如红绿灯状态）持续一致的要求。","approach":"用 coverage 轴明确模型维护哪些变量，按应用需求判断是否足够。"}],
 "non_consensus":[{"kind":"insight","point":"LLM 和 Google Maps 在 RL 意义上都可算 world model，关键在于看它实现哪些功能而非是否可视。","quote":"I would very much argue that an LLM absolutely can qualify as a model of how a world behaves, right?","seg":"127–135","speaker":"Christoph Lassner"},
-{"kind":"prediction","point":"world model 将成为智能与世界交互的接口，成为 agent 长期推理与领域实时回路之间的桥梁。","quote":"World models are going to define how intelligence interfaces with the world.","seg":"271–280","speaker":"Christoph Lassner"}],
+{"kind":"prediction","point":"world model 将成为智能与世界交互的接口，成为 agent 长期推理与领域实时回路之间的桥梁。","quote":"World models are going to define how intelligence interfaces with the world.","seg":"281–289","speaker":"Christoph Lassner"}],
 "signals":[{"type":"market_pattern","signal":"“world model”一词在图形、机器人、视频生成、生物、企业软件中被泛用，市场叙事混杂，需要分类来区分真实能力。","value_as_heard":"","seg":"189–202"},
 {"type":"metric_focus","signal":"用 coverage（模型是否对未观测部分持续正确更新）而非单帧一致性来评价生成世界的质量。","value_as_heard":"","seg":"209–214"}],
 "trend_categories":["world_model_spatial","personal_agent_ai_native"],

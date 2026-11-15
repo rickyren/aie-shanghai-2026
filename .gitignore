@@ -3,3 +3,6 @@ __pycache__/
 .DS_Store
 raw/
 *.zip
+out/
+data/03_clean/_input/
+data/04_analysis_v3/_input/

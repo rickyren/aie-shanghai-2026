@@ -3,11 +3,13 @@
 Usage: python3 -I pipeline/stage3_prepare.py <project_root> [talk_id ...]   (no ids = all talks)
 Writes data/03_clean/_input/<file_id>.{txt,meta.json,prompt.md} (file_id = filesystem-safe talk_id)
 """
-import csv
 import json
 import re
 import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from validate_data import read_csv, read_jsonl
 
 INPUT_DIR = "data/03_clean/_input"
 OUTPUT_DIR = "data/03_clean"
@@ -30,13 +32,10 @@ def file_id(talk_id):
 
 def main(root, ids):
     root = Path(root)
-    segs = {}
-    for line in (root / "data/00_segments.jsonl").open(encoding="utf-8"):
-        r = json.loads(line)
-        segs[r["seg_id"]] = r
-    labels = [json.loads(line) for line in (root / "data/01_segment_labels.jsonl").open(encoding="utf-8")]
-    talks = {t["talk_id"]: t for t in csv.DictReader((root / "data/01_talks.csv").open(encoding="utf-8"))}
-    agenda = list(csv.DictReader((root / "data/agenda.csv").open(encoding="utf-8")))
+    segs = {r["seg_id"]: r for r in read_jsonl(root / "data/00_segments.jsonl")}
+    labels = read_jsonl(root / "data/01_segment_labels.jsonl")
+    talks = {t["talk_id"]: t for t in read_csv(root / "data/01_talks.csv")}
+    agenda = read_csv(root / "data/agenda.csv")
     glossary = sorted({x.strip() for a in agenda for x in (a["speakers"] + ";" + a["orgs"]).split(";") if x.strip()}
                       | {a["moderator"] for a in agenda if a["moderator"]} | set(TERMS))
     template = (root / "pipeline/prompts/clean_llm.md").read_text(encoding="utf-8")
