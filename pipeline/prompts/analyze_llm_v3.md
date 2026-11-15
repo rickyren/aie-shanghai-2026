@@ -4,7 +4,7 @@ Inputs (project root <project_root>):
 - `data/03_clean/{file_id}.md` — proofread transcript; paragraphs end with `[seg A–B]` (sometimes on their own line, applying to the paragraph above).
 - `data/03_clean/{file_id}.notes.json` — speaker facts from proofreading.
 - `data/03_clean/_input/{file_id}.meta.json` — agenda metadata.
-- `pipeline/schemas/talk_analysis_v3.json` — output shape, allowed codes, list limits.
+- `pipeline/schemas/talk_analysis_v3.json` — JSON Schema: required properties, types, allowed codes and list limits.
 
 ## Step 1 — understand the talk as the speaker intended it (do this before writing anything)
 Read the whole transcript. Then answer for yourself:
@@ -29,8 +29,8 @@ All numbers come from live speech recognition and cannot be verified yet (no sli
 
 Common sense to drop (unless the speaker adds something genuinely new to it): agents need good context/memory/tools; evals matter, benchmarks saturate; models get cheaper/better; harness/context engineering matters; coding agents boost productivity; data is a moat; pilot-to-production is hard; open models are catching up; human-in-the-loop; latency/throughput/cost trade-offs; bare company intros and customer logos.
 
-Write `data/04_analysis_v3/{file_id}.json` following `shape` exactly. Chinese prose; quotes verbatim from the clean transcript in its original language, one sentence each.
+Write `data/04_analysis_v3/{file_id}.json` following the JSON Schema exactly (`properties`, `required`, `$defs`, and array limits). Chinese prose; quotes verbatim from the clean transcript in its original language, one sentence each.
 
-Validate before finishing with a short `python3 -I` script (in your own `mktemp -d` directory): JSON parses, enum codes are allowed, list lengths respect `limits`, each quote is a substring of the transcript (ignoring whitespace and ** markers), each seg lies within the transcript ranges.
+Before finishing, run `python pipeline/validate_data.py <project_root> --talk {file_id}` from the project environment. Fix every reported issue: required properties, types, enum codes, list limits, nonempty quotes, ordered segment ranges, and quotes matching the cited paragraphs. Do not change the transcript to make an analysis pass.
 
 Final reply (under 80 words): intent, skeleton, and core_message.

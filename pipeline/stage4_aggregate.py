@@ -8,18 +8,19 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from validate_data import read_csv, require_valid
+
 
 def main(root):
     root = Path(root)
+    require_valid(root)
     schema = json.loads((root / "pipeline/schemas/talk_analysis_v3.json").read_text(encoding="utf-8"))["enums"]
-    talks = list(csv.DictReader((root / "data/01_talks.csv").open(encoding="utf-8")))
-    rows, missing = [], []
+    talks = read_csv(root / "data/01_talks.csv")
+    rows = []
     for t in talks:
         fid = re.sub(r"[^A-Za-z0-9-]+", "_", t["talk_id"]).strip("_")
         f = root / f"data/04_analysis_v3/{fid}.json"
-        if not f.exists():
-            missing.append(fid)
-            continue
         d = json.loads(f.read_text(encoding="utf-8"))
         rows.append({
             "talk_id": t["talk_id"], "file_id": fid, "day": t["day"], "stage": t["stage"], "format": t["format"],
@@ -40,7 +41,7 @@ def main(root):
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
         w.writeheader()
         w.writerows(rows)
-    print(f"{len(rows)} talks -> data/04_talks_analysis.csv; missing: {missing}")
+    print(f"{len(rows)} talks -> data/04_talks_analysis.csv")
 
 
 if __name__ == "__main__":

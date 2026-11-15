@@ -1,0 +1,29 @@
+name: Check data and site
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.12', '3.14']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - run: python pipeline/validate_data.py .
+      - run: python -m unittest discover -s tests -v
+      - run: python pipeline/stage4_aggregate.py .
+      - run: python pipeline/build_site.py . docs
+      - run: python pipeline/check_site.py docs
+      - name: Check committed generated files
+        run: |
+          git diff --exit-code -- docs data/04_talks_analysis.csv
+          test -z "$(git ls-files --others --exclude-standard -- docs)"

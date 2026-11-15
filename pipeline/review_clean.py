@@ -32,13 +32,15 @@ def parse_md(text):
         m = SEG.search(chunk)
         rng = (int(m.group(1)), int(m.group(2) or m.group(1))) if m else None
         text = SEG.sub("", chunk).strip()
-        if not text and rng:
-            # a "[seg A–B]" on its own line belongs to the paragraph(s) right above it
+        if rng:
+            # A trailing range covers the preceding unmarked paragraphs in this block,
+            # whether it is on a separate line or attached to the final paragraph.
             for i in range(len(blocks) - 1, -1, -1):
                 if blocks[i][0] != "p" or blocks[i][2] is not None:
                     break
                 blocks[i] = ("p", blocks[i][1], rng)
-            continue
+            if not text:
+                continue
         blocks.append(("p", text, rng))
     return fm, blocks
 

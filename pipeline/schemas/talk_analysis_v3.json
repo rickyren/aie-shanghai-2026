@@ -1,5 +1,279 @@
 {
-  "_doc": "V3: reconstruct the speaker's intent and skeleton first, then a lean set of fields that each feed a section of the final report. Prose in Chinese; quotes verbatim in the transcript's language. Numbers come from speech recognition and are unverified: record which metric a speaker tracks, not its value.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Talk analysis V3",
+  "description": "V3: reconstruct the speaker's intent and skeleton first, then a lean set of fields that each feed a section of the final report. Prose in Chinese; quotes verbatim in the transcript's language. Numbers come from speech recognition and are unverified: record which metric a speaker tracks, not its value.",
+  "type": "object",
+  "required": [
+    "talk_id",
+    "speakers",
+    "org",
+    "value_chain_layer",
+    "position",
+    "target_customer",
+    "intent",
+    "skeleton",
+    "core_message",
+    "frameworks",
+    "offerings",
+    "why_needed",
+    "problem_approach",
+    "non_consensus",
+    "signals",
+    "trend_categories",
+    "novelty",
+    "pr_level",
+    "content_industry_note",
+    "filtered_consensus"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "talk_id": {
+      "type": "string",
+      "description": "Must match data/01_talks.csv.",
+      "pattern": "\\S"
+    },
+    "speakers": {
+      "type": "string",
+      "description": "",
+      "pattern": "\\S"
+    },
+    "org": {
+      "type": "string",
+      "description": "",
+      "pattern": "\\S"
+    },
+    "value_chain_layer": {
+      "$ref": "#/$defs/value_chain_layer"
+    },
+    "position": {
+      "type": "string",
+      "description": "A short description of the specific position.",
+      "pattern": "\\S"
+    },
+    "target_customer": {
+      "$ref": "#/$defs/target_customer"
+    },
+    "intent": {
+      "$ref": "#/$defs/intent"
+    },
+    "skeleton": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 4,
+      "items": {
+        "type": "string",
+        "description": "One main point, in presentation order.",
+        "pattern": "\\S"
+      }
+    },
+    "core_message": {
+      "type": "string",
+      "description": "One or two Chinese sentences.",
+      "pattern": "\\S"
+    },
+    "frameworks": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "gist",
+          "seg"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "",
+            "pattern": "\\S"
+          },
+          "gist": {
+            "type": "string",
+            "description": "",
+            "pattern": "\\S"
+          },
+          "seg": {
+            "$ref": "#/$defs/segment_range"
+          }
+        }
+      }
+    },
+    "offerings": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "what",
+          "for_whom",
+          "status"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "",
+            "pattern": "\\S"
+          },
+          "what": {
+            "type": "string",
+            "description": "",
+            "pattern": "\\S"
+          },
+          "for_whom": {
+            "type": "string",
+            "description": "",
+            "pattern": "\\S"
+          },
+          "status": {
+            "$ref": "#/$defs/offering_status"
+          }
+        }
+      }
+    },
+    "why_needed": {
+      "type": "string",
+      "description": "Name existing alternatives and explain why this is needed; may be empty."
+    },
+    "problem_approach": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "problem",
+          "approach"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "problem": {
+            "type": "string",
+            "description": "",
+            "pattern": "\\S"
+          },
+          "approach": {
+            "type": "string",
+            "description": "",
+            "pattern": "\\S"
+          }
+        }
+      }
+    },
+    "non_consensus": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "point",
+          "quote",
+          "seg"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "$ref": "#/$defs/nc_kind"
+          },
+          "point": {
+            "type": "string",
+            "description": "",
+            "pattern": "\\S"
+          },
+          "quote": {
+            "type": "string",
+            "description": "Verbatim transcript text.",
+            "pattern": "\\S"
+          },
+          "seg": {
+            "$ref": "#/$defs/segment_range"
+          },
+          "speaker": {
+            "type": "string",
+            "description": "Required for panels or multiple speakers; optional otherwise."
+          }
+        }
+      }
+    },
+    "signals": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "signal",
+          "value_as_heard",
+          "seg"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "$ref": "#/$defs/signal_type"
+          },
+          "signal": {
+            "type": "string",
+            "description": "",
+            "pattern": "\\S"
+          },
+          "value_as_heard": {
+            "type": "string",
+            "description": "Unverified ASR number for reference; may be empty."
+          },
+          "seg": {
+            "$ref": "#/$defs/segment_range"
+          }
+        }
+      }
+    },
+    "trend_categories": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 2,
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/trend_category"
+          },
+          {
+            "type": "string",
+            "pattern": "^new:\\S.*$"
+          }
+        ]
+      }
+    },
+    "novelty": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "pr_level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "content_industry_note": {
+      "type": "string",
+      "description": "Specific implication for content creators or platforms; may be empty."
+    },
+    "filtered_consensus": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 6,
+      "items": {
+        "type": "string",
+        "description": "",
+        "pattern": "\\S"
+      }
+    }
+  },
   "enums": {
     "value_chain_layer": {
       "foundation_model": "基座模型",
@@ -59,75 +333,89 @@
       "launch": "发布 / 开源"
     }
   },
-  "shape": {
-    "talk_id": "str",
-    "speakers": "str",
-    "org": "str",
-    "value_chain_layer": "enum value_chain_layer",
-    "position": "str ≤15 字",
-    "target_customer": "enum target_customer",
-    "intent": "enum intent",
-    "skeleton": [
-      "str：按演讲顺序的 2–4 个主要论点，每条一句，讲者视角"
-    ],
-    "core_message": "str 1–2 句",
-    "frameworks": [
-      {
-        "name": "str，讲者提出的划分/分类/公式",
-        "gist": "str 一句话",
-        "seg": "A–B"
-      }
-    ],
-    "offerings": [
-      {
-        "name": "str",
-        "what": "str 一句话",
-        "for_whom": "str",
-        "status": "enum offering_status"
-      }
-    ],
-    "why_needed": "str 或空：在什么替代方案已存在的背景下，为什么还需要它（点名替代方案）",
-    "problem_approach": [
-      {
-        "problem": "str",
-        "approach": "str"
-      }
-    ],
-    "non_consensus": [
-      {
-        "kind": "enum nc_kind",
-        "point": "str",
-        "quote": "str 清稿原句",
-        "seg": "A–B",
-        "speaker": "str（多人场次必填）"
-      }
-    ],
-    "signals": [
-      {
-        "type": "enum signal_type",
-        "signal": "str，定性一句话，不依赖具体数值",
-        "value_as_heard": "str 或空：metric_focus 时可记原话中的数值，仅供参考（转写未核实）",
-        "seg": "A–B"
-      }
-    ],
-    "trend_categories": [
-      "enum trend_category 或 'new:<中文名>'，1–2 个"
-    ],
-    "novelty": "int 1–5",
-    "pr_level": "int 1–5",
-    "content_industry_note": "str 或空",
-    "filtered_consensus": [
-      "str 短语"
-    ]
-  },
-  "limits": {
-    "skeleton": 4,
-    "frameworks": 2,
-    "offerings": 3,
-    "problem_approach": 2,
-    "non_consensus": 3,
-    "trend_categories": 2,
-    "filtered_consensus": 6,
-    "signals": 4
+  "$defs": {
+    "value_chain_layer": {
+      "type": "string",
+      "enum": [
+        "foundation_model",
+        "model_infra",
+        "agent_infra",
+        "data_context",
+        "evaluation",
+        "general_agent_app",
+        "vertical_app",
+        "ai_adopter",
+        "embodied_world_model",
+        "on_device",
+        "capital_community"
+      ]
+    },
+    "target_customer": {
+      "type": "string",
+      "enum": [
+        "developer",
+        "enterprise",
+        "model_lab",
+        "consumer",
+        "internal",
+        "n/a"
+      ]
+    },
+    "intent": {
+      "type": "string",
+      "enum": [
+        "product",
+        "insight",
+        "both"
+      ]
+    },
+    "offering_status": {
+      "type": "string",
+      "enum": [
+        "launched",
+        "open_source",
+        "preview",
+        "service",
+        "internal"
+      ]
+    },
+    "nc_kind": {
+      "type": "string",
+      "enum": [
+        "insight",
+        "practice",
+        "prediction",
+        "market_call"
+      ]
+    },
+    "trend_category": {
+      "type": "string",
+      "enum": [
+        "agent_harness_runtime",
+        "open_models_posttrain_inference",
+        "eval_verifiability",
+        "enterprise_agent_ops",
+        "memory_data_context",
+        "personal_agent_ai_native",
+        "world_model_spatial",
+        "embodied_physical_ai",
+        "on_device_decision_models",
+        "investment_startup"
+      ]
+    },
+    "signal_type": {
+      "type": "string",
+      "enum": [
+        "data_signal",
+        "metric_focus",
+        "market_pattern",
+        "launch"
+      ]
+    },
+    "segment_range": {
+      "type": "string",
+      "pattern": "^\\d+(?:\\s*[–-]\\s*\\d+)?$",
+      "description": "Source segment order or inclusive range; must be ordered and supported by the transcript."
+    }
   }
 }

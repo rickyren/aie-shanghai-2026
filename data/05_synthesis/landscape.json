@@ -1,0 +1,633 @@
+{
+  "description": "Final editorial classification. Used by filters and talk pages. Visible groups and entities match the approved landscape.svg. Analysis value_chain_layer remains the original analytical tag, not the final map classification.",
+  "layers": [
+    {
+      "name": "应用",
+      "rows": [
+        [
+          {
+            "name": "通用 / 个人 agent",
+            "entities": [
+              {
+                "name": "Manus",
+                "description": "",
+                "talk_ids": [
+                  "d1m13"
+                ]
+              },
+              {
+                "name": "OpenClaw",
+                "description": "",
+                "talk_ids": [
+                  "d1m10"
+                ]
+              },
+              {
+                "name": "YouMind",
+                "description": "",
+                "talk_ids": [
+                  "d1b01"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "垂直行业",
+            "entities": [
+              {
+                "name": "Harvey",
+                "description": "法律",
+                "talk_ids": [
+                  "d1b02"
+                ]
+              },
+              {
+                "name": "AhaCreator",
+                "description": "达人营销",
+                "talk_ids": [
+                  "d1b12"
+                ]
+              },
+              {
+                "name": "Cookiy",
+                "description": "用户研究",
+                "talk_ids": [
+                  "d1b06"
+                ]
+              },
+              {
+                "name": "HeyGen",
+                "description": "视频",
+                "talk_ids": [
+                  "d2m02"
+                ]
+              },
+              {
+                "name": "CHILING",
+                "description": "美妆",
+                "talk_ids": [
+                  "d2m03"
+                ]
+              },
+              {
+                "name": "KouShi",
+                "description": "语言学习",
+                "talk_ids": [
+                  "d2m06"
+                ]
+              },
+              {
+                "name": "HellYeah",
+                "description": "广告投放",
+                "exhibitor": true
+              }
+            ]
+          },
+          {
+            "name": "企业内部落地",
+            "entities": [
+              {
+                "name": "Optiver",
+                "description": "交易",
+                "talk_ids": [
+                  "d1m16"
+                ]
+              },
+              {
+                "name": "Techcombank",
+                "description": "银行",
+                "talk_ids": [
+                  "d1m18"
+                ]
+              },
+              {
+                "name": "Agoda",
+                "description": "旅游",
+                "talk_ids": [
+                  "d1b07"
+                ]
+              },
+              {
+                "name": "Instagram",
+                "description": "社交",
+                "talk_ids": [
+                  "d1b05"
+                ]
+              },
+              {
+                "name": "HICAP",
+                "description": "制造",
+                "talk_ids": [
+                  "d2m04"
+                ]
+              },
+              {
+                "name": "Data4Life",
+                "description": "医疗",
+                "talk_ids": [
+                  "d1b09"
+                ]
+              }
+            ]
+          }
+        ]
+      ],
+      "widths": [
+        [
+          132,
+          410,
+          282
+        ]
+      ]
+    },
+    {
+      "name": "Agent Infra",
+      "rows": [
+        [
+          {
+            "name": "搜索与数据 API",
+            "entities": [
+              {
+                "name": "You.com",
+                "description": "",
+                "talk_ids": [
+                  "d1m05"
+                ]
+              },
+              {
+                "name": "Exa",
+                "description": "",
+                "talk_ids": [
+                  "d1m14"
+                ]
+              },
+              {
+                "name": "Jina",
+                "description": "",
+                "talk_ids": [
+                  "d2m20"
+                ]
+              },
+              {
+                "name": "Brave",
+                "description": "",
+                "exhibitor": true
+              },
+              {
+                "name": "智慧芽",
+                "description": "",
+                "exhibitor": true
+              }
+            ]
+          },
+          {
+            "name": "支付与交易",
+            "entities": [
+              {
+                "name": "Visa",
+                "description": "",
+                "talk_ids": [
+                  "d1b04"
+                ]
+              },
+              {
+                "name": "masons.ai",
+                "description": "",
+                "talk_ids": [
+                  "d2m12"
+                ]
+              },
+              {
+                "name": "Stripe",
+                "description": "",
+                "exhibitor": true
+              },
+              {
+                "name": "Adyen",
+                "description": "",
+                "exhibitor": true
+              },
+              {
+                "name": "Clink",
+                "description": "",
+                "exhibitor": true
+              }
+            ]
+          },
+          {
+            "name": "企业知识与本体",
+            "entities": [
+              {
+                "name": "DataHub",
+                "description": "",
+                "talk_ids": [
+                  "d1b08"
+                ]
+              },
+              {
+                "name": "Datus",
+                "description": "",
+                "talk_ids": [
+                  "d1b10"
+                ]
+              },
+              {
+                "name": "Nowledge",
+                "description": "",
+                "talk_ids": [
+                  "d2m19"
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "name": "框架与平台",
+            "entities": [
+              {
+                "name": "Dify",
+                "description": "",
+                "talk_ids": [
+                  "d1b03"
+                ]
+              },
+              {
+                "name": "Pipecat",
+                "description": "",
+                "talk_ids": [
+                  "d2m05"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "身份与权限",
+            "entities": [
+              {
+                "name": "Microsoft",
+                "description": "",
+                "talk_ids": [
+                  "d1m02"
+                ]
+              },
+              {
+                "name": "1Password",
+                "description": "",
+                "talk_ids": [
+                  "d2m16"
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "name": "模型网关",
+            "entities": [
+              {
+                "name": "Raytone",
+                "description": "",
+                "exhibitor": true
+              }
+            ]
+          },
+          {
+            "name": "沙箱",
+            "entities": [
+              {
+                "name": "Daytona",
+                "description": "",
+                "talk_ids": [
+                  "d1m12"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "存储",
+            "entities": [
+              {
+                "name": "TiDB",
+                "description": "",
+                "talk_ids": [
+                  "d1m17"
+                ]
+              },
+              {
+                "name": "Tonbo",
+                "description": "",
+                "exhibitor": true
+              }
+            ]
+          }
+        ]
+      ],
+      "row_labels": [
+        "外部连接",
+        "框架与治理",
+        "运行底座"
+      ],
+      "widths": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "模型",
+      "rows": [
+        [
+          {
+            "name": "通用 LLM",
+            "entities": [
+              {
+                "name": "StepFun",
+                "description": "",
+                "talk_ids": [
+                  "d1m09"
+                ]
+              },
+              {
+                "name": "Kimi",
+                "description": "",
+                "talk_ids": [
+                  "d1m20"
+                ]
+              },
+              {
+                "name": "MiniMax",
+                "description": "",
+                "talk_ids": [
+                  "d2m08"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "端侧 / 决策模型",
+            "entities": [
+              {
+                "name": "Liquid",
+                "description": "决策模型",
+                "talk_ids": [
+                  "d2m11"
+                ]
+              },
+              {
+                "name": "AutoTrust",
+                "description": "决策模型",
+                "exhibitor": true
+              },
+              {
+                "name": "AutoArk",
+                "description": "端侧 LLM",
+                "talk_ids": [
+                  "d1m11"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "生成模型",
+            "entities": [
+              {
+                "name": "Tripo",
+                "description": "3D、实时视频",
+                "talk_ids": [
+                  "d2m10"
+                ]
+              },
+              {
+                "name": "Alaya Lab",
+                "description": "AI 游戏引擎",
+                "exhibitor": true
+              }
+            ]
+          },
+          {
+            "name": "具身与世界模型",
+            "entities": [
+              {
+                "name": "穹彻",
+                "description": "",
+                "talk_ids": [
+                  "d2m14"
+                ]
+              },
+              {
+                "name": "未来不远",
+                "description": "",
+                "talk_ids": [
+                  "d2m17"
+                ]
+              },
+              {
+                "name": "DYNA",
+                "description": "",
+                "talk_ids": [
+                  "d2m15"
+                ]
+              },
+              {
+                "name": "墨甲",
+                "description": "",
+                "talk_ids": [
+                  "d2m09"
+                ]
+              },
+              {
+                "name": "数耀量生",
+                "description": "",
+                "talk_ids": [
+                  "d2m13"
+                ]
+              },
+              {
+                "name": "World Labs",
+                "description": "",
+                "talk_ids": [
+                  "d2m01"
+                ]
+              }
+            ]
+          }
+        ]
+      ],
+      "widths": [
+        [
+          170,
+          190,
+          190,
+          264
+        ]
+      ]
+    },
+    {
+      "name": "数据与训练",
+      "rows": [
+        [
+          {
+            "name": "评测与 RL 数据",
+            "entities": [
+              {
+                "name": "Arena",
+                "description": "agent 轨迹 → RL 环境",
+                "talk_ids": [
+                  "d1m07"
+                ]
+              },
+              {
+                "name": "You.com",
+                "description": "搜索类 RL 题",
+                "related_talk_ids": [
+                  "d1m05"
+                ]
+              },
+              {
+                "name": "OpenEnv",
+                "description": "模拟环境"
+              },
+              {
+                "name": "Copula",
+                "description": "专家数据",
+                "exhibitor": true
+              },
+              {
+                "name": "MindLab",
+                "description": "行业模型定制",
+                "exhibitor": true
+              }
+            ]
+          },
+          {
+            "name": "模型与数据 Infra",
+            "entities": [
+              {
+                "name": "Baseten",
+                "description": "推理",
+                "talk_ids": [
+                  "d1m06"
+                ]
+              },
+              {
+                "name": "Google",
+                "description": "RL 训练沙箱",
+                "talk_ids": [
+                  "d1m19"
+                ]
+              },
+              {
+                "name": "Zilliz",
+                "description": "湖库存储",
+                "talk_ids": [
+                  "d1m15"
+                ]
+              },
+              {
+                "name": "Langfuse",
+                "description": "可观测",
+                "talk_ids": [
+                  "d1m03"
+                ]
+              },
+              {
+                "name": "LanceDB",
+                "description": "多模态数据",
+                "talk_ids": [
+                  "d2m18"
+                ]
+              }
+            ]
+          }
+        ]
+      ],
+      "widths": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "资本与社区",
+      "show_in_figure": false,
+      "rows": [
+        [
+          {
+            "name": "大会、社区与投资人",
+            "entities": [
+              {
+                "name": "Shawn \"swyx\" Wang",
+                "description": "AI Engineer",
+                "talk_ids": [
+                  "d1m01"
+                ]
+              },
+              {
+                "name": "AJ、Koji（杨远骋）、曲凯（Kai Qu）、高宁（主持）",
+                "description": "WaytoAGI / 十字路口 Crossing / 42章经 / Linkloud",
+                "talk_ids": [
+                  "d1m08"
+                ]
+              },
+              {
+                "name": "AJ",
+                "description": "WaytoAGI（通往AGI之路）",
+                "talk_ids": [
+                  "offagenda_AJ_WaytoAGI"
+                ]
+              },
+              {
+                "name": "戴雨森 Yusen Dai; 王淮 Harry Wang; 刘勇 Patrick Liu（主持：比比）",
+                "description": "真格基金; 线性资本; TaoZ Capital",
+                "talk_ids": [
+                  "d2m07"
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "个人",
+      "show_in_figure": false,
+      "rows": [
+        [
+          {
+            "name": "独立讲者",
+            "entities": [
+              {
+                "name": "Ryo Lu",
+                "description": "ex-Cursor",
+                "talk_ids": [
+                  "d1m04"
+                ]
+              },
+              {
+                "name": "Sac",
+                "description": "Independent",
+                "talk_ids": [
+                  "d1b11"
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    }
+  ],
+  "footnote": "单点工具被收购：Langfuse → ClickHouse，Jina → Elastic，Pipecat → Deepgram"
+}

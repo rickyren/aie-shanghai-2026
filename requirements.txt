@@ -1,2 +1,2 @@
-markdown>=3.5
-typesafe-sdk>=0.7
+markdown==3.10
+jsonschema==4.25.1

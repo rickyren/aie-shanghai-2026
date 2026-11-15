@@ -1,46 +1,101 @@
-# AIE Shanghai 2026：从 53 场分享看 AI 行业
+# AIE Shanghai 2026 参会笔记
 
-AI Engineer Shanghai 2026（2026 年 11 月 5–6 日，上海）的现场同传转写、逐场分析和行业报告。
+AI Engineer Shanghai 2026（11 月 5–6 日）的演讲转写、摘要和参会笔记。
 
-**适合谁看**：想快速了解这次大会揭示的产业格局和趋势，或者想查某一场分享具体讲了什么的人。
-**不适合**：需要精确数字的场景。全部内容来自现场语音识别，数字没有用幻灯片或回放核对过。
+**给谁看**：查某场演讲，或了解会上讨论的产品和工程实践。只想阅读，打开下面的页面即可；后面的命令供维护仓库时使用。数字来自现场语音识别，未用幻灯片或回放核实，不适合拿来做精确比较。
 
-## 在线浏览
+## 阅读
 
-站点：https://rickyren.github.io/aie-shanghai-2026/
+- [参会笔记](https://rickyren.github.io/aie-shanghai-2026/)：参会机构、模型与应用公司的变化、四个主题的工程实践。
+- [全部演讲](https://rickyren.github.io/aie-shanghai-2026/talks.html)：53 场的摘要，可搜索、筛选和排序。
+- 单场页面：摘要、校对后的转写、原始识别文本。「查看原文」会定位到对应转写段落；段落后的链接可查看原始识别文本。
 
-站点分三层：
+## 本地构建
 
-1. **报告**（`docs/index.html`）：产业版图、核心判断，以及四个方向的结论。文中方括号里的场次编号可以点击，跳到对应的单场页。
-2. **全部分享与打标**（`docs/talks.html`）：53 场的逐场分析，包括版图位置、核心 message、骨架、框架、推出的产品、非共识观点、信号、新信息量和推销浓度评分。表格可以搜索、筛选、排序，不含原文。
-3. **单场页**（`docs/talks/<场次>.html`）：每场的分析摘要、校对后的转写全文，以及折叠起来的原始识别文本。
+需要 **Python 3.12 或更新版本**。先用 `python3 --version` 确认版本；如果系统默认的 Python 太旧，以下命令中的 `python3` 请换成新版 Python 的路径。
 
-## 目录
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python pipeline/build_site.py . out/site
+open out/site/index.html
+```
+
+构建只读取已入库数据，不调用 LLM、Jev 或联网调研。它会先校验输入，再在临时目录生成全部页面并检查站内链接。全部通过后才替换输出目录；失败时保留旧页面。`out/` 已忽略。
+
+更新仓库内的静态页面：
+
+```bash
+.venv/bin/python pipeline/build_site.py . docs
+```
+
+这只改本地文件，不会推送或发布。
+
+## 检查
+
+```bash
+.venv/bin/python pipeline/validate_data.py .
+.venv/bin/python -m unittest discover -s tests -v
+.venv/bin/python pipeline/check_site.py docs
+```
+
+检查范围包括：场次和输入文件是否齐全、转写与标签是否一一对应、V3 字段类型和评分范围、引用是否出现在标注的段落、版图是否覆盖全部场次，以及 HTML 文件和锚点链接是否有效。发现问题返回非零退出码。
+
+编辑单场分析时，可以先检查这一场：
+
+```bash
+.venv/bin/python pipeline/validate_data.py . --talk d1m05
+```
+
+CI 会运行全量校验、回归测试、重建站点，并确认提交的 `docs/` 和分析 CSV 与源数据一致。
+
+## 修改摘要或笔记
+
+当前分析格式是 **V3**。
+
+1. 修改单场分析：编辑 `data/04_analysis_v3/<file_id>.json`，字段约束见 `pipeline/schemas/talk_analysis_v3.json`（标准 JSON Schema）。
+2. 修改首页文字：编辑 `data/05_synthesis/report_body.md`。
+3. 修改机构分类或图中实体：编辑 `data/05_synthesis/landscape.json`。列表筛选和单场分类读取这份数据。首页直接嵌入同目录的定稿 `landscape.svg`，修改图中机构时需同步两个文件。`value_chain_layer` 保留分析阶段的原始标签，最终展示以 `landscape.json` 为准。
+4. 重新生成 CSV 和页面，再运行检查：
+
+```bash
+.venv/bin/python pipeline/stage4_aggregate.py .
+.venv/bin/python pipeline/build_site.py . docs
+```
+
+需要重新准备分析任务时：
+
+```bash
+.venv/bin/python pipeline/stage3_prepare.py .
+.venv/bin/python pipeline/stage4_prepare.py .
+```
+
+第一条生成逐场原文、议程元数据和校对 prompt；第二条生成 `data/04_analysis_v3/_input/*.prompt.md`。也可在命令末尾指定单场。脚本只准备输入，LLM 校对、分析和综合是独立的人工或 agent 工作，不会被这些命令自动执行。
+
+V1、V2 的 prompt、schema 和复核脚本仅为历史记录，当前构建不使用。更多脚本说明见 [pipeline/README.md](pipeline/README.md)。
+
+## 数据和复现范围
 
 | 路径 | 内容 |
 |---|---|
-| `docs/` | 生成好的静态站点，即 GitHub Pages 发布的内容 |
-| `data/agenda.csv` | 议程，共 52 场，另有 1 场议程外的分享 |
-| `data/00_segments.jsonl` | 同传逐句数据，约 9000 段，包含原文、中英译文和识别时间 |
-| `data/01_segment_labels.jsonl` | 逐句切分结果：嘉宾正文、主持串场、场务、噪声；LLM 切分，Jev 交叉校验 |
-| `data/01_talks.csv` | 每场的起止位置、时间和字数 |
-| `data/02_speakers.csv` | 讲者信息，只取讲者在台上的自述 |
-| `data/03_clean/` | 每场的校对清稿（`.md`），以及纠错和存疑记录（`.notes.json`） |
-| `data/04_analysis_v3/` | 每场的结构化分析（JSON），字段定义见 `pipeline/schemas/talk_analysis_v3.json` |
-| `data/05_synthesis/` | 报告正文、展商信息、偏宣传场次名单、剪辑数据外部调研，以及各方向逐条附原文的证据表（`sections/`） |
-| `pipeline/` | 处理脚本和 prompt |
+| `docs/` | 已生成的静态页面 |
+| `data/agenda.csv` | 52 场议程，另有 1 场议程外分享 |
+| `data/00_segments.jsonl` | 9,071 段原始转写及译文 |
+| `data/01_segment_labels.jsonl` | 正文、主持串场、场务和噪声标签，以及所属场次 |
+| `data/01_talks.csv` | 场次、讲者、段落范围和时间 |
+| `data/02_speakers.csv` | 讲者自述信息 |
+| `data/03_clean/` | 校对转写及纠错、查证和存疑记录 |
+| `data/04_analysis_v3/` | 逐场结构化分析 |
+| `data/05_synthesis/` | 首页正文、机构分类、展商资料、证据表和外部调研 |
 
-## 处理流程
+从已入库数据可以离线重建站点、汇总 CSV、校验分析，以及准备逐场校对和分析输入。以下上游步骤需要额外材料，不能仅靠本仓库从头复现：
 
-1. **统一**：合并 TransGull 同传 API 数据，用识别时间排序（`stage0_unify.py`）。
-2. **切分**：LLM 按窗口逐段标注正文、串场、场务，并对应到议程场次；TypeSafe Jev 逐段打分做交叉校验，两者一致率 97.5%（`stage1_merge.py`、`jev_segment.py`）。
-3. **校对**：逐场修正专有名词、去掉口头语，存疑的专有名词联网核实（`stage3_prepare.py` + `prompts/clean_llm.md`）。
-4. **分析**：先还原讲者意图和演讲骨架，再提取框架、产品、非共识观点和信号，过滤掉行业共识（`prompts/analyze_llm_v3.md`）。
-5. **综合**：每个方向回到原文逐条核实，结论附上原文引用（`data/05_synthesis/sections/*_evidence.md`）。
-6. **生成站点**：`python pipeline/build_site.py . docs`
+- `stage0_unify.py` 需要 `raw/refetch_20261108/` 中的 TransGull API 导出。原始导出包含分享链接凭据，不入库。
+- `stage1_merge.py` 需要原始 LLM 窗口结果 `data/seg_llm/` 和补充评测窗口 `data/eval_1h/llm_labels.json`；Jev 交叉校验还需要 `data/seg_jev/`。这些中间结果未入库。脚本会在缺少必要输入时停止，不覆盖已提交的标签。
+- `jev_segment.py` 会调用付费 API，需要单独安装 `requirements-jev.txt`，并通过环境变量或 macOS Keychain 提供 `TYPESAFE_API_KEY`。重建站点无需安装它，也无需凭据。
 
-## 说明
+## 内容说明
 
-- 原始抓取数据不在仓库里，因为里面有分享链接的凭据。`stage0_unify.py` 需要这份数据才能重跑；其他步骤都可以从 `data/` 开始。
-- 转写内容的版权属于各位讲者和大会主办方，本仓库只用于学习和研究。如果有讲者希望撤下内容，请提 issue。
-- 「（推断）」标记的是分析者的推断，不是讲者原话。展商信息来自展商官网和现场物料，展商没有上台演讲。
+转写版权属于讲者和大会主办方，本仓库用于学习和研究。讲者如需撤下内容，可提 issue。
+
+「（推断）」是整理者的判断，不是讲者原话。展商资料来自官网和现场物料，展商没有上台演讲。讲者阵容由主办方和赞助商决定，本页不能代表整个行业。

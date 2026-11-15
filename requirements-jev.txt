@@ -1,0 +1,3 @@
+# Optional: only needed to call the Jev API, not to build or validate the site.
+-r requirements.txt
+typesafe-sdk>=0.7,<1

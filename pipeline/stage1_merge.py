@@ -52,7 +52,13 @@ def coverage_note(segs, agenda_row):
 
 def load_windows(root):
     out = []
-    for f in sorted((root / "data/seg_llm").glob("w*/llm_labels.json")):
+    windows = sorted((root / "data/seg_llm").glob("w*/llm_labels.json"))
+    missing = [path for _, _, path, _, _ in EXTRA_WINDOWS if not (root / path).is_file()]
+    if not windows or missing:
+        raise SystemExit("Stage 1 needs the original LLM window labels and eval labels, which are not included in this repository. "
+                         "Restore data/seg_llm/ and data/eval_1h/ to regenerate segmentation. "
+                         "To rebuild the site, use the committed data/01_segment_labels.jsonl and run build_site.py instead.")
+    for f in windows:
         wdir = f.parent
         first = wdir.joinpath("window.txt").open(encoding="utf-8").readline()
         prompt = wdir.joinpath("prompt.md").read_text(encoding="utf-8")
@@ -87,6 +93,8 @@ def main(root):
                     label[sid] = (sp["type"], sp.get("session_id") if sp["type"] == "talk" else None)
                     window_of[sid] = wid
     missing = [s["seg_id"] for s in segs if s["seg_id"] not in label]
+    if missing:
+        raise SystemExit(f"Refusing to overwrite segmentation: {len(missing)} segments are unlabelled.")
 
     # per-segment table with the Jev cross-check
     rows = []
@@ -103,6 +111,7 @@ def main(root):
                      "session_id": sess, "window": window_of.get(s["seg_id"]),
                      "jev_type": j["pred_type"] if j else None,
                      "jev_p_talk": round(p_talk, 3) if p_talk is not None else None, "flag": flag})
+    (root / "out").mkdir(exist_ok=True)
     with (root / "data/01_segment_labels.jsonl").open("w", encoding="utf-8") as f:
         for r in rows:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
