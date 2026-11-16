@@ -31,160 +31,174 @@ tr.row:hover{background:#fafbfc} td .more{display:none} tr.open td .more{display
 <p>从现场公司的业务看，可以先分清两条“掘金”路线：一条做模型，提供模型能力；另一条做应用，把模型能力用到具体场景，向用户交付产品或服务。</p>
 <p>卖数据、做训练与推理服务，以及提供搜索、沙箱、存储等 Agent Infra 的公司，更像是为这两条路线“卖水、卖铲子”：提供所需的数据、工具和基础设施。</p>
 <p>图中“企业内部落地”的公司则是使用方，把 AI 用进自己的业务。</p>
-<svg viewBox="-4 -4 1008 930" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'PingFang SC','Helvetica Neue',sans-serif" style="width:100%;height:auto">
-<style>
-.ls-layer{fill:#f6f7f9}
-.ls-card{fill:#fff;stroke:#e3e6ea}
-.ls-t{fill:#f1f4f9}
-.ls-x{fill:#fff;stroke:#c9cfd6;stroke-dasharray:3 2.5}
-.ls-n{font-size:13px;font-weight:500;fill:#1f2328}
-.ls-xn{font-size:13px;font-weight:500;fill:#8c959f}
-.ls-d{font-size:11.5px;font-weight:400;fill:#6e7781}
-.ls-xd{font-size:11.5px;font-weight:400;fill:#8c959f}
-.ls-gt{font-size:13px;font-weight:600;fill:#1f2328}
-.ls-lab{font-size:15px;font-weight:700;fill:#2f5bd3}
-.ls-sub{font-size:12.5px;fill:#57606a}
-.ls-note{font-size:12px;fill:#57606a}
-</style>
-
+<svg viewBox="-4 -4 1008 900" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'PingFang SC','Helvetica Neue',sans-serif" style="width:100%;height:auto">
+<defs><filter id="lv-sh" x="-5%" y="-10%" width="110%" height="130%"><feDropShadow dx="0" dy="1" stdDeviation="1.3" flood-color="#1b2a4a" flood-opacity="0.07"/></filter><linearGradient id="lv-gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
 <!-- ===== 应用 ===== -->
-<rect class="ls-layer" x="132" y="0" width="868" height="174" rx="12"/>
-<text class="ls-lab" x="0" y="36">应用</text>
+<rect x="0.5" y="0.5" width="999" height="177" rx="14" fill="#f7f6fd" stroke="#eae7f9"/>
+<text x="54" y="38" font-size="15" font-weight="700" fill="#1b2230">应用</text>
 
-<rect class="ls-card" x="144" y="12" width="132" height="150" rx="8"/>
-<text class="ls-gt" x="158" y="36">通用 / 个人 agent</text>
-<rect class="ls-t" x="158" y="48" width="61.5" height="28" rx="6"/><text class="ls-n" x="169" y="66.5">Manus</text>
-<rect class="ls-t" x="158" y="84" width="84.2" height="28" rx="6"/><text class="ls-n" x="169" y="102.5">OpenClaw</text>
-<rect class="ls-t" x="158" y="120" width="75" height="28" rx="6"/><text class="ls-n" x="169" y="138.5">YouMind</text>
+<rect x="160.0" y="14" width="143.2" height="150" rx="10" fill="#fff" stroke="#eae7f9" filter="url(#lv-sh)"/>
+<rect x="160.0" y="28.5" width="3" height="13" rx="1.5" fill="#6c5dd3"/>
+<text class="ls-gt" x="174.0" y="39" font-size="13" font-weight="600" fill="#1b2230">通用 / 个人 agent</text>
+<rect x="174.0" y="51" width="62.8" height="28" rx="7" fill="#f0eefb"/><text class="ls-n" x="185.0" y="69.5" font-size="13" font-weight="500" fill="#1b2230">Manus</text>
+<rect x="174.0" y="87" width="84.8" height="28" rx="7" fill="#f0eefb"/><text class="ls-n" x="185.0" y="105.5" font-size="13" font-weight="500" fill="#1b2230">OpenClaw</text>
+<rect x="174.0" y="123" width="76.6" height="28" rx="7" fill="#f0eefb"/><text class="ls-n" x="185.0" y="141.5" font-size="13" font-weight="500" fill="#1b2230">YouMind</text>
 
-<rect class="ls-card" x="286" y="12" width="410" height="150" rx="8"/>
-<text class="ls-gt" x="300" y="36">垂直行业</text>
-<rect class="ls-t" x="300" y="48" width="95.7" height="28" rx="6"/><text class="ls-n" x="311" y="66.5">Harvey<tspan class="ls-d" dx="6">法律</tspan></text>
-<rect class="ls-t" x="403.7" y="48" width="145.1" height="28" rx="6"/><text class="ls-n" x="414.7" y="66.5">AhaCreator<tspan class="ls-d" dx="6">达人营销</tspan></text>
-<rect class="ls-t" x="556.8" y="48" width="119.6" height="28" rx="6"/><text class="ls-n" x="567.8" y="66.5">Cookiy<tspan class="ls-d" dx="6">用户研究</tspan></text>
-<rect class="ls-t" x="300" y="84" width="100.6" height="28" rx="6"/><text class="ls-n" x="311" y="102.5">HeyGen<tspan class="ls-d" dx="6">视频</tspan></text>
-<rect class="ls-t" x="408.6" y="84" width="106.5" height="28" rx="6"/><text class="ls-n" x="419.6" y="102.5">CHILING<tspan class="ls-d" dx="6">美妆</tspan></text>
-<rect class="ls-t" x="523.1" y="84" width="121.3" height="28" rx="6"/><text class="ls-n" x="534.1" y="102.5">KouShi<tspan class="ls-d" dx="6">语言学习</tspan></text>
-<rect class="ls-x" x="300" y="120" width="133.2" height="28" rx="6"/><text class="ls-xn" x="311" y="138.5">HellYeah<tspan class="ls-xd" dx="6">广告投放</tspan></text>
+<rect x="313.2" y="14" width="376.2" height="150" rx="10" fill="#fff" stroke="#eae7f9" filter="url(#lv-sh)"/>
+<rect x="313.2" y="28.5" width="3" height="13" rx="1.5" fill="#6c5dd3"/>
+<text class="ls-gt" x="327.2" y="39" font-size="13" font-weight="600" fill="#1b2230">垂直行业</text>
+<rect x="327.2" y="51" width="93.3" height="28" rx="7" fill="#f0eefb"/><text class="ls-n" x="338.2" y="69.5" font-size="13" font-weight="500" fill="#1b2230">Harvey<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">法律</tspan></text>
+<rect x="428.6" y="51" width="116.4" height="28" rx="7" fill="#f0eefb"/><text class="ls-n" x="439.6" y="69.5" font-size="13" font-weight="500" fill="#1b2230">Cookiy<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">用户研究</tspan></text>
+<rect x="553.0" y="51" width="99.2" height="28" rx="7" fill="#f0eefb"/><text class="ls-n" x="564.0" y="69.5" font-size="13" font-weight="500" fill="#1b2230">HeyGen<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">视频</tspan></text>
+<rect x="327.2" y="87" width="144.0" height="28" rx="7" fill="#f0eefb"/><text class="ls-n" x="338.2" y="105.5" font-size="13" font-weight="500" fill="#1b2230">AhaCreator<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">达人营销</tspan></text>
+<rect x="479.2" y="87" width="117.8" height="28" rx="7" fill="#f0eefb"/><text class="ls-n" x="490.2" y="105.5" font-size="13" font-weight="500" fill="#1b2230">KouShi<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">语言学习</tspan></text>
+<rect x="327.2" y="123" width="103.5" height="28" rx="7" fill="#f0eefb"/><text class="ls-n" x="338.2" y="141.5" font-size="13" font-weight="500" fill="#1b2230">CHILING<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">美妆</tspan></text>
+<rect x="438.8" y="123" width="128.4" height="28" rx="7" fill="#f8f6fd" stroke="#b6aee9" stroke-dasharray="3 2.5"/><text class="ls-xn" x="449.8" y="141.5" font-size="13" font-weight="500" fill="#8d96a5">HellYeah<tspan dx="6" font-size="11.5" font-weight="400" fill="#8d96a5">广告投放</tspan></text>
 
-<rect class="ls-card" x="706" y="12" width="282" height="150" rx="8"/>
-<text class="ls-gt" x="720" y="36">企业内部落地</text>
-<rect class="ls-t" x="720" y="48" width="96.8" height="28" rx="6"/><text class="ls-n" x="731" y="66.5">Optiver<tspan class="ls-d" dx="6">交易</tspan></text>
-<rect class="ls-t" x="824.8" y="48" width="138.4" height="28" rx="6"/><text class="ls-n" x="835.8" y="66.5">Techcombank<tspan class="ls-d" dx="6">银行</tspan></text>
-<rect class="ls-t" x="720" y="84" width="91.4" height="28" rx="6"/><text class="ls-n" x="731" y="102.5">Agoda<tspan class="ls-d" dx="6">旅游</tspan></text>
-<rect class="ls-t" x="819.4" y="84" width="111.9" height="28" rx="6"/><text class="ls-n" x="830.4" y="102.5">Instagram<tspan class="ls-d" dx="6">社交</tspan></text>
-<rect class="ls-t" x="720" y="120" width="93" height="28" rx="6"/><text class="ls-n" x="731" y="138.5">HICAP<tspan class="ls-d" dx="6">制造</tspan></text>
-<rect class="ls-t" x="821" y="120" width="114.1" height="28" rx="6"/><text class="ls-n" x="832" y="138.5">Data4Life<tspan class="ls-d" dx="6">医疗</tspan></text>
+<rect x="699.4" y="14" width="286.6" height="150" rx="10" fill="#fff" stroke="#eae7f9" filter="url(#lv-sh)"/>
+<rect x="699.4" y="28.5" width="3" height="13" rx="1.5" fill="#6c5dd3"/>
+<text class="ls-gt" x="713.4" y="39" font-size="13" font-weight="600" fill="#1b2230">企业内部落地</text>
+<rect x="713.4" y="51" width="95.7" height="28" rx="7" fill="#f0eefb"/><text class="ls-n" x="724.4" y="69.5" font-size="13" font-weight="500" fill="#1b2230">Optiver<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">交易</tspan></text>
+<rect x="817.1" y="51" width="137.2" height="28" rx="7" fill="#f0eefb"/><text class="ls-n" x="828.1" y="69.5" font-size="13" font-weight="500" fill="#1b2230">Techcombank<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">银行</tspan></text>
+<rect x="713.4" y="87" width="90.5" height="28" rx="7" fill="#f0eefb"/><text class="ls-n" x="724.4" y="105.5" font-size="13" font-weight="500" fill="#1b2230">Agoda<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">旅游</tspan></text>
+<rect x="811.9" y="87" width="112.0" height="28" rx="7" fill="#f0eefb"/><text class="ls-n" x="822.9" y="105.5" font-size="13" font-weight="500" fill="#1b2230">Instagram<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">社交</tspan></text>
+<rect x="713.4" y="123" width="90.5" height="28" rx="7" fill="#f0eefb"/><text class="ls-n" x="724.4" y="141.5" font-size="13" font-weight="500" fill="#1b2230">HICAP<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">制造</tspan></text>
+<rect x="811.9" y="123" width="111.0" height="28" rx="7" fill="#f0eefb"/><text class="ls-n" x="822.9" y="141.5" font-size="13" font-weight="500" fill="#1b2230">Data4Life<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">医疗</tspan></text>
 
 <!-- ===== Agent Infra ===== -->
-<rect class="ls-layer" x="132" y="190" width="868" height="314" rx="12"/>
-<text class="ls-lab" x="0" y="212">Agent Infra</text>
-<rect x="1" y="224" width="2" height="268" fill="#2f5bd3" opacity="0.3"/>
-<text class="ls-sub" x="14" y="238">外部连接</text>
-<text class="ls-sub" x="14" y="350">框架与治理</text>
-<text class="ls-sub" x="14" y="438">运行底座</text>
+<rect x="0.5" y="192.5" width="999" height="277" rx="14" fill="#f4f7fd" stroke="#e2eaf9"/>
+<text x="54" y="230" font-size="15" font-weight="700" fill="#1b2230">Agent Infra</text>
 
-<rect class="ls-card" x="144" y="202" width="276" height="114" rx="8"/>
-<text class="ls-gt" x="158" y="226">搜索与数据 API</text>
-<rect class="ls-t" x="158" y="238" width="75" height="28" rx="6"/><text class="ls-n" x="169" y="256.5">You.com</text>
-<rect class="ls-t" x="241" y="238" width="46.3" height="28" rx="6"/><text class="ls-n" x="252" y="256.5">Exa</text>
-<rect class="ls-t" x="295.3" y="238" width="50.7" height="28" rx="6"/><text class="ls-n" x="306.3" y="256.5">Jina</text>
-<rect class="ls-x" x="158" y="274" width="58.2" height="28" rx="6"/><text class="ls-xn" x="169" y="292.5">Brave</text>
-<rect class="ls-x" x="224.2" y="274" width="62.6" height="28" rx="6"/><text class="ls-xn" x="235.2" y="292.5">智慧芽</text>
+<rect x="160.0" y="230" width="286.4" height="114" rx="10" fill="#fff" stroke="#e2eaf9" filter="url(#lv-sh)"/>
+<rect x="160.0" y="244.5" width="3" height="13" rx="1.5" fill="#2f6de0"/>
+<text class="ls-gt" x="174.0" y="255" font-size="13" font-weight="600" fill="#1b2230">搜索与数据 API</text>
+<rect x="174.0" y="267" width="76.1" height="28" rx="7" fill="#eaf1fd"/><text class="ls-n" x="185.0" y="285.5" font-size="13" font-weight="500" fill="#1b2230">You.com</text>
+<rect x="258.1" y="267" width="44.6" height="28" rx="7" fill="#eaf1fd"/><text class="ls-n" x="269.1" y="285.5" font-size="13" font-weight="500" fill="#1b2230">Exa</text>
+<rect x="310.7" y="267" width="47.3" height="28" rx="7" fill="#eaf1fd"/><text class="ls-n" x="321.7" y="285.5" font-size="13" font-weight="500" fill="#1b2230">Jina</text>
+<rect x="174.0" y="303" width="57.0" height="28" rx="7" fill="#f4f8fe" stroke="#97b6f0" stroke-dasharray="3 2.5"/><text class="ls-xn" x="185.0" y="321.5" font-size="13" font-weight="500" fill="#8d96a5">Brave</text>
+<rect x="239.0" y="303" width="61.0" height="28" rx="7" fill="#f4f8fe" stroke="#97b6f0" stroke-dasharray="3 2.5"/><text class="ls-xn" x="250.0" y="321.5" font-size="13" font-weight="500" fill="#8d96a5">智慧芽</text>
 
-<rect class="ls-card" x="430" y="202" width="276" height="114" rx="8"/>
-<text class="ls-gt" x="444" y="226">支付与交易</text>
-<rect class="ls-t" x="444" y="238" width="50.7" height="28" rx="6"/><text class="ls-n" x="455" y="256.5">Visa</text>
-<rect class="ls-t" x="502.7" y="238" width="85.3" height="28" rx="6"/><text class="ls-n" x="513.7" y="256.5">masons.ai</text>
-<rect class="ls-x" x="596" y="238" width="59.3" height="28" rx="6"/><text class="ls-xn" x="607" y="256.5">Stripe</text>
-<rect class="ls-x" x="444" y="274" width="61.5" height="28" rx="6"/><text class="ls-xn" x="455" y="292.5">Adyen</text>
-<rect class="ls-x" x="513.5" y="274" width="55" height="28" rx="6"/><text class="ls-xn" x="524.5" y="292.5">Clink</text>
+<rect x="456.4" y="230" width="291.1" height="114" rx="10" fill="#fff" stroke="#e2eaf9" filter="url(#lv-sh)"/>
+<rect x="456.4" y="244.5" width="3" height="13" rx="1.5" fill="#2f6de0"/>
+<text class="ls-gt" x="470.4" y="255" font-size="13" font-weight="600" fill="#1b2230">支付与交易</text>
+<rect x="470.4" y="267" width="48.2" height="28" rx="7" fill="#eaf1fd"/><text class="ls-n" x="481.4" y="285.5" font-size="13" font-weight="500" fill="#1b2230">Visa</text>
+<rect x="526.6" y="267" width="84.0" height="28" rx="7" fill="#eaf1fd"/><text class="ls-n" x="537.6" y="285.5" font-size="13" font-weight="500" fill="#1b2230">masons.ai</text>
+<rect x="470.4" y="303" width="58.6" height="28" rx="7" fill="#f4f8fe" stroke="#97b6f0" stroke-dasharray="3 2.5"/><text class="ls-xn" x="481.4" y="321.5" font-size="13" font-weight="500" fill="#8d96a5">Stripe</text>
+<rect x="536.9" y="303" width="60.1" height="28" rx="7" fill="#f4f8fe" stroke="#97b6f0" stroke-dasharray="3 2.5"/><text class="ls-xn" x="547.9" y="321.5" font-size="13" font-weight="500" fill="#8d96a5">Adyen</text>
+<rect x="605.0" y="303" width="52.9" height="28" rx="7" fill="#f4f8fe" stroke="#97b6f0" stroke-dasharray="3 2.5"/><text class="ls-xn" x="616.0" y="321.5" font-size="13" font-weight="500" fill="#8d96a5">Clink</text>
 
-<rect class="ls-card" x="716" y="202" width="272" height="114" rx="8"/>
-<text class="ls-gt" x="730" y="226">企业知识与本体</text>
-<rect class="ls-t" x="730" y="238" width="75" height="28" rx="6"/><text class="ls-n" x="741" y="256.5">DataHub</text>
-<rect class="ls-t" x="813" y="238" width="58.2" height="28" rx="6"/><text class="ls-n" x="824" y="256.5">Datus</text>
-<rect class="ls-t" x="879.2" y="238" width="82.6" height="28" rx="6"/><text class="ls-n" x="890.2" y="256.5">Nowledge</text>
+<rect x="757.4" y="230" width="228.6" height="114" rx="10" fill="#fff" stroke="#e2eaf9" filter="url(#lv-sh)"/>
+<rect x="757.4" y="244.5" width="3" height="13" rx="1.5" fill="#2f6de0"/>
+<text class="ls-gt" x="771.4" y="255" font-size="13" font-weight="600" fill="#1b2230">企业知识与本体</text>
+<rect x="771.4" y="267" width="75.6" height="28" rx="7" fill="#eaf1fd"/><text class="ls-n" x="782.4" y="285.5" font-size="13" font-weight="500" fill="#1b2230">DataHub</text>
+<rect x="855.0" y="267" width="57.7" height="28" rx="7" fill="#eaf1fd"/><text class="ls-n" x="866.0" y="285.5" font-size="13" font-weight="500" fill="#1b2230">Datus</text>
+<rect x="771.4" y="303" width="82.8" height="28" rx="7" fill="#eaf1fd"/><text class="ls-n" x="782.4" y="321.5" font-size="13" font-weight="500" fill="#1b2230">Nowledge</text>
+<text x="161.0" y="220" font-size="12" font-weight="600" fill="#2f6de0">外部连接</text>
+<line x1="219.0" y1="216" x2="986.0" y2="216" stroke="#2f6de0" stroke-opacity="0.22"/>
 
-<rect class="ls-card" x="144" y="326" width="276" height="78" rx="8"/>
-<text class="ls-gt" x="158" y="350">框架与平台</text>
-<rect class="ls-t" x="158" y="362" width="47.4" height="28" rx="6"/><text class="ls-n" x="169" y="380.5">Dify</text>
-<rect class="ls-t" x="213.4" y="362" width="70.1" height="28" rx="6"/><text class="ls-n" x="224.4" y="380.5">Pipecat</text>
+<rect x="160.0" y="378" width="166.6" height="78" rx="10" fill="#fff" stroke="#e2eaf9" filter="url(#lv-sh)"/>
+<rect x="160.0" y="392.5" width="3" height="13" rx="1.5" fill="#2f6de0"/>
+<text class="ls-gt" x="174.0" y="403" font-size="13" font-weight="600" fill="#1b2230">框架与平台</text>
+<rect x="174.0" y="415" width="46.5" height="28" rx="7" fill="#eaf1fd"/><text class="ls-n" x="185.0" y="433.5" font-size="13" font-weight="500" fill="#1b2230">Dify</text>
+<rect x="228.5" y="415" width="68.4" height="28" rx="7" fill="#eaf1fd"/><text class="ls-n" x="239.5" y="433.5" font-size="13" font-weight="500" fill="#1b2230">Pipecat</text>
 
-<rect class="ls-card" x="430" y="326" width="558" height="78" rx="8"/>
-<text class="ls-gt" x="444" y="350">身份与权限</text>
-<rect class="ls-t" x="444" y="362" width="78.8" height="28" rx="6"/><text class="ls-n" x="455" y="380.5">Microsoft</text>
-<rect class="ls-t" x="530.8" y="362" width="86.9" height="28" rx="6"/><text class="ls-n" x="541.8" y="380.5">1Password</text>
+<rect x="336.6" y="378" width="225.4" height="78" rx="10" fill="#fff" stroke="#e2eaf9" filter="url(#lv-sh)"/>
+<rect x="336.6" y="392.5" width="3" height="13" rx="1.5" fill="#2f6de0"/>
+<text class="ls-gt" x="350.6" y="403" font-size="13" font-weight="600" fill="#1b2230">身份与权限</text>
+<rect x="350.6" y="415" width="81.2" height="28" rx="7" fill="#eaf1fd"/><text class="ls-n" x="361.6" y="433.5" font-size="13" font-weight="500" fill="#1b2230">Microsoft</text>
+<rect x="439.7" y="415" width="87.1" height="28" rx="7" fill="#eaf1fd"/><text class="ls-n" x="450.7" y="433.5" font-size="13" font-weight="500" fill="#1b2230">1Password</text>
+<text x="161.0" y="368" font-size="12" font-weight="600" fill="#2f6de0">框架与治理</text>
+<line x1="231.0" y1="364" x2="562.0" y2="364" stroke="#2f6de0" stroke-opacity="0.22"/>
 
-<rect class="ls-card" x="144" y="414" width="276" height="78" rx="8"/>
-<text class="ls-gt" x="158" y="438">模型网关</text>
-<rect class="ls-x" x="158" y="450" width="73.4" height="28" rx="6"/><text class="ls-xn" x="169" y="468.5">Raytone</text>
+<rect x="580.0" y="378" width="110.8" height="78" rx="10" fill="#fff" stroke="#e2eaf9" filter="url(#lv-sh)"/>
+<rect x="580.0" y="392.5" width="3" height="13" rx="1.5" fill="#2f6de0"/>
+<text class="ls-gt" x="594.0" y="403" font-size="13" font-weight="600" fill="#1b2230">模型网关</text>
+<rect x="594.0" y="415" width="72.4" height="28" rx="7" fill="#f4f8fe" stroke="#97b6f0" stroke-dasharray="3 2.5"/><text class="ls-xn" x="605.0" y="433.5" font-size="13" font-weight="500" fill="#8d96a5">Raytone</text>
 
-<rect class="ls-card" x="430" y="414" width="276" height="78" rx="8"/>
-<text class="ls-gt" x="444" y="438">沙箱</text>
-<rect class="ls-t" x="444" y="450" width="73.4" height="28" rx="6"/><text class="ls-n" x="455" y="468.5">Daytona</text>
+<rect x="700.8" y="378" width="111.2" height="78" rx="10" fill="#fff" stroke="#e2eaf9" filter="url(#lv-sh)"/>
+<rect x="700.8" y="392.5" width="3" height="13" rx="1.5" fill="#2f6de0"/>
+<text class="ls-gt" x="714.8" y="403" font-size="13" font-weight="600" fill="#1b2230">沙箱</text>
+<rect x="714.8" y="415" width="72.8" height="28" rx="7" fill="#eaf1fd"/><text class="ls-n" x="725.8" y="433.5" font-size="13" font-weight="500" fill="#1b2230">Daytona</text>
 
-<rect class="ls-card" x="716" y="414" width="272" height="78" rx="8"/>
-<text class="ls-gt" x="730" y="438">存储</text>
-<rect class="ls-t" x="730" y="450" width="53.9" height="28" rx="6"/><text class="ls-n" x="741" y="468.5">TiDB</text>
-<rect class="ls-x" x="791.9" y="450" width="61.5" height="28" rx="6"/><text class="ls-xn" x="802.9" y="468.5">Tonbo</text>
+<rect x="822.0" y="378" width="164.0" height="78" rx="10" fill="#fff" stroke="#e2eaf9" filter="url(#lv-sh)"/>
+<rect x="822.0" y="392.5" width="3" height="13" rx="1.5" fill="#2f6de0"/>
+<text class="ls-gt" x="836.0" y="403" font-size="13" font-weight="600" fill="#1b2230">存储</text>
+<rect x="836.0" y="415" width="51.8" height="28" rx="7" fill="#eaf1fd"/><text class="ls-n" x="847.0" y="433.5" font-size="13" font-weight="500" fill="#1b2230">TiDB</text>
+<rect x="895.8" y="415" width="60.8" height="28" rx="7" fill="#f4f8fe" stroke="#97b6f0" stroke-dasharray="3 2.5"/><text class="ls-xn" x="906.8" y="433.5" font-size="13" font-weight="500" fill="#8d96a5">Tonbo</text>
+<text x="581.0" y="368" font-size="12" font-weight="600" fill="#2f6de0">运行底座</text>
+<line x1="639.0" y1="364" x2="986.0" y2="364" stroke="#2f6de0" stroke-opacity="0.22"/>
 
 <!-- ===== 模型 ===== -->
-<rect class="ls-layer" x="132" y="520" width="868" height="174" rx="12"/>
-<text class="ls-lab" x="0" y="556">模型</text>
+<rect x="0.5" y="484.5" width="999" height="177" rx="14" fill="#f2f9fa" stroke="#dbeff2"/>
+<text x="54" y="522" font-size="15" font-weight="700" fill="#1b2230">模型</text>
 
-<rect class="ls-card" x="144" y="532" width="170" height="150" rx="8"/>
-<text class="ls-gt" x="158" y="556">通用 LLM</text>
-<rect class="ls-t" x="158" y="568" width="75" height="28" rx="6"/><text class="ls-n" x="169" y="586.5">StepFun</text>
-<rect class="ls-t" x="241" y="568" width="49" height="28" rx="6"/><text class="ls-n" x="252" y="586.5">Kimi</text>
-<rect class="ls-t" x="158" y="604" width="71.8" height="28" rx="6"/><text class="ls-n" x="169" y="622.5">MiniMax</text>
+<rect x="160.0" y="498" width="129.5" height="150" rx="10" fill="#fff" stroke="#dbeff2" filter="url(#lv-sh)"/>
+<rect x="160.0" y="512.5" width="3" height="13" rx="1.5" fill="#0d94a3"/>
+<text class="ls-gt" x="174.0" y="523" font-size="13" font-weight="600" fill="#1b2230">通用 LLM</text>
+<rect x="174.0" y="535" width="72.8" height="28" rx="7" fill="#e3f3f6"/><text class="ls-n" x="185.0" y="553.5" font-size="13" font-weight="500" fill="#1b2230">StepFun</text>
+<rect x="174.0" y="571" width="49.7" height="28" rx="7" fill="#e3f3f6"/><text class="ls-n" x="185.0" y="589.5" font-size="13" font-weight="500" fill="#1b2230">Kimi</text>
+<rect x="174.0" y="607" width="74.2" height="28" rx="7" fill="#e3f3f6"/><text class="ls-n" x="185.0" y="625.5" font-size="13" font-weight="500" fill="#1b2230">MiniMax</text>
 
-<rect class="ls-card" x="324" y="532" width="190" height="150" rx="8"/>
-<text class="ls-gt" x="338" y="556">端侧 / 决策模型</text>
-<rect class="ls-t" x="338" y="568" width="116.4" height="28" rx="6"/><text class="ls-n" x="349" y="586.5">Liquid<tspan class="ls-d" dx="6">决策模型</tspan></text>
-<rect class="ls-x" x="338" y="604" width="137.5" height="28" rx="6"/><text class="ls-xn" x="349" y="622.5">AutoTrust<tspan class="ls-xd" dx="6">决策模型</tspan></text>
-<rect class="ls-t" x="338" y="640" width="129.9" height="28" rx="6"/><text class="ls-n" x="349" y="658.5">AutoArk<tspan class="ls-d" dx="6">端侧 LLM</tspan></text>
+<rect x="299.5" y="498" width="206.0" height="150" rx="10" fill="#fff" stroke="#dbeff2" filter="url(#lv-sh)"/>
+<rect x="299.5" y="512.5" width="3" height="13" rx="1.5" fill="#0d94a3"/>
+<text class="ls-gt" x="313.5" y="523" font-size="13" font-weight="600" fill="#1b2230">端侧 / 决策模型</text>
+<rect x="313.5" y="535" width="111.8" height="28" rx="7" fill="#e3f3f6"/><text class="ls-n" x="324.5" y="553.5" font-size="13" font-weight="500" fill="#1b2230">Liquid<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">决策模型</tspan></text>
+<rect x="313.5" y="571" width="127.9" height="28" rx="7" fill="#e3f3f6"/><text class="ls-n" x="324.5" y="589.5" font-size="13" font-weight="500" fill="#1b2230">AutoArk<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">端侧 LLM</tspan></text>
+<rect x="313.5" y="607" width="134.5" height="28" rx="7" fill="#f1f9fa" stroke="#86cad1" stroke-dasharray="3 2.5"/><text class="ls-xn" x="324.5" y="625.5" font-size="13" font-weight="500" fill="#8d96a5">AutoTrust<tspan dx="6" font-size="11.5" font-weight="400" fill="#8d96a5">决策模型</tspan></text>
 
-<rect class="ls-card" x="524" y="532" width="190" height="150" rx="8"/>
-<text class="ls-gt" x="538" y="556">生成模型</text>
-<rect class="ls-t" x="538" y="568" width="136.1" height="28" rx="6"/><text class="ls-n" x="549" y="586.5">Tripo<tspan class="ls-d" dx="6">3D、实时视频</tspan></text>
-<rect class="ls-x" x="538" y="604" width="156.5" height="28" rx="6"/><text class="ls-xn" x="549" y="622.5">Alaya Lab<tspan class="ls-xd" dx="6">AI 游戏引擎</tspan></text>
+<rect x="515.5" y="498" width="224.2" height="150" rx="10" fill="#fff" stroke="#dbeff2" filter="url(#lv-sh)"/>
+<rect x="515.5" y="512.5" width="3" height="13" rx="1.5" fill="#0d94a3"/>
+<text class="ls-gt" x="529.5" y="523" font-size="13" font-weight="600" fill="#1b2230">生成模型</text>
+<rect x="529.5" y="535" width="132.4" height="28" rx="7" fill="#e3f3f6"/><text class="ls-n" x="540.5" y="553.5" font-size="13" font-weight="500" fill="#1b2230">Tripo<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">3D、实时视频</tspan></text>
+<rect x="529.5" y="571" width="148.9" height="28" rx="7" fill="#f1f9fa" stroke="#86cad1" stroke-dasharray="3 2.5"/><text class="ls-xn" x="540.5" y="589.5" font-size="13" font-weight="500" fill="#8d96a5">Alaya Lab<tspan dx="6" font-size="11.5" font-weight="400" fill="#8d96a5">AI 游戏引擎</tspan></text>
 
-<rect class="ls-card" x="724" y="532" width="264" height="150" rx="8"/>
-<text class="ls-gt" x="738" y="556">具身与世界模型</text>
-<rect class="ls-t" x="738" y="568" width="49" height="28" rx="6"/><text class="ls-n" x="749" y="586.5">穹彻</text>
-<rect class="ls-t" x="795" y="568" width="76.1" height="28" rx="6"/><text class="ls-n" x="806" y="586.5">未来不远</text>
-<rect class="ls-t" x="879.1" y="568" width="58.8" height="28" rx="6"/><text class="ls-n" x="890.1" y="586.5">DYNA</text>
-<rect class="ls-t" x="738" y="604" width="49" height="28" rx="6"/><text class="ls-n" x="749" y="622.5">墨甲</text>
-<rect class="ls-t" x="795" y="604" width="76.1" height="28" rx="6"/><text class="ls-n" x="806" y="622.5">数耀量生</text>
-<rect class="ls-t" x="879.1" y="604" width="91.2" height="28" rx="6"/><text class="ls-n" x="890.1" y="622.5">World Labs</text>
+<rect x="749.8" y="498" width="236.2" height="150" rx="10" fill="#fff" stroke="#dbeff2" filter="url(#lv-sh)"/>
+<rect x="749.8" y="512.5" width="3" height="13" rx="1.5" fill="#0d94a3"/>
+<text class="ls-gt" x="763.8" y="523" font-size="13" font-weight="600" fill="#1b2230">具身与世界模型</text>
+<rect x="763.8" y="535" width="48.0" height="28" rx="7" fill="#e3f3f6"/><text class="ls-n" x="774.8" y="553.5" font-size="13" font-weight="500" fill="#1b2230">穹彻</text>
+<rect x="819.8" y="535" width="74.0" height="28" rx="7" fill="#e3f3f6"/><text class="ls-n" x="830.8" y="553.5" font-size="13" font-weight="500" fill="#1b2230">未来不远</text>
+<rect x="763.8" y="571" width="48.0" height="28" rx="7" fill="#e3f3f6"/><text class="ls-n" x="774.8" y="589.5" font-size="13" font-weight="500" fill="#1b2230">墨甲</text>
+<rect x="819.8" y="571" width="74.0" height="28" rx="7" fill="#e3f3f6"/><text class="ls-n" x="830.8" y="589.5" font-size="13" font-weight="500" fill="#1b2230">数耀量生</text>
+<rect x="763.8" y="607" width="58.5" height="28" rx="7" fill="#e3f3f6"/><text class="ls-n" x="774.8" y="625.5" font-size="13" font-weight="500" fill="#1b2230">DYNA</text>
+<rect x="830.2" y="607" width="91.9" height="28" rx="7" fill="#e3f3f6"/><text class="ls-n" x="841.2" y="625.5" font-size="13" font-weight="500" fill="#1b2230">World Labs</text>
 
 <!-- ===== 数据与训练 ===== -->
-<rect class="ls-layer" x="132" y="710" width="868" height="174" rx="12"/>
-<text class="ls-lab" x="0" y="746">数据与训练</text>
+<rect x="0.5" y="676.5" width="999" height="177" rx="14" fill="#f3f9f6" stroke="#ddefe5"/>
+<text x="54" y="714" font-size="15" font-weight="700" fill="#1b2230">数据与训练</text>
 
-<rect class="ls-card" x="144" y="722" width="417" height="150" rx="8"/>
-<text class="ls-gt" x="158" y="746">评测与 RL 数据</text>
-<rect class="ls-t" x="158" y="758" width="186.2" height="28" rx="6"/><text class="ls-n" x="169" y="776.5">Arena<tspan class="ls-d" dx="6">agent 轨迹 → RL 环境</tspan></text>
-<rect class="ls-t" x="352.2" y="758" width="152.8" height="28" rx="6"/><text class="ls-n" x="363.2" y="776.5">You.com<tspan class="ls-d" dx="6">搜索类 RL 题</tspan></text>
-<rect class="ls-t" x="158" y="794" width="132.1" height="28" rx="6"/><text class="ls-n" x="169" y="812.5">OpenEnv<tspan class="ls-d" dx="6">模拟环境</tspan></text>
-<rect class="ls-x" x="298.1" y="794" width="119.6" height="28" rx="6"/><text class="ls-xn" x="309.1" y="812.5">Copula<tspan class="ls-xd" dx="6">专家数据</tspan></text>
-<rect class="ls-x" x="158" y="830" width="152.8" height="28" rx="6"/><text class="ls-xn" x="169" y="848.5">MindLab<tspan class="ls-xd" dx="6">行业模型定制</tspan></text>
+<rect x="160.0" y="690" width="468.3" height="150" rx="10" fill="#fff" stroke="#ddefe5" filter="url(#lv-sh)"/>
+<rect x="160.0" y="704.5" width="3" height="13" rx="1.5" fill="#2e9363"/>
+<text class="ls-gt" x="174.0" y="715" font-size="13" font-weight="600" fill="#1b2230">评测与 RL 数据</text>
+<rect x="174.0" y="727" width="181.3" height="28" rx="7" fill="#e5f3eb"/><text class="ls-n" x="185.0" y="745.5" font-size="13" font-weight="500" fill="#1b2230">Arena<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">agent 轨迹 → RL 环境</tspan></text>
+<rect x="363.3" y="727" width="150.3" height="28" rx="7" fill="#e5f3eb"/><text class="ls-n" x="374.3" y="745.5" font-size="13" font-weight="500" fill="#1b2230">You.com<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">搜索类 RL 题</tspan></text>
+<rect x="174.0" y="763" width="129.0" height="28" rx="7" fill="#e5f3eb"/><text class="ls-n" x="185.0" y="781.5" font-size="13" font-weight="500" fill="#1b2230">OpenEnv<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">模拟环境</tspan></text>
+<rect x="311.0" y="763" width="117.2" height="28" rx="7" fill="#f2f9f5" stroke="#96c9b1" stroke-dasharray="3 2.5"/><text class="ls-xn" x="322.0" y="781.5" font-size="13" font-weight="500" fill="#8d96a5">Copula<tspan dx="6" font-size="11.5" font-weight="400" fill="#8d96a5">专家数据</tspan></text>
+<rect x="174.0" y="799" width="150.3" height="28" rx="7" fill="#f2f9f5" stroke="#96c9b1" stroke-dasharray="3 2.5"/><text class="ls-xn" x="185.0" y="817.5" font-size="13" font-weight="500" fill="#8d96a5">MindLab<tspan dx="6" font-size="11.5" font-weight="400" fill="#8d96a5">行业模型定制</tspan></text>
 
-<rect class="ls-card" x="571" y="722" width="417" height="150" rx="8"/>
-<text class="ls-gt" x="585" y="746">模型与数据 Infra</text>
-<rect class="ls-t" x="585" y="758" width="103.3" height="28" rx="6"/><text class="ls-n" x="596" y="776.5">Baseten<tspan class="ls-d" dx="6">推理</tspan></text>
-<rect class="ls-t" x="696.3" y="758" width="139.7" height="28" rx="6"/><text class="ls-n" x="707.3" y="776.5">Google<tspan class="ls-d" dx="6">RL 训练沙箱</tspan></text>
-<rect class="ls-t" x="844" y="758" width="109.9" height="28" rx="6"/><text class="ls-n" x="855" y="776.5">Zilliz<tspan class="ls-d" dx="6">湖库存储</tspan></text>
-<rect class="ls-t" x="585" y="794" width="122.8" height="28" rx="6"/><text class="ls-n" x="596" y="812.5">Langfuse<tspan class="ls-d" dx="6">可观测</tspan></text>
-<rect class="ls-t" x="715.8" y="794" width="145.7" height="28" rx="6"/><text class="ls-n" x="726.8" y="812.5">LanceDB<tspan class="ls-d" dx="6">多模态数据</tspan></text>
+<rect x="638.3" y="690" width="347.7" height="150" rx="10" fill="#fff" stroke="#ddefe5" filter="url(#lv-sh)"/>
+<rect x="638.3" y="704.5" width="3" height="13" rx="1.5" fill="#2e9363"/>
+<text class="ls-gt" x="652.3" y="715" font-size="13" font-weight="600" fill="#1b2230">模型与数据 Infra</text>
+<rect x="652.3" y="727" width="100.9" height="28" rx="7" fill="#e5f3eb"/><text class="ls-n" x="663.3" y="745.5" font-size="13" font-weight="500" fill="#1b2230">Baseten<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">推理</tspan></text>
+<rect x="761.2" y="727" width="136.1" height="28" rx="7" fill="#e5f3eb"/><text class="ls-n" x="772.2" y="745.5" font-size="13" font-weight="500" fill="#1b2230">Google<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">RL 训练沙箱</tspan></text>
+<rect x="652.3" y="763" width="102.3" height="28" rx="7" fill="#e5f3eb"/><text class="ls-n" x="663.3" y="781.5" font-size="13" font-weight="500" fill="#1b2230">Zilliz<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">湖库存储</tspan></text>
+<rect x="762.6" y="763" width="119.4" height="28" rx="7" fill="#e5f3eb"/><text class="ls-n" x="773.6" y="781.5" font-size="13" font-weight="500" fill="#1b2230">Langfuse<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">可观测</tspan></text>
+<rect x="652.3" y="799" width="140.9" height="28" rx="7" fill="#e5f3eb"/><text class="ls-n" x="663.3" y="817.5" font-size="13" font-weight="500" fill="#1b2230">LanceDB<tspan dx="6" font-size="11.5" font-weight="400" fill="#687385">多模态数据</tspan></text>
+
+<!-- ===== 层标记 ===== -->
+<line x1="30" y1="54" x2="30" y2="204" stroke="#c3cbdb" stroke-width="2" stroke-linecap="round" stroke-dasharray="0.1 6"/>
+<line x1="30" y1="246" x2="30" y2="496" stroke="#c3cbdb" stroke-width="2" stroke-linecap="round" stroke-dasharray="0.1 6"/>
+<line x1="30" y1="538" x2="30" y2="688" stroke="#c3cbdb" stroke-width="2" stroke-linecap="round" stroke-dasharray="0.1 6"/>
+<rect x="16" y="19" width="28" height="28" rx="8.5" fill="#6c5dd3"/><rect x="16" y="19" width="28" height="28" rx="8.5" fill="url(#lv-gloss)"/><g transform="translate(22 25)" fill="#fff"><rect x="1.6" y="1.6" width="5.4" height="5.4" rx="1.5"/><rect x="9" y="1.6" width="5.4" height="5.4" rx="1.5"/><rect x="1.6" y="9" width="5.4" height="5.4" rx="1.5"/><rect x="9" y="9" width="5.4" height="5.4" rx="1.5"/></g>
+<rect x="16" y="211" width="28" height="28" rx="8.5" fill="#2f6de0"/><rect x="16" y="211" width="28" height="28" rx="8.5" fill="url(#lv-gloss)"/><g transform="translate(22 217)" fill="#fff"><path d="M8 3.4 L3.2 12.4 H12.8 Z" fill="none" stroke="#fff" stroke-width="1.3" stroke-linejoin="round"/><circle cx="8" cy="3.4" r="2.1"/><circle cx="3.2" cy="12.4" r="2.1"/><circle cx="12.8" cy="12.4" r="2.1"/></g>
+<rect x="16" y="503" width="28" height="28" rx="8.5" fill="#0d94a3"/><rect x="16" y="503" width="28" height="28" rx="8.5" fill="url(#lv-gloss)"/><g transform="translate(22 509)" fill="#fff"><path d="M8 0.8 C8.5 5 11 7.5 15.2 8 C11 8.5 8.5 11 8 15.2 C7.5 11 5 8.5 0.8 8 C5 7.5 7.5 5 8 0.8 Z"/></g>
+<rect x="16" y="695" width="28" height="28" rx="8.5" fill="#2e9363"/><rect x="16" y="695" width="28" height="28" rx="8.5" fill="url(#lv-gloss)"/><g transform="translate(22 701)" fill="#fff"><g fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round"><ellipse cx="8" cy="3.9" rx="5.4" ry="2.2"/><path d="M2.6 3.9 V12.1 C2.6 13.3 5 14.3 8 14.3 S13.4 13.3 13.4 12.1 V3.9"/><path d="M2.6 8 C2.6 9.2 5 10.2 8 10.2 S13.4 9.2 13.4 8"/></g></g>
 
 <!-- ===== 图例与脚注 ===== -->
-<rect class="ls-t" x="132" y="899" width="34" height="18" rx="5"/>
-<text class="ls-note" x="174" y="912">上台演讲</text>
-<rect class="ls-x" x="250" y="899" width="34" height="18" rx="5"/>
-<text class="ls-note" x="292" y="912">展区参展商（未上台）</text>
-<text class="ls-note" x="1000" y="912" text-anchor="end">单点工具被收购：Langfuse → ClickHouse，Jina → Elastic，Pipecat → Deepgram</text>
+<rect x="160" y="870" width="30" height="18" rx="5.5" fill="#eaf1fd"/>
+<text x="198" y="883" font-size="12" fill="#5b6575">上台演讲</text>
+<rect x="268" y="870" width="30" height="18" rx="5.5" fill="#f4f8fe" stroke="#97b6f0" stroke-dasharray="3 2.5"/>
+<text x="306" y="883" font-size="12" fill="#5b6575">展区参展商（未上台）</text>
+<text x="986" y="883" font-size="12" fill="#5b6575" text-anchor="end">单点工具被收购：Langfuse → ClickHouse，Jina → Elastic，Pipecat → Deepgram</text>
 </svg>
 
 <p>先看清这些分工，再看模型与应用之间的边界如何变化。</p>

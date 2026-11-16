@@ -42,13 +42,6 @@
                 ]
               },
               {
-                "name": "AhaCreator",
-                "description": "达人营销",
-                "talk_ids": [
-                  "d1b12"
-                ]
-              },
-              {
                 "name": "Cookiy",
                 "description": "用户研究",
                 "talk_ids": [
@@ -63,10 +56,10 @@
                 ]
               },
               {
-                "name": "CHILING",
-                "description": "美妆",
+                "name": "AhaCreator",
+                "description": "达人营销",
                 "talk_ids": [
-                  "d2m03"
+                  "d1b12"
                 ]
               },
               {
@@ -74,6 +67,13 @@
                 "description": "语言学习",
                 "talk_ids": [
                   "d2m06"
+                ]
+              },
+              {
+                "name": "CHILING",
+                "description": "美妆",
+                "talk_ids": [
+                  "d2m03"
                 ]
               },
               {
@@ -386,16 +386,16 @@
                 ]
               },
               {
-                "name": "AutoTrust",
-                "description": "决策模型",
-                "exhibitor": true
-              },
-              {
                 "name": "AutoArk",
                 "description": "端侧 LLM",
                 "talk_ids": [
                   "d1m11"
                 ]
+              },
+              {
+                "name": "AutoTrust",
+                "description": "决策模型",
+                "exhibitor": true
               }
             ]
           },
@@ -434,13 +434,6 @@
                 ]
               },
               {
-                "name": "DYNA",
-                "description": "",
-                "talk_ids": [
-                  "d2m15"
-                ]
-              },
-              {
                 "name": "墨甲",
                 "description": "",
                 "talk_ids": [
@@ -452,6 +445,13 @@
                 "description": "",
                 "talk_ids": [
                   "d2m13"
+                ]
+              },
+              {
+                "name": "DYNA",
+                "description": "",
+                "talk_ids": [
+                  "d2m15"
                 ]
               },
               {
